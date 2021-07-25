@@ -57,6 +57,7 @@ namespace DoAn_ver5.BLL
         //public DataTable GetKHByCMND(string CMND)
         //{
         //    return DAL_KhachHang.Instance.GetKhachHangByTCMND(CMND);
-        //}
+        //}dddddddd
+
     }
 }
