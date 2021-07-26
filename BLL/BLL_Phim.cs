@@ -44,13 +44,13 @@ namespace DoAn_ver5.BLL
         {
             return DAL_Phim.Instance.GetPhimByTenPhim(Name);
         }
-        //public DataTable GetPhimByDate1(string dt1, string dt2)
-        //{
-        //    return DAL_Phim.Instance.GetPhimByDate1(dt1, dt2);
-        //}
-        //public DataTable GetPhimByMaPhim(string MaPhim)
-        //{
-        //    return DAL_Phim.Instance.GetPhimByMaPhim(MaPhim);
-        //}
+        public DataTable GetPhimByDate1(string dt1, string dt2)
+        {
+            return DAL_Phim.Instance.GetPhimByDate1(dt1, dt2);
+        }
+        public DataTable GetPhimByMaPhim(string MaPhim)
+        {
+            return DAL_Phim.Instance.GetPhimByMaPhim(MaPhim);
+        }
     }
 }
