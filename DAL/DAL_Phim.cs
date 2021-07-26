@@ -49,5 +49,57 @@ namespace DoAn_ver5.DAL
         //    DataTable dt = new DataTable();
         //    string query = 
         //}
+         public DataTable GetPhimByDate1(string dt1, string dt2)
+        {
+            DataTable dt = new DataTable();
+            string query = "select * from Phim where NgayRaMat between '" + dt1 + "' and '" + dt2 + "'";
+            dt = DataProvider.Instance.GetRecords(query);
+            return dt;
+        }
+        public DataTable GetPhimByMaPhim(string MaPhim)
+        {
+            DataTable dt = new DataTable();
+            string query = "select * from Phim where MaPhim = N'" + MaPhim + "'";
+            dt = DataProvider.Instance.GetRecords(query);
+            return dt;
+        }
+
+        public bool InsertPhim(string MaPhim, string TenPhim, int ThoiLuong, int Namsx,
+        int DoTuoi, string NgayRaMat, string TrangThai, string DienVien, string Nuocsx, string NN,
+        string Nhasx, int DoanhThu, string TomTat)
+        {
+            try
+            {
+                string query = "insert into Phim values " +
+                    "('" + MaPhim + "', N'" + TenPhim + "', " + ThoiLuong + ", " + Namsx + ", " + DoTuoi + ", '" + NgayRaMat + "', " +
+                    "'" + TrangThai + "', N'" + DienVien + "',N'" + Nuocsx + "',N'" + NN + "',N'" + Nhasx + "'," + DoanhThu + ", N'" + TomTat + "')";
+                DataProvider.Instance.ExcuteDB(query);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
+
+        public bool UpdatePhim(string MaPhim, string TenPhim, int ThoiLuong, int Namsx,
+        int DoTuoi, string NgayRaMat, string TrangThai, string DienVien, string Nuocsx, string NN,
+        string Nhasx, int DoanhThu, string TomTat)
+        {
+            try
+            {
+                string query = "update Phim set TenPhim = N'" + TenPhim + "', ThoiLuong = " + ThoiLuong + ", NamSanXuat = " + Namsx + "," +
+                    " GioiHanTuoi = " + DoTuoi + ",NgayRaMat = '" + NgayRaMat + "',TrangThai = '" + TrangThai + "', DienVien = N'" + DienVien 
+                    + "', NuocSanXuat = N'" + Nuocsx + "', NgonNgu = N'" + NN + "', NhaSanXuat = N'" + Nhasx + "', DoanhThu = " + DoanhThu + ",TomTat = N'" + TomTat + "' where MaPhim = '"+ MaPhim + "'";
+                DataProvider.Instance.ExcuteDB(query);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
     }
 }
