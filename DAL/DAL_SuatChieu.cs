@@ -46,5 +46,19 @@ namespace DoAn_ver5.DAL
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
+        public DataTable GetSuatChieuByDate(string TuNgay, string DenNgay)
+        {
+            DataTable dt = new DataTable();
+            string query = "select * from dbo.SuatChieu join dbo.Phim on SuatChieu.MaPhim = Phim.MaPhim where NgayGio between '" + TuNgay + "'and'" + DenNgay + "'";
+            dt = DataProvider.Instance.GetRecords(query);
+            return dt;
+        }
+        public DataTable GetAllSuatChieu()
+        {
+            DataTable dt = new DataTable();
+            string query = "select * from SuatChieu join Phim on SuatChieu.MaPhim = Phim.MaPhim";
+            dt = DataProvider.Instance.GetRecords(query);
+            return dt;
+        }
     }
 }
