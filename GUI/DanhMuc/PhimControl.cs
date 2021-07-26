@@ -29,18 +29,16 @@ namespace DoAn_ver5.GUI
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
             Phim_ThemPhim frm = new Phim_ThemPhim();
             frm.Show();
         }
 
-        private void button5_Click_2(object sender, EventArgs e)
+        private void btnSua_Click(object sender, EventArgs e)
         {
-            Phim_ThemPhim frm = new Phim_ThemPhim();
-            frm.Show();
-        }
 
+        }
     }
       
 }

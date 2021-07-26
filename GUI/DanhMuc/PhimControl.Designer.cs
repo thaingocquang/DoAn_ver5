@@ -73,6 +73,7 @@ namespace DoAn_ver5.GUI
             this.btnSua.TabIndex = 4;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnHienTatCa
             // 
@@ -91,7 +92,7 @@ namespace DoAn_ver5.GUI
             this.btnThem.TabIndex = 4;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.button5_Click_2);
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnDatLai
             // 
@@ -115,7 +116,7 @@ namespace DoAn_ver5.GUI
             // 
             this.txtTheoTenPhim.Location = new System.Drawing.Point(17, 96);
             this.txtTheoTenPhim.Name = "txtTheoTenPhim";
-            this.txtTheoTenPhim.Size = new System.Drawing.Size(238, 23);
+            this.txtTheoTenPhim.Size = new System.Drawing.Size(238, 26);
             this.txtTheoTenPhim.TabIndex = 2;
             // 
             // chkTheoKhoangTime
@@ -123,7 +124,7 @@ namespace DoAn_ver5.GUI
             this.chkTheoKhoangTime.AutoSize = true;
             this.chkTheoKhoangTime.Location = new System.Drawing.Point(17, 153);
             this.chkTheoKhoangTime.Name = "chkTheoKhoangTime";
-            this.chkTheoKhoangTime.Size = new System.Drawing.Size(169, 21);
+            this.chkTheoKhoangTime.Size = new System.Drawing.Size(194, 24);
             this.chkTheoKhoangTime.TabIndex = 1;
             this.chkTheoKhoangTime.Text = "Theo khoảng thời gian";
             this.chkTheoKhoangTime.UseVisualStyleBackColor = true;
@@ -133,7 +134,7 @@ namespace DoAn_ver5.GUI
             this.chkTheoTenPhim.AutoSize = true;
             this.chkTheoTenPhim.Location = new System.Drawing.Point(17, 69);
             this.chkTheoTenPhim.Name = "chkTheoTenPhim";
-            this.chkTheoTenPhim.Size = new System.Drawing.Size(118, 21);
+            this.chkTheoTenPhim.Size = new System.Drawing.Size(137, 24);
             this.chkTheoTenPhim.TabIndex = 1;
             this.chkTheoTenPhim.Text = "Theo tên phim";
             this.chkTheoTenPhim.UseVisualStyleBackColor = true;
@@ -145,7 +146,7 @@ namespace DoAn_ver5.GUI
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(25, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 29);
+            this.label1.Size = new System.Drawing.Size(188, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tra cứu phim";
             // 
@@ -280,7 +281,7 @@ namespace DoAn_ver5.GUI
             this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDenNgay.Location = new System.Drawing.Point(89, 228);
             this.dtpDenNgay.Name = "dtpDenNgay";
-            this.dtpDenNgay.Size = new System.Drawing.Size(166, 23);
+            this.dtpDenNgay.Size = new System.Drawing.Size(166, 26);
             this.dtpDenNgay.TabIndex = 8;
             // 
             // dtpTuNgay
@@ -288,7 +289,7 @@ namespace DoAn_ver5.GUI
             this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpTuNgay.Location = new System.Drawing.Point(89, 190);
             this.dtpTuNgay.Name = "dtpTuNgay";
-            this.dtpTuNgay.Size = new System.Drawing.Size(166, 23);
+            this.dtpTuNgay.Size = new System.Drawing.Size(166, 26);
             this.dtpTuNgay.TabIndex = 7;
             // 
             // label3
@@ -296,7 +297,7 @@ namespace DoAn_ver5.GUI
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(14, 233);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 17);
+            this.label3.Size = new System.Drawing.Size(79, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Đến ngày";
             // 
@@ -305,13 +306,13 @@ namespace DoAn_ver5.GUI
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(14, 195);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 17);
+            this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Từ ngày";
             // 
             // PhimControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
