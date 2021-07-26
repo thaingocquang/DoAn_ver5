@@ -34,5 +34,41 @@ namespace DoAn_ver5.DAL
             string query = "update dbo.GheNgoi set TinhTrang = 'true' where MaGhe = '" + maVe + "'";
             DataProvider.Instance.ExcuteDB(query);
         }
+        public DataTable GetVe()
+        {
+            DataTable dt = new DataTable();
+            string query = "select HDV.MaHoaDonVe, HDV.MaSuatChieu, HDV.MaGhe, HDV.NgayBanVe, HDV.GiaVe, NV.HovaTen, KH.TenKhachHang from HoaDonVe HDV" +
+                " join NhanVien NV on HDV.MaNhanVien = NV.MaNhanVien " +
+                " join KhachHang KH on HDV.MaKhachHang = KH.MaKhachHang";
+            dt = DataProvider.Instance.GetRecords(query);
+            return dt;
+        }
+        public DataTable GetVeByMaVe(string Ma)
+        {
+            DataTable dt = new DataTable();
+            string query = "select HDV.MaHoaDonVe, HDV.MaSuatChieu, HDV.MaGhe, HDV.NgayBanVe, HDV.GiaVe, NV.HovaTen, KH.TenKhachHang from HoaDonVe HDV" +
+                " join NhanVien NV on HDV.MaNhanVien = NV.MaNhanVien " +
+                " join KhachHang KH on HDV.MaKhachHang = KH.MaKhachHang where HDV.MaHoaDonVe = " + Ma ;
+            dt = DataProvider.Instance.GetRecords(query);
+            return dt;
+        }
+        public DataTable GetVeByTenKH(string TenKH)
+        {
+            DataTable dt = new DataTable();
+            string query = "select HDV.MaHoaDonVe,HDV.MaSuatChieu, HDV.MaGhe, HDV.NgayBanVe, HDV.GiaVe, NV.HovaTen, KH.TenKhachHang from HoaDonVe HDV" +
+                " join NhanVien NV on HDV.MaNhanVien = NV.MaNhanVien " +
+                " join KhachHang KH on HDV.MaKhachHang = KH.MaKhachHang where KH.TenKhachHang = N'" + TenKH + "'";
+            dt = DataProvider.Instance.GetRecords(query);
+            return dt;
+        }
+        public DataTable GetVeByDate(string dt1, string dt2)
+        {
+            DataTable dt = new DataTable();
+            string query = "select HDV.MaHoaDonVe, HDV.MaSuatChieu, HDV.MaGhe, HDV.NgayBanVe, HDV.GiaVe, NV.HovaTen, KH.TenKhachHang from HoaDonVe HDV" +
+                " join NhanVien NV on HDV.MaNhanVien = NV.MaNhanVien " +
+                " join KhachHang KH on HDV.MaKhachHang = KH.MaKhachHang where HDV.NgayBanVe between '" + dt1 + "' and '" + dt2 + "'";
+            dt = DataProvider.Instance.GetRecords(query);
+            return dt;
+        }
     }
 }
