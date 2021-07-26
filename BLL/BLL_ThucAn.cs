@@ -34,22 +34,22 @@ namespace DoAn_ver5.BLL
             return list;
 
         }
-        //public DataTable GetThucAnByTenThucAn(string Ten)
-        //{
-        //    return DAL_ThucAn.Instance.GetThucAnByTenThucAn(Ten);
-        //}
-        //public DataTable GetGiaTAByTenThucAN(string Ten)
-        //{
-        //    return DAL_ThucAn.Instance.GetGiaTAByTenThucAn(Ten);
-        //}
-        //public DataTable GetThucAnByLoaiTA(string Loai)
-        //{
-        //    return DAL_ThucAn.Instance.GetThucAnByLoaiThucAn(Loai);
-        //}
+        public DataTable GetThucAnByTenThucAn(string Ten)
+        {
+            return DAL_ThucAn.Instance.GetThucAnByTenThucAn(Ten);
+        }
+        public DataTable GetGiaTAByTenThucAN(string Ten)
+        {
+            return DAL_ThucAn.Instance.GetGiaTAByTenThucAn(Ten);
+        }
+        public DataTable GetThucAnByLoaiTA(string Loai)
+        {
+            return DAL_ThucAn.Instance.GetThucAnByLoaiThucAn(Loai);
+        }
         
-        //public DataTable GetThucAn()
-        //{
-        //    return DAL_ThucAn.Instance.GetThucAn();
-        //}
+        public DataTable GetThucAn()
+        {
+            return DAL_ThucAn.Instance.GetThucAn();
+        }
     }
 }
