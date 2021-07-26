@@ -46,5 +46,35 @@ namespace DoAn_ver5.DAL
             data = DataProvider.Instance.GetRecords(query);
             return data;
         }
+        public DataTable GetKhachHangByTenKH(string Ten)
+        {
+            DataTable data = new DataTable();
+            string query = "select * from KhachHang where TenKhachHang = N'"+ Ten + "'";
+            data = DataProvider.Instance.GetRecords(query);
+            return data;
+        }
+
+        public DataTable GetKhachHangByTCMND(string CMND)
+        {
+            DataTable data = new DataTable();
+            string query = "select * from KhachHang where CMND = '" + CMND + "'";
+            data = DataProvider.Instance.GetRecords(query);
+            return data;
+        }
+        public bool InsertKhachHang(string MaKhachHang, string TenKhachHang, string GioiTinh, string NgaySinh, string Email, string SDT, string LoaiKhachHang, string NgayDangKi, int CMND)
+        {
+            try
+            {
+                string query = "insert into KhachHang values ( N'" + MaKhachHang + "',N'" + TenKhachHang + "',N'" + GioiTinh + "','" + NgaySinh +
+                    "','" + Email + "',N'" + SDT + "',N'" + LoaiKhachHang + "','" + NgayDangKi + "'," + CMND + ")";
+                DataProvider.Instance.ExcuteDB(query);
+                return true;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
     }
 }
