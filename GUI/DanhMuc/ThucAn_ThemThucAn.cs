@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAn_ver5.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,18 +18,13 @@ namespace DoAn_ver5.GUI
             InitializeComponent();
         }
 
-        private void ThucAn_ThemThucAn_Load(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnLuu_Click(object sender, EventArgs e)
         {
             DAL_ThucAn.Instance.InsertThucAn
             (
-                tbMaThucAn.Text.Trim(),
-                cbbLoaiThucAn.SelectedItem.ToString(),
-                tbTenThucAn.Text.Trim()
+                txtMa.Text.Trim(),
+                cbbLoai.SelectedItem.ToString(),
+                txtTen.Text.Trim()
             );
             this.Close();
         }

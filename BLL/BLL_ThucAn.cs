@@ -46,7 +46,11 @@ namespace DoAn_ver5.BLL
         {
             return DAL_ThucAn.Instance.GetThucAnByLoaiThucAn(Loai);
         }
-        
+
+        public DataTable GetTAByMaThucAn(string Ma)
+        {
+            return DAL_ThucAn.Instance.GetThucAnByMaThucAn(Ma);
+        }
         public DataTable GetThucAn()
         {
             return DAL_ThucAn.Instance.GetThucAn();

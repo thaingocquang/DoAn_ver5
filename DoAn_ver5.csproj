@@ -119,6 +119,9 @@
     <Compile Include="GUI\DanhMuc\ThucAn_SuaThucAn.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GUI\DanhMuc\ThucAn_SuaThucAn.Designer.cs">
+      <DependentUpon>ThucAn_SuaThucAn.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DanhMuc\VeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

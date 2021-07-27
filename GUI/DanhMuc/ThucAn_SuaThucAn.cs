@@ -14,11 +14,9 @@ namespace DoAn_ver5.GUI.DanhMuc
 {
     public partial class ThucAn_SuaThucAn : Form
     {
-        public ThucAn_SuaThucAn(string m)
+        public ThucAn_SuaThucAn()
         {
-            
             InitializeComponent();
-            GUI(m);
         }
         public void GUI(string MaThucAn)
         {
@@ -27,9 +25,9 @@ namespace DoAn_ver5.GUI.DanhMuc
                 DataTable dt = BLL_ThucAn.Instance.GetTAByMaThucAn(MaThucAn);
                 foreach (DataRow i in dt.Rows)
                 {
-                    tbMaThucAn.Text = i["MaThucAn"].ToString();
-                    cbbLoaiThucAn.SelectedItem = i["LoaiThucAn"].ToString();
-                    tbTenThucAn.Text = i["TenThucAn"].ToString();
+                    txtMa.Text = i["MaThucAn"].ToString();
+                    cbbLoai.SelectedItem = i["LoaiThucAn"].ToString();
+                    txtTen.Text = i["TenThucAn"].ToString();
                 }
             }
         }
@@ -42,9 +40,9 @@ namespace DoAn_ver5.GUI.DanhMuc
         {
             DAL_ThucAn.Instance.UpdateThucAn
             (
-                tbMaThucAn.Text.Trim(),
-                cbbLoaiThucAn.SelectedItem.ToString(),
-                tbTenThucAn.Text.Trim()
+                txtMa.Text.Trim(),
+                cbbLoai.SelectedItem.ToString(),
+                txtTen.Text.Trim()
             );
         }
     }
