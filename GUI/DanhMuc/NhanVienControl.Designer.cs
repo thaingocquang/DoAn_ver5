@@ -43,19 +43,19 @@ namespace DoAn_ver5.GUI
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnHienTatCa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbChucVu = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.txtCMND = new System.Windows.Forms.TextBox();
+            this.txtTen = new System.Windows.Forms.TextBox();
+            this.chkCMND = new System.Windows.Forms.CheckBox();
+            this.chkChucVu = new System.Windows.Forms.CheckBox();
+            this.chkTen = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -152,59 +152,67 @@ namespace DoAn_ver5.GUI
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.btnSua);
+            this.panel2.Controls.Add(this.btnHienTatCa);
+            this.panel2.Controls.Add(this.btnThem);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(269, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1051, 44);
             this.panel2.TabIndex = 7;
             // 
-            // button6
+            // btnSua
             // 
-            this.button6.Location = new System.Drawing.Point(84, 12);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(78, 26);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Sửa";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnSua.Location = new System.Drawing.Point(84, 12);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(78, 26);
+            this.btnSua.TabIndex = 4;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnHienTatCa
             // 
-            this.button4.Location = new System.Drawing.Point(946, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 26);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Hiện tất cả";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnHienTatCa.Location = new System.Drawing.Point(946, 12);
+            this.btnHienTatCa.Name = "btnHienTatCa";
+            this.btnHienTatCa.Size = new System.Drawing.Size(102, 26);
+            this.btnHienTatCa.TabIndex = 4;
+            this.btnHienTatCa.Text = "Hiện tất cả";
+            this.btnHienTatCa.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnThem
             // 
-            this.button5.Location = new System.Drawing.Point(0, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(78, 26);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Thêm";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnThem.Location = new System.Drawing.Point(0, 12);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(78, 26);
+            this.btnThem.TabIndex = 4;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cbbChucVu);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.checkBox3);
-            this.panel1.Controls.Add(this.checkBox2);
-            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.txtCMND);
+            this.panel1.Controls.Add(this.txtTen);
+            this.panel1.Controls.Add(this.chkCMND);
+            this.panel1.Controls.Add(this.chkChucVu);
+            this.panel1.Controls.Add(this.chkTen);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(269, 575);
             this.panel1.TabIndex = 6;
+            // 
+            // cbbChucVu
+            // 
+            this.cbbChucVu.FormattingEnabled = true;
+            this.cbbChucVu.Location = new System.Drawing.Point(17, 166);
+            this.cbbChucVu.Name = "cbbChucVu";
+            this.cbbChucVu.Size = new System.Drawing.Size(238, 28);
+            this.cbbChucVu.TabIndex = 5;
             // 
             // button2
             // 
@@ -223,23 +231,54 @@ namespace DoAn_ver5.GUI
             this.button1.TabIndex = 4;
             this.button1.Text = "Tìm kiếm";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnTim_Click);
             // 
-            // textBox1
+            // txtCMND
             // 
-            this.textBox1.Location = new System.Drawing.Point(17, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(238, 23);
-            this.textBox1.TabIndex = 2;
+            this.txtCMND.Location = new System.Drawing.Point(17, 238);
+            this.txtCMND.Name = "txtCMND";
+            this.txtCMND.Size = new System.Drawing.Size(238, 26);
+            this.txtCMND.TabIndex = 2;
             // 
-            // checkBox1
+            // txtTen
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(17, 69);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(150, 21);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "Theo tên nhân viên";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.txtTen.Location = new System.Drawing.Point(17, 96);
+            this.txtTen.Name = "txtTen";
+            this.txtTen.Size = new System.Drawing.Size(238, 26);
+            this.txtTen.TabIndex = 2;
+            // 
+            // chkCMND
+            // 
+            this.chkCMND.AutoSize = true;
+            this.chkCMND.Location = new System.Drawing.Point(17, 211);
+            this.chkCMND.Name = "chkCMND";
+            this.chkCMND.Size = new System.Drawing.Size(124, 24);
+            this.chkCMND.TabIndex = 1;
+            this.chkCMND.Text = "Theo CMND";
+            this.chkCMND.UseVisualStyleBackColor = true;
+            this.chkCMND.CheckedChanged += new System.EventHandler(this.chkCMND_CheckedChanged);
+            // 
+            // chkChucVu
+            // 
+            this.chkChucVu.AutoSize = true;
+            this.chkChucVu.Location = new System.Drawing.Point(17, 139);
+            this.chkChucVu.Name = "chkChucVu";
+            this.chkChucVu.Size = new System.Drawing.Size(131, 24);
+            this.chkChucVu.TabIndex = 1;
+            this.chkChucVu.Text = "Theo chức vụ";
+            this.chkChucVu.UseVisualStyleBackColor = true;
+            this.chkChucVu.CheckedChanged += new System.EventHandler(this.chkChucVu_CheckedChanged);
+            // 
+            // chkTen
+            // 
+            this.chkTen.AutoSize = true;
+            this.chkTen.Location = new System.Drawing.Point(17, 69);
+            this.chkTen.Name = "chkTen";
+            this.chkTen.Size = new System.Drawing.Size(172, 24);
+            this.chkTen.TabIndex = 1;
+            this.chkTen.Text = "Theo tên nhân viên";
+            this.chkTen.UseVisualStyleBackColor = true;
+            this.chkTen.CheckedChanged += new System.EventHandler(this.chkTen_CheckedChanged);
             // 
             // label1
             // 
@@ -248,54 +287,19 @@ namespace DoAn_ver5.GUI
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(25, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 29);
+            this.label1.Size = new System.Drawing.Size(254, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tra cứu nhân viên";
             // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(17, 139);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(113, 21);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Theo chức vụ";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(17, 211);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(104, 21);
-            this.checkBox3.TabIndex = 1;
-            this.checkBox3.Text = "Theo CMND";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(17, 238);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(238, 23);
-            this.textBox3.TabIndex = 2;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(17, 166);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(238, 24);
-            this.comboBox1.TabIndex = 5;
-            // 
             // NhanVienControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NhanVienControl";
             this.Size = new System.Drawing.Size(1320, 575);
             this.panel3.ResumeLayout(false);
@@ -322,18 +326,18 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnHienTatCa;
+        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbChucVu;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox txtCMND;
+        private System.Windows.Forms.TextBox txtTen;
+        private System.Windows.Forms.CheckBox chkCMND;
+        private System.Windows.Forms.CheckBox chkChucVu;
+        private System.Windows.Forms.CheckBox chkTen;
         private System.Windows.Forms.Label label1;
     }
 }

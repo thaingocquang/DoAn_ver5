@@ -27,115 +27,108 @@ namespace DoAn_ver5.GUI
             InitializeComponent();
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void chkTen_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (chkTen.Checked == true)
+            {
+                txtTen.Enabled = true;
+                chkChucVu.Checked = false;
+                chkCMND.Checked = false;
+                cbbChucVu.Enabled = false;
+                txtCMND.Enabled = false;
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void chkChucVu_CheckedChanged(object sender, EventArgs e)
         {
-            NhanVien_ThemNhanVien frm = new NhanVien_ThemNhanVien();
-            frm.Show();
+            if (chkChucVu.Checked == true)
+            {
+                cbbChucVu.Enabled = true;
+                chkTen.Checked = false;
+                txtTen.Enabled = false;
+                txtCMND.Enabled = false;
+                chkCMND.Checked = false;
+            }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void chkCMND_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (chkCMND.Checked == true)
+            {
+                txtCMND.Enabled = true;
+                chkChucVu.Checked = false;
+                cbbChucVu.Enabled = false;
+                chkTen.Checked = false;
+                txtTen.Enabled = false;
+            }
         }
 
-        private void panel7_Paint(object sender, PaintEventArgs e)
+        private void btnTim_Click(object sender, EventArgs e)
         {
+            string Ten = txtTen.Text;
+            string CMND = txtCMND.Text;
+            int count = 1;
+            if (chkTen.Checked == true)
+            {
+                listView1.Items.Clear();
+                foreach (DataRow i in BLL_NhanVien.Instance.GetNhanVienByTen(Ten).Rows)
+                {
+                    ListViewItem ls = new ListViewItem(count.ToString());
+                    ls.SubItems.Add(i["MaNhanVien"].ToString());
+                    ls.SubItems.Add(i["HovaTen"].ToString());
+                    ls.SubItems.Add(i["NgaySinh"].ToString());
+                    ls.SubItems.Add(i["GioiTinh"].ToString());
+                    ls.SubItems.Add(i["DiaChi"].ToString());
+                    ls.SubItems.Add(i["CMND"].ToString());
+                    ls.SubItems.Add(i["Email"].ToString());
+                    ls.SubItems.Add(i["SDT"].ToString());
+                    ls.SubItems.Add(i["ChucVu"].ToString());
+                    ls.SubItems.Add(i["NgayVaoLam"].ToString());
+                    listView1.Items.Add(ls);
+                    count++;
+                }
+            }
+            if (chkChucVu.Checked == true)
+            {
+                listView1.Items.Clear();
+                foreach (DataRow i in BLL_NhanVien.Instance.GetNhanVienByChucVu(cbbChucVu.SelectedItem.ToString()).Rows)
+                {
+                    ListViewItem ls = new ListViewItem(count.ToString());
+                    ls.SubItems.Add(i["MaNhanVien"].ToString());
+                    ls.SubItems.Add(i["HovaTen"].ToString());
+                    ls.SubItems.Add(i["NgaySinh"].ToString());
+                    ls.SubItems.Add(i["GioiTinh"].ToString());
+                    ls.SubItems.Add(i["DiaChi"].ToString());
+                    ls.SubItems.Add(i["CMND"].ToString());
+                    ls.SubItems.Add(i["Email"].ToString());
+                    ls.SubItems.Add(i["SDT"].ToString());
+                    ls.SubItems.Add(i["ChucVu"].ToString());
+                    ls.SubItems.Add(i["NgayVaoLam"].ToString());
+                    listView1.Items.Add(ls);
+                    count++;
+                }
 
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel8_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
+            }
+            if (chkCMND.Checked == true)
+            {
+                listView1.Items.Clear();
+                foreach (DataRow i in BLL_NhanVien.Instance.GetNhanVienByCMND(CMND).Rows)
+                {
+                    ListViewItem ls = new ListViewItem(count.ToString());
+                    ls.SubItems.Add(i["MaNhanVien"].ToString());
+                    ls.SubItems.Add(i["HovaTen"].ToString());
+                    ls.SubItems.Add(i["NgaySinh"].ToString());
+                    ls.SubItems.Add(i["GioiTinh"].ToString());
+                    ls.SubItems.Add(i["DiaChi"].ToString());
+                    ls.SubItems.Add(i["CMND"].ToString());
+                    ls.SubItems.Add(i["Email"].ToString());
+                    ls.SubItems.Add(i["SDT"].ToString());
+                    ls.SubItems.Add(i["ChucVu"].ToString());
+                    ls.SubItems.Add(i["NgayVaoLam"].ToString());
+                    listView1.Items.Add(ls);
+                    count++;
+                }
+            }
         }
     }
 }
