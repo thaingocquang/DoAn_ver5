@@ -34,8 +34,10 @@ namespace DoAn_ver5.GUI.HeThong
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel4 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lstTaiKhoan = new System.Windows.Forms.ListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -50,8 +52,6 @@ namespace DoAn_ver5.GUI.HeThong
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -79,16 +79,16 @@ namespace DoAn_ver5.GUI.HeThong
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.listView1);
+            this.panel4.Controls.Add(this.lstTaiKhoan);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1051, 531);
             this.panel4.TabIndex = 0;
             // 
-            // listView1
+            // lstTaiKhoan
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lstTaiKhoan.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
@@ -96,22 +96,32 @@ namespace DoAn_ver5.GUI.HeThong
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1051, 531);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.lstTaiKhoan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstTaiKhoan.FullRowSelect = true;
+            this.lstTaiKhoan.GridLines = true;
+            this.lstTaiKhoan.HideSelection = false;
+            this.lstTaiKhoan.Location = new System.Drawing.Point(0, 0);
+            this.lstTaiKhoan.Name = "lstTaiKhoan";
+            this.lstTaiKhoan.Size = new System.Drawing.Size(1051, 531);
+            this.lstTaiKhoan.TabIndex = 0;
+            this.lstTaiKhoan.UseCompatibleStateImageBehavior = false;
+            this.lstTaiKhoan.View = System.Windows.Forms.View.Details;
+            this.lstTaiKhoan.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Tên nhân viên";
             this.columnHeader4.Width = 150;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Tên quyền";
+            this.columnHeader6.Width = 150;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Trạng thái";
+            this.columnHeader7.Width = 150;
             // 
             // panel3
             // 
@@ -255,16 +265,6 @@ namespace DoAn_ver5.GUI.HeThong
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhân viên";
             // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Tên quyền";
-            this.columnHeader6.Width = 150;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Trạng thái";
-            this.columnHeader7.Width = 150;
-            // 
             // TaiKhoanControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -276,6 +276,7 @@ namespace DoAn_ver5.GUI.HeThong
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TaiKhoanControl";
             this.Size = new System.Drawing.Size(1320, 575);
+            this.Load += new System.EventHandler(this.TaiKhoanControl_Load);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -292,7 +293,7 @@ namespace DoAn_ver5.GUI.HeThong
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lstTaiKhoan;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button5;
