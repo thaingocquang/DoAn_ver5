@@ -45,22 +45,9 @@ namespace DoAn_ver5.BLL
         {
             return DAL_SuatChieu.Instance.GetDoanhThuByTimePeriod(TenPhim, TuNgay, DenNgay);
         }
-        
-        //public DataTable GetSuatChieuByDate(string dt1, string dt2)
-        //{
-        //    return DAL_SuatChieu.Instance.GetSuatChieuByDate(dt1, dt2);
-        //}
-        //public DataTable GetAllSuatChieu()
-        //{
-        //    return DAL_SuatChieu.Instance.GetAllSuatChieu();
-        //}
         public DataTable GetSuatChieuByDate(string dt1, string dt2)
         {
             return DAL_SuatChieu.Instance.GetSuatChieuByDate(dt1, dt2);
-        }
-        public DataTable GetDoanhThuByTimePeriod(string TenPhim, string TuNgay, string DenNgay)
-        {
-            return DAL_SuatChieu.Instance.GetDoanhThuByTimePeriod(TenPhim, TuNgay, DenNgay);
         }
 
         public DataTable GetAllSuatChieu()
