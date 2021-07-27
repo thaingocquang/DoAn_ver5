@@ -85,6 +85,39 @@
     <Compile Include="GUI\DanhMuc\KhachHangControl.Designer.cs">
       <DependentUpon>KhachHangControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\DanhMuc\KhachHang_SuaKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DanhMuc\KhachHang_SuaKhachHang.Designer.cs">
+      <DependentUpon>KhachHang_SuaKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DanhMuc\KhachHang_ThemKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DanhMuc\KhachHang_ThemKhachHang.Designer.cs">
+      <DependentUpon>KhachHang_ThemKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DanhMuc\NhanVien_SuaNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DanhMuc\NhanVien_SuaNhanVien.Designer.cs">
+      <DependentUpon>NhanVien_SuaNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DanhMuc\Phim_SuaPhim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DanhMuc\Phim_SuaPhim.Designer.cs">
+      <DependentUpon>Phim_SuaPhim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DanhMuc\SuatChieu_SuaSuatChieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DanhMuc\SuatChieu_SuaSuatChieu.Designer.cs">
+      <DependentUpon>SuatChieu_SuaSuatChieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DanhMuc\ThucAn_SuaThucAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GUI\DanhMuc\VeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -215,6 +248,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DanhMuc\KhachHangControl.resx">
       <DependentUpon>KhachHangControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DanhMuc\KhachHang_SuaKhachHang.resx">
+      <DependentUpon>KhachHang_SuaKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DanhMuc\KhachHang_ThemKhachHang.resx">
+      <DependentUpon>KhachHang_ThemKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DanhMuc\NhanVien_SuaNhanVien.resx">
+      <DependentUpon>NhanVien_SuaNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DanhMuc\Phim_SuaPhim.resx">
+      <DependentUpon>Phim_SuaPhim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DanhMuc\SuatChieu_SuaSuatChieu.resx">
+      <DependentUpon>SuatChieu_SuaSuatChieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DanhMuc\ThucAn_SuaThucAn.resx">
+      <DependentUpon>ThucAn_SuaThucAn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DanhMuc\VeControl.resx">
       <DependentUpon>VeControl.cs</DependentUpon>

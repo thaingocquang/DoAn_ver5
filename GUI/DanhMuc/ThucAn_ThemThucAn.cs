@@ -19,7 +19,18 @@ namespace DoAn_ver5.GUI
 
         private void ThucAn_ThemThucAn_Load(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            DAL_ThucAn.Instance.InsertThucAn
+            (
+                tbMaThucAn.Text.Trim(),
+                cbbLoaiThucAn.SelectedItem.ToString(),
+                tbTenThucAn.Text.Trim()
+            );
+            this.Close();
         }
     }
 }

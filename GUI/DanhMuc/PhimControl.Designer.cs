@@ -35,7 +35,7 @@ namespace DoAn_ver5.GUI
             this.btnHienTatCa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnDatLai = new System.Windows.Forms.Button();
-            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.btnTim = new System.Windows.Forms.Button();
             this.txtTheoTenPhim = new System.Windows.Forms.TextBox();
             this.chkTheoKhoangTime = new System.Windows.Forms.CheckBox();
             this.chkTheoTenPhim = new System.Windows.Forms.CheckBox();
@@ -83,6 +83,7 @@ namespace DoAn_ver5.GUI
             this.btnHienTatCa.TabIndex = 4;
             this.btnHienTatCa.Text = "Hiện tất cả";
             this.btnHienTatCa.UseVisualStyleBackColor = true;
+            this.btnHienTatCa.Click += new System.EventHandler(this.btnHienTatCa_Click);
             // 
             // btnThem
             // 
@@ -103,14 +104,15 @@ namespace DoAn_ver5.GUI
             this.btnDatLai.Text = "Đặt lại";
             this.btnDatLai.UseVisualStyleBackColor = true;
             // 
-            // btnTimKiem
+            // btnTim
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(30, 280);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(78, 26);
-            this.btnTimKiem.TabIndex = 4;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTim.Location = new System.Drawing.Point(30, 280);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(78, 26);
+            this.btnTim.TabIndex = 4;
+            this.btnTim.Text = "Tìm kiếm";
+            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // txtTheoTenPhim
             // 
@@ -128,6 +130,7 @@ namespace DoAn_ver5.GUI
             this.chkTheoKhoangTime.TabIndex = 1;
             this.chkTheoKhoangTime.Text = "Theo khoảng thời gian";
             this.chkTheoKhoangTime.UseVisualStyleBackColor = true;
+            this.chkTheoKhoangTime.CheckedChanged += new System.EventHandler(this.chkTheoKhoangTime_CheckedChanged);
             // 
             // chkTheoTenPhim
             // 
@@ -138,6 +141,7 @@ namespace DoAn_ver5.GUI
             this.chkTheoTenPhim.TabIndex = 1;
             this.chkTheoTenPhim.Text = "Theo tên phim";
             this.chkTheoTenPhim.UseVisualStyleBackColor = true;
+            this.chkTheoTenPhim.CheckedChanged += new System.EventHandler(this.chkTheoTenPhim_CheckedChanged);
             // 
             // label1
             // 
@@ -265,7 +269,7 @@ namespace DoAn_ver5.GUI
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnDatLai);
-            this.panel1.Controls.Add(this.btnTimKiem);
+            this.panel1.Controls.Add(this.btnTim);
             this.panel1.Controls.Add(this.txtTheoTenPhim);
             this.panel1.Controls.Add(this.chkTheoKhoangTime);
             this.panel1.Controls.Add(this.chkTheoTenPhim);
@@ -336,7 +340,7 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.Button btnHienTatCa;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnDatLai;
-        private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.TextBox txtTheoTenPhim;
         private System.Windows.Forms.CheckBox chkTheoKhoangTime;
         private System.Windows.Forms.CheckBox chkTheoTenPhim;

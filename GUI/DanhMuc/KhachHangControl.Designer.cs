@@ -39,21 +39,21 @@ namespace DoAn_ver5.GUI
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lstKhachHang = new System.Windows.Forms.ListView();
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnHienTatCa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnDatLai = new System.Windows.Forms.Button();
+            this.btnTim = new System.Windows.Forms.Button();
+            this.txtTen = new System.Windows.Forms.TextBox();
+            this.chkCMND = new System.Windows.Forms.CheckBox();
+            this.chkTen = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCMND = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -108,9 +108,9 @@ namespace DoAn_ver5.GUI
             // 
             this.columnHeader1.Text = "STT";
             // 
-            // listView1
+            // lstKhachHang
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lstKhachHang.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
@@ -122,17 +122,16 @@ namespace DoAn_ver5.GUI
             this.columnHeader9,
             this.columnHeader10,
             this.columnHeader11});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1051, 531);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.lstKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstKhachHang.FullRowSelect = true;
+            this.lstKhachHang.GridLines = true;
+            this.lstKhachHang.HideSelection = false;
+            this.lstKhachHang.Location = new System.Drawing.Point(0, 0);
+            this.lstKhachHang.Name = "lstKhachHang";
+            this.lstKhachHang.Size = new System.Drawing.Size(1051, 531);
+            this.lstKhachHang.TabIndex = 0;
+            this.lstKhachHang.UseCompatibleStateImageBehavior = false;
+            this.lstKhachHang.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader11
             // 
@@ -141,7 +140,7 @@ namespace DoAn_ver5.GUI
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.listView1);
+            this.panel3.Controls.Add(this.lstKhachHang);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(269, 44);
             this.panel3.Name = "panel3";
@@ -151,86 +150,92 @@ namespace DoAn_ver5.GUI
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.btnSua);
+            this.panel2.Controls.Add(this.btnHienTatCa);
+            this.panel2.Controls.Add(this.btnThem);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(269, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1051, 44);
             this.panel2.TabIndex = 7;
             // 
-            // button6
+            // btnSua
             // 
-            this.button6.Location = new System.Drawing.Point(84, 12);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(78, 26);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Sửa";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnSua.Location = new System.Drawing.Point(84, 12);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(78, 26);
+            this.btnSua.TabIndex = 4;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // button4
+            // btnHienTatCa
             // 
-            this.button4.Location = new System.Drawing.Point(946, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 26);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Hiện tất cả";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnHienTatCa.Location = new System.Drawing.Point(946, 12);
+            this.btnHienTatCa.Name = "btnHienTatCa";
+            this.btnHienTatCa.Size = new System.Drawing.Size(102, 26);
+            this.btnHienTatCa.TabIndex = 4;
+            this.btnHienTatCa.Text = "Hiện tất cả";
+            this.btnHienTatCa.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnThem
             // 
-            this.button5.Location = new System.Drawing.Point(0, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(78, 26);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Thêm";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnThem.Location = new System.Drawing.Point(0, 12);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(78, 26);
+            this.btnThem.TabIndex = 4;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // button2
+            // btnDatLai
             // 
-            this.button2.Location = new System.Drawing.Point(111, 231);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 26);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Đặt lại";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDatLai.Location = new System.Drawing.Point(111, 231);
+            this.btnDatLai.Name = "btnDatLai";
+            this.btnDatLai.Size = new System.Drawing.Size(78, 26);
+            this.btnDatLai.TabIndex = 4;
+            this.btnDatLai.Text = "Đặt lại";
+            this.btnDatLai.UseVisualStyleBackColor = true;
+            this.btnDatLai.Click += new System.EventHandler(this.btnDatLai_Click);
             // 
-            // button1
+            // btnTim
             // 
-            this.button1.Location = new System.Drawing.Point(30, 231);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 26);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Tìm kiếm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnTim.Location = new System.Drawing.Point(30, 231);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(78, 26);
+            this.btnTim.TabIndex = 4;
+            this.btnTim.Text = "Tìm kiếm";
+            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
-            // textBox1
+            // txtTen
             // 
-            this.textBox1.Location = new System.Drawing.Point(17, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(238, 23);
-            this.textBox1.TabIndex = 2;
+            this.txtTen.Location = new System.Drawing.Point(17, 96);
+            this.txtTen.Name = "txtTen";
+            this.txtTen.Size = new System.Drawing.Size(238, 26);
+            this.txtTen.TabIndex = 2;
             // 
-            // checkBox2
+            // chkCMND
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(17, 153);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(104, 21);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Theo CMND";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkCMND.AutoSize = true;
+            this.chkCMND.Location = new System.Drawing.Point(17, 153);
+            this.chkCMND.Name = "chkCMND";
+            this.chkCMND.Size = new System.Drawing.Size(124, 24);
+            this.chkCMND.TabIndex = 1;
+            this.chkCMND.Text = "Theo CMND";
+            this.chkCMND.UseVisualStyleBackColor = true;
+            this.chkCMND.CheckedChanged += new System.EventHandler(this.chkCMND_CheckedChanged);
             // 
-            // checkBox1
+            // chkTen
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(17, 69);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(162, 21);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "Theo tên khách hàng";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkTen.AutoSize = true;
+            this.chkTen.Location = new System.Drawing.Point(17, 69);
+            this.chkTen.Name = "chkTen";
+            this.chkTen.Size = new System.Drawing.Size(186, 24);
+            this.chkTen.TabIndex = 1;
+            this.chkTen.Text = "Theo tên khách hàng";
+            this.chkTen.UseVisualStyleBackColor = true;
+            this.chkTen.CheckedChanged += new System.EventHandler(this.chkTen_CheckedChanged);
             // 
             // label1
             // 
@@ -239,19 +244,19 @@ namespace DoAn_ver5.GUI
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(25, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 29);
+            this.label1.Size = new System.Drawing.Size(279, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tra cứu khách hàng";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.checkBox2);
-            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.btnDatLai);
+            this.panel1.Controls.Add(this.btnTim);
+            this.panel1.Controls.Add(this.txtCMND);
+            this.panel1.Controls.Add(this.txtTen);
+            this.panel1.Controls.Add(this.chkCMND);
+            this.panel1.Controls.Add(this.chkTen);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -259,22 +264,22 @@ namespace DoAn_ver5.GUI
             this.panel1.Size = new System.Drawing.Size(269, 575);
             this.panel1.TabIndex = 6;
             // 
-            // textBox2
+            // txtCMND
             // 
-            this.textBox2.Location = new System.Drawing.Point(17, 180);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(238, 23);
-            this.textBox2.TabIndex = 2;
+            this.txtCMND.Location = new System.Drawing.Point(17, 180);
+            this.txtCMND.Name = "txtCMND";
+            this.txtCMND.Size = new System.Drawing.Size(238, 26);
+            this.txtCMND.TabIndex = 2;
             // 
             // KhachHangControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "KhachHangControl";
             this.Size = new System.Drawing.Size(1320, 575);
             this.panel3.ResumeLayout(false);
@@ -297,20 +302,20 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lstKhachHang;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnHienTatCa;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnDatLai;
+        private System.Windows.Forms.Button btnTim;
+        private System.Windows.Forms.TextBox txtTen;
+        private System.Windows.Forms.CheckBox chkCMND;
+        private System.Windows.Forms.CheckBox chkTen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCMND;
     }
 }
