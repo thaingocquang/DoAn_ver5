@@ -1,4 +1,5 @@
 ﻿using DoAn_ver5.BLL;
+using DoAn_ver5.GUI.DanhMuc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -124,6 +125,23 @@ namespace DoAn_ver5.GUI
                 dtpDenNgay.Enabled = true;
                 chkTen.Checked = false;
                 txtTen.Enabled = false;
+            }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            SuatChieu_ThemSuatChieu sc = new SuatChieu_ThemSuatChieu();
+            sc.ShowDialog();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if(lstSuatChieu.SelectedItems.Count > 0)
+            {
+                ListViewItem ls = lstSuatChieu.SelectedItems[0];
+                string s = ls.SubItems[1].Text.Trim();
+                SuatChieu_SuaSuatChieu sc = new SuatChieu_SuaSuatChieu(s);
+                sc.ShowDialog();
             }
         }
     }
