@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAn_ver5.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -62,6 +63,25 @@ namespace DoAn_ver5.GUI.DanhMuc
                 dtpDenNgay.Enabled = true;
                 chkMa.Checked = false;
                 txtMa.Enabled = false;
+            }
+        }
+
+        private void btnHienTatCa_Click(object sender, EventArgs e)
+        {
+            int count = 1;
+            listView1.Items.Clear();
+
+            foreach (DataRow i in BLL_HoaDon.Instance.GetHoaDon().Rows)
+            {
+
+
+                ListViewItem ls = new ListViewItem(count.ToString());
+                ls.SubItems.Add(i["MaHoaDon"].ToString());
+                ls.SubItems.Add(i["NgayTao"].ToString());
+                ls.SubItems.Add(BLL_HoaDon.Instance.GetTongTienByMHD(i["MaHoaDon"].ToString()) + "");
+                ls.SubItems.Add(i["MaNhanVien"].ToString());
+                listView1.Items.Add(ls);
+                count++;
             }
         }
     }

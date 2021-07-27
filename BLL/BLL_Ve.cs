@@ -38,21 +38,21 @@ namespace DoAn_ver5.BLL
             }
             return list;
         }
-        //public DataTable GetVe()
-        //{
-        //    return DAL_Ve.Instance.GetVe();
-        //}
-        //public DataTable GetVeByTenKH(string TenKH)
-        //{
-        //    return DAL_Ve.Instance.GetVeByTenKH(TenKH);
-        //}
-        //public DataTable GetVeByDate(string dt1, string dt2)
-        //{
-        //    return DAL_Ve.Instance.GetVeByDate(dt1,dt2);
-        //}
-        //public DataTable GetVeByMaVe(string Ma)
-        //{
-        //    return DAL_Ve.Instance.GetVeByMaVe(Ma);
-        //}
+        public DataTable GetVe()
+        {
+            return DAL_Ve.Instance.GetVe();
+        }
+        public DataTable GetVeByTenKH(string TenKH)
+        {
+           return DAL_Ve.Instance.GetVeByTenKH(TenKH);
+        }
+        public DataTable GetVeByDate(string dt1, string dt2)
+        {
+           return DAL_Ve.Instance.GetVeByDate(dt1,dt2);
+        }
+        public DataTable GetVeByMaVe(string Ma)
+        {
+            return DAL_Ve.Instance.GetVeByMaVe(Ma);
+        }
     }
 }
