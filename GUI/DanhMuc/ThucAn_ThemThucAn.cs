@@ -28,5 +28,10 @@ namespace DoAn_ver5.GUI
             );
             this.Close();
         }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

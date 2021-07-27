@@ -29,7 +29,6 @@ namespace DoAn_ver5.GUI.DanhMuc
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
@@ -44,20 +43,11 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.txtTen = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DoAn_ver5.Properties.Resources.foodIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(49, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(52, 42);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -77,6 +67,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnHuy
             // 
@@ -86,6 +77,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.btnHuy.TabIndex = 3;
             this.btnHuy.Text = "Hủy bỏ";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // panel1
             // 
@@ -192,6 +184,16 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label5.TabIndex = 9;
             this.label5.Text = "Thêm thức ăn";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DoAn_ver5.Properties.Resources.foodIcon;
+            this.pictureBox1.Location = new System.Drawing.Point(49, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(52, 42);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // ThucAn_SuaThucAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -204,10 +206,10 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.Controls.Add(this.label5);
             this.Name = "ThucAn_SuaThucAn";
             this.Text = "ThucAn_SuaThucAn";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

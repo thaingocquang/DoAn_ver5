@@ -31,12 +31,8 @@ namespace DoAn_ver5.GUI.DanhMuc
                 }
             }
         }
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
-        private void bntLuu_Click(object sender, EventArgs e)
+        private void btnLuu_Click(object sender, EventArgs e)
         {
             DAL_ThucAn.Instance.UpdateThucAn
             (
@@ -44,6 +40,11 @@ namespace DoAn_ver5.GUI.DanhMuc
                 cbbLoai.SelectedItem.ToString(),
                 txtTen.Text.Trim()
             );
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

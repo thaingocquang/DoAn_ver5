@@ -117,6 +117,7 @@ namespace DoAn_ver5.GUI
             this.btnHuy.TabIndex = 3;
             this.btnHuy.Text = "Hủy bỏ";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // label5
             // 
