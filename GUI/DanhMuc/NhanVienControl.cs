@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAn_ver5.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -128,6 +129,39 @@ namespace DoAn_ver5.GUI
                     listView1.Items.Add(ls);
                     count++;
                 }
+            }
+        }
+
+        private void btnDatLai_Click(object sender, EventArgs e)
+        {
+            txtCMND.Text = "";
+            txtTen.Text = "";
+            cbbChucVu.SelectedItem = null;
+            chkChucVu.Checked = false;
+            chkCMND.Checked = false;
+            chkTen.Checked = false;
+        }
+
+        private void btnHienTatCa_Click(object sender, EventArgs e)
+        {
+            int count = 1;
+            listView1.Items.Clear();
+            foreach (DataRow i in BLL_NhanVien.Instance.GetAllNhanVien().Rows)
+            {
+
+                ListViewItem ls = new ListViewItem(count.ToString());
+                ls.SubItems.Add(i["MaNhanVien"].ToString());
+                ls.SubItems.Add(i["HovaTen"].ToString());
+                ls.SubItems.Add(i["NgaySinh"].ToString());
+                ls.SubItems.Add(i["GioiTinh"].ToString());
+                ls.SubItems.Add(i["DiaChi"].ToString());
+                ls.SubItems.Add(i["CMND"].ToString());
+                ls.SubItems.Add(i["Email"].ToString());
+                ls.SubItems.Add(i["SDT"].ToString());
+                ls.SubItems.Add(i["ChucVu"].ToString());
+                ls.SubItems.Add(i["NgayVaoLam"].ToString());
+                listView1.Items.Add(ls);
+                count++;
             }
         }
     }

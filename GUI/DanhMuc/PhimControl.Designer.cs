@@ -103,6 +103,7 @@ namespace DoAn_ver5.GUI
             this.btnDatLai.TabIndex = 4;
             this.btnDatLai.Text = "Đặt lại";
             this.btnDatLai.UseVisualStyleBackColor = true;
+            this.btnDatLai.Click += new System.EventHandler(this.btnDatLai_Click);
             // 
             // btnTim
             // 

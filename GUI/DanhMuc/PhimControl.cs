@@ -144,6 +144,13 @@ namespace DoAn_ver5.GUI
                 chkTheoTenPhim.Checked = false;
             }
         }
+
+        private void btnDatLai_Click(object sender, EventArgs e)
+        {
+            txtTheoTenPhim.Text = "";
+            chkTheoTenPhim.Checked = false;
+            chkTheoKhoangTime.Checked = false;
+        }
     }
       
 }

@@ -48,7 +48,7 @@ namespace DoAn_ver5.GUI
             this.btnThem = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbbChucVu = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDatLai = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
@@ -178,6 +178,7 @@ namespace DoAn_ver5.GUI
             this.btnHienTatCa.TabIndex = 4;
             this.btnHienTatCa.Text = "Hiện tất cả";
             this.btnHienTatCa.UseVisualStyleBackColor = true;
+            this.btnHienTatCa.Click += new System.EventHandler(this.btnHienTatCa_Click);
             // 
             // btnThem
             // 
@@ -192,7 +193,7 @@ namespace DoAn_ver5.GUI
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.cbbChucVu);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnDatLai);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txtCMND);
             this.panel1.Controls.Add(this.txtTen);
@@ -214,14 +215,15 @@ namespace DoAn_ver5.GUI
             this.cbbChucVu.Size = new System.Drawing.Size(238, 28);
             this.cbbChucVu.TabIndex = 5;
             // 
-            // button2
+            // btnDatLai
             // 
-            this.button2.Location = new System.Drawing.Point(111, 295);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 26);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Đặt lại";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDatLai.Location = new System.Drawing.Point(111, 295);
+            this.btnDatLai.Name = "btnDatLai";
+            this.btnDatLai.Size = new System.Drawing.Size(78, 26);
+            this.btnDatLai.TabIndex = 4;
+            this.btnDatLai.Text = "Đặt lại";
+            this.btnDatLai.UseVisualStyleBackColor = true;
+            this.btnDatLai.Click += new System.EventHandler(this.btnDatLai_Click);
             // 
             // button1
             // 
@@ -331,7 +333,7 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cbbChucVu;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDatLai;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.TextBox txtTen;

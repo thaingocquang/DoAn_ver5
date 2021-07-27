@@ -39,25 +39,25 @@ namespace DoAn_ver5.GUI
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
+            this.dtpTuNgay = new System.Windows.Forms.DateTimePicker();
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lstSuatChieu = new System.Windows.Forms.ListView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnHienTatCa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btnDatLai = new System.Windows.Forms.Button();
+            this.btnTim = new System.Windows.Forms.Button();
+            this.txtTen = new System.Windows.Forms.TextBox();
+            this.chkThoiGian = new System.Windows.Forms.CheckBox();
+            this.chkTen = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -112,21 +112,21 @@ namespace DoAn_ver5.GUI
             // 
             this.columnHeader1.Text = "STT";
             // 
-            // dateTimePicker2
+            // dtpDenNgay
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(89, 228);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(166, 23);
-            this.dateTimePicker2.TabIndex = 8;
+            this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDenNgay.Location = new System.Drawing.Point(89, 228);
+            this.dtpDenNgay.Name = "dtpDenNgay";
+            this.dtpDenNgay.Size = new System.Drawing.Size(166, 26);
+            this.dtpDenNgay.TabIndex = 8;
             // 
-            // dateTimePicker1
+            // dtpTuNgay
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(89, 190);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(166, 23);
-            this.dateTimePicker1.TabIndex = 7;
+            this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTuNgay.Location = new System.Drawing.Point(89, 190);
+            this.dtpTuNgay.Name = "dtpTuNgay";
+            this.dtpTuNgay.Size = new System.Drawing.Size(166, 26);
+            this.dtpTuNgay.TabIndex = 7;
             // 
             // columnHeader11
             // 
@@ -138,22 +138,22 @@ namespace DoAn_ver5.GUI
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(14, 233);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 17);
+            this.label3.Size = new System.Drawing.Size(79, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Đến ngày";
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.listView1);
+            this.panel3.Controls.Add(this.lstSuatChieu);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(269, 44);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1051, 531);
             this.panel3.TabIndex = 8;
             // 
-            // listView1
+            // lstSuatChieu
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lstSuatChieu.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
@@ -165,69 +165,79 @@ namespace DoAn_ver5.GUI
             this.columnHeader9,
             this.columnHeader10,
             this.columnHeader11});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1051, 531);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lstSuatChieu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstSuatChieu.FullRowSelect = true;
+            this.lstSuatChieu.GridLines = true;
+            this.lstSuatChieu.HideSelection = false;
+            this.lstSuatChieu.Location = new System.Drawing.Point(0, 0);
+            this.lstSuatChieu.Name = "lstSuatChieu";
+            this.lstSuatChieu.Size = new System.Drawing.Size(1051, 531);
+            this.lstSuatChieu.TabIndex = 0;
+            this.lstSuatChieu.UseCompatibleStateImageBehavior = false;
+            this.lstSuatChieu.View = System.Windows.Forms.View.Details;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.btnSua);
             this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.btnHienTatCa);
+            this.panel2.Controls.Add(this.btnThem);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(269, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1051, 44);
             this.panel2.TabIndex = 7;
             // 
-            // button6
+            // btnSua
             // 
-            this.button6.Location = new System.Drawing.Point(84, 12);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(78, 26);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Sửa";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnSua.Location = new System.Drawing.Point(84, 12);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(78, 26);
+            this.btnSua.TabIndex = 4;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // button3
             // 
-            this.button4.Location = new System.Drawing.Point(946, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 26);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Hiện tất cả";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button3.Location = new System.Drawing.Point(792, 12);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(148, 26);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Cập nhật trạng thái";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnHienTatCa
             // 
-            this.button5.Location = new System.Drawing.Point(0, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(78, 26);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Thêm";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnHienTatCa.Location = new System.Drawing.Point(946, 12);
+            this.btnHienTatCa.Name = "btnHienTatCa";
+            this.btnHienTatCa.Size = new System.Drawing.Size(102, 26);
+            this.btnHienTatCa.TabIndex = 4;
+            this.btnHienTatCa.Text = "Hiện tất cả";
+            this.btnHienTatCa.UseVisualStyleBackColor = true;
+            this.btnHienTatCa.Click += new System.EventHandler(this.btnHienTatCa_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(0, 12);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(78, 26);
+            this.btnThem.TabIndex = 4;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.dateTimePicker2);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.dtpDenNgay);
+            this.panel1.Controls.Add(this.dtpTuNgay);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.checkBox2);
-            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.btnDatLai);
+            this.panel1.Controls.Add(this.btnTim);
+            this.panel1.Controls.Add(this.txtTen);
+            this.panel1.Controls.Add(this.chkThoiGian);
+            this.panel1.Controls.Add(this.chkTen);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -240,54 +250,58 @@ namespace DoAn_ver5.GUI
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(14, 195);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 17);
+            this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Từ ngày";
             // 
-            // button2
+            // btnDatLai
             // 
-            this.button2.Location = new System.Drawing.Point(111, 280);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 26);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Đặt lại";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDatLai.Location = new System.Drawing.Point(111, 280);
+            this.btnDatLai.Name = "btnDatLai";
+            this.btnDatLai.Size = new System.Drawing.Size(78, 26);
+            this.btnDatLai.TabIndex = 4;
+            this.btnDatLai.Text = "Đặt lại";
+            this.btnDatLai.UseVisualStyleBackColor = true;
+            this.btnDatLai.Click += new System.EventHandler(this.btnDatLai_Click);
             // 
-            // button1
+            // btnTim
             // 
-            this.button1.Location = new System.Drawing.Point(30, 280);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 26);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Tìm kiếm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnTim.Location = new System.Drawing.Point(30, 280);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(78, 26);
+            this.btnTim.TabIndex = 4;
+            this.btnTim.Text = "Tìm kiếm";
+            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
-            // textBox1
+            // txtTen
             // 
-            this.textBox1.Location = new System.Drawing.Point(17, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(238, 23);
-            this.textBox1.TabIndex = 2;
+            this.txtTen.Location = new System.Drawing.Point(17, 96);
+            this.txtTen.Name = "txtTen";
+            this.txtTen.Size = new System.Drawing.Size(238, 26);
+            this.txtTen.TabIndex = 2;
             // 
-            // checkBox2
+            // chkThoiGian
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(17, 153);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(169, 21);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Theo khoảng thời gian";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkThoiGian.AutoSize = true;
+            this.chkThoiGian.Location = new System.Drawing.Point(17, 153);
+            this.chkThoiGian.Name = "chkThoiGian";
+            this.chkThoiGian.Size = new System.Drawing.Size(194, 24);
+            this.chkThoiGian.TabIndex = 1;
+            this.chkThoiGian.Text = "Theo khoảng thời gian";
+            this.chkThoiGian.UseVisualStyleBackColor = true;
+            this.chkThoiGian.CheckedChanged += new System.EventHandler(this.chkThoiGian_CheckedChanged);
             // 
-            // checkBox1
+            // chkTen
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(17, 69);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(118, 21);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "Theo tên phim";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkTen.AutoSize = true;
+            this.chkTen.Location = new System.Drawing.Point(17, 69);
+            this.chkTen.Name = "chkTen";
+            this.chkTen.Size = new System.Drawing.Size(137, 24);
+            this.chkTen.TabIndex = 1;
+            this.chkTen.Text = "Theo tên phim";
+            this.chkTen.UseVisualStyleBackColor = true;
+            this.chkTen.CheckedChanged += new System.EventHandler(this.chkTen_CheckedChanged);
             // 
             // label1
             // 
@@ -296,31 +310,21 @@ namespace DoAn_ver5.GUI
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(25, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 29);
+            this.label1.Size = new System.Drawing.Size(260, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tra cứu suất chiếu";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(792, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(148, 26);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Cập nhật trạng thái";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // SuatChieuControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SuatChieuControl";
             this.Size = new System.Drawing.Size(1320, 575);
-            this.Load += new System.EventHandler(this.SuatChieuControl_Load);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -340,24 +344,24 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDenNgay;
+        private System.Windows.Forms.DateTimePicker dtpTuNgay;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lstSuatChieu;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnHienTatCa;
+        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button btnDatLai;
+        private System.Windows.Forms.Button btnTim;
+        private System.Windows.Forms.TextBox txtTen;
+        private System.Windows.Forms.CheckBox chkThoiGian;
+        private System.Windows.Forms.CheckBox chkTen;
         private System.Windows.Forms.Label label1;
     }
 }

@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="BLL\BLL_BackupAndRestore.cs" />
     <Compile Include="BLL\BLL_KhachHang.cs" />
+    <Compile Include="BLL\BLL_NhanVien.cs" />
     <Compile Include="BLL\BLL_Phim.cs" />
     <Compile Include="BLL\BLL_PhongChieu.cs" />
     <Compile Include="BLL\BLL_SuatChieu.cs" />

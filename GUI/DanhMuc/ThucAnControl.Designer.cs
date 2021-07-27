@@ -41,18 +41,18 @@ namespace DoAn_ver5.GUI
             this.listView2 = new System.Windows.Forms.ListView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnHienTatCa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btnDatLai = new System.Windows.Forms.Button();
+            this.btnTim = new System.Windows.Forms.Button();
+            this.cbbLoai = new System.Windows.Forms.ComboBox();
+            this.txtTen = new System.Windows.Forms.TextBox();
+            this.chkLoai = new System.Windows.Forms.CheckBox();
+            this.chkTen = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
@@ -108,6 +108,7 @@ namespace DoAn_ver5.GUI
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
             // 
             // columnHeader4
             // 
@@ -159,14 +160,14 @@ namespace DoAn_ver5.GUI
             this.panel3.Size = new System.Drawing.Size(1051, 531);
             this.panel3.TabIndex = 5;
             // 
-            // button6
+            // btnSua
             // 
-            this.button6.Location = new System.Drawing.Point(84, 12);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(78, 26);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Sửa";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnSua.Location = new System.Drawing.Point(84, 12);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(78, 26);
+            this.btnSua.TabIndex = 4;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
@@ -177,23 +178,25 @@ namespace DoAn_ver5.GUI
             this.button8.Text = "Xóa cỡ";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnHienTatCa
             // 
-            this.button4.Location = new System.Drawing.Point(622, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 26);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Hiện tất cả";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnHienTatCa.Location = new System.Drawing.Point(622, 12);
+            this.btnHienTatCa.Name = "btnHienTatCa";
+            this.btnHienTatCa.Size = new System.Drawing.Size(102, 26);
+            this.btnHienTatCa.TabIndex = 4;
+            this.btnHienTatCa.Text = "Hiện tất cả";
+            this.btnHienTatCa.UseVisualStyleBackColor = true;
+            this.btnHienTatCa.Click += new System.EventHandler(this.btnHienTatCa_Click);
             // 
-            // button5
+            // btnThem
             // 
-            this.button5.Location = new System.Drawing.Point(0, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(78, 26);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Thêm";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnThem.Location = new System.Drawing.Point(0, 12);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(78, 26);
+            this.btnThem.TabIndex = 4;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // button7
             // 
@@ -207,10 +210,10 @@ namespace DoAn_ver5.GUI
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.btnSua);
             this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.btnHienTatCa);
+            this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.button7);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(269, 0);
@@ -218,58 +221,60 @@ namespace DoAn_ver5.GUI
             this.panel2.Size = new System.Drawing.Size(1051, 44);
             this.panel2.TabIndex = 4;
             // 
-            // button2
+            // btnDatLai
             // 
-            this.button2.Location = new System.Drawing.Point(111, 234);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 26);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Đặt lại";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDatLai.Location = new System.Drawing.Point(111, 234);
+            this.btnDatLai.Name = "btnDatLai";
+            this.btnDatLai.Size = new System.Drawing.Size(78, 26);
+            this.btnDatLai.TabIndex = 4;
+            this.btnDatLai.Text = "Đặt lại";
+            this.btnDatLai.UseVisualStyleBackColor = true;
+            this.btnDatLai.Click += new System.EventHandler(this.btnDatLai_Click);
             // 
-            // button1
+            // btnTim
             // 
-            this.button1.Location = new System.Drawing.Point(30, 234);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 26);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Tìm kiếm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnTim.Location = new System.Drawing.Point(30, 234);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(78, 26);
+            this.btnTim.TabIndex = 4;
+            this.btnTim.Text = "Tìm kiếm";
+            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
-            // comboBox1
+            // cbbLoai
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(17, 180);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(238, 24);
-            this.comboBox1.TabIndex = 3;
+            this.cbbLoai.FormattingEnabled = true;
+            this.cbbLoai.Location = new System.Drawing.Point(17, 180);
+            this.cbbLoai.Name = "cbbLoai";
+            this.cbbLoai.Size = new System.Drawing.Size(238, 28);
+            this.cbbLoai.TabIndex = 3;
             // 
-            // textBox1
+            // txtTen
             // 
-            this.textBox1.Location = new System.Drawing.Point(17, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(238, 23);
-            this.textBox1.TabIndex = 2;
+            this.txtTen.Location = new System.Drawing.Point(17, 96);
+            this.txtTen.Name = "txtTen";
+            this.txtTen.Size = new System.Drawing.Size(238, 26);
+            this.txtTen.TabIndex = 2;
             // 
-            // checkBox2
+            // chkLoai
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(17, 153);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(137, 21);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Theo loại thức ăn";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkLoai.AutoSize = true;
+            this.chkLoai.Location = new System.Drawing.Point(17, 153);
+            this.chkLoai.Name = "chkLoai";
+            this.chkLoai.Size = new System.Drawing.Size(159, 24);
+            this.chkLoai.TabIndex = 1;
+            this.chkLoai.Text = "Theo loại thức ăn";
+            this.chkLoai.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // chkTen
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(17, 69);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(135, 21);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "Theo tên thức ăn";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkTen.AutoSize = true;
+            this.chkTen.Location = new System.Drawing.Point(17, 69);
+            this.chkTen.Name = "chkTen";
+            this.chkTen.Size = new System.Drawing.Size(156, 24);
+            this.chkTen.TabIndex = 1;
+            this.chkTen.Text = "Theo tên thức ăn";
+            this.chkTen.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -279,19 +284,19 @@ namespace DoAn_ver5.GUI
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(25, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 29);
+            this.label1.Size = new System.Drawing.Size(222, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tra cứu thức ăn";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.checkBox2);
-            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.btnDatLai);
+            this.panel1.Controls.Add(this.btnTim);
+            this.panel1.Controls.Add(this.cbbLoai);
+            this.panel1.Controls.Add(this.txtTen);
+            this.panel1.Controls.Add(this.chkLoai);
+            this.panel1.Controls.Add(this.chkTen);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -301,13 +306,13 @@ namespace DoAn_ver5.GUI
             // 
             // ThucAnControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ThucAnControl";
             this.Size = new System.Drawing.Size(1320, 575);
             this.panel4.ResumeLayout(false);
@@ -334,18 +339,18 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnHienTatCa;
+        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button btnDatLai;
+        private System.Windows.Forms.Button btnTim;
+        private System.Windows.Forms.ComboBox cbbLoai;
+        private System.Windows.Forms.TextBox txtTen;
+        private System.Windows.Forms.CheckBox chkLoai;
+        private System.Windows.Forms.CheckBox chkTen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
     }
