@@ -122,6 +122,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.btnHienTatCa.TabIndex = 4;
             this.btnHienTatCa.Text = "Hiện tất cả";
             this.btnHienTatCa.UseVisualStyleBackColor = true;
+            this.btnHienTatCa.Click += new System.EventHandler(this.btnHienTatCa_Click);
             // 
             // button5
             // 

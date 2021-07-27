@@ -117,5 +117,26 @@ namespace DoAn_ver5.GUI
 
             }
         }
+
+        private void btnHienTatCa_Click(object sender, EventArgs e)
+        {
+            int count = 1;
+            lstKhachHang.Items.Clear();
+            foreach (DataRow i in BLL_KhachHang.Instance.GetAllKH().Rows)
+            {
+                ListViewItem ls = new ListViewItem(count.ToString());
+                ls.SubItems.Add(i["MaKhachHang"].ToString());
+                ls.SubItems.Add(i["TenKhachHang"].ToString());
+                ls.SubItems.Add(i["GioiTinh"].ToString());
+                ls.SubItems.Add(i["CMND"].ToString());
+                ls.SubItems.Add(i["NgaySinh"].ToString());
+                ls.SubItems.Add(i["Email"].ToString());
+                ls.SubItems.Add(i["SDT"].ToString());
+                ls.SubItems.Add(i["LoaiKhachHang"].ToString());
+                ls.SubItems.Add(i["NgayDangKy"].ToString());
+                lstKhachHang.Items.Add(ls);
+                count++;
+            }
+        }
     }
 }
