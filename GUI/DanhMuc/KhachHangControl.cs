@@ -98,6 +98,8 @@ namespace DoAn_ver5.GUI
         {
             chkTen.Checked = false;
             chkCMND.Checked = false;
+            txtTen.Enabled = true;
+            txtCMND.Enabled = true;
             txtTen.Text = "";
             txtCMND.Text = "";
         }

@@ -98,6 +98,8 @@ namespace DoAn_ver5.GUI
             chkTen.Checked = false;
             chkLoai.Checked = false;
             txtTen.Text = "";
+            txtTen.Enabled = true;
+            cbbLoai.Enabled = true;
             cbbLoai.SelectedItem = null;
         }
 
@@ -105,6 +107,26 @@ namespace DoAn_ver5.GUI
         {
             ThucAn_ThemThucAn t = new ThucAn_ThemThucAn();
             t.ShowDialog();
+        }
+
+        private void chkTen_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkTen.Checked == true)
+            {
+                txtTen.Enabled = true;
+                chkLoai.Checked = false;
+                cbbLoai.Enabled = false;
+            }
+        }
+
+        private void chkLoai_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkLoai.Checked == true)
+            {
+                cbbLoai.Enabled = true;
+                chkTen.Checked = false;
+                txtTen.Enabled = false;
+            }
         }
     }
 }

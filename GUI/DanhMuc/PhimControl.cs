@@ -148,6 +148,9 @@ namespace DoAn_ver5.GUI
         private void btnDatLai_Click(object sender, EventArgs e)
         {
             txtTheoTenPhim.Text = "";
+            txtTheoTenPhim.Enabled = true;
+            dtpTuNgay.Enabled = true;
+            dtpDenNgay.Enabled = true;
             chkTheoTenPhim.Checked = false;
             chkTheoKhoangTime.Checked = false;
         }

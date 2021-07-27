@@ -136,6 +136,9 @@ namespace DoAn_ver5.GUI
         {
             txtCMND.Text = "";
             txtTen.Text = "";
+            txtTen.Enabled = true;
+            txtCMND.Enabled = true;
+            cbbChucVu.Enabled = true;
             cbbChucVu.SelectedItem = null;
             chkChucVu.Checked = false;
             chkCMND.Checked = false;

@@ -265,6 +265,7 @@ namespace DoAn_ver5.GUI
             this.chkLoai.TabIndex = 1;
             this.chkLoai.Text = "Theo loại thức ăn";
             this.chkLoai.UseVisualStyleBackColor = true;
+            this.chkLoai.CheckedChanged += new System.EventHandler(this.chkLoai_CheckedChanged);
             // 
             // chkTen
             // 
@@ -275,6 +276,7 @@ namespace DoAn_ver5.GUI
             this.chkTen.TabIndex = 1;
             this.chkTen.Text = "Theo tên thức ăn";
             this.chkTen.UseVisualStyleBackColor = true;
+            this.chkTen.CheckedChanged += new System.EventHandler(this.chkTen_CheckedChanged);
             // 
             // label1
             // 

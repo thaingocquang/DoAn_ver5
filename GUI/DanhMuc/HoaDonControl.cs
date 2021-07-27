@@ -31,5 +31,38 @@ namespace DoAn_ver5.GUI.DanhMuc
         {
 
         }
+
+        private void btnDatLai_Click(object sender, EventArgs e)
+        {
+            chkMa.Checked = false;
+            chkThoiGian.Checked = false;
+            dtpTuNgay.Enabled = true;
+            dtpDenNgay.Enabled = true;
+            txtMa.Text = "";
+            txtMa.Enabled = true;
+            
+        }
+
+        private void chkMa_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkMa.Checked == true)
+            {
+                txtMa.Enabled = true;
+                chkThoiGian.Checked = false;
+                dtpTuNgay.Enabled = false;
+                dtpDenNgay.Enabled = false;
+            }
+        }
+
+        private void chkThoiGian_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkThoiGian.Checked == true)
+            {
+                dtpTuNgay.Enabled = true;
+                dtpDenNgay.Enabled = true;
+                chkMa.Checked = false;
+                txtMa.Enabled = false;
+            }
+        }
     }
 }
