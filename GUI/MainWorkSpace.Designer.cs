@@ -63,6 +63,7 @@ namespace DoAn_ver5.GUI
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.lblDangXuat = new System.Windows.Forms.Label();
+            this.lblThongTinNhanVien = new System.Windows.Forms.Label();
             this.tabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -174,7 +175,7 @@ namespace DoAn_ver5.GUI
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1326, 658);
+            this.tabPage2.Size = new System.Drawing.Size(1326, 655);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Nghiệp vụ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -185,7 +186,7 @@ namespace DoAn_ver5.GUI
             this.panel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel6.Location = new System.Drawing.Point(3, 80);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1320, 575);
+            this.panel6.Size = new System.Drawing.Size(1320, 572);
             this.panel6.TabIndex = 1;
             // 
             // panel5
@@ -326,7 +327,7 @@ namespace DoAn_ver5.GUI
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1326, 658);
+            this.tabPage1.Size = new System.Drawing.Size(1326, 655);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Danh mục";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -338,7 +339,7 @@ namespace DoAn_ver5.GUI
             this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(3, 80);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1320, 575);
+            this.panel4.Size = new System.Drawing.Size(1320, 572);
             this.panel4.TabIndex = 1;
             // 
             // panel3
@@ -447,12 +448,11 @@ namespace DoAn_ver5.GUI
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Location = new System.Drawing.Point(0, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1334, 691);
+            this.tabControl1.Size = new System.Drawing.Size(1334, 688);
             this.tabControl1.TabIndex = 0;
             // 
             // lblDangXuat
@@ -470,12 +470,25 @@ namespace DoAn_ver5.GUI
             this.lblDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblDangXuat.Click += new System.EventHandler(this.label21_Click);
             // 
+            // lblThongTinNhanVien
+            // 
+            this.lblThongTinNhanVien.AutoSize = true;
+            this.lblThongTinNhanVien.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblThongTinNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThongTinNhanVien.Location = new System.Drawing.Point(1156, 5);
+            this.lblThongTinNhanVien.Name = "lblThongTinNhanVien";
+            this.lblThongTinNhanVien.Size = new System.Drawing.Size(60, 20);
+            this.lblThongTinNhanVien.TabIndex = 2;
+            this.lblThongTinNhanVien.Text = "label10";
+            this.lblThongTinNhanVien.Click += new System.EventHandler(this.lblThongTinNhanVien_Click);
+            // 
             // MainWorkSpace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(1334, 691);
+            this.Controls.Add(this.lblThongTinNhanVien);
             this.Controls.Add(this.lblDangXuat);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -495,6 +508,7 @@ namespace DoAn_ver5.GUI
             this.panel3.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -534,5 +548,6 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.Label labelHoaDon;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label lblDangXuat;
+        private System.Windows.Forms.Label lblThongTinNhanVien;
     }
 }

@@ -233,5 +233,11 @@ namespace DoAn_ver5.GUI
             SaoLuuPhucHoi slph = new SaoLuuPhucHoi();
             slph.Show();
         }
+
+        private void lblThongTinNhanVien_Click(object sender, EventArgs e)
+        {
+            ThongTinNhanVien frm = new ThongTinNhanVien();
+            frm.Show();
+        }
     }
 }

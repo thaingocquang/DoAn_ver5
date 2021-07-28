@@ -10,7 +10,7 @@ namespace DoAn_ver5.DAL
 {
     public class DataProvider
     {
-        private string cnnStr = @"Data Source=LAPTOP-51GQMDC8\SQLEXPRESS;Initial Catalog=DoAn;Integrated Security=True";
+        private string cnnStr = @"Data Source=DESKTOP-AQ65L5R\SQLEXPRESS;Initial Catalog=DOAN_TEST;Integrated Security=True";
         
         private static DataProvider _Instance;
         public static DataProvider Instance
@@ -27,7 +27,7 @@ namespace DoAn_ver5.DAL
         }
         private DataProvider()
         {
-            cnnStr = @"Data Source=LAPTOP-51GQMDC8\SQLEXPRESS;Initial Catalog=DOAN_TEST;Integrated Security=True";
+            cnnStr = @"Data Source=DESKTOP-AQ65L5R\SQLEXPRESS;Initial Catalog=DOAN_TEST;Integrated Security=True";
         }
         public bool ExcuteDB(string query)
         {

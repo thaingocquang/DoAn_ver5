@@ -162,6 +162,12 @@
     <Compile Include="GUI\HeThong\TaiKhoanControl.Designer.cs">
       <DependentUpon>TaiKhoanControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\HeThong\ThongTinNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HeThong\ThongTinNhanVien.Designer.cs">
+      <DependentUpon>ThongTinNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\MainWorkSpace.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HeThong\TaiKhoanControl.resx">
       <DependentUpon>TaiKhoanControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HeThong\ThongTinNhanVien.resx">
+      <DependentUpon>ThongTinNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainWorkSpace.resx">
       <DependentUpon>MainWorkSpace.cs</DependentUpon>
@@ -456,6 +465,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Image\logout.png" />
+    <Content Include="Image\NhanVienHeThong.png" />
     <Content Include="SQL\02_Add-TaiKhoan.sql" />
     <EmbeddedResource Include="SQL\01_Create-Database.sql" />
   </ItemGroup>
