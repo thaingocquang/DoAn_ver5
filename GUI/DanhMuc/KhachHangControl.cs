@@ -114,7 +114,10 @@ namespace DoAn_ver5.GUI
         {
             if(lstKhachHang.SelectedItems.Count > 0)
             {
-
+                ListViewItem ls = lstKhachHang.SelectedItems[0];
+                string s = ls.SubItems[2].Text;
+                KhachHang_SuaKhachHang kh = new KhachHang_SuaKhachHang(s);
+                kh.ShowDialog();
             }
         }
 

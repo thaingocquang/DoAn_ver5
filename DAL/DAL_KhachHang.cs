@@ -61,16 +61,32 @@ namespace DoAn_ver5.DAL
             data = DataProvider.Instance.GetRecords(query);
             return data;
         }
-        public bool InsertKhachHang(string MaKhachHang, string TenKhachHang, string GioiTinh, string NgaySinh, string Email, string SDT, string LoaiKhachHang, string NgayDangKi, int CMND)
+        public bool InsertKhachHang(string MaKhachHang, string TenKhachHang, string GioiTinh, int CMND, string NgaySinh, string Email, string SDT, string NgayDangKi)
         {
             try
             {
-                string query = "insert into KhachHang values ( N'" + MaKhachHang + "',N'" + TenKhachHang + "',N'" + GioiTinh + "','" + NgaySinh +
-                    "','" + Email + "',N'" + SDT + "',N'" + LoaiKhachHang + "','" + NgayDangKi + "'," + CMND + ")";
+                string query = "insert into KhachHang (MaKhachHang, TenKhachHang, GioiTinh, CMND, NgaySinh, Email, SDT, NgayDangKi) values ( N'" + MaKhachHang + "',N'" + TenKhachHang + "',N'" + GioiTinh + "'," + CMND + ",'" + NgaySinh +
+                    "','" + Email + "',N'" + SDT + "','" + NgayDangKi + "')";
                 DataProvider.Instance.ExcuteDB(query);
                 return true;
             }
             catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
+
+        public bool UpdateKhachHang( string TenKhachHang, string GioiTinh, string NgaySinh, string Email, string SDT, string NgayDangKi, int CMND, string MaKhachHang)
+        {
+            try
+            {
+                string query = "update KhachHang set TenKhachHang = N'" + TenKhachHang + "', GioiTinh = N'" + GioiTinh + "', NgaySinh = '" + NgaySinh +
+                    "', Email = '" + Email + "', SDT = '" + SDT + "', NgayDangKi = '" + NgayDangKi + "', CMND = " + CMND + " where MaKhachHang = N'" + MaKhachHang ;
+                DataProvider.Instance.ExcuteDB(query);
+                return true;
+            }
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
                 return false;

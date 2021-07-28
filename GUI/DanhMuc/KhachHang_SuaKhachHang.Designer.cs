@@ -30,19 +30,19 @@ namespace DoAn_ver5.GUI.DanhMuc
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayDK = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.rdNam = new System.Windows.Forms.RadioButton();
+            this.rdNu = new System.Windows.Forms.RadioButton();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtCMND = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtTen = new System.Windows.Forms.TextBox();
+            this.txtMa = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -60,17 +60,17 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.dtpNgayDK);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.radioButton2);
-            this.panel2.Controls.Add(this.radioButton1);
-            this.panel2.Controls.Add(this.dateTimePicker2);
-            this.panel2.Controls.Add(this.textBox7);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.rdNam);
+            this.panel2.Controls.Add(this.rdNu);
+            this.panel2.Controls.Add(this.dtpNgaySinh);
+            this.panel2.Controls.Add(this.txtSDT);
+            this.panel2.Controls.Add(this.txtCMND);
+            this.panel2.Controls.Add(this.txtEmail);
+            this.panel2.Controls.Add(this.txtTen);
+            this.panel2.Controls.Add(this.txtMa);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label11);
@@ -83,14 +83,13 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.panel2.Size = new System.Drawing.Size(688, 380);
             this.panel2.TabIndex = 9;
             // 
-            // dateTimePicker1
+            // dtpNgayDK
             // 
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(463, 18);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(203, 22);
-            this.dateTimePicker1.TabIndex = 8;
+            this.dtpNgayDK.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayDK.Location = new System.Drawing.Point(463, 18);
+            this.dtpNgayDK.Name = "dtpNgayDK";
+            this.dtpNgayDK.Size = new System.Drawing.Size(203, 22);
+            this.dtpNgayDK.TabIndex = 8;
             // 
             // label5
             // 
@@ -103,7 +102,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.btnHuy);
             this.panel3.Controls.Add(this.btnLuu);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 325);
@@ -111,15 +110,15 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.panel3.Size = new System.Drawing.Size(688, 55);
             this.panel3.TabIndex = 6;
             // 
-            // button2
+            // btnHuy
             // 
-            this.button2.Location = new System.Drawing.Point(542, 19);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(76, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Hủy bỏ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnHuy.Location = new System.Drawing.Point(542, 19);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(76, 23);
+            this.btnHuy.TabIndex = 0;
+            this.btnHuy.Text = "Hủy bỏ";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -131,70 +130,70 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // radioButton2
+            // rdNam
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(126, 287);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(58, 21);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nam";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdNam.AutoSize = true;
+            this.rdNam.Location = new System.Drawing.Point(126, 287);
+            this.rdNam.Name = "rdNam";
+            this.rdNam.Size = new System.Drawing.Size(58, 21);
+            this.rdNam.TabIndex = 4;
+            this.rdNam.TabStop = true;
+            this.rdNam.Text = "Nam";
+            this.rdNam.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rdNu
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(205, 287);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(47, 21);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nữ";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdNu.AutoSize = true;
+            this.rdNu.Location = new System.Drawing.Point(205, 287);
+            this.rdNu.Name = "rdNu";
+            this.rdNu.Size = new System.Drawing.Size(47, 21);
+            this.rdNu.TabIndex = 4;
+            this.rdNu.TabStop = true;
+            this.rdNu.Text = "Nữ";
+            this.rdNu.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker2
+            // dtpNgaySinh
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(463, 162);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(203, 22);
-            this.dateTimePicker2.TabIndex = 3;
+            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgaySinh.Location = new System.Drawing.Point(463, 162);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(203, 22);
+            this.dtpNgaySinh.TabIndex = 3;
             // 
-            // textBox7
+            // txtSDT
             // 
-            this.textBox7.Location = new System.Drawing.Point(463, 93);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(203, 22);
-            this.textBox7.TabIndex = 1;
+            this.txtSDT.Location = new System.Drawing.Point(463, 93);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(203, 22);
+            this.txtSDT.TabIndex = 1;
             // 
-            // textBox5
+            // txtCMND
             // 
-            this.textBox5.Location = new System.Drawing.Point(130, 164);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(203, 22);
-            this.textBox5.TabIndex = 1;
+            this.txtCMND.Location = new System.Drawing.Point(130, 164);
+            this.txtCMND.Name = "txtCMND";
+            this.txtCMND.Size = new System.Drawing.Size(203, 22);
+            this.txtCMND.TabIndex = 1;
             // 
-            // textBox6
+            // txtEmail
             // 
-            this.textBox6.Location = new System.Drawing.Point(130, 223);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(203, 22);
-            this.textBox6.TabIndex = 1;
+            this.txtEmail.Location = new System.Drawing.Point(130, 223);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(203, 22);
+            this.txtEmail.TabIndex = 1;
             // 
-            // textBox2
+            // txtTen
             // 
-            this.textBox2.Location = new System.Drawing.Point(130, 88);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(203, 22);
-            this.textBox2.TabIndex = 1;
+            this.txtTen.Location = new System.Drawing.Point(130, 88);
+            this.txtTen.Name = "txtTen";
+            this.txtTen.Size = new System.Drawing.Size(203, 22);
+            this.txtTen.TabIndex = 1;
             // 
-            // textBox1
+            // txtMa
             // 
-            this.textBox1.Location = new System.Drawing.Point(134, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 22);
-            this.textBox1.TabIndex = 1;
+            this.txtMa.Location = new System.Drawing.Point(134, 18);
+            this.txtMa.Name = "txtMa";
+            this.txtMa.Size = new System.Drawing.Size(199, 22);
+            this.txtMa.TabIndex = 1;
             // 
             // label13
             // 
@@ -314,19 +313,19 @@ namespace DoAn_ver5.GUI.DanhMuc
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpNgayDK;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RadioButton rdNam;
+        private System.Windows.Forms.RadioButton rdNu;
+        private System.Windows.Forms.DateTimePicker dtpNgaySinh;
+        private System.Windows.Forms.TextBox txtSDT;
+        private System.Windows.Forms.TextBox txtCMND;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtTen;
+        private System.Windows.Forms.TextBox txtMa;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label11;

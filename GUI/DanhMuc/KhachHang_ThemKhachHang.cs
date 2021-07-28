@@ -30,12 +30,11 @@ namespace DoAn_ver5.GUI.DanhMuc
                 txtMaKhachHang.Text.Trim(),
                 txtHovaTen.Text.Trim(),
                 rbNam.Checked == true ? rbNam.Text : rbNu.Text,
+                int.Parse(txtCMND.Text.Trim()),
                 dtpNgaySinh.Value.Date.ToString("yyyy/MM/dd"),
                 txtEmail.Text.Trim(),
                 txtSDT.Text.Trim(),
-                "Thường",
-                dtpNgayDK.Value.Date.ToString("yyyy/MM/dd"),
-                Convert.ToInt32(txtCMND.Text.Trim())
+                dtpNgayDK.Value.Date.ToString("yyyy/MM/dd")
             );
             this.Close();
         }
