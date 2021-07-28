@@ -27,12 +27,6 @@ namespace DoAn_ver5.GUI.DanhMuc
         {
             InitializeComponent();
         }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnDatLai_Click(object sender, EventArgs e)
         {
             chkMa.Checked = false;
@@ -81,6 +75,24 @@ namespace DoAn_ver5.GUI.DanhMuc
                 ls.SubItems.Add(BLL_HoaDon.Instance.GetTongTienByMHD(i["MaHoaDon"].ToString()) + "");
                 ls.SubItems.Add(i["MaNhanVien"].ToString());
                 listView1.Items.Add(ls);
+                count++;
+            }
+        }
+
+        private void listView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            ListViewItem ls = listView1.SelectedItems[0];
+            int count = 1;
+            listView2.Items.Clear();
+            foreach (DataRow i in BLL_HoaDon.Instance.GetThucAnByMaHD(ls.SubItems[1].Text).Rows)
+            {
+                ListViewItem sl = new ListViewItem(count.ToString());
+                sl.SubItems.Add(i["MaThucAn"].ToString());
+                sl.SubItems.Add(i["TenThucAn"].ToString());
+                sl.SubItems.Add(i["KichCo"].ToString());
+                sl.SubItems.Add(i["GiaBan"].ToString());
+                sl.SubItems.Add(i["SoLuong"].ToString());
+                listView2.Items.Add(sl);
                 count++;
             }
         }

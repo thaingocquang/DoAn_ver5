@@ -94,10 +94,9 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.btnHienTatCa);
             this.panel2.Controls.Add(this.button5);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(269, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1051, 44);
+            this.panel2.Size = new System.Drawing.Size(1051, 51);
             this.panel2.TabIndex = 7;
             // 
             // btnHienTatCa

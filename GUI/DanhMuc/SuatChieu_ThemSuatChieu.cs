@@ -16,5 +16,15 @@ namespace DoAn_ver5.GUI
         {
             InitializeComponent();
         }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

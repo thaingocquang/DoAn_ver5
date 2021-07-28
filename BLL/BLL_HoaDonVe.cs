@@ -29,7 +29,7 @@ namespace DoAn_ver5.BLL
             List<DTO_HoaDonVe> list = new List<DTO_HoaDonVe>();
             foreach(DataRow row in DAL_HoaDonVe.Instance.GetAllHoaDonVe().Rows)
             {
-                list.Add(new DTO_HoaDonVe(row["MaHoaDonVe"].ToString(), row["MaSuatChieu"].ToString(), row["MaGhe"].ToString(), (DateTime)row["NgayBanVe"], row["MaNhanVien"].ToString(), (float)row["GiaVe"], row["MaKhachHang"].ToString());
+                list.Add(new DTO_HoaDonVe(row["MaHoaDonVe"].ToString(), row["MaSuatChieu"].ToString(), row["MaGhe"].ToString(), (DateTime)row["NgayBanVe"], row["MaNhanVien"].ToString(), (float)row["GiaVe"], row["MaKhachHang"].ToString()));
             }
             return list;    
         }

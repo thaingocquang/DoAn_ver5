@@ -77,6 +77,7 @@
     <Compile Include="DAL\DAL_ThucAn.cs" />
     <Compile Include="DAL\DAL_Ve.cs" />
     <Compile Include="DAL\DataProvider.cs" />
+    <Compile Include="DTO\DTO_HoaDonVe.cs" />
     <Compile Include="DTO\DTO_KhachHang.cs" />
     <Compile Include="DTO\DTO_Phim.cs" />
     <Compile Include="DTO\DTO_PhongChieu.cs" />

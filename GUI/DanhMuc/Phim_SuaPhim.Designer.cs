@@ -115,7 +115,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(587, 400);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Phim";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // dtpNgayChieu
@@ -382,7 +382,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(587, 400);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Suất Phim";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // panel2

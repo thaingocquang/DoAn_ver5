@@ -90,7 +90,7 @@ namespace DoAn_ver5.GUI
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Giờ";
+            this.columnHeader5.Text = "Ngày Giờ";
             this.columnHeader5.Width = 150;
             // 
             // columnHeader4

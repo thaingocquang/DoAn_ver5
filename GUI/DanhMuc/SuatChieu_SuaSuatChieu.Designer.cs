@@ -31,7 +31,7 @@ namespace DoAn_ver5.GUI.DanhMuc
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnHuy = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -65,7 +65,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.Controls.Add(this.btnHuy);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnLuu);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 566);
             this.panel2.Name = "panel2";
@@ -83,15 +83,16 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // button1
+            // btnLuu
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(389, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 30);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Lưu";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Location = new System.Drawing.Point(389, 12);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 30);
+            this.btnLuu.TabIndex = 0;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // panel1
             // 
@@ -187,23 +188,23 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Mã phim";
-            this.columnHeader1.Width = 80;
+            this.columnHeader1.Text = "Mã Phim";
+            this.columnHeader1.Width = 120;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Định dạng";
-            this.columnHeader2.Width = 80;
+            this.columnHeader2.Width = 100;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Hình thức";
-            this.columnHeader3.Width = 90;
+            this.columnHeader3.Width = 150;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Ngôn ngữ";
-            this.columnHeader4.Width = 110;
+            this.columnHeader4.Width = 150;
             // 
             // label9
             // 
@@ -327,7 +328,7 @@ namespace DoAn_ver5.GUI.DanhMuc
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnHuy;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;

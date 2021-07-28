@@ -67,12 +67,13 @@ namespace DoAn_ver5.DAL
                 return false;
             }
         }
-        public bool UpdateNhanVien(string MaNhanVien, string HovaTen, string NgaySinh, string GioiTinh, string DiaChi, int CMND, string Email, string SDT, string ChucVu, string NgayVaoLam)
+        public bool UpdateNhanVien(string HovaTen, string NgaySinh, string GioiTinh, string DiaChi,
+            int CMND, string Email, string SDT, string ChucVu, string NgayVaoLam, string MaNhanVien)
         {
             try
             {
-                string query = "update NhanVien set MaNhanVien = '" + MaNhanVien + "', HovaTen = " + HovaTen + "', NgaySinh = " + NgaySinh + ", GioiTinh = N'"+ GioiTinh + ","
-                    +"DiaChi = N'" + DiaChi + ", CMND = "+CMND + ", Email = '" + Email +", SDT = "+ SDT + ", ChucVu = N'"+ ChucVu + ", NgayVaoLam =" + NgayVaoLam;
+                string query = "update NhanVien set HovaTen = N'" + HovaTen + "', NgaySinh = '" + NgaySinh + "', GioiTinh = N'"+ GioiTinh + ","
+                    +"DiaChi = N'" + DiaChi + ", CMND = "+ CMND + ", Email = '" + Email + "', SDT = '"+ SDT + "', ChucVu = N'"+ ChucVu + ", NgayVaoLam = '" + NgayVaoLam +"' where MaNhanVien = '" + MaNhanVien + "'";
                 DataProvider.Instance.ExcuteDB(query);
                 return true;
             }

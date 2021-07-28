@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAn_ver5.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,29 @@ namespace DoAn_ver5.GUI
         public NhanVien_ThemNhanVien()
         {
             InitializeComponent();
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            DAL_NhanVien.Instance.InsertNhanVien
+                (
+                    txtMaNV.Text.Trim(),
+                    txtTen.Text.Trim(),
+                    dtpNgaySinh.Value.Date.ToString("yyyy/MM/dd"),
+                    rdNam.Checked == true ? rdNam.Text : rdNu.Text,
+                    txtDiaChi.Text.Trim(),
+                    int.Parse(txtCMND.Text.Trim()),
+                    txtEmail.Text.Trim(),
+                    txtSDT.Text.Trim(),
+                    cbbChucVu.SelectedItem.ToString(),
+                    dtpNgayLam.Value.Date.ToString("yyyy/MM/dd")
+                );
+            this.Close();
         }
     }
 }

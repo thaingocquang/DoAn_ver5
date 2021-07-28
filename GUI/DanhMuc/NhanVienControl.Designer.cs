@@ -40,7 +40,7 @@ namespace DoAn_ver5.GUI
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lstNhanVien = new System.Windows.Forms.ListView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSua = new System.Windows.Forms.Button();
@@ -115,9 +115,9 @@ namespace DoAn_ver5.GUI
             // 
             this.columnHeader1.Text = "STT";
             // 
-            // listView1
+            // lstNhanVien
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lstNhanVien.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
@@ -129,20 +129,20 @@ namespace DoAn_ver5.GUI
             this.columnHeader9,
             this.columnHeader10,
             this.columnHeader12});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1051, 531);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lstNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstNhanVien.FullRowSelect = true;
+            this.lstNhanVien.GridLines = true;
+            this.lstNhanVien.HideSelection = false;
+            this.lstNhanVien.Location = new System.Drawing.Point(0, 0);
+            this.lstNhanVien.Name = "lstNhanVien";
+            this.lstNhanVien.Size = new System.Drawing.Size(1051, 531);
+            this.lstNhanVien.TabIndex = 0;
+            this.lstNhanVien.UseCompatibleStateImageBehavior = false;
+            this.lstNhanVien.View = System.Windows.Forms.View.Details;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.listView1);
+            this.panel3.Controls.Add(this.lstNhanVien);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(269, 44);
             this.panel3.Name = "panel3";
@@ -169,6 +169,7 @@ namespace DoAn_ver5.GUI
             this.btnSua.TabIndex = 4;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnHienTatCa
             // 
@@ -188,6 +189,7 @@ namespace DoAn_ver5.GUI
             this.btnThem.TabIndex = 4;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // panel1
             // 
@@ -325,7 +327,7 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lstNhanVien;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnSua;

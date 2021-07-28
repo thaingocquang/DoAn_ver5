@@ -26,5 +26,10 @@ namespace DoAn_ver5.GUI.DanhMuc
         {
             this.Close();
         }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using DoAn_ver5.BLL;
+using DoAn_ver5.GUI.DanhMuc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -71,7 +72,7 @@ namespace DoAn_ver5.GUI
             int count = 1;
             if (chkTen.Checked == true)
             {
-                listView1.Items.Clear();
+                lstNhanVien.Items.Clear();
                 foreach (DataRow i in BLL_NhanVien.Instance.GetNhanVienByTen(Ten).Rows)
                 {
                     ListViewItem ls = new ListViewItem(count.ToString());
@@ -85,13 +86,13 @@ namespace DoAn_ver5.GUI
                     ls.SubItems.Add(i["SDT"].ToString());
                     ls.SubItems.Add(i["ChucVu"].ToString());
                     ls.SubItems.Add(i["NgayVaoLam"].ToString());
-                    listView1.Items.Add(ls);
+                    lstNhanVien.Items.Add(ls);
                     count++;
                 }
             }
             if (chkChucVu.Checked == true)
             {
-                listView1.Items.Clear();
+                lstNhanVien.Items.Clear();
                 foreach (DataRow i in BLL_NhanVien.Instance.GetNhanVienByChucVu(cbbChucVu.SelectedItem.ToString()).Rows)
                 {
                     ListViewItem ls = new ListViewItem(count.ToString());
@@ -105,14 +106,14 @@ namespace DoAn_ver5.GUI
                     ls.SubItems.Add(i["SDT"].ToString());
                     ls.SubItems.Add(i["ChucVu"].ToString());
                     ls.SubItems.Add(i["NgayVaoLam"].ToString());
-                    listView1.Items.Add(ls);
+                    lstNhanVien.Items.Add(ls);
                     count++;
                 }
 
             }
             if (chkCMND.Checked == true)
             {
-                listView1.Items.Clear();
+                lstNhanVien.Items.Clear();
                 foreach (DataRow i in BLL_NhanVien.Instance.GetNhanVienByCMND(CMND).Rows)
                 {
                     ListViewItem ls = new ListViewItem(count.ToString());
@@ -126,7 +127,7 @@ namespace DoAn_ver5.GUI
                     ls.SubItems.Add(i["SDT"].ToString());
                     ls.SubItems.Add(i["ChucVu"].ToString());
                     ls.SubItems.Add(i["NgayVaoLam"].ToString());
-                    listView1.Items.Add(ls);
+                    lstNhanVien.Items.Add(ls);
                     count++;
                 }
             }
@@ -148,7 +149,7 @@ namespace DoAn_ver5.GUI
         private void btnHienTatCa_Click(object sender, EventArgs e)
         {
             int count = 1;
-            listView1.Items.Clear();
+            lstNhanVien.Items.Clear();
             foreach (DataRow i in BLL_NhanVien.Instance.GetAllNhanVien().Rows)
             {
 
@@ -163,8 +164,25 @@ namespace DoAn_ver5.GUI
                 ls.SubItems.Add(i["SDT"].ToString());
                 ls.SubItems.Add(i["ChucVu"].ToString());
                 ls.SubItems.Add(i["NgayVaoLam"].ToString());
-                listView1.Items.Add(ls);
+                lstNhanVien.Items.Add(ls);
                 count++;
+            }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            NhanVien_ThemNhanVien nv = new NhanVien_ThemNhanVien();
+            nv.ShowDialog();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if(lstNhanVien.SelectedItems.Count > 0)
+            {
+                ListViewItem ls = lstNhanVien.SelectedItems[0];
+                string s = ls.SubItems[2].Text.Trim();
+                NhanVien_SuaNhanVien nv = new NhanVien_SuaNhanVien(s);
+                nv.ShowDialog();
             }
         }
     }

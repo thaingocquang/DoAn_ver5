@@ -60,5 +60,39 @@ namespace DoAn_ver5.DAL
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
+
+        public bool InsertSuatChieu()
+        {
+            try
+            {
+                string query = "insert into";
+                DataProvider.Instance.ExcuteDB(query);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
+
+        public bool UpdateSuatChieu(string MaPhim, string TenPhim, int ThoiLuong, int Namsx,
+        int DoTuoi, string NgayRaMat, string TrangThai, string DienVien, string Nuocsx, string NN,
+        string Nhasx, int DoanhThu, string TomTat)
+        {
+            try
+            {
+                string query = "update SuatChieu set TenPhim = N'" + TenPhim + "', ThoiLuong = " + ThoiLuong + ", NamSanXuat = " + Namsx + "," +
+                    " GioiHanTuoi = " + DoTuoi + ",NgayRaMat = '" + NgayRaMat + "',TrangThai = '" + TrangThai + "', DienVien = N'" + DienVien
+                    + "', NuocSanXuat = N'" + Nuocsx + "', NgonNgu = N'" + NN + "', NhaSanXuat = N'" + Nhasx + "', DoanhThu = " + DoanhThu + ",TomTat = N'" + TomTat + "' where MaPhim = '" + MaPhim + "'";
+                DataProvider.Instance.ExcuteDB(query);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
     }
 }
