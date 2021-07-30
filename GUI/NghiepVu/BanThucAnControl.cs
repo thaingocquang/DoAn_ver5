@@ -39,13 +39,13 @@ namespace DoAn_ver5.GUI.NghiepVu
             {
                 foreach(DTO_ThucAn TA in listTA)
                 {
-                    if (TA.MaLoaiThucAn == "Food")
+                    if (TA.LoaiThucAn == "Đồ ăn")
                     {
                         ListViewItem lvi = new ListViewItem(TA.TenThucAn);
                         lvi.SubItems.Add(TA.KichCo);
                         lvi.SubItems.Add(TA.GiaBan + "");
                         lstDoAn.Items.Add(lvi);
-                        lvi.Tag = TA.MaLoaiThucAn;
+                        lvi.Tag = TA.LoaiThucAn;
                     }
                 }
             }
@@ -53,7 +53,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             {
                 foreach(ListViewItem lvi in lstDoAn.Items)
                 {
-                    if((string)lvi.Tag == "Food")
+                    if((string)lvi.Tag == "Đồ ăn")
                     {
                         lstDoAn.Items.Remove(lvi);
                     }
@@ -68,13 +68,13 @@ namespace DoAn_ver5.GUI.NghiepVu
             {
                 foreach (DTO_ThucAn TA in listTA)
                 {
-                    if (TA.MaLoaiThucAn == "Drink")
+                    if (TA.LoaiThucAn == "Nước uống")
                     {
                         ListViewItem lvi = new ListViewItem(TA.TenThucAn);
                         lvi.SubItems.Add(TA.KichCo);
                         lvi.SubItems.Add(TA.GiaBan + "");
                         lstDoAn.Items.Add(lvi);
-                        lvi.Tag = TA.MaLoaiThucAn;
+                        lvi.Tag = TA.LoaiThucAn;
                     }
                 }
             }
@@ -82,7 +82,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             {
                 foreach (ListViewItem lvi in lstDoAn.Items)
                 {
-                    if ((string)lvi.Tag == "Drink")
+                    if ((string)lvi.Tag == "Nước uống")
                     {
                         lstDoAn.Items.Remove(lvi);
                     }
@@ -117,11 +117,16 @@ namespace DoAn_ver5.GUI.NghiepVu
 
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+        private void lstBanDoAn_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lstBanDoAn.Items.Remove(lstBanDoAn.SelectedItems[0]);
+
         }
-        
+
+        private void lstDoAn_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         // nothing
     }
 }

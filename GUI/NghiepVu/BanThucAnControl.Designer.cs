@@ -105,6 +105,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.lstDoAn.TabIndex = 0;
             this.lstDoAn.UseCompatibleStateImageBehavior = false;
             this.lstDoAn.View = System.Windows.Forms.View.Details;
+            this.lstDoAn.SelectedIndexChanged += new System.EventHandler(this.lstDoAn_SelectedIndexChanged);
             // 
             // columnHeader8
             // 
@@ -260,7 +261,6 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.btnXoa.TabIndex = 4;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // button5
             // 
@@ -308,6 +308,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.lstBanDoAn.TabIndex = 0;
             this.lstBanDoAn.UseCompatibleStateImageBehavior = false;
             this.lstBanDoAn.View = System.Windows.Forms.View.Details;
+            this.lstBanDoAn.SelectedIndexChanged += new System.EventHandler(this.lstBanDoAn_SelectedIndexChanged);
             // 
             // columnHeader1
             // 

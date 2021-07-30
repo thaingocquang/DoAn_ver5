@@ -28,16 +28,6 @@ namespace DoAn_ver5.GUI.HeThong
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void TaiKhoanControl_Load(object sender, EventArgs e)
         {
             HienTatCaTaiKhoan();
@@ -53,11 +43,28 @@ namespace DoAn_ver5.GUI.HeThong
                     lvi.SubItems.Add(row["TenDangNhap"].ToString());
                     lvi.SubItems.Add(row["MaNhanVien"].ToString());
                     lvi.SubItems.Add(row["HoVaTen"].ToString());
-                    lvi.SubItems.Add(row["MatKhau"].ToString());
-                    lvi.SubItems.Add(row["TrangThai"].ToString());
+                    lvi.SubItems.Add(row["ChucVu"].ToString());
+                    lvi.SubItems.Add(((bool)row["TrangThai"]==true)?"Kích hoạt":"Tạm ngưng");
                     lstTaiKhoan.Items.Add(lvi);
                     i++;
                 }
+        }
+
+        private void lstTaiKhoan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstTaiKhoan.SelectedItems.Count == 0)
+                return;
+            lblTenNhanVien.Text = lstTaiKhoan.SelectedItems[0].SubItems[3].Text;
+            lblTenDangNhap.Text = lstTaiKhoan.SelectedItems[0].SubItems[1].Text;
+            cbbQuyenHan.Text = lstTaiKhoan.SelectedItems[0].SubItems[4].Text;
+            if(lstTaiKhoan.SelectedItems[0].SubItems[5].Text=="Kích hoạt")
+            {
+                rdbKichHoat.Checked = true;
+            }
+            else
+            {
+                rdbTamNgung.Checked = true;
+            }
         }
     }
 }

@@ -25,8 +25,8 @@ namespace DoAn_ver5.DAL
         public DataTable GetAllThucAn()
         {
             DataTable dt = new DataTable();
-            string query = @"select TTA.MaLoaiThucAn, TTA.TenThucAn, KC.TenKichCo, TAs.GiaBan from dbo.ThucAns TAs join dbo.TenThucAn TTA on TAs.MaThucAn = TTA.MaThucAn
-            join dbo.KichCoThucAn KC on TAs.MaKichCo = KC.MaKichCo";
+            string query = @"select TA.LoaiThucAn, TA.TenThucAn, KC.KichCo, KC.GiaBan from dbo.ThucAn TA join dbo.Size_Price KC on TA.MaThucAn = KC.MaThucAn";
+            //join dbo.KichCoThucAn KC on TAs.MaKichCo = KC.MaKichCo";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
