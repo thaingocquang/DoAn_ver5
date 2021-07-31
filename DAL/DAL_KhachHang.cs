@@ -82,7 +82,8 @@ namespace DoAn_ver5.DAL
         {
             try
             {
-                string query = "update KhachHang set TenKhachHang = N'" + TenKhachHang + "', GioiTinh = N'" + GioiTinh +"' , NgaySinh = '" + NgaySinh +"', Email = '" + Email + "', SDT = N'" + SDT + "', NgayDangKy = '" + NgayDangKi + "', CMND = " + CMND + " where MaKhachHang = N'" + MaKhachHang +"'" ;
+                string query = "update KhachHang set TenKhachHang = N'" + TenKhachHang + "', GioiTinh = N'" + GioiTinh +"' , NgaySinh = '" + NgaySinh 
+                    +"', Email = '" + Email + "', SDT = N'" + SDT + "', NgayDangKy = '" + NgayDangKi + "', CMND = " + CMND + " where MaKhachHang = N'" + MaKhachHang +"'" ;
                 MessageBox.Show(query);
                 DataProvider.Instance.ExcuteDB(query);
                 return true;

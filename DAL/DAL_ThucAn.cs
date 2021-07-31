@@ -41,7 +41,7 @@ namespace DoAn_ver5.DAL
         public DataTable GetGiaTAByTenThucAn(string Ten)
         {
             DataTable dt = new DataTable();
-            string query = "select SP.KichCo, SP.GiaBan from Size_Price SP join ThucAn TA on SP.MaThucAn = TA.MaThucAn where TA.TenThucAn " +
+            string query = "select SP.MaSP, SP.KichCo, SP.GiaBan from Size_Price SP join ThucAn TA on SP.MaThucAn = TA.MaThucAn where TA.TenThucAn " +
                 " = N'" + Ten + "'";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
@@ -108,6 +108,23 @@ namespace DoAn_ver5.DAL
                 string query = "update ThucAn set TenThucAn = N'"+TenThucAn+"', LoaiThucAn = '"+LoaiThucAn+"' where MaThucAn = '"+MaThucAn+"'";
                 MessageBox.Show(query);
                 DataProvider.Instance.ExcuteDB(query);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
+
+        public bool DeleteCoThucAn(string MaSP, string KichCo, string MaTA)
+        {
+            try
+            {
+                string query = "delete from ChiTietHDTA where MaSP = '"  + MaSP + "'";
+                string s = "delete from Size_Price where KichCo=N'" + KichCo + "' and MaThucAn='" + MaTA + "'";
+                DataProvider.Instance.ExcuteDB(query);
+                DataProvider.Instance.ExcuteDB(s);
                 return true;
             }
             catch (Exception e)

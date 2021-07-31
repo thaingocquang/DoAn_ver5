@@ -29,7 +29,6 @@ namespace DoAn_ver5.GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -55,17 +54,13 @@ namespace DoAn_ver5.GUI
             this.chkTen = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Trạng thái";
-            this.columnHeader5.Width = 160;
             // 
             // columnHeader3
             // 
@@ -80,6 +75,7 @@ namespace DoAn_ver5.GUI
             // columnHeader1
             // 
             this.columnHeader1.Text = "STT";
+            this.columnHeader1.Width = 80;
             // 
             // panel4
             // 
@@ -87,7 +83,7 @@ namespace DoAn_ver5.GUI
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(724, 531);
+            this.panel4.Size = new System.Drawing.Size(587, 531);
             this.panel4.TabIndex = 0;
             // 
             // listView1
@@ -96,15 +92,14 @@ namespace DoAn_ver5.GUI
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5});
+            this.columnHeader4});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(724, 531);
+            this.listView1.Size = new System.Drawing.Size(587, 531);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -128,6 +123,7 @@ namespace DoAn_ver5.GUI
             // listView2
             // 
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7});
             this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -136,7 +132,7 @@ namespace DoAn_ver5.GUI
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(0, 0);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(321, 531);
+            this.listView2.Size = new System.Drawing.Size(458, 531);
             this.listView2.TabIndex = 0;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -145,9 +141,9 @@ namespace DoAn_ver5.GUI
             // 
             this.panel5.Controls.Add(this.listView2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(730, 0);
+            this.panel5.Location = new System.Drawing.Point(593, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(321, 531);
+            this.panel5.Size = new System.Drawing.Size(458, 531);
             this.panel5.TabIndex = 1;
             // 
             // panel3
@@ -309,6 +305,12 @@ namespace DoAn_ver5.GUI
             this.panel1.Size = new System.Drawing.Size(269, 575);
             this.panel1.TabIndex = 3;
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.DisplayIndex = 0;
+            this.columnHeader5.Text = "Mã SP";
+            this.columnHeader5.Width = 150;
+            // 
             // ThucAnControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -331,8 +333,6 @@ namespace DoAn_ver5.GUI
         }
 
         #endregion
-
-        private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader1;
@@ -358,5 +358,6 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.CheckBox chkTen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }

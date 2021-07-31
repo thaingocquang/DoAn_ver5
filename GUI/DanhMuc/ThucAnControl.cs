@@ -1,4 +1,5 @@
 ﻿using DoAn_ver5.BLL;
+using DoAn_ver5.DAL;
 using DoAn_ver5.GUI.DanhMuc;
 using System;
 using System.Collections.Generic;
@@ -50,10 +51,10 @@ namespace DoAn_ver5.GUI
             ListViewItem ls = listView1.SelectedItems[0];
             int count = 1;
             listView2.Items.Clear();
-
             foreach (DataRow i in BLL_ThucAn.Instance.GetGiaTAByTenThucAn(ls.SubItems[2].Text).Rows)
             {
-                ListViewItem sl = new ListViewItem(i["KichCo"].ToString());
+                ListViewItem sl = new ListViewItem(i["MaSP"].ToString());
+                sl.SubItems.Add(i["KichCo"].ToString());
                 sl.SubItems.Add(i["GiaBan"].ToString());
                 listView2.Items.Add(sl);
                 count++;
@@ -156,7 +157,13 @@ namespace DoAn_ver5.GUI
         {
             if(listView2.SelectedItems.Count > 0)
             {
-               listView2.Items.RemoveAt(listView2.SelectedItems[0].Index); 
+               listView2.Items.RemoveAt(listView2.SelectedItems[0].Index);
+                DAL_ThucAn.Instance.DeleteCoThucAn
+                    (
+                        listView2.SelectedItems[0].SubItems[0].Text.Trim(),
+                        listView2.SelectedItems[0].SubItems[1].Text.Trim(),
+                        listView1.SelectedItems[0].SubItems[1].Text.Trim()
+                    );
             }                  
         }
     }
