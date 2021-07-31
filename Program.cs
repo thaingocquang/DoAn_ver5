@@ -17,7 +17,7 @@ namespace DoAn_ver5
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainWorkSpace());
+            Application.Run(new DangNhap());
         }
     }
 }

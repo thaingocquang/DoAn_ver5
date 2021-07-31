@@ -27,5 +27,17 @@ namespace DoAn_ver5.BLL
         {
             return DAL_TaiKhoan.Instance.GetAllTaiKhoan();
         }
+        public string GetMaNhanVien(string TaiKhoan, string MatKhau)
+        {
+            //string MaNV;
+            foreach(DataRow row in DAL_TaiKhoan.Instance.GetAllTaiKhoan().Rows)
+            {
+                if (row["TenDangNhap"].ToString() == TaiKhoan && row["MatKhau"].ToString() == MatKhau)
+                {
+                    return(row["MaNhanVien"].ToString());
+                }
+            }
+            return "";
+        }
     }
 }

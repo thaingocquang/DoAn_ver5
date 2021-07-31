@@ -7,29 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoAn_ver5.BLL;
+using DoAn_ver5.GUI;
 
 namespace DoAn_ver5
 {
     public partial class DangNhap : Form
     {
+        public static string MaNhanVien;
         public DangNhap()
         {
             InitializeComponent();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void btnDangNhap_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            MaNhanVien = BLL_TaiKhoan.Instance.GetMaNhanVien(txtTenDangNhap.Text, txtMatKhau.Text);
+            if (MaNhanVien != "")
+            {
+                MainWorkSpace MWS = new MainWorkSpace();
+                MWS.ShowDialog();
+            }
         }
     }
 }

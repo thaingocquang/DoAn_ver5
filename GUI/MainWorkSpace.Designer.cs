@@ -83,7 +83,7 @@ namespace DoAn_ver5.GUI
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1326, 658);
+            this.tabPage3.Size = new System.Drawing.Size(1326, 655);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Hệ thống";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -93,7 +93,7 @@ namespace DoAn_ver5.GUI
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 80);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1320, 575);
+            this.panel2.Size = new System.Drawing.Size(1320, 572);
             this.panel2.TabIndex = 1;
             // 
             // panel1
@@ -480,6 +480,7 @@ namespace DoAn_ver5.GUI
             this.lblThongTinNhanVien.Size = new System.Drawing.Size(60, 20);
             this.lblThongTinNhanVien.TabIndex = 2;
             this.lblThongTinNhanVien.Text = "label10";
+            this.lblThongTinNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblThongTinNhanVien.Click += new System.EventHandler(this.lblThongTinNhanVien_Click);
             // 
             // MainWorkSpace
