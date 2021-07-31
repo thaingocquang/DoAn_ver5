@@ -98,7 +98,7 @@ namespace DoAn_ver5.DAL
             }
         }
 
-
+       
 
         public bool UpdateThucAn(string MaThucAn, string LoaiThucAn, string TenThucAn)
         {

@@ -178,6 +178,7 @@ namespace DoAn_ver5.GUI
             this.btnXoaco.TabIndex = 4;
             this.btnXoaco.Text = "Xóa cỡ";
             this.btnXoaco.UseVisualStyleBackColor = true;
+            this.btnXoaco.Click += new System.EventHandler(this.btnXoaco_Click);
             // 
             // btnHienTatCa
             // 

@@ -151,5 +151,14 @@ namespace DoAn_ver5.GUI
                 sta.ShowDialog();
             }
         }
+
+        private void btnXoaco_Click(object sender, EventArgs e)
+        {
+            if(listView2.SelectedItems.Count > 0)
+            {
+               listView2.Items.RemoveAt(listView2.SelectedItems[0].Index); 
+            }
+            MessageBox.Show(listView1.SelectedItems[0].SubItems[1].Text);            
+        }
     }
 }

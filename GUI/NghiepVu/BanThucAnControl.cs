@@ -112,10 +112,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             lblTongTien.Text = ThanhTien + "";
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
 
         private void lstBanDoAn_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -126,6 +123,8 @@ namespace DoAn_ver5.GUI.NghiepVu
         {
 
         }
+
+        
 
         // nothing
     }
