@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DoAn_ver5.DAL
 {
@@ -81,8 +82,8 @@ namespace DoAn_ver5.DAL
         {
             try
             {
-                string query = "update KhachHang set TenKhachHang = N'" + TenKhachHang + "', GioiTinh = N'" + GioiTinh + "', NgaySinh = '" + NgaySinh +
-                    "', Email = '" + Email + "', SDT = '" + SDT + "', NgayDangKi = '" + NgayDangKi + "', CMND = " + CMND + " where MaKhachHang = N'" + MaKhachHang ;
+                string query = "update KhachHang set TenKhachHang = N'" + TenKhachHang + "', GioiTinh = N'" + GioiTinh +"' , NgaySinh = '" + NgaySinh +"', Email = '" + Email + "', SDT = N'" + SDT + "', NgayDangKy = '" + NgayDangKi + "', CMND = " + CMND + " where MaKhachHang = N'" + MaKhachHang +"'" ;
+                MessageBox.Show(query);
                 DataProvider.Instance.ExcuteDB(query);
                 return true;
             }

@@ -46,10 +46,10 @@ namespace DoAn_ver5.GUI.DanhMuc
                 (                  
                     txtTen.Text.Trim(),
                     rdNam.Checked == true ? rdNam.Text : rdNu.Text,
-                    dtpNgaySinh.Value.ToString(),
+                    dtpNgaySinh.Value.ToString("yyyy/MM/dd"),
                     txtEmail.Text.Trim(),
                     txtSDT.Text.Trim(),
-                    dtpNgaySinh.Value.ToString(),
+                    dtpNgaySinh.Value.ToString("yyyy/MM/dd"),
                     int.Parse(txtCMND.Text.Trim()),
                     txtMa.Text.Trim()
                 );
