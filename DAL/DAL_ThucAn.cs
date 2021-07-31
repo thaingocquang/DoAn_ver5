@@ -83,6 +83,23 @@ namespace DoAn_ver5.DAL
             }
         }
 
+        public bool InsertCoThucAn(string MaThucAn, string KichCo, int GiaBan)
+        {
+            try
+            {
+                string query = "insert into Size_Price (MaThucAn, KichCo, GiaBan) values ( '"+ MaThucAn + "', N'"+ KichCo +"', " + GiaBan +")";
+                DataProvider.Instance.ExcuteDB(query);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
+
+
+
         public bool UpdateThucAn(string MaThucAn, string LoaiThucAn, string TenThucAn)
         {
             try

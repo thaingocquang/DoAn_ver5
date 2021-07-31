@@ -51,7 +51,7 @@ namespace DoAn_ver5.GUI
             int count = 1;
             listView2.Items.Clear();
 
-            foreach (DataRow i in BLL_ThucAn.Instance.GetGiaTAByTenThucAN(ls.SubItems[2].Text).Rows)
+            foreach (DataRow i in BLL_ThucAn.Instance.GetGiaTAByTenThucAn(ls.SubItems[2].Text).Rows)
             {
                 ListViewItem sl = new ListViewItem(i["KichCo"].ToString());
                 sl.SubItems.Add(i["GiaBan"].ToString());

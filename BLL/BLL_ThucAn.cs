@@ -38,7 +38,7 @@ namespace DoAn_ver5.BLL
         {
             return DAL_ThucAn.Instance.GetThucAnByTenThucAn(Ten);
         }
-        public DataTable GetGiaTAByTenThucAN(string Ten)
+        public DataTable GetGiaTAByTenThucAn(string Ten)
         {
             return DAL_ThucAn.Instance.GetGiaTAByTenThucAn(Ten);
         }
