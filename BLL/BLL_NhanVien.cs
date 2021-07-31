@@ -46,5 +46,9 @@ namespace DoAn_ver5.BLL
         {
             return DAL_NhanVien.Instance.GetNhanVienByCMND(CMND);
         }
+        public DataTable GetNhanVienByMaNhanVien(string MaNV)
+        {
+            return DAL_NhanVien.Instance.GetNhanVienByMaNhanVien(MaNV);
+        }
     }
 }

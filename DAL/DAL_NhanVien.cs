@@ -53,6 +53,13 @@ namespace DoAn_ver5.DAL
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
+        public DataTable GetNhanVienByMaNhanVien(string MaNV)
+        {
+            DataTable dt = new DataTable();
+            string query = "select * from NhanVien where MaNhanVien = '" + MaNV + "'";
+            dt = DataProvider.Instance.GetRecords(query);
+            return dt;
+        }
         public bool InsertNhanVien(string MaNhanVien, string HovaTen, string NgaySinh, string GioiTinh, string DiaChi, int CMND, string Email, string SDT, string ChucVu, string NgayVaoLam)
         {
             try

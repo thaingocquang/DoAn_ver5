@@ -18,50 +18,11 @@ namespace DoAn_ver5.GUI
         public MainWorkSpace()
         {
             InitializeComponent();
-            ////lấy kích thước của màn hình
-            //int widthscreen = Screen.PrimaryScreen.WorkingArea.Width;
-            //int heightscreen = Screen.PrimaryScreen.WorkingArea.Height;
-
-            ////cho form hiển thị theo kích thước của màn hình
-            //this.Width = widthscreen;
-            //this.Height = heightscreen;
-
-            ////lay ty le bang cach lay kich thuoc man hinh chia cho kich thuoc thiet ke
-            ////1088 là chiều rộng, 602 là chiều cao form khi thiết kế, xem trong properties của form
-            //float widthperscpective = (float)Width / 1088;
-            //float heightperscpective = (float)Height / 602;
-            //ResizeAllControls(this, widthperscpective, heightperscpective);
         }
-        //private void ResizeAllControls(Control recussiveControl, float WidthPerscpective, float HeightPerscpective)
-        //{
-
-        //    foreach (Control control in recussiveControl.Controls)
-        //    {
-
-        //        //gọi đệ quy nếu như 1 control nào có chứa các control khác nữa
-
-        //        if (control.Controls.Count != 0)
-
-        //            ResizeAllControls(control, WidthPerscpective, HeightPerscpective);
-
-        //        //canh lại toạ độ x, y, chiều rộng, cao cho các control trên form
-
-        //        control.Left = (int)(control.Left * WidthPerscpective);
-
-        //        control.Top = (int)(control.Top * HeightPerscpective);
-
-        //        control.Width = (int)(control.Width * WidthPerscpective);
-
-        //        control.Height = (int)(control.Height * HeightPerscpective);
-
-        //    }
-        //}
-
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
         }
-
         private void label2_Click(object sender, EventArgs e)
         {
             if (!panel4.Controls.Contains(SuatChieuControl.Instance))
@@ -88,7 +49,7 @@ namespace DoAn_ver5.GUI
 
         private void MainWorkSpace_Load(object sender, EventArgs e)
         {
-
+            lblThongTinNhanVien.Text = "Xin chào, " + DangNhap.MaNhanVien;
         }
 
         private void label3_Click(object sender, EventArgs e)
