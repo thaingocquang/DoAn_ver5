@@ -137,7 +137,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             // 
             this.numericUpDownSoLuong.Location = new System.Drawing.Point(89, 10);
             this.numericUpDownSoLuong.Name = "numericUpDownSoLuong";
-            this.numericUpDownSoLuong.Size = new System.Drawing.Size(70, 23);
+            this.numericUpDownSoLuong.Size = new System.Drawing.Size(70, 26);
             this.numericUpDownSoLuong.TabIndex = 2;
             // 
             // btnChon
@@ -155,7 +155,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(19, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 17);
+            this.label2.Size = new System.Drawing.Size(74, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Số lượng";
             // 
@@ -175,7 +175,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.chkNuocUong.AutoSize = true;
             this.chkNuocUong.Location = new System.Drawing.Point(86, 54);
             this.chkNuocUong.Name = "chkNuocUong";
-            this.chkNuocUong.Size = new System.Drawing.Size(96, 21);
+            this.chkNuocUong.Size = new System.Drawing.Size(111, 24);
             this.chkNuocUong.TabIndex = 2;
             this.chkNuocUong.Text = "Nước uống";
             this.chkNuocUong.UseVisualStyleBackColor = true;
@@ -186,7 +186,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.chkDoAn.AutoSize = true;
             this.chkDoAn.Location = new System.Drawing.Point(15, 54);
             this.chkDoAn.Name = "chkDoAn";
-            this.chkDoAn.Size = new System.Drawing.Size(65, 21);
+            this.chkDoAn.Size = new System.Drawing.Size(75, 24);
             this.chkDoAn.TabIndex = 1;
             this.chkDoAn.Text = "Đồ ăn";
             this.chkDoAn.UseVisualStyleBackColor = true;
@@ -199,7 +199,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(10, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 29);
+            this.label1.Size = new System.Drawing.Size(173, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Loại thức ăn";
             // 
@@ -217,7 +217,6 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1051, 44);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // lblTongTien
             // 
@@ -232,7 +231,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(353, 17);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 17);
+            this.label4.Size = new System.Drawing.Size(83, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Tổng tiền:";
             // 
@@ -241,7 +240,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(126, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 17);
+            this.label3.Size = new System.Drawing.Size(79, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Ngày bán";
             // 
@@ -250,7 +249,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(201, 15);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(98, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(98, 26);
             this.dateTimePicker1.TabIndex = 5;
             // 
             // btnXoa
@@ -342,7 +341,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             // 
             // BanThucAnControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);

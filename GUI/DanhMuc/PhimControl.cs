@@ -41,7 +41,7 @@ namespace DoAn_ver5.GUI
             if (lstPhim.SelectedItems.Count > 0)
             {
                 ListViewItem ls = lstPhim.SelectedItems[0];
-                string MaPhim = ls.SubItems[1].Text.Trim();
+                string MaPhim = ls.SubItems[0].Text.Trim();
                 Phim_SuaPhim f = new Phim_SuaPhim(MaPhim);
                 f.ShowDialog();
             }
@@ -53,8 +53,7 @@ namespace DoAn_ver5.GUI
             int count = 1;
             foreach (DataRow i in BLL_Phim.Instance.GetAllPhim().Rows)
             {
-                ListViewItem ls = new ListViewItem(count.ToString());
-                ls.SubItems.Add(i["MaPhim"].ToString());
+                ListViewItem ls = new ListViewItem(i["MaPhim"].ToString());               
                 ls.SubItems.Add(i["TenPhim"].ToString());
                 ls.SubItems.Add(i["ThoiLuong"].ToString());
                 ls.SubItems.Add(i["NhaSanXuat"].ToString());

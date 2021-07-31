@@ -59,7 +59,7 @@ namespace DoAn_ver5.GUI.DanhMuc
                     int.Parse(numericUpDown2.Value.ToString()),
                     int.Parse(numericUpDown3.Value.ToString()),
                     int.Parse(cbbDoTuoi.SelectedItem.ToString()),
-                    dtpNgayChieu.Value.ToString(),
+                    dtpNgayChieu.Value.ToString("yyyy/MM/dd"),
                     cbbTrangThai.SelectedItem.ToString(),
                     txtDienVien.Text.Trim(),
                     cbbNuocsx.SelectedItem.ToString(),
@@ -69,6 +69,19 @@ namespace DoAn_ver5.GUI.DanhMuc
                     txtTomTat.Text.Trim()
                 );
             this.Close();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            txtDinhdang.Text = "";
+            txtNgonngu.Text = "";
+            cbbHinhthuc.SelectedItem = null;
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            int count = 1;
+
         }
     }
 }

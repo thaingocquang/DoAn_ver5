@@ -14,9 +14,10 @@ namespace DoAn_ver5.GUI.DanhMuc
 {
     public partial class ThucAn_SuaThucAn : Form
     {
-        public ThucAn_SuaThucAn()
+        public ThucAn_SuaThucAn(string Ma)
         {
             InitializeComponent();
+            GUI(Ma);
         }
         public void GUI(string MaThucAn)
         {

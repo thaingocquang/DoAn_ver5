@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using DoAn_ver5.DTO;
 
 namespace DoAn_ver5.DAL
@@ -43,12 +44,7 @@ namespace DoAn_ver5.DAL
             string query = "select * from dbo.Phim where TenPhim = N'" + TenPhim + "'";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
-        }
-        //public DataTable GetPhimByTimePeriod(DateTime time1, DateTime time2)
-        //{
-        //    DataTable dt = new DataTable();
-        //    string query = 
-        //}
+        }       
          public DataTable GetPhimByDate1(string dt1, string dt2)
         {
             DataTable dt = new DataTable();
@@ -89,9 +85,10 @@ namespace DoAn_ver5.DAL
         {
             try
             {
-                string query = "update Phim set TenPhim = N'" + TenPhim + "', ThoiLuong = " + ThoiLuong + ", NamSanXuat = " + Namsx + "," +
-                    " GioiHanTuoi = " + DoTuoi + ",NgayRaMat = '" + NgayRaMat + "',TrangThai = '" + TrangThai + "', DienVien = N'" + DienVien 
+                string query = "update Phim set TenPhim = N'" + TenPhim + "', ThoiLuong = " + ThoiLuong + ", NamSanXuat = " + Namsx 
+                    + ",GioiHanTuoi = " + DoTuoi + ", NgayRaMat = '" + NgayRaMat + "',TrangThai = N'" + TrangThai + "', DienVien = N'" + DienVien 
                     + "', NuocSanXuat = N'" + Nuocsx + "', NgonNgu = N'" + NN + "', NhaSanXuat = N'" + Nhasx + "', DoanhThu = " + DoanhThu + ",TomTat = N'" + TomTat + "' where MaPhim = '"+ MaPhim + "'";
+                MessageBox.Show(query);
                 DataProvider.Instance.ExcuteDB(query);
                 return true;
             }

@@ -1,4 +1,5 @@
 ﻿using DoAn_ver5.BLL;
+using DoAn_ver5.GUI.DanhMuc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,7 +51,7 @@ namespace DoAn_ver5.GUI
             int count = 1;
             listView2.Items.Clear();
 
-            foreach (DataRow i in BLL_ThucAn.Instance.GetGiaTAByTenThucAN(ls.SubItems[2].Text).Rows)
+            foreach (DataRow i in BLL_ThucAn.Instance.GetGiaTAByTenThucAn(ls.SubItems[2].Text).Rows)
             {
                 ListViewItem sl = new ListViewItem(i["KichCo"].ToString());
                 sl.SubItems.Add(i["GiaBan"].ToString());
@@ -127,6 +128,37 @@ namespace DoAn_ver5.GUI
                 chkTen.Checked = false;
                 txtTen.Enabled = false;
             }
+        }
+
+        private void btnThemco_Click(object sender, EventArgs e)
+        {
+            if(listView1.SelectedItems.Count > 0)
+            {
+                ListViewItem ls = listView1.SelectedItems[0];
+                string s = ls.SubItems[1].Text;
+                ThucAn_CoThucAn c = new ThucAn_CoThucAn(s);
+                c.ShowDialog();
+            }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                ListViewItem ls = listView1.SelectedItems[0];
+                string s = ls.SubItems[1].Text;
+                ThucAn_SuaThucAn sta = new ThucAn_SuaThucAn(s);
+                sta.ShowDialog();
+            }
+        }
+
+        private void btnXoaco_Click(object sender, EventArgs e)
+        {
+            if(listView2.SelectedItems.Count > 0)
+            {
+               listView2.Items.RemoveAt(listView2.SelectedItems[0].Index); 
+            }
+            MessageBox.Show(listView1.SelectedItems[0].SubItems[1].Text);            
         }
     }
 }

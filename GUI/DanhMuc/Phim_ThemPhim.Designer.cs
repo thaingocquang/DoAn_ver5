@@ -35,6 +35,7 @@ namespace DoAn_ver5.GUI
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dtpNgayChieu = new System.Windows.Forms.DateTimePicker();
             this.txtTomTat = new System.Windows.Forms.TextBox();
             this.cbbNhaSX = new System.Windows.Forms.ComboBox();
             this.cbbNN = new System.Windows.Forms.ComboBox();
@@ -64,14 +65,30 @@ namespace DoAn_ver5.GUI
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
-            this.dtpNgayChieu = new System.Windows.Forms.DateTimePicker();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.lstSuatphim = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtDinhdang = new System.Windows.Forms.TextBox();
+            this.txtNgonngu = new System.Windows.Forms.TextBox();
+            this.cbbHinhthuc = new System.Windows.Forms.ComboBox();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ThoiLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NamSX)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -162,6 +179,13 @@ namespace DoAn_ver5.GUI
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Phim";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // dtpNgayChieu
+            // 
+            this.dtpNgayChieu.Location = new System.Drawing.Point(107, 272);
+            this.dtpNgayChieu.Name = "dtpNgayChieu";
+            this.dtpNgayChieu.Size = new System.Drawing.Size(173, 26);
+            this.dtpNgayChieu.TabIndex = 7;
             // 
             // txtTomTat
             // 
@@ -374,6 +398,8 @@ namespace DoAn_ver5.GUI
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.lstSuatphim);
+            this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -415,12 +441,129 @@ namespace DoAn_ver5.GUI
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // dtpNgayChieu
+            // groupBox1
             // 
-            this.dtpNgayChieu.Location = new System.Drawing.Point(107, 272);
-            this.dtpNgayChieu.Name = "dtpNgayChieu";
-            this.dtpNgayChieu.Size = new System.Drawing.Size(173, 26);
-            this.dtpNgayChieu.TabIndex = 7;
+            this.groupBox1.Controls.Add(this.btnXoa);
+            this.groupBox1.Controls.Add(this.btnThem);
+            this.groupBox1.Controls.Add(this.cbbHinhthuc);
+            this.groupBox1.Controls.Add(this.txtNgonngu);
+            this.groupBox1.Controls.Add(this.txtDinhdang);
+            this.groupBox1.Controls.Add(this.label18);
+            this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Location = new System.Drawing.Point(18, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(549, 132);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            // 
+            // lstSuatphim
+            // 
+            this.lstSuatphim.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.lstSuatphim.FullRowSelect = true;
+            this.lstSuatphim.GridLines = true;
+            this.lstSuatphim.HideSelection = false;
+            this.lstSuatphim.Location = new System.Drawing.Point(18, 144);
+            this.lstSuatphim.Name = "lstSuatphim";
+            this.lstSuatphim.Size = new System.Drawing.Size(549, 237);
+            this.lstSuatphim.TabIndex = 1;
+            this.lstSuatphim.UseCompatibleStateImageBehavior = false;
+            this.lstSuatphim.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "STT";
+            this.columnHeader1.Width = 70;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Định dạng";
+            this.columnHeader2.Width = 130;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Hình thức";
+            this.columnHeader3.Width = 140;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Ngôn Ngữ";
+            this.columnHeader4.Width = 140;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(49, 26);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(84, 20);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Định dạng";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(49, 76);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(80, 20);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Ngôn ngữ";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(297, 26);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(81, 20);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "Hình thức";
+            // 
+            // txtDinhdang
+            // 
+            this.txtDinhdang.Location = new System.Drawing.Point(140, 26);
+            this.txtDinhdang.Name = "txtDinhdang";
+            this.txtDinhdang.Size = new System.Drawing.Size(119, 26);
+            this.txtDinhdang.TabIndex = 3;
+            // 
+            // txtNgonngu
+            // 
+            this.txtNgonngu.Location = new System.Drawing.Point(140, 76);
+            this.txtNgonngu.Name = "txtNgonngu";
+            this.txtNgonngu.Size = new System.Drawing.Size(119, 26);
+            this.txtNgonngu.TabIndex = 4;
+            // 
+            // cbbHinhthuc
+            // 
+            this.cbbHinhthuc.FormattingEnabled = true;
+            this.cbbHinhthuc.Items.AddRange(new object[] {
+            "Phụ đề"});
+            this.cbbHinhthuc.Location = new System.Drawing.Point(385, 26);
+            this.cbbHinhthuc.Name = "cbbHinhthuc";
+            this.cbbHinhthuc.Size = new System.Drawing.Size(125, 28);
+            this.cbbHinhthuc.TabIndex = 5;
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(351, 72);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(75, 30);
+            this.btnThem.TabIndex = 6;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(449, 72);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 30);
+            this.btnXoa.TabIndex = 7;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // Phim_ThemPhim
             // 
@@ -444,7 +587,10 @@ namespace DoAn_ver5.GUI
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ThoiLuong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NamSX)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -488,5 +634,20 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.DateTimePicker dtpNgayChieu;
+        private System.Windows.Forms.ListView lstSuatphim;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.ComboBox cbbHinhthuc;
+        private System.Windows.Forms.TextBox txtNgonngu;
+        private System.Windows.Forms.TextBox txtDinhdang;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
     }
 }
