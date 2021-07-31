@@ -70,5 +70,18 @@ namespace DoAn_ver5.GUI.DanhMuc
                 );
             this.Close();
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            txtDinhdang.Text = "";
+            txtNgonngu.Text = "";
+            cbbHinhthuc.SelectedItem = null;
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            int count = 1;
+
+        }
     }
 }

@@ -43,5 +43,17 @@ namespace DoAn_ver5.GUI
             );
             this.Close();
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            txtDinhdang.Text = "";
+            txtNgonngu.Text = "";
+            cbbHinhthuc.SelectedItem = null;
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -42,10 +42,10 @@ namespace DoAn_ver5.GUI
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSua = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnXoaco = new System.Windows.Forms.Button();
             this.btnHienTatCa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnThemco = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnDatLai = new System.Windows.Forms.Button();
             this.btnTim = new System.Windows.Forms.Button();
@@ -168,15 +168,16 @@ namespace DoAn_ver5.GUI
             this.btnSua.TabIndex = 4;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // button8
+            // btnXoaco
             // 
-            this.button8.Location = new System.Drawing.Point(973, 12);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(78, 26);
-            this.button8.TabIndex = 4;
-            this.button8.Text = "Xóa cỡ";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnXoaco.Location = new System.Drawing.Point(973, 12);
+            this.btnXoaco.Name = "btnXoaco";
+            this.btnXoaco.Size = new System.Drawing.Size(78, 26);
+            this.btnXoaco.TabIndex = 4;
+            this.btnXoaco.Text = "Xóa cỡ";
+            this.btnXoaco.UseVisualStyleBackColor = true;
             // 
             // btnHienTatCa
             // 
@@ -198,23 +199,24 @@ namespace DoAn_ver5.GUI
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // button7
+            // btnThemco
             // 
-            this.button7.Location = new System.Drawing.Point(889, 12);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(78, 26);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "Thêm cỡ";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnThemco.Location = new System.Drawing.Point(889, 12);
+            this.btnThemco.Name = "btnThemco";
+            this.btnThemco.Size = new System.Drawing.Size(78, 26);
+            this.btnThemco.TabIndex = 4;
+            this.btnThemco.Text = "Thêm cỡ";
+            this.btnThemco.UseVisualStyleBackColor = true;
+            this.btnThemco.Click += new System.EventHandler(this.btnThemco_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.btnSua);
-            this.panel2.Controls.Add(this.button8);
+            this.panel2.Controls.Add(this.btnXoaco);
             this.panel2.Controls.Add(this.btnHienTatCa);
             this.panel2.Controls.Add(this.btnThem);
-            this.panel2.Controls.Add(this.button7);
+            this.panel2.Controls.Add(this.btnThemco);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(269, 0);
             this.panel2.Name = "panel2";
@@ -342,10 +344,10 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnXoaco;
         private System.Windows.Forms.Button btnHienTatCa;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnThemco;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnDatLai;
         private System.Windows.Forms.Button btnTim;
