@@ -87,8 +87,7 @@ namespace DoAn_ver5.DAL
             {
                 string query = "update Phim set TenPhim = N'" + TenPhim + "', ThoiLuong = " + ThoiLuong + ", NamSanXuat = " + Namsx 
                     + ",GioiHanTuoi = " + DoTuoi + ", NgayRaMat = '" + NgayRaMat + "',TrangThai = N'" + TrangThai + "', DienVien = N'" + DienVien 
-                    + "', NuocSanXuat = N'" + Nuocsx + "', NgonNgu = N'" + NN + "', NhaSanXuat = N'" + Nhasx + "', DoanhThu = " + DoanhThu + ",TomTat = N'" + TomTat + "' where MaPhim = '"+ MaPhim + "'";
-                MessageBox.Show(query);
+                    + "', NuocSanXuat = N'" + Nuocsx + "', NgonNgu = N'" + NN + "', NhaSanXuat = N'" + Nhasx + "', DoanhThu = " + DoanhThu + ",TomTat = N'" + TomTat + "' where MaPhim = '"+ MaPhim + "'";                
                 DataProvider.Instance.ExcuteDB(query);
                 return true;
             }
