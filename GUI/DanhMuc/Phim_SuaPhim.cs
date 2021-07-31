@@ -59,7 +59,7 @@ namespace DoAn_ver5.GUI.DanhMuc
                     int.Parse(numericUpDown2.Value.ToString()),
                     int.Parse(numericUpDown3.Value.ToString()),
                     int.Parse(cbbDoTuoi.SelectedItem.ToString()),
-                    dtpNgayChieu.Value.ToString(),
+                    dtpNgayChieu.Value.ToString("yyyy/MM/dd"),
                     cbbTrangThai.SelectedItem.ToString(),
                     txtDienVien.Text.Trim(),
                     cbbNuocsx.SelectedItem.ToString(),

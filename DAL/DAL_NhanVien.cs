@@ -73,15 +73,10 @@ namespace DoAn_ver5.DAL
         {
             try
             {
-                MessageBox.Show(MaNhanVien); 
+                
                 string query = "update NhanVien set HovaTen = N'" + HovaTen+ "',NgaySinh = '" + NgaySinh+ "', GioiTinh = N'" + GioiTinh+ "', DiaChi = N'" + DiaChi 
                                                                 + "', CMND = " + CMND + ", Email = '" + Email + "', SDT = '" + SDT + "', ChucVu = N'" 
                                                                 + ChucVu + "', NgayVaoLam = '" + NgayVaoLam + "' where MaNhanVien='"+MaNhanVien+"'";
-
-                //string query = "update NhanVien set HovaTen = N'" + HovaTen + "',NgaySinh = '" + NgaySinh + "', GioiTinh = N'" + GioiTinh + "', DiaChi = N'" + DiaChi
-                //                                            + "', CMND = '" + CMND + "', Email = N'" + Email + "', SDT = N'" + SDT + "', ChucVu = N'"
-                //                                            + ChucVu + "', NgayVaoLam = N'" + NgayVaoLam + "' where MaNhanVien='" + MaNhanVien + "'";
-
                 MessageBox.Show(query);
                 DataProvider.Instance.ExcuteDB(query);
                 return true;
