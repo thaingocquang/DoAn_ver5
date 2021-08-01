@@ -41,9 +41,10 @@ namespace DoAn_ver5.GUI.DanhMuc
         {
             DAL_ThucAn.Instance.InsertCoThucAn
                 (
-                    txtMa.Text.Trim(),
                     cbbKichco.SelectedItem.ToString(),
-                    int.Parse(txtGia.Text.Trim())
+                    int.Parse(txtGia.Text.Trim()),
+                    txtMaSP.Text.Trim(),
+                    txtMa.Text.Trim()                                  
                 );
                 this.Close();
         }
