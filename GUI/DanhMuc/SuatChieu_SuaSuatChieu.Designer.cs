@@ -33,10 +33,9 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtMaSP = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -49,7 +48,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,7 +55,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,10 +93,9 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtMaSP);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.numericUpDown1);
             this.panel1.Controls.Add(this.comboBox3);
             this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.comboBox1);
@@ -108,7 +104,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(14, 89);
@@ -116,12 +111,12 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.panel1.Size = new System.Drawing.Size(595, 429);
             this.panel1.TabIndex = 15;
             // 
-            // textBox2
+            // txtMaSP
             // 
-            this.textBox2.Location = new System.Drawing.Point(119, 186);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(181, 22);
-            this.textBox2.TabIndex = 6;
+            this.txtMaSP.Location = new System.Drawing.Point(119, 139);
+            this.txtMaSP.Name = "txtMaSP";
+            this.txtMaSP.Size = new System.Drawing.Size(181, 22);
+            this.txtMaSP.TabIndex = 6;
             // 
             // textBox1
             // 
@@ -137,13 +132,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(171, 22);
             this.dateTimePicker1.TabIndex = 5;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(119, 137);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(181, 22);
-            this.numericUpDown1.TabIndex = 4;
             // 
             // comboBox3
             // 
@@ -188,7 +176,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Mã Phim";
+            this.columnHeader1.Text = "Mã Suất Phim";
             this.columnHeader1.Width = 120;
             // 
             // columnHeader2
@@ -220,9 +208,9 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(318, 89);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 17);
+            this.label8.Size = new System.Drawing.Size(64, 17);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Thời gian";
+            this.label8.Text = "Ngày giờ";
             // 
             // label7
             // 
@@ -236,20 +224,11 @@ namespace DoAn_ver5.GUI.DanhMuc
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 189);
+            this.label6.Location = new System.Drawing.Point(17, 142);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(92, 17);
             this.label6.TabIndex = 0;
             this.label6.Text = "Mã suất phim";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 139);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 17);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Giờ";
             // 
             // label4
             // 
@@ -317,7 +296,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -330,10 +308,9 @@ namespace DoAn_ver5.GUI.DanhMuc
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtMaSP;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -346,7 +323,6 @@ namespace DoAn_ver5.GUI.DanhMuc
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

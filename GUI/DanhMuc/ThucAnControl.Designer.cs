@@ -38,6 +38,7 @@ namespace DoAn_ver5.GUI
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSua = new System.Windows.Forms.Button();
@@ -54,7 +55,6 @@ namespace DoAn_ver5.GUI
             this.chkTen = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -103,7 +103,8 @@ namespace DoAn_ver5.GUI
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
+//            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+//            this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
             // 
             // columnHeader4
             // 
@@ -136,6 +137,11 @@ namespace DoAn_ver5.GUI
             this.listView2.TabIndex = 0;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Mã SP";
+            this.columnHeader5.Width = 150;
             // 
             // panel5
             // 
@@ -304,12 +310,6 @@ namespace DoAn_ver5.GUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(269, 575);
             this.panel1.TabIndex = 3;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.DisplayIndex = 0;
-            this.columnHeader5.Text = "Mã SP";
-            this.columnHeader5.Width = 150;
             // 
             // ThucAnControl
             // 

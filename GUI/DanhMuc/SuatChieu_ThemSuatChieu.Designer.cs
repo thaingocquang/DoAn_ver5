@@ -33,6 +33,7 @@ namespace DoAn_ver5.GUI
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtTenPhim = new System.Windows.Forms.TextBox();
             this.txtMa = new System.Windows.Forms.TextBox();
             this.txtMaSC = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -54,7 +55,6 @@ namespace DoAn_ver5.GUI
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtTenPhim = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -116,6 +116,13 @@ namespace DoAn_ver5.GUI
             this.panel1.Size = new System.Drawing.Size(595, 429);
             this.panel1.TabIndex = 7;
             // 
+            // txtTenPhim
+            // 
+            this.txtTenPhim.Location = new System.Drawing.Point(119, 86);
+            this.txtTenPhim.Name = "txtTenPhim";
+            this.txtTenPhim.Size = new System.Drawing.Size(181, 26);
+            this.txtTenPhim.TabIndex = 7;
+            // 
             // txtMa
             // 
             this.txtMa.Location = new System.Drawing.Point(119, 186);
@@ -176,7 +183,7 @@ namespace DoAn_ver5.GUI
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(32, 231);
+            this.listView1.Location = new System.Drawing.Point(21, 238);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(548, 143);
             this.listView1.TabIndex = 1;
@@ -298,13 +305,6 @@ namespace DoAn_ver5.GUI
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // txtTenPhim
-            // 
-            this.txtTenPhim.Location = new System.Drawing.Point(119, 86);
-            this.txtTenPhim.Name = "txtTenPhim";
-            this.txtTenPhim.Size = new System.Drawing.Size(181, 26);
-            this.txtTenPhim.TabIndex = 7;
             // 
             // SuatChieu_ThemSuatChieu
             // 

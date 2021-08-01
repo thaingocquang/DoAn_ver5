@@ -65,7 +65,7 @@ namespace DoAn_ver5.DAL
         {
             try
             {
-                string query = "insert into";
+                string query = "insert into SuatChieu values ()";
                 DataProvider.Instance.ExcuteDB(query);
                 return true;
             }

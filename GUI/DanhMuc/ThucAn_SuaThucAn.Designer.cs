@@ -34,11 +34,9 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.btnHuy = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbbLoai = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtMa = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -83,11 +81,9 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.cbbLoai);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txtMa);
             this.panel1.Controls.Add(this.txtTen);
             this.panel1.Location = new System.Drawing.Point(49, 66);
@@ -98,24 +94,16 @@ namespace DoAn_ver5.GUI.DanhMuc
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 66);
+            this.label1.Location = new System.Drawing.Point(14, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã thức ăn";
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(106, 207);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(234, 24);
-            this.comboBox2.TabIndex = 4;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 113);
+            this.label2.Location = new System.Drawing.Point(14, 149);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 17);
             this.label2.TabIndex = 1;
@@ -127,7 +115,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.cbbLoai.Items.AddRange(new object[] {
             "Đồ ăn",
             "Nước uống"});
-            this.cbbLoai.Location = new System.Drawing.Point(106, 157);
+            this.cbbLoai.Location = new System.Drawing.Point(106, 213);
             this.cbbLoai.Name = "cbbLoai";
             this.cbbLoai.Size = new System.Drawing.Size(234, 24);
             this.cbbLoai.TabIndex = 4;
@@ -135,31 +123,22 @@ namespace DoAn_ver5.GUI.DanhMuc
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 160);
+            this.label3.Location = new System.Drawing.Point(14, 216);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Loại thức ăn";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 207);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 17);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Trạng thái";
-            // 
             // txtMa
             // 
-            this.txtMa.Location = new System.Drawing.Point(106, 66);
+            this.txtMa.Location = new System.Drawing.Point(106, 70);
             this.txtMa.Name = "txtMa";
             this.txtMa.Size = new System.Drawing.Size(234, 22);
             this.txtMa.TabIndex = 2;
             // 
             // txtTen
             // 
-            this.txtTen.Location = new System.Drawing.Point(106, 110);
+            this.txtTen.Location = new System.Drawing.Point(106, 146);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(234, 22);
             this.txtTen.TabIndex = 2;
@@ -223,11 +202,9 @@ namespace DoAn_ver5.GUI.DanhMuc
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbbLoai;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtMa;
         private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.Label label6;

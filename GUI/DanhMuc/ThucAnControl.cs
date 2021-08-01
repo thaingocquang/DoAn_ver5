@@ -46,9 +46,9 @@ namespace DoAn_ver5.GUI
             }
         }
 
-        private void listView1_MouseClick(object sender, MouseEventArgs e)
+        /*private void listView1_MouseClick(object sender, MouseEventArgs e)
         {
-            ListViewItem ls = listView1.SelectedItems[0];
+            *//*ListViewItem ls = listView1.SelectedItems[0];
             int count = 1;
             listView2.Items.Clear();
             foreach (DataRow i in BLL_ThucAn.Instance.GetGiaTAByTenThucAn(ls.SubItems[2].Text).Rows)
@@ -58,8 +58,8 @@ namespace DoAn_ver5.GUI
                 sl.SubItems.Add(i["GiaBan"].ToString());
                 listView2.Items.Add(sl);
                 count++;
-            }
-        }
+            }*//*
+        }*/
 
         private void btnTim_Click(object sender, EventArgs e)
         {
@@ -147,7 +147,7 @@ namespace DoAn_ver5.GUI
             if (listView1.SelectedItems.Count > 0)
             {
                 ListViewItem ls = listView1.SelectedItems[0];
-                string s = ls.SubItems[1].Text;
+                string s = ls.SubItems[1].Text.Trim();
                 ThucAn_SuaThucAn sta = new ThucAn_SuaThucAn(s);
                 sta.ShowDialog();
             }
@@ -166,5 +166,24 @@ namespace DoAn_ver5.GUI
                     );
             }                  
         }
+
+
+        /*private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(listView1.SelectedItems.Count > 0)
+            {
+                ListViewItem ls = listView1.SelectedItems[0];
+                int count = 1;
+                listView2.Items.Clear();
+                foreach (DataRow i in BLL_ThucAn.Instance.GetGiaTAByTenThucAn(ls.SubItems[2].Text).Rows)
+                {
+                    ListViewItem sl = new ListViewItem(i["MaSP"].ToString());
+                    sl.SubItems.Add(i["KichCo"].ToString());
+                    sl.SubItems.Add(i["GiaBan"].ToString());
+                    listView2.Items.Add(sl);
+                    count++;
+                }
+            }            
+        }*/
     }
 }

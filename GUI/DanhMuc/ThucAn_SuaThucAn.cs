@@ -41,6 +41,7 @@ namespace DoAn_ver5.GUI.DanhMuc
                 cbbLoai.SelectedItem.ToString(),
                 txtTen.Text.Trim()
             );
+            this.Close();
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

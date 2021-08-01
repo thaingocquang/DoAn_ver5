@@ -26,5 +26,7 @@ namespace DoAn_ver5.GUI
         {
             this.Close();
         }
+
+       
     }
 }

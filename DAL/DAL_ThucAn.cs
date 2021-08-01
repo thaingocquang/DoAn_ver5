@@ -104,9 +104,8 @@ namespace DoAn_ver5.DAL
         public bool UpdateThucAn(string MaThucAn, string LoaiThucAn, string TenThucAn)
         {
             try
-            {
-                string query = "update ThucAn set TenThucAn = N'"+TenThucAn+"', LoaiThucAn = '"+LoaiThucAn+"' where MaThucAn = '"+MaThucAn+"'";
-                MessageBox.Show(query);
+            {     
+                string query = "update ThucAn set LoaiThucAn = N'"+ LoaiThucAn + "' , TenThucAn = N' "+ TenThucAn +"' where MaThucAn = '"+ MaThucAn + "'";    
                 DataProvider.Instance.ExcuteDB(query);
                 return true;
             }
