@@ -159,9 +159,9 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label5.Location = new System.Drawing.Point(107, 6);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(168, 29);
+            this.label5.Size = new System.Drawing.Size(148, 29);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Thêm thức ăn";
+            this.label5.Text = "Sửa thức ăn";
             // 
             // pictureBox1
             // 

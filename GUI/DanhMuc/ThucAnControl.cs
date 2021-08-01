@@ -46,21 +46,6 @@ namespace DoAn_ver5.GUI
             }
         }
 
-        /*private void listView1_MouseClick(object sender, MouseEventArgs e)
-        {
-            *//*ListViewItem ls = listView1.SelectedItems[0];
-            int count = 1;
-            listView2.Items.Clear();
-            foreach (DataRow i in BLL_ThucAn.Instance.GetGiaTAByTenThucAn(ls.SubItems[2].Text).Rows)
-            {
-                ListViewItem sl = new ListViewItem(i["MaSP"].ToString());
-                sl.SubItems.Add(i["KichCo"].ToString());
-                sl.SubItems.Add(i["GiaBan"].ToString());
-                listView2.Items.Add(sl);
-                count++;
-            }*//*
-        }*/
-
         private void btnTim_Click(object sender, EventArgs e)
         {
             int count = 1;
@@ -148,9 +133,11 @@ namespace DoAn_ver5.GUI
             {
                 ListViewItem ls = listView1.SelectedItems[0];
                 string s = ls.SubItems[1].Text.Trim();
-                ThucAn_SuaThucAn sta = new ThucAn_SuaThucAn(s);
-                sta.ShowDialog();
+                ThucAn_SuaThucAn ta = new ThucAn_SuaThucAn(s);
+                ta.ShowDialog();
+
             }
+            
         }
 
         private void btnXoaco_Click(object sender, EventArgs e)
@@ -167,23 +154,19 @@ namespace DoAn_ver5.GUI
             }                  
         }
 
-
-        /*private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void listView1_MouseClick(object sender, MouseEventArgs e)
         {
-            if(listView1.SelectedItems.Count > 0)
+            ListViewItem ls = listView1.SelectedItems[0];
+            int count = 1;
+            listView2.Items.Clear();
+            foreach (DataRow i in BLL_ThucAn.Instance.GetGiaTAByTenThucAn(ls.SubItems[2].Text).Rows)
             {
-                ListViewItem ls = listView1.SelectedItems[0];
-                int count = 1;
-                listView2.Items.Clear();
-                foreach (DataRow i in BLL_ThucAn.Instance.GetGiaTAByTenThucAn(ls.SubItems[2].Text).Rows)
-                {
-                    ListViewItem sl = new ListViewItem(i["MaSP"].ToString());
-                    sl.SubItems.Add(i["KichCo"].ToString());
-                    sl.SubItems.Add(i["GiaBan"].ToString());
-                    listView2.Items.Add(sl);
-                    count++;
-                }
-            }            
-        }*/
+                ListViewItem sl = new ListViewItem(i["MaSP"].ToString());
+                sl.SubItems.Add(i["KichCo"].ToString());
+                sl.SubItems.Add(i["GiaBan"].ToString());
+                listView2.Items.Add(sl);
+                count++;
+            }
+        }
     }
 }

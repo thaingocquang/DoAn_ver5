@@ -57,7 +57,7 @@ namespace DoAn_ver5.DAL
         public DataTable GetThucAnByMaThucAn(string Ma)
         {
             DataTable dt = new DataTable();
-            string query = "select MaThucAn, TenThucAn, LoaiThucAn from ThucAn where MaThucAn =" + Ma +"";
+            string query = "select MaThucAn, TenThucAn, LoaiThucAn from ThucAn where MaThucAn ='" + Ma +"'";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
