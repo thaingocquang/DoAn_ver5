@@ -47,7 +47,6 @@ namespace DoAn_ver5.GUI
             this.lstSuatChieu = new System.Windows.Forms.ListView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSua = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.btnHienTatCa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -180,7 +179,6 @@ namespace DoAn_ver5.GUI
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.btnSua);
-            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.btnHienTatCa);
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -198,15 +196,6 @@ namespace DoAn_ver5.GUI
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(792, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(148, 26);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Cập nhật trạng thái";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // btnHienTatCa
             // 
@@ -354,7 +343,6 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.ListView lstSuatChieu;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnHienTatCa;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Panel panel1;

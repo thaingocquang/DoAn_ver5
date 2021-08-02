@@ -145,7 +145,7 @@ namespace DoAn_ver5.GUI
             if(listView2.SelectedItems.Count > 0)
             {
                listView2.Items.RemoveAt(listView2.SelectedItems[0].Index);
-                DAL_ThucAn.Instance.DeleteCoThucAn
+               DAL_ThucAn.Instance.DeleteCoThucAn
                     (
                         listView2.SelectedItems[0].SubItems[0].Text.Trim(),
                         listView2.SelectedItems[0].SubItems[1].Text.Trim(),

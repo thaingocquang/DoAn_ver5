@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAn_ver5.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +13,26 @@ namespace DoAn_ver5.GUI.DanhMuc
 {
     public partial class SuatChieu_SuaSuatChieu : Form
     {
-        public SuatChieu_SuaSuatChieu(string MaSC)
+        public SuatChieu_SuaSuatChieu(string Ten)
         {
             InitializeComponent();
-            GUI(MaSC);
+            GUI(Ten);
         }
 
-        public void GUI(string MaSC)
+        public void GUI(string Ten)
         {
-
+            if (BLL_SuatChieu.Instance.GetSuatChieusByTenPhim(Ten) != null)
+            {
+                DataTable dt = BLL_SuatChieu.Instance.GetSuatChieusByTenPhim(Ten);
+                foreach (DataRow i in dt.Rows)
+                {
+                    ListViewItem ls = new ListViewItem(i["MaPhim"].ToString());
+                    ls.SubItems.Add(i["DinhDang"].ToString());
+                    ls.SubItems.Add(i["HinhThuc"].ToString());
+                    ls.SubItems.Add(i["NgonNgu"].ToString());
+                    listView1.Items.Add(ls);
+                }
+            }
         }
         private void btnHuy_Click(object sender, EventArgs e)
         {
