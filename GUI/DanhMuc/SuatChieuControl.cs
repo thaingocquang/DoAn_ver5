@@ -40,9 +40,7 @@ namespace DoAn_ver5.GUI
                 ls.SubItems.Add(i["MaPhim"].ToString());
                 ls.SubItems.Add(i["TenPhim"].ToString());
                 ls.SubItems.Add(i["NgayGio"].ToString());
-                ls.SubItems.Add(i["DinhDang"].ToString());
-                ls.SubItems.Add(i["HinhThuc"].ToString());
-                ls.SubItems.Add(i["NgonNgu"].ToString());
+                
                 ls.SubItems.Add(i["TenPhongChieu"].ToString());
                 ls.SubItems.Add(i["TrangThai"].ToString());                
                 lstSuatChieu.Items.Add(ls);
@@ -66,9 +64,7 @@ namespace DoAn_ver5.GUI
                     ls.SubItems.Add(i["MaPhim"].ToString());
                     ls.SubItems.Add(i["TenPhim"].ToString());
                     ls.SubItems.Add(i["NgayGio"].ToString());
-                    ls.SubItems.Add(i["DinhDang"].ToString());
-                    ls.SubItems.Add(i["HinhThuc"].ToString());
-                    ls.SubItems.Add(i["NgonNgu"].ToString());
+                    
                     ls.SubItems.Add(i["TenPhongChieu"].ToString());
                     ls.SubItems.Add(i["TrangThai"].ToString());
                     ls.SubItems.Add(i["MaSuatChieu"].ToString());
@@ -85,9 +81,7 @@ namespace DoAn_ver5.GUI
                     ls.SubItems.Add(i["MaPhim"].ToString());
                     ls.SubItems.Add(i["TenPhim"].ToString());
                     ls.SubItems.Add(i["NgayGio"].ToString());
-                    ls.SubItems.Add(i["DinhDang"].ToString());
-                    ls.SubItems.Add(i["HinhThuc"].ToString());
-                    ls.SubItems.Add(i["NgonNgu"].ToString());
+                   
                     ls.SubItems.Add(i["TenPhongChieu"].ToString());
                     ls.SubItems.Add(i["TrangThai"].ToString());
                     ls.SubItems.Add(i["MaSuatChieu"].ToString());
@@ -129,13 +123,10 @@ namespace DoAn_ver5.GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (lstSuatChieu.SelectedItems.Count > 0)
-            {
-                ListViewItem ls = lstSuatChieu.SelectedItems[0];
-                string s = ls.SubItems[3].Text.Trim();
-                SuatChieu_ThemSuatChieu sc = new SuatChieu_ThemSuatChieu(s);
+            
+                SuatChieu_ThemSuatChieu sc = new SuatChieu_ThemSuatChieu();
                 sc.ShowDialog();
-            }          
+                    
         }
 
         private void btnSua_Click(object sender, EventArgs e)

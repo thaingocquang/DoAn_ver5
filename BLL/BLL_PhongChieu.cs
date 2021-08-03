@@ -38,7 +38,7 @@ namespace DoAn_ver5.BLL
         }
         public DataTable GetAllPhongChieu()
         {
-            DAL_PhongChieu
+            return DAL_PhongChieu.Instance.GetAllPhongChieu();
         }
     }
 }

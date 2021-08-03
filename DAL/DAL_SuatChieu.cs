@@ -61,6 +61,13 @@ namespace DoAn_ver5.DAL
             return dt;
         }
 
+        public DataTable GetSuatPhimByMaPhim(string MaPhim)
+        {
+            DataTable dt = new DataTable();
+            string query = "select MaSuatPhim, DinhDang, HinhThuc, NgonNgu from Phim p join SuatPhim sp on p.MaPhim = sp.MaPhim where p.MaPhim = '"+ MaPhim +"'";
+            dt = DataProvider.Instance.GetRecords(query);
+            return dt;
+        }
         public bool InsertSuatChieu(string MaPhim, string MaSC, int NgayGio, int DingDang, string HinhThuc,
             string NgonNgu, string TrangThai, string Phong, int TenPhim, string ThoiLuong)
         {

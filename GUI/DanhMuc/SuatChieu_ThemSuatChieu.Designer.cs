@@ -33,11 +33,13 @@ namespace DoAn_ver5.GUI
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtTenPhim = new System.Windows.Forms.TextBox();
+            this.cbbPhong = new System.Windows.Forms.ComboBox();
+            this.txtMaSP = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtMaSC = new System.Windows.Forms.TextBox();
             this.dtpThoigian = new System.Windows.Forms.DateTimePicker();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbbTrangThai = new System.Windows.Forms.ComboBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -52,9 +54,7 @@ namespace DoAn_ver5.GUI
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtMaSP = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbbTenPhim = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -96,14 +96,14 @@ namespace DoAn_ver5.GUI
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cbbTenPhim);
+            this.panel1.Controls.Add(this.cbbPhong);
             this.panel1.Controls.Add(this.txtMaSP);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txtTenPhim);
             this.panel1.Controls.Add(this.txtMaSC);
             this.panel1.Controls.Add(this.dtpThoigian);
             this.panel1.Controls.Add(this.numericUpDown1);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.cbbTrangThai);
             this.panel1.Controls.Add(this.listView1);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
@@ -116,12 +116,30 @@ namespace DoAn_ver5.GUI
             this.panel1.Size = new System.Drawing.Size(595, 429);
             this.panel1.TabIndex = 7;
             // 
-            // txtTenPhim
+            // cbbPhong
             // 
-            this.txtTenPhim.Location = new System.Drawing.Point(119, 86);
-            this.txtTenPhim.Name = "txtTenPhim";
-            this.txtTenPhim.Size = new System.Drawing.Size(181, 26);
-            this.txtTenPhim.TabIndex = 7;
+            this.cbbPhong.FormattingEnabled = true;
+            this.cbbPhong.Location = new System.Drawing.Point(398, 34);
+            this.cbbPhong.Name = "cbbPhong";
+            this.cbbPhong.Size = new System.Drawing.Size(171, 28);
+            this.cbbPhong.TabIndex = 11;
+            // 
+            // txtMaSP
+            // 
+            this.txtMaSP.Enabled = false;
+            this.txtMaSP.Location = new System.Drawing.Point(119, 181);
+            this.txtMaSP.Name = "txtMaSP";
+            this.txtMaSP.Size = new System.Drawing.Size(181, 26);
+            this.txtMaSP.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 184);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(114, 20);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Mã Suất Phim";
             // 
             // txtMaSC
             // 
@@ -145,18 +163,18 @@ namespace DoAn_ver5.GUI
             this.numericUpDown1.Size = new System.Drawing.Size(181, 26);
             this.numericUpDown1.TabIndex = 4;
             // 
-            // comboBox2
+            // cbbTrangThai
             // 
-            this.comboBox2.Enabled = false;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbbTrangThai.Enabled = false;
+            this.cbbTrangThai.FormattingEnabled = true;
+            this.cbbTrangThai.Items.AddRange(new object[] {
             "Công Chiếu",
             "Sắp Chiếu",
             "Đã Chiếu"});
-            this.comboBox2.Location = new System.Drawing.Point(397, 136);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(171, 28);
-            this.comboBox2.TabIndex = 3;
+            this.cbbTrangThai.Location = new System.Drawing.Point(397, 136);
+            this.cbbTrangThai.Name = "cbbTrangThai";
+            this.cbbTrangThai.Size = new System.Drawing.Size(171, 28);
+            this.cbbTrangThai.TabIndex = 3;
             // 
             // listView1
             // 
@@ -174,6 +192,7 @@ namespace DoAn_ver5.GUI
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -282,37 +301,14 @@ namespace DoAn_ver5.GUI
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // label6
+            // cbbTenPhim
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 184);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 20);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Mã Suất Phim";
-            // 
-            // txtMaSP
-            // 
-            this.txtMaSP.Enabled = false;
-            this.txtMaSP.Location = new System.Drawing.Point(119, 181);
-            this.txtMaSP.Name = "txtMaSP";
-            this.txtMaSP.Size = new System.Drawing.Size(181, 26);
-            this.txtMaSP.TabIndex = 10;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Enabled = false;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "001",
-            "002",
-            "003",
-            "004",
-            "005"});
-            this.comboBox1.Location = new System.Drawing.Point(398, 34);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(171, 28);
-            this.comboBox1.TabIndex = 11;
+            this.cbbTenPhim.FormattingEnabled = true;
+            this.cbbTenPhim.Location = new System.Drawing.Point(119, 89);
+            this.cbbTenPhim.Name = "cbbTenPhim";
+            this.cbbTenPhim.Size = new System.Drawing.Size(181, 28);
+            this.cbbTenPhim.TabIndex = 12;
+            this.cbbTenPhim.TextChanged += new System.EventHandler(this.cbbTenPhim_TextChanged);
             // 
             // SuatChieu_ThemSuatChieu
             // 
@@ -348,7 +344,7 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.TextBox txtMaSC;
         private System.Windows.Forms.DateTimePicker dtpThoigian;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbbTrangThai;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -363,9 +359,9 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtTenPhim;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbPhong;
         private System.Windows.Forms.TextBox txtMaSP;
+        private System.Windows.Forms.ComboBox cbbTenPhim;
     }
 }

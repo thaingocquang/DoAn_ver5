@@ -9,36 +9,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DoAn_ver5.DTO;
 namespace DoAn_ver5.GUI
 {
     public partial class SuatChieu_ThemSuatChieu : Form
     {
-        public SuatChieu_ThemSuatChieu(string Ten)
+        public SuatChieu_ThemSuatChieu()
         {
             InitializeComponent();
-            GUI(Ten);
+            GUI();
         }
 
        
-        public void GUI(string Ten)
+        public void GUI()
         {
-            foreach ()
+            foreach( DataRow i in BLL_Phim.Instance.GetAllPhim().Rows)
             {
-
+                cbbTenPhim.Items.Add( new CbbItem() {  ID = i["MaPhim"].ToString(), Name = i["TenPhim"].ToString()});
             }
-            if (BLL_SuatChieu.Instance.GetSuatChieusByTenPhim(Ten) != null)
+            foreach(DataRow i in BLL_PhongChieu.Instance.GetAllPhongChieu().Rows)
             {
-                DataTable dt = BLL_SuatChieu.Instance.GetSuatChieusByTenPhim(Ten);
-                foreach(DataRow i in dt.Rows)
-                {
-                    ListViewItem ls = new ListViewItem(i["MaPhim"].ToString());
-                    ls.SubItems.Add(i["DinhDang"].ToString());
-                    ls.SubItems.Add(i["HinhThuc"].ToString());
-                    ls.SubItems.Add(i["NgonNgu"].ToString());
-                    listView1.Items.Add(ls);
-                }
+                cbbPhong.Items.Add(new CbbItem (){ ID = i["MaPhongChieu"].ToString(), Name = i["TenPhongChieu"].ToString() });
             }
+            
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -55,6 +48,30 @@ namespace DoAn_ver5.GUI
         private void SuatChieu_ThemSuatChieu_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbbTenPhim_TextChanged(object sender, EventArgs e)
+        {
+
+            string MaPhim = ((CbbItem)cbbTenPhim.SelectedItem).ID.Trim();           
+            foreach(DataRow i in BLL_SuatChieu.Instance.GetSuatPhimByMaPhim(MaPhim).Rows)
+            {
+                ListViewItem ls = new ListViewItem(i["MaSuatPhim"].ToString());
+                ls.SubItems.Add(i["DinhDang"].ToString());
+                ls.SubItems.Add(i["HinhThuc"].ToString());
+                ls.SubItems.Add(i["NgonNgu"].ToString());
+                listView1.Items.Add(ls);
+            }
+         
+            MessageBox.Show(MaPhim);
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(listView1.SelectedItems.Count > 0)
+            {
+                txtMaSP.Text = listView1.SelectedItems[0].SubItems[0].Text.Trim();
+            }
         }
     }
 }
