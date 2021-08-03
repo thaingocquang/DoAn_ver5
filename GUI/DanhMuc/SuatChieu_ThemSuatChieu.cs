@@ -1,4 +1,5 @@
 ﻿using DoAn_ver5.BLL;
+using DoAn_ver5.DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,6 +43,7 @@ namespace DoAn_ver5.GUI
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            //DAL_SuatChieu
             this.Close();
         }
 

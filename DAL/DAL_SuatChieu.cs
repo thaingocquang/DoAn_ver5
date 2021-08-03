@@ -61,12 +61,16 @@ namespace DoAn_ver5.DAL
             return dt;
         }
 
-        public bool InsertSuatChieu()
+        public bool InsertSuatChieu(string MaPhim, string MaSC, int NgayGio, int DingDang, string HinhThuc,
+            string NgonNgu, string TrangThai, string Phong, int TenPhim, string ThoiLuong)
         {
             try
             {
-                string query = "insert into SuatChieu values ()";
+                string query = "insert into SuatChieu values ( MaPhim = '" +MaPhim+ "', MaSuatChieu = '" +MaSC+ "', NgayGio = '" + NgayGio 
+                    + "', DinhDang = '" + NgayGio + "', HinhThuc = N'" +HinhThuc +"', NgonNgu = N'" + NgonNgu + "', TrangThai = N'" + TrangThai +"', TenPhongChieu = N'"+Phong+"')";
+                string s = "insert into";
                 DataProvider.Instance.ExcuteDB(query);
+                DataProvider.Instance.ExcuteDB(s);
                 return true;
             }
             catch (Exception e)
@@ -76,15 +80,13 @@ namespace DoAn_ver5.DAL
             }
         }
 
-        public bool UpdateSuatChieu(string MaPhim, string TenPhim, int ThoiLuong, int Namsx,
-        int DoTuoi, string NgayRaMat, string TrangThai, string DienVien, string Nuocsx, string NN,
-        string Nhasx, int DoanhThu, string TomTat)
+        public bool UpdateSuatChieu(string MaSC, string MaPhim, int TenPhim, int NgayGio,
+        int DingDang, string HinhThuc, string NgonNgu, string Phong, string TrangThai, string ThoiLuong)
         {
             try
             {
-                string query = "update SuatChieu set TenPhim = N'" + TenPhim + "', ThoiLuong = " + ThoiLuong + ", NamSanXuat = " + Namsx + "," +
-                    " GioiHanTuoi = " + DoTuoi + ",NgayRaMat = '" + NgayRaMat + "',TrangThai = '" + TrangThai + "', DienVien = N'" + DienVien
-                    + "', NuocSanXuat = N'" + Nuocsx + "', NgonNgu = N'" + NN + "', NhaSanXuat = N'" + Nhasx + "', DoanhThu = " + DoanhThu + ",TomTat = N'" + TomTat + "' where MaPhim = '" + MaPhim + "'";
+                string query = "update SuatChieu set MaPhim = '"+ MaPhim +"', NgayGio = '"+NgayGio+"', DinhDang = '" + DingDang +"', HinhThuc = N'"
+                    + HinhThuc +"', NgonNgu = N'" + NgonNgu +"', TrangThai ='"+TrangThai+"', TenPhongChieu = N'"+ Phong +"' where MaSC = '" + MaSC + "'";
                 DataProvider.Instance.ExcuteDB(query);
                 return true;
             }
