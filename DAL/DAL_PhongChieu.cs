@@ -29,5 +29,12 @@ namespace DoAn_ver5.DAL
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
+        public DataTable GetAllPhongChieu()
+        {
+            DataTable dt = new DataTable();
+            string query = "select * from dbo.PhongChieu ";
+            dt = DataProvider.Instance.GetRecords(query);
+            return dt;
+        }
     }
 }

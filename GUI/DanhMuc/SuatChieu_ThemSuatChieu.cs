@@ -20,8 +20,13 @@ namespace DoAn_ver5.GUI
             GUI(Ten);
         }
 
+       
         public void GUI(string Ten)
         {
+            foreach ()
+            {
+
+            }
             if (BLL_SuatChieu.Instance.GetSuatChieusByTenPhim(Ten) != null)
             {
                 DataTable dt = BLL_SuatChieu.Instance.GetSuatChieusByTenPhim(Ten);
@@ -47,6 +52,9 @@ namespace DoAn_ver5.GUI
             this.Close();
         }
 
-       
+        private void SuatChieu_ThemSuatChieu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

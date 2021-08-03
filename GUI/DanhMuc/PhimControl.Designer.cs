@@ -60,6 +60,7 @@ namespace DoAn_ver5.GUI
             this.dtpTuNgay = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -167,6 +168,7 @@ namespace DoAn_ver5.GUI
             // lstPhim
             // 
             this.lstPhim.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader13,
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
@@ -315,6 +317,11 @@ namespace DoAn_ver5.GUI
             this.label2.TabIndex = 5;
             this.label2.Text = "Từ ngày";
             // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "STT";
+            this.columnHeader13.Width = 70;
+            // 
             // PhimControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -366,5 +373,6 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
     }
 }

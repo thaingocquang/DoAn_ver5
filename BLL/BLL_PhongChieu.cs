@@ -36,5 +36,9 @@ namespace DoAn_ver5.BLL
                  
             };
         }
+        public DataTable GetAllPhongChieu()
+        {
+            DAL_PhongChieu
+        }
     }
 }

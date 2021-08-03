@@ -53,7 +53,8 @@ namespace DoAn_ver5.GUI
             int count = 1;
             foreach (DataRow i in BLL_Phim.Instance.GetAllPhim().Rows)
             {
-                ListViewItem ls = new ListViewItem(i["MaPhim"].ToString());               
+                ListViewItem ls = new ListViewItem(count.ToString());
+                ls.SubItems.Add(i["MaPhim"].ToString());
                 ls.SubItems.Add(i["TenPhim"].ToString());
                 ls.SubItems.Add(i["ThoiLuong"].ToString());
                 ls.SubItems.Add(i["NhaSanXuat"].ToString());
@@ -83,7 +84,6 @@ namespace DoAn_ver5.GUI
                 {
                     ListViewItem ls = new ListViewItem(count.ToString());
                     ls.SubItems.Add(i["MaPhim"].ToString());
-                    ls.SubItems.Add(i["TenPhim"].ToString());
                     ls.SubItems.Add(i["ThoiLuong"].ToString());
                     ls.SubItems.Add(i["NhaSanXuat"].ToString());
                     ls.SubItems.Add(i["NamSanXuat"].ToString());
@@ -105,7 +105,6 @@ namespace DoAn_ver5.GUI
                 {
                     ListViewItem ls = new ListViewItem(count.ToString());
                     ls.SubItems.Add(i["MaPhim"].ToString());
-                    ls.SubItems.Add(i["TenPhim"].ToString());
                     ls.SubItems.Add(i["ThoiLuong"].ToString());
                     ls.SubItems.Add(i["NhaSanXuat"].ToString());
                     ls.SubItems.Add(i["NamSanXuat"].ToString());

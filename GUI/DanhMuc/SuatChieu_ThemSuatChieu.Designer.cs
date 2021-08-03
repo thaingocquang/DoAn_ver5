@@ -52,7 +52,9 @@ namespace DoAn_ver5.GUI
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtPhong = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtMaSP = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -94,7 +96,9 @@ namespace DoAn_ver5.GUI
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.txtPhong);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.txtMaSP);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtTenPhim);
             this.panel1.Controls.Add(this.txtMaSC);
             this.panel1.Controls.Add(this.dtpThoigian);
@@ -143,9 +147,12 @@ namespace DoAn_ver5.GUI
             // 
             // comboBox2
             // 
+            this.comboBox2.Enabled = false;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "Công Chiếu"});
+            "Công Chiếu",
+            "Sắp Chiếu",
+            "Đã Chiếu"});
             this.comboBox2.Location = new System.Drawing.Point(397, 136);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(171, 28);
@@ -170,7 +177,7 @@ namespace DoAn_ver5.GUI
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Mã phim";
+            this.columnHeader1.Text = "Mã Suất phim";
             this.columnHeader1.Width = 120;
             // 
             // columnHeader2
@@ -209,7 +216,7 @@ namespace DoAn_ver5.GUI
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(318, 139);
+            this.label7.Location = new System.Drawing.Point(307, 139);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 20);
             this.label7.TabIndex = 0;
@@ -275,12 +282,37 @@ namespace DoAn_ver5.GUI
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // txtPhong
+            // label6
             // 
-            this.txtPhong.Location = new System.Drawing.Point(397, 39);
-            this.txtPhong.Name = "txtPhong";
-            this.txtPhong.Size = new System.Drawing.Size(171, 26);
-            this.txtPhong.TabIndex = 8;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 184);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(114, 20);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Mã Suất Phim";
+            // 
+            // txtMaSP
+            // 
+            this.txtMaSP.Enabled = false;
+            this.txtMaSP.Location = new System.Drawing.Point(119, 181);
+            this.txtMaSP.Name = "txtMaSP";
+            this.txtMaSP.Size = new System.Drawing.Size(181, 26);
+            this.txtMaSP.TabIndex = 10;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Enabled = false;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "001",
+            "002",
+            "003",
+            "004",
+            "005"});
+            this.comboBox1.Location = new System.Drawing.Point(398, 34);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(171, 28);
+            this.comboBox1.TabIndex = 11;
             // 
             // SuatChieu_ThemSuatChieu
             // 
@@ -296,6 +328,7 @@ namespace DoAn_ver5.GUI
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SuatChieu_ThemSuatChieu";
             this.Text = "SuatChieu_ThemSuatChieu";
+            this.Load += new System.EventHandler(this.SuatChieu_ThemSuatChieu_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -331,6 +364,8 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtTenPhim;
-        private System.Windows.Forms.TextBox txtPhong;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtMaSP;
     }
 }
