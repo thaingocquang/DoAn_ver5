@@ -52,18 +52,16 @@ namespace DoAn_ver5.GUI
 
         private void cbbTenPhim_TextChanged(object sender, EventArgs e)
         {
-
+            listView1.Items.Clear();
             string MaPhim = ((CbbItem)cbbTenPhim.SelectedItem).ID.Trim();           
             foreach(DataRow i in BLL_SuatChieu.Instance.GetSuatPhimByMaPhim(MaPhim).Rows)
-            {
+            {               
                 ListViewItem ls = new ListViewItem(i["MaSuatPhim"].ToString());
                 ls.SubItems.Add(i["DinhDang"].ToString());
                 ls.SubItems.Add(i["HinhThuc"].ToString());
                 ls.SubItems.Add(i["NgonNgu"].ToString());
                 listView1.Items.Add(ls);
-            }
-         
-            MessageBox.Show(MaPhim);
+            }         
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -71,6 +69,7 @@ namespace DoAn_ver5.GUI
             if(listView1.SelectedItems.Count > 0)
             {
                 txtMaSP.Text = listView1.SelectedItems[0].SubItems[0].Text.Trim();
+                MessageBox.Show(listView1.SelectedItems[0].SubItems[2].Text.Trim());
             }
         }
     }

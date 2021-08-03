@@ -144,19 +144,16 @@ namespace DoAn_ver5.GUI
         {
             if(listView2.SelectedItems.Count > 0)
             {
-               listView2.Items.RemoveAt(listView2.SelectedItems[0].Index);
-                string s = listView2.SelectedItems[0].SubItems[0].Text.Trim();
-                MessageBox.Show(s);
+               
+               string s = listView2.SelectedItems[0].SubItems[0].Text.Trim();
                 DAL_ThucAn.Instance.DeleteCoThucAn
-                     (
-                     
+                     (                    
                          listView2.SelectedItems[0].SubItems[0].Text.Trim(),
-                         
                          listView2.SelectedItems[0].SubItems[1].Text.Trim(),
                          listView1.SelectedItems[0].SubItems[1].Text.Trim()
                      );
-                
-            }                  
+            }
+            listView2.Items.RemoveAt(listView2.SelectedItems[0].Index);
         }
 
         private void listView1_MouseClick(object sender, MouseEventArgs e)
