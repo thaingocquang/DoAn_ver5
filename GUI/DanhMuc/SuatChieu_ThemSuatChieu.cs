@@ -53,7 +53,23 @@ namespace DoAn_ver5.GUI
                     listView1.SelectedItems[0].SubItems[2].Text.Trim(),
                     listView1.SelectedItems[0].SubItems[3].Text.Trim(),
                     int.Parse(txtGiaVe.Text.Trim())
-                );
+                );       
+            string TenPhongChieu = ((CbbItem)(cbbPhong.SelectedItem)).Name;
+            DataTable PhongChieu = DAL_PhongChieu.Instance.GetPhongChieuByTenPhongChieu(TenPhongChieu);
+            int SoHang = int.Parse(PhongChieu.Rows[0]["SoHangGhe"].ToString());
+            int SoGhe1Hang = int.Parse(PhongChieu.Rows[0]["SoGhe1Hang"].ToString());
+                int x = 0;
+            for(int i=0; i<SoHang*SoGhe1Hang; i++)
+            {
+                DAL_SuatChieu.Instance.InsertGheNgoi
+                    (
+                        txtMaSC.Text.Trim(),
+                        x.ToString(),
+                        "false",
+                        ((CbbItem)cbbPhong.SelectedItem).ID.Trim()
+                    );
+                x++;
+            }
             this.Close();
         }
 

@@ -91,10 +91,25 @@ namespace DoAn_ver5.DAL
         {
             try
             {
-                string query = "update SuatChieu set MaPhim = '"+MaPhim+"', MaSuatChieu = '"+MaSC+"', NgayGio = '"+ThoiGian+"', TrangThai = N'"+TrangThai+"', TenPhongChieu = N'"+Phong+"', GiaVe = "+GiaVe;
-                string s = "update SuatPhim set MaSuatPhim = '"+MaSP+"', MaPhim = '"+MaPhim+"', DinhDang = '"+DinhDang+"', HinhThuc = N'"+HinhThuc+"', NgonNgu = N'"+NgonNgu+"'";
+                string query = "update SuatChieu set MaPhim = '"+MaPhim+"', NgayGio = '"+ThoiGian+"', TrangThai = N'"+TrangThai+"', TenPhongChieu = N'"+Phong+"', GiaVe = "+GiaVe+" where MaSuatChieu = '" + MaSC + "'";
+                string s = "update SuatPhim set  MaPhim = '"+MaPhim+"', DinhDang = '"+DinhDang+"', HinhThuc = N'"+HinhThuc+"', NgonNgu = N'"+NgonNgu+"' where MaSuatPhim = '"+MaSP+"'";
                 DataProvider.Instance.ExcuteDB(query);
                 DataProvider.Instance.ExcuteDB(s);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
+        public bool InsertGheNgoi(string MaSuatChieu, string MaGhe, string TinhTrang, string MaPhongChieu )
+        {
+            try
+            {
+                string query = "insert into GheNgoi values ('"+MaSuatChieu+"', '"+MaGhe+"', '"+TinhTrang+"', '"+MaPhongChieu+"')";
+                DataProvider.Instance.ExcuteDB(query);
+              
                 return true;
             }
             catch (Exception e)

@@ -33,6 +33,8 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtGiaVe = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.cbbTenPhim = new System.Windows.Forms.ComboBox();
             this.cbbPhong = new System.Windows.Forms.ComboBox();
             this.txtMaSP = new System.Windows.Forms.TextBox();
@@ -53,8 +55,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtGiaVe = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -115,6 +115,22 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(595, 429);
             this.panel1.TabIndex = 15;
+            // 
+            // txtGiaVe
+            // 
+            this.txtGiaVe.Location = new System.Drawing.Point(130, 198);
+            this.txtGiaVe.Name = "txtGiaVe";
+            this.txtGiaVe.Size = new System.Drawing.Size(181, 27);
+            this.txtGiaVe.TabIndex = 29;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(61, 198);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 20);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "Giá vé";
             // 
             // cbbTenPhim
             // 
@@ -300,22 +316,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
-            // txtGiaVe
-            // 
-            this.txtGiaVe.Location = new System.Drawing.Point(130, 198);
-            this.txtGiaVe.Name = "txtGiaVe";
-            this.txtGiaVe.Size = new System.Drawing.Size(181, 27);
-            this.txtGiaVe.TabIndex = 29;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(61, 198);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 20);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "Giá vé";
-            // 
             // SuatChieu_SuaSuatChieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -328,6 +328,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.Controls.Add(this.pictureBox1);
             this.Name = "SuatChieu_SuaSuatChieu";
             this.Text = "SuatChieu";
+            this.Load += new System.EventHandler(this.SuatChieu_SuaSuatChieu_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

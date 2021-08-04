@@ -15,6 +15,7 @@ namespace DoAn_ver5.GUI.DanhMuc
 {
     public partial class SuatChieu_SuaSuatChieu : Form
     {
+       
         public SuatChieu_SuaSuatChieu(string Ma)
         {
             InitializeComponent();
@@ -23,7 +24,7 @@ namespace DoAn_ver5.GUI.DanhMuc
 
         public void GUI(string Ma)
         {
-            
+            txtMaSC.Text = Ma;
             foreach (DataRow i in BLL_Phim.Instance.GetAllPhim().Rows)
             {
                 cbbTenPhim.Items.Add(new CbbItem() { ID = i["MaPhim"].ToString(), Name = i["TenPhim"].ToString() });
@@ -76,6 +77,11 @@ namespace DoAn_ver5.GUI.DanhMuc
             {
                 txtMaSP.Text = listView1.SelectedItems[0].SubItems[0].Text.Trim();
             }
+        }
+
+        private void SuatChieu_SuaSuatChieu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
