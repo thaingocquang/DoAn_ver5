@@ -41,19 +41,29 @@ namespace DoAn_ver5.GUI
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            //DAL_SuatChieu
+            DAL_SuatChieu.Instance.InsertSuatChieu
+                (
+                    ((CbbItem)cbbTenPhim.SelectedItem).ID.Trim(),
+                    txtMaSC.Text.Trim(),
+                    txtMaSP.Text.Trim(),
+                    ((CbbItem)cbbPhong.SelectedItem).ToString().Trim(),
+                    dtpThoigian.Value.ToString(),
+                    cbbTrangThai.SelectedItem.ToString().Trim(),
+                    listView1.SelectedItems[0].SubItems[1].Text.Trim(),
+                    listView1.SelectedItems[0].SubItems[2].Text.Trim(),
+                    listView1.SelectedItems[0].SubItems[3].Text.Trim(),
+                    int.Parse(txtGiaVe.Text.Trim())
+                );
             this.Close();
         }
 
-        private void SuatChieu_ThemSuatChieu_Load(object sender, EventArgs e)
-        {
 
-        }
 
         private void cbbTenPhim_TextChanged(object sender, EventArgs e)
         {
             listView1.Items.Clear();
-            string MaPhim = ((CbbItem)cbbTenPhim.SelectedItem).ID.Trim();           
+            string MaPhim = ((CbbItem)cbbTenPhim.SelectedItem).ID.Trim();
+            
             foreach(DataRow i in BLL_SuatChieu.Instance.GetSuatPhimByMaPhim(MaPhim).Rows)
             {               
                 ListViewItem ls = new ListViewItem(i["MaSuatPhim"].ToString());
@@ -69,7 +79,6 @@ namespace DoAn_ver5.GUI
             if(listView1.SelectedItems.Count > 0)
             {
                 txtMaSP.Text = listView1.SelectedItems[0].SubItems[0].Text.Trim();
-                MessageBox.Show(listView1.SelectedItems[0].SubItems[2].Text.Trim());
             }
         }
     }

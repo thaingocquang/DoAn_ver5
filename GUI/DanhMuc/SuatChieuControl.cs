@@ -40,9 +40,12 @@ namespace DoAn_ver5.GUI
                 ls.SubItems.Add(i["MaPhim"].ToString());
                 ls.SubItems.Add(i["TenPhim"].ToString());
                 ls.SubItems.Add(i["NgayGio"].ToString());
-                
+                ls.SubItems.Add(i["DinhDang"].ToString());
+                ls.SubItems.Add(i["HinhThuc"].ToString());
+                ls.SubItems.Add(i["NgonNgu"].ToString());
                 ls.SubItems.Add(i["TenPhongChieu"].ToString());
-                ls.SubItems.Add(i["TrangThai"].ToString());                
+                ls.SubItems.Add(i["TrangThai"].ToString());
+                ls.SubItems.Add(i["MaSuatPhim"].ToString());
                 lstSuatChieu.Items.Add(ls);
                 count++;
             }
@@ -64,10 +67,12 @@ namespace DoAn_ver5.GUI
                     ls.SubItems.Add(i["MaPhim"].ToString());
                     ls.SubItems.Add(i["TenPhim"].ToString());
                     ls.SubItems.Add(i["NgayGio"].ToString());
-                    
+                    ls.SubItems.Add(i["DinhDang"].ToString());
+                    ls.SubItems.Add(i["HinhThuc"].ToString());
+                    ls.SubItems.Add(i["NgonNgu"].ToString());
                     ls.SubItems.Add(i["TenPhongChieu"].ToString());
                     ls.SubItems.Add(i["TrangThai"].ToString());
-                    ls.SubItems.Add(i["MaSuatChieu"].ToString());
+                    ls.SubItems.Add(i["MaSuatPhim"].ToString());
                     lstSuatChieu.Items.Add(ls);
                 }
             }
@@ -81,10 +86,12 @@ namespace DoAn_ver5.GUI
                     ls.SubItems.Add(i["MaPhim"].ToString());
                     ls.SubItems.Add(i["TenPhim"].ToString());
                     ls.SubItems.Add(i["NgayGio"].ToString());
-                   
+                    ls.SubItems.Add(i["DinhDang"].ToString());
+                    ls.SubItems.Add(i["HinhThuc"].ToString());
+                    ls.SubItems.Add(i["NgonNgu"].ToString());
                     ls.SubItems.Add(i["TenPhongChieu"].ToString());
                     ls.SubItems.Add(i["TrangThai"].ToString());
-                    ls.SubItems.Add(i["MaSuatChieu"].ToString());
+                    ls.SubItems.Add(i["MaSuatPhim"].ToString());
                     lstSuatChieu.Items.Add(ls);
                 }
             }
@@ -134,7 +141,7 @@ namespace DoAn_ver5.GUI
             if(lstSuatChieu.SelectedItems.Count > 0)
             {
                 ListViewItem ls = lstSuatChieu.SelectedItems[0];
-                string s = ls.SubItems[3].Text.Trim();
+                string s = ls.SubItems[1].Text.Trim();
                 SuatChieu_SuaSuatChieu sc = new SuatChieu_SuaSuatChieu(s);
                 sc.ShowDialog();
             }

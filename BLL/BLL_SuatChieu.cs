@@ -32,7 +32,6 @@ namespace DoAn_ver5.BLL
                 MaSuatChieu = row["MaSuatChieu"].ToString(),
                 PhongChieu = row["TenPhongChieu"].ToString(),
                 NgayGio = (DateTime)row["NgayGio"],
-                //GiaVe = ()row["GiaVe"]
                 GiaVe = float.Parse(row["GiaVe"].ToString())
             };
         }

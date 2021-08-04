@@ -56,7 +56,7 @@ namespace DoAn_ver5.DAL
         public DataTable GetAllSuatChieu()
         {
             DataTable dt = new DataTable();
-            string query = "select * from SuatChieu join Phim on SuatChieu.MaPhim = Phim.MaPhim";
+            string query = "select * from SuatChieu sc  join Phim  p on sc.MaPhim = p.MaPhim join SuatPhim sp on sc.MaPhim = sp.MaPhim";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
@@ -68,14 +68,15 @@ namespace DoAn_ver5.DAL
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
-        public bool InsertSuatChieu(string MaSC, string TenPhim, int ThoiLuong, string MaSP, string Phong, string ThoiGian, string TrangThai, string DingDang, string HinhThuc, string NgonNgu )
+        public bool InsertSuatChieu(string MaPhim, string MaSC, string MaSP, string Phong, string ThoiGian, string TrangThai,
+            string DinhDang, string HinhThuc, string NgonNgu,int GiaVe)
         {
             try
             {
-                string query = "()";
-                string s = "insert into";
+                string query = "insert into SuatChieu values ('" + MaPhim+"','"+ MaSC +"', '" + ThoiGian + "', N'" +TrangThai +"', N'"+Phong+"',"+GiaVe+")";
+                string s = "insert into SuatPhim values ('"+MaSP+"', '"+MaPhim+"', '"+DinhDang+"', N'"+HinhThuc+"', N'"+NgonNgu+"')";         
                 DataProvider.Instance.ExcuteDB(query);
-                DataProvider.Instance.ExcuteDB(s);
+                DataProvider.Instance.ExcuteDB(s);                
                 return true;
             }
             catch (Exception e)
@@ -85,14 +86,15 @@ namespace DoAn_ver5.DAL
             }
         }
 
-        public bool UpdateSuatChieu(string MaSC, string MaPhim, int TenPhim, int NgayGio,
-        int DingDang, string HinhThuc, string NgonNgu, string Phong, string TrangThai, string ThoiLuong)
+        public bool UpdateSuatChieu(string MaPhim, string MaSC, string MaSP, string Phong, string ThoiGian, string TrangThai,
+            string DinhDang, string HinhThuc, string NgonNgu, int GiaVe)
         {
             try
             {
-                string query = "update SuatChieu set MaPhim = '"+ MaPhim +"', NgayGio = '"+NgayGio+"', DinhDang = '" + DingDang +"', HinhThuc = N'"
-                    + HinhThuc +"', NgonNgu = N'" + NgonNgu +"', TrangThai ='"+TrangThai+"', TenPhongChieu = N'"+ Phong +"' where MaSC = '" + MaSC + "'";
+                string query = "update SuatChieu set MaPhim = '"+MaPhim+"', MaSuatChieu = '"+MaSC+"', NgayGio = '"+ThoiGian+"', TrangThai = N'"+TrangThai+"', TenPhongChieu = N'"+Phong+"', GiaVe = "+GiaVe;
+                string s = "update SuatPhim set MaSuatPhim = '"+MaSP+"', MaPhim = '"+MaPhim+"', DinhDang = '"+DinhDang+"', HinhThuc = N'"+HinhThuc+"', NgonNgu = N'"+NgonNgu+"'";
                 DataProvider.Instance.ExcuteDB(query);
+                DataProvider.Instance.ExcuteDB(s);
                 return true;
             }
             catch (Exception e)

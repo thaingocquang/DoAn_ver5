@@ -64,7 +64,6 @@ namespace DoAn_ver5.GUI
                 ls.SubItems.Add(i["NuocSanXuat"].ToString());
                 ls.SubItems.Add(i["DoanhThu"].ToString());
                 ls.SubItems.Add(i["DienVien"].ToString());
-                ls.SubItems.Add(i["TrangThai"].ToString());
                 ls.SubItems.Add(i["TomTat"].ToString());
                 lstPhim.Items.Add(ls);
                 count++;
@@ -92,7 +91,6 @@ namespace DoAn_ver5.GUI
                     ls.SubItems.Add(i["NuocSanXuat"].ToString());
                     ls.SubItems.Add(i["DoanhThu"].ToString());
                     ls.SubItems.Add(i["DienVien"].ToString());
-                    ls.SubItems.Add(i["TrangThai"].ToString());
                     ls.SubItems.Add(i["TomTat"].ToString());
                     lstPhim.Items.Add(ls);
                     count++; ;
@@ -113,7 +111,6 @@ namespace DoAn_ver5.GUI
                     ls.SubItems.Add(i["NuocSanXuat"].ToString());
                     ls.SubItems.Add(i["DoanhThu"].ToString());
                     ls.SubItems.Add(i["DienVien"].ToString());
-                    ls.SubItems.Add(i["TrangThai"].ToString());
                     ls.SubItems.Add(i["TomTat"].ToString());
                     lstPhim.Items.Add(ls);
                     count++;

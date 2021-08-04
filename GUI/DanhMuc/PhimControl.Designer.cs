@@ -42,17 +42,16 @@ namespace DoAn_ver5.GUI
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lstPhim = new System.Windows.Forms.ListView();
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -60,7 +59,6 @@ namespace DoAn_ver5.GUI
             this.dtpTuNgay = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -174,12 +172,10 @@ namespace DoAn_ver5.GUI
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader6,
             this.columnHeader7,
             this.columnHeader8,
             this.columnHeader9,
             this.columnHeader10,
-            this.columnHeader11,
             this.columnHeader12});
             this.lstPhim.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstPhim.FullRowSelect = true;
@@ -191,6 +187,11 @@ namespace DoAn_ver5.GUI
             this.lstPhim.TabIndex = 0;
             this.lstPhim.UseCompatibleStateImageBehavior = false;
             this.lstPhim.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "STT";
+            this.columnHeader13.Width = 70;
             // 
             // columnHeader1
             // 
@@ -217,11 +218,6 @@ namespace DoAn_ver5.GUI
             this.columnHeader5.Text = "Năm sản xuất";
             this.columnHeader5.Width = 150;
             // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Ngôn ngữ";
-            this.columnHeader6.Width = 150;
-            // 
             // columnHeader7
             // 
             this.columnHeader7.Text = "Ngày khởi chiếu";
@@ -241,11 +237,6 @@ namespace DoAn_ver5.GUI
             // 
             this.columnHeader10.Text = "Các diễn viên";
             this.columnHeader10.Width = 150;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Trạng thái";
-            this.columnHeader11.Width = 150;
             // 
             // columnHeader12
             // 
@@ -317,11 +308,6 @@ namespace DoAn_ver5.GUI
             this.label2.TabIndex = 5;
             this.label2.Text = "Từ ngày";
             // 
-            // columnHeader13
-            // 
-            this.columnHeader13.Text = "STT";
-            this.columnHeader13.Width = 70;
-            // 
             // PhimControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -366,12 +352,10 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ColumnHeader columnHeader13;
     }
