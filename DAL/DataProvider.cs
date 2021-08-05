@@ -10,7 +10,7 @@ namespace DoAn_ver5.DAL
 {
     public class DataProvider
     {
-        private string cnnStr = @"Data Source=.\SQLEXPRESS;Initial Catalog=DOAN_TEST;Integrated Security=True";
+        private string cnnStr = @"Data Source=.\SQLEXPRESS;Initial Catalog=DoAnT;Integrated Security=True";
         
         private static DataProvider _Instance;
         public static DataProvider Instance

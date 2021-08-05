@@ -197,6 +197,9 @@ namespace DoAn_ver5.GUI
             // cbbNhaSX
             // 
             this.cbbNhaSX.FormattingEnabled = true;
+            this.cbbNhaSX.Items.AddRange(new object[] {
+            "Mavel",
+            "Truyền hình Việt Nam"});
             this.cbbNhaSX.Location = new System.Drawing.Point(399, 237);
             this.cbbNhaSX.Name = "cbbNhaSX";
             this.cbbNhaSX.Size = new System.Drawing.Size(121, 28);
@@ -205,6 +208,9 @@ namespace DoAn_ver5.GUI
             // cbbNN
             // 
             this.cbbNN.FormattingEnabled = true;
+            this.cbbNN.Items.AddRange(new object[] {
+            "Tiếng Anh",
+            "Tiếng Việt"});
             this.cbbNN.Location = new System.Drawing.Point(399, 200);
             this.cbbNN.Name = "cbbNN";
             this.cbbNN.Size = new System.Drawing.Size(121, 28);
@@ -213,7 +219,10 @@ namespace DoAn_ver5.GUI
             // cbbNuocSX
             // 
             this.cbbNuocSX.FormattingEnabled = true;
-            this.cbbNuocSX.Location = new System.Drawing.Point(399, 159);
+            this.cbbNuocSX.Items.AddRange(new object[] {
+            "Mỹ ",
+            "Việt Nam"});
+            this.cbbNuocSX.Location = new System.Drawing.Point(399, 154);
             this.cbbNuocSX.Name = "cbbNuocSX";
             this.cbbNuocSX.Size = new System.Drawing.Size(121, 28);
             this.cbbNuocSX.TabIndex = 5;
@@ -221,6 +230,10 @@ namespace DoAn_ver5.GUI
             // cbbDoTuoi
             // 
             this.cbbDoTuoi.FormattingEnabled = true;
+            this.cbbDoTuoi.Items.AddRange(new object[] {
+            "16",
+            "18",
+            "20"});
             this.cbbDoTuoi.Location = new System.Drawing.Point(107, 233);
             this.cbbDoTuoi.Name = "cbbDoTuoi";
             this.cbbDoTuoi.Size = new System.Drawing.Size(121, 28);
@@ -243,6 +256,8 @@ namespace DoAn_ver5.GUI
             // cbbTrangThai
             // 
             this.cbbTrangThai.FormattingEnabled = true;
+            this.cbbTrangThai.Items.AddRange(new object[] {
+            "Công chiếu"});
             this.cbbTrangThai.Location = new System.Drawing.Point(399, 16);
             this.cbbTrangThai.Name = "cbbTrangThai";
             this.cbbTrangThai.Size = new System.Drawing.Size(121, 28);

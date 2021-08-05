@@ -103,7 +103,7 @@ namespace DoAn_ver5.DAL
         {
             try
             {
-                string query = "insert into SuatPhim values ('"+MaSP+"', '"+MaPhim+"', '"+DinhDang+"',N'"+ HinhThuc+"', N'"+NgonNgu+"')";
+                string query = "insert into SuatPhim values ('"+MaSP+"','"+DinhDang+"',N'"+ HinhThuc+"', N'"+NgonNgu+"')";
                 DataProvider.Instance.ExcuteDB(query);
                 return true;
             }

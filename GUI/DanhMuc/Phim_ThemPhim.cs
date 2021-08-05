@@ -42,14 +42,14 @@ namespace DoAn_ver5.GUI
             );
 
 
-            /*DAL_Phim.Instance.InsertSuatPhim
+            DAL_Phim.Instance.InsertSuatPhim
                 (
-                    s +
+                    "SP",
                     txtMaPhim.Text.Trim(),
                     txtDinhdang.Text.Trim(),
                     cbbHinhthuc.SelectedItem.ToString(),
                     txtNgonngu.Text.Trim()
-                );*/
+                ); 
             this.Close();
         }
 

@@ -73,7 +73,9 @@ namespace DoAn_ver5.DAL
         public DataTable GetAllSuatChieu()
         {
             DataTable dt = new DataTable();
-            string query = "select sc.MaSuatChieu, sc.MaPhim, p.TenPhim, sc.NgayGio, sp.DinhDang, sp.HinhThuc, sp.NgonNgu, pc.TenPhongChieu, sc.TrangThai, sp.MaSuatPhim from SuatChieu sc join Phim  p on sc.MaPhim = p.MaPhim join SuatPhim sp on sc.MaSuatPhim = sp.MaSuatPhim join PhongChieu pc on pc.MaPhongChieu = sc.MaPhongChieu";
+            string query = "select sc.MaSuatChieu, sc.MaPhim, p.TenPhim, sc.NgayGio, sp.DinhDang, sp.HinhThuc, sp.NgonNgu, pc.TenPhongChieu," +
+                " sc.TrangThai, sp.MaSuatPhim from SuatChieu sc join Phim  p on sc.MaPhim = p.MaPhim join SuatPhim sp on sc.MaSuatPhim = sp.MaSuatPhim " +
+                "join PhongChieu pc on pc.MaPhongChieu = sc.MaPhongChieu";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
