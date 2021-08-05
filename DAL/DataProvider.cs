@@ -27,7 +27,7 @@ namespace DoAn_ver5.DAL
         }
         private DataProvider()
         {
-            cnnStr = @"Data Source=.\SQLEXPRESS;Initial Catalog=DOAN_TEST;Integrated Security=True";
+            cnnStr = @"Data Source=.\SQLEXPRESS;Initial Catalog=DoAn;Integrated Security=True";
         }
         public bool ExcuteDB(string query)
         {

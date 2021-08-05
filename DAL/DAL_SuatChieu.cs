@@ -32,7 +32,9 @@ namespace DoAn_ver5.DAL
         public DataTable GetSuatChieusByTenPhim(string TenPhim)
         {
             DataTable dt = new DataTable();
-            string query = "select * from dbo.SuatChieu where TenPhim = '" + TenPhim + "'";
+            string query = "select sc.MaSuatChieu, sc.MaPhim, p.TenPhim, sc.NgayGio, sp.DinhDang, sp.HinhThuc, sp.NgonNgu, pc.TenPhongChieu, sc.TrangThai," +
+                " sp.MaSuatPhim from SuatChieu sc join Phim  p on sc.MaPhim = p.MaPhim join SuatPhim sp on sc.MaSuatPhim = sp.MaSuatPhim " +
+                "join PhongChieu pc on pc.MaPhongChieu = sc.MaPhongChieu where TenPhim = '" + TenPhim + "'";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
@@ -62,18 +64,19 @@ namespace DoAn_ver5.DAL
         public DataTable GetSuatChieuByDate(string TuNgay, string DenNgay)
         {
             DataTable dt = new DataTable();
-            string query = "select * from dbo.SuatChieu join dbo.Phim on SuatChieu.MaPhim = Phim.MaPhim where NgayGio between '" + TuNgay + "'and'" + DenNgay + "'";
+            string query = "select sc.MaSuatChieu, sc.MaPhim, p.TenPhim, sc.NgayGio, sp.DinhDang, sp.HinhThuc, sp.NgonNgu, pc.TenPhongChieu, sc.TrangThai," +
+                " sp.MaSuatPhim from SuatChieu sc join Phim  p on sc.MaPhim = p.MaPhim join SuatPhim sp on sc.MaSuatPhim = sp.MaSuatPhim " +
+                "join PhongChieu pc on pc.MaPhongChieu = sc.MaPhongChieu where NgayGio between '" + TuNgay + "'and'" + DenNgay + "'";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
         public DataTable GetAllSuatChieu()
         {
             DataTable dt = new DataTable();
-            string query = "select * from SuatChieu sc join Phim  p on sc.MaPhim = p.MaPhim join SuatPhim sp on sc.MaSuatChieu = sp.MaSuatChieu";
+            string query = "select sc.MaSuatChieu, sc.MaPhim, p.TenPhim, sc.NgayGio, sp.DinhDang, sp.HinhThuc, sp.NgonNgu, pc.TenPhongChieu, sc.TrangThai, sp.MaSuatPhim from SuatChieu sc join Phim  p on sc.MaPhim = p.MaPhim join SuatPhim sp on sc.MaSuatPhim = sp.MaSuatPhim join PhongChieu pc on pc.MaPhongChieu = sc.MaPhongChieu";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
-
         public DataTable GetSuatPhimByMaPhim(string MaPhim)
         {
             DataTable dt = new DataTable();
@@ -104,8 +107,8 @@ namespace DoAn_ver5.DAL
         {
             try
             {
-                string query = "update SuatChieu set MaPhim = '"+MaPhim+"', NgayGio = '"+ThoiGian+"', TrangThai = N'"+TrangThai+"', TenPhongChieu = N'"+Phong+"', GiaVe = "+GiaVe+" where MaSuatChieu = '" + MaSC + "'";
-                string s = "update SuatPhim set  MaPhim = '"+MaPhim+"', DinhDang = '"+DinhDang+"', HinhThuc = N'"+HinhThuc+"', NgonNgu = N'"+NgonNgu+"' where MaSuatPhim = '"+MaSP+"'";
+                string query = "update SuatChieu set MaPhim = '"+MaPhim+"', NgayGio = '"+ThoiGian+"', TrangThai = N'"+TrangThai+"', TenPhongChieu = N'"+Phong+"', GiaVe = "+GiaVe+", MaSuatPhim = '"+MaSP+"' where MaSuatChieu = '" + MaSC + "'";
+                string s = "update SuatPhim set DinhDang = '"+DinhDang+"', HinhThuc = N'"+HinhThuc+"', NgonNgu = N'"+NgonNgu+"' where MaSuatPhim = '"+MaSP+"'";
                 DataProvider.Instance.ExcuteDB(query);
                 DataProvider.Instance.ExcuteDB(s);
                 return true;
