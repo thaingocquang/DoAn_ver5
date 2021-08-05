@@ -13,6 +13,8 @@ namespace DoAn_ver5.DTO
         public DateTime NgayGio { get; set; }
         public int GiaVe { get; set; }
         public string PhongChieu { get; set; }
+        public string TrangThai { get; set; }
+        public string MaSuatPhim { get; set; }
         public DTO_SuatChieu() { }
         public DTO_SuatChieu(string MSC, string MP, DateTime NG, int GV, string PC)
         {

@@ -43,7 +43,7 @@ namespace DoAn_ver5.GUI
                 ls.SubItems.Add(i["DinhDang"].ToString());
                 ls.SubItems.Add(i["HinhThuc"].ToString());
                 ls.SubItems.Add(i["NgonNgu"].ToString());
-                ls.SubItems.Add(i["TenPhongChieu"].ToString());
+                ls.SubItems.Add(i["MaPhongChieu"].ToString());
                 ls.SubItems.Add(i["TrangThai"].ToString());
                 ls.SubItems.Add(i["MaSuatPhim"].ToString());
                 lstSuatChieu.Items.Add(ls);

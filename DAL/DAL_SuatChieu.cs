@@ -80,7 +80,11 @@ namespace DoAn_ver5.DAL
         public DataTable GetSuatPhimByMaPhim(string MaPhim)
         {
             DataTable dt = new DataTable();
-            string query = "select MaSuatPhim, DinhDang, HinhThuc, NgonNgu from Phim p join SuatPhim sp on p.MaPhim = sp.MaPhim where p.MaPhim = '"+ MaPhim +"'";
+            //string query = "select MaSuatPhim, DinhDang, HinhThuc, NgonNgu from Phim p join SuatPhim sp on p.MaPhim = sp.MaPhim where p.MaPhim = '"+ MaPhim +"'";
+            string query = @"select sp.MaSuatPhim, sp.DinhDang, sp.HinhThuc, sp.NgonNgu from Phim p join SuatChieu sc
+                            on p.MaPhim = sc.MaPhim
+                            join SuatPhim sp on sc.MaSuatPhim = sp.MaSuatPhim
+                            where p.MaPhim = '"+ MaPhim +"'";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
@@ -119,11 +123,11 @@ namespace DoAn_ver5.DAL
                 return false;
             }
         }
-        public bool InsertGheNgoi(string MaSuatChieu, string MaGhe, string TinhTrang, string MaPhongChieu )
+        public bool InsertGheNgoi(string MaSuatChieu, string TinhTrang, string MaPhongChieu )
         {
             try
             {
-                string query = "insert into GheNgoi values ('"+MaSuatChieu+"', '"+MaGhe+"', '"+TinhTrang+"', '"+MaPhongChieu+"')";
+                string query = "insert into GheNgoi (MaSuatChieu, TinhTrang, MaPhongChieu) values ('"+MaSuatChieu+"', '"+TinhTrang+"', '"+MaPhongChieu+"')";
                 DataProvider.Instance.ExcuteDB(query);
               
                 return true;
