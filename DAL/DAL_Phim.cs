@@ -24,11 +24,13 @@ namespace DoAn_ver5.DAL
             }
             private set => _Instance = value;
         }
-        public DataTable GetPhimByDate(DateTime date)
+        public DataTable GetPhimHaveSuatPhimByDate(DateTime date)
         {
             DataTable dt = new DataTable();
-            string query = "exec USP_GetPhimByDateHaveParam @date";
-            dt = DataProvider.Instance.ExecuteQueryParam(query, new object[] { date });
+            string query = @"select p.TenPhim from dbo.Phim p join dbo.SuatChieu sc
+                            on p.MaPhim = sc.MaPhim
+                            where sc.NgayGio = '" + date.Date.ToString() +"'";
+            dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
         public DataTable GetAllPhim()

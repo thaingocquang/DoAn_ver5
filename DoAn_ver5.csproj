@@ -84,7 +84,7 @@
     <Compile Include="DTO\DTO_PhongChieu.cs" />
     <Compile Include="DTO\DTO_SuatChieu.cs" />
     <Compile Include="DTO\DTO_ThucAn.cs" />
-    <Compile Include="DTO\DTO_Ve.cs" />
+    <Compile Include="DTO\DTO_GheNgoi.cs" />
     <Compile Include="GUI\DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>

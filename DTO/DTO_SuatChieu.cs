@@ -10,12 +10,17 @@ namespace DoAn_ver5.DTO
     {
         public string MaSuatChieu { get; set; }
         public string MaPhim { get; set; }
-        public string DinhDang { get; set; }
-        public string HinhThuc { get; set; }
-        public string NgonNgu { get; set; }
         public DateTime NgayGio { get; set; }
-        public float GiaVe { get; set; }
+        public int GiaVe { get; set; }
         public string PhongChieu { get; set; }
-
+        public DTO_SuatChieu() { }
+        public DTO_SuatChieu(string MSC, string MP, DateTime NG, int GV, string PC)
+        {
+            this.MaSuatChieu = MSC;
+            this.MaPhim = MP;
+            this.NgayGio = NG;
+            this.GiaVe = GV;
+            this.PhongChieu = PC;
+        }
     }
 }

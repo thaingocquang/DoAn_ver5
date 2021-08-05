@@ -11,24 +11,33 @@ namespace DoAn_ver5.DTO
     {
         public string MaPhim {get;set;}
         public string TenPhim { get; set; }
-        public string ThoiLuong { get; set; }
+        public int ThoiLuong { get; set; }
         public string NhaSanXuat { get; set; }
-        public string NamSanXuat { get; set; }
-        public string NgonNgu { get; set; }
-        public DateTime NgayKhoiChieu { get; set; }
+        public int NamSanXuat { get; set; }
+        public DateTime NgayRaMat { get; set; }
         public string NuocSanXuat { get; set; }
-        public double DoanhThu { get; set; }
+        public int DoanhThu { get; set; }
         public string CacDienVien { get; set; }
-        public bool TrangThai { get; set; }
-        public string MoTa { get; set; }
+        public string TomTat { get; set; }
 
         public DTO_Phim()
         {
         }
-        public DTO_Phim(DataRow row)
+        //public DTO_Phim(DataRow row)
+        //{
+        //    MaPhim = row["MaPhim"].ToString();
+        //    TenPhim = row["TenPhim"].ToString();
+        //}
+        public DTO_Phim(string MaPhim, string TenPhim, int ThoiLuong, string NhaSanXuat, int NamSanXuat, DateTime NgayRaMat, string NuocSanXuat, int DoanhThu, string CacDienVien, string TomTat)
         {
-            MaPhim = row["MaPhim"].ToString();
-            TenPhim = row["TenPhim"].ToString();
+            this.MaPhim = MaPhim;
+            this.TenPhim = TenPhim;
+            this.ThoiLuong = ThoiLuong;
+            this.NhaSanXuat = NhaSanXuat;
+            this.NgayRaMat = NgayRaMat;
+            this.NuocSanXuat = NuocSanXuat;
+            this.CacDienVien = CacDienVien;
+            this.TomTat = TomTat;
         }
     }
 

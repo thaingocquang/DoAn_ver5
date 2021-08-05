@@ -22,7 +22,7 @@ namespace DoAn_ver5.DAL
             }
             private set => _Instance = value;
         }
-        public DataTable GetListVeBySuatChieu(string MaSuatChieu)
+        public DataTable GetListGheBySuatChieu(string MaSuatChieu)
         {
             DataTable dt = new DataTable();
             string query = "select * from dbo.GheNgoi join dbo.SuatChieu on GheNgoi.MaSuatChieu = SuatChieu.MaSuatChieu";

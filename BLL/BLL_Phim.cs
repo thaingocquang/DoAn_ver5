@@ -26,15 +26,9 @@ namespace DoAn_ver5.BLL
             private set => _Instance = value;
         }
 
-        public DataTable GetPhimByDate(DateTime date)
+        public DataTable GetPhimHaveSuatPhimByDate(DateTime date)
         {
-            return DAL_Phim.Instance.GetPhimByDate(date);           
-        }
-        public DTO_Phim GetPhimByTenPhim(string TenPhim)
-        {
-            DataTable dt = DAL_Phim.Instance.GetPhimByTenPhim(TenPhim);
-            DataRow r = dt.Rows[0];
-            return new DTO_Phim(r);
+            return DAL_Phim.Instance.GetPhimHaveSuatPhimByDate(date);           
         }
        public DataTable GetAllPhim()
         {
@@ -51,6 +45,21 @@ namespace DoAn_ver5.BLL
         public DataTable GetPhimByMaPhim(string MaPhim)
         {
             return DAL_Phim.Instance.GetPhimByMaPhim(MaPhim);
+        }
+        public DTO_Phim GetDTOPhimByMaPhim(string MaPhim)
+        {
+            DataRow row = DAL_Phim.Instance.GetPhimByMaPhim(MaPhim).Rows[0];
+            return new DTO_Phim()
+            {
+                MaPhim = row["MaPhim"].ToString(),
+                TenPhim = row["TenPhim"].ToString(),
+                ThoiLuong = int.Parse(row["ThoiLuong"].ToString()),
+                NhaSanXuat = row["NhaSanXuat"].ToString(),
+                NgayRaMat = (DateTime)row["NgayRaMat"],
+                NuocSanXuat = row["NuocSanXuat"].ToString(),
+                CacDienVien = row["CacDienVien"].ToString(),
+                TomTat = row["TomTat"].ToString()
+            };
         }
     }
 }

@@ -33,7 +33,7 @@ namespace DoAn_ver5.GUI.NghiepVu
 
         private void HienThiPhimLenListView(DateTime date)
         {
-            DataTable data = BLL_Phim.Instance.GetPhimByDate(date);
+            DataTable data = BLL_Phim.Instance.GetPhimHaveSuatPhimByDate(date);
             int i = 1;
             foreach(DataRow row in data.Rows)
             {
@@ -54,9 +54,7 @@ namespace DoAn_ver5.GUI.NghiepVu
         {
             if (lstListSuatChieu.SelectedItems.Count > 0)
             {
-                DTO_SuatChieu SuatChieu = BLL_SuatChieu.Instance.GetSuatChieuByMaSuatChieu(lstListSuatChieu.SelectedItems[0].SubItems[1].Text);
-                DTO_Phim Phim = BLL_Phim.Instance.GetPhimByTenPhim(lstListPhim.SelectedItems[0].SubItems[1].Text);
-                BanVe_ChonGhe frm = new BanVe_ChonGhe(SuatChieu, Phim);
+                BanVe_ChonGhe frm = new BanVe_ChonGhe(lstListSuatChieu.SelectedItems[0].SubItems[1].Text);
                 frm.Show();
             }           
         }
@@ -65,17 +63,18 @@ namespace DoAn_ver5.GUI.NghiepVu
         {
             lstListSuatChieu.Items.Clear();
             string tenPhim = lstListPhim.SelectedItems[0].SubItems[1].Text;
-            DataTable SuatChieus = BLL_SuatChieu.Instance.GetSuatChieusByTenPhim(tenPhim);
+            DataTable SuatChieus = BLL_SuatChieu.Instance.GetSuatChieusByTenPhimAndDate(tenPhim, dtpChonNgay.Value);
             int i = 1;
             foreach (DataRow row in SuatChieus.Rows)
             {
                 ListViewItem lviLst = new ListViewItem(i + "");
                 lviLst.SubItems.Add(row["MaSuatChieu"].ToString());
-                lviLst.SubItems.Add(((DateTime)row["NgayGio"]).ToString());
+                lviLst.SubItems.Add(((DateTime)row["NgayGio"]).TimeOfDay.ToString());
                 lviLst.SubItems.Add(row["DinhDang"].ToString());
                 lviLst.SubItems.Add(row["HinhThuc"].ToString());
                 lviLst.SubItems.Add(row["NgonNgu"].ToString());
                 lviLst.SubItems.Add(row["TenPhongChieu"].ToString());
+                lviLst.SubItems.Add(row["TrangThai"].ToString());
                 lstListSuatChieu.Items.Add(lviLst);
                 i++;
             }

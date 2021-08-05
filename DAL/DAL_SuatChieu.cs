@@ -29,10 +29,23 @@ namespace DoAn_ver5.DAL
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
-        public DataTable GetSuatChieusByTenPhim(string tenPhim)
+        public DataTable GetSuatChieusByTenPhim(string TenPhim)
         {
             DataTable dt = new DataTable();
-            string query = "select * from dbo.SuatChieu join dbo.Phim on SuatChieu.MaPhim = Phim.MaPhim where Phim.TenPhim = N'" + tenPhim + "'";
+            string query = "select * from dbo.SuatChieu where TenPhim = '" + TenPhim + "'";
+            dt = DataProvider.Instance.GetRecords(query);
+            return dt;
+        }
+        public DataTable GetSuatChieusByTenPhimAndDate(string tenPhim, DateTime Ngay)
+        {
+            DataTable dt = new DataTable();
+            string query = @"select sc.MaSuatChieu, sc.NgayGio, sp.DinhDang, sp.HinhThuc, sp.NgonNgu, pc.TenPhongChieu, sc.TrangThai from dbo.SuatChieu sc join dbo.Phim p
+                            on sc.MaPhim = p.MaPhim
+                            join dbo.SuatPhim sp
+                            on sp.MaSuatChieu = sc.MaSuatChieu
+                            join dbo.PhongChieu pc
+                            on pc.MaPhongChieu = sc.MaPhongChieu
+                            where p.TenPhim = N'"+ tenPhim +"' and sc.NgayGio = '"+ Ngay.Date.ToString() +"'";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }

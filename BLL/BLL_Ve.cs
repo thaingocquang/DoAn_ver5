@@ -25,15 +25,17 @@ namespace DoAn_ver5.BLL
             private set => _Instance = value;
         }
 
-        public List<DTO_Ve> GetListVeBySuatChieu(string MaSuatChieu)
+        public List<DTO_GheNgoi> GetListGheBySuatChieu(string MaSuatChieu)
         {
-            List<DTO_Ve> list = new List<DTO_Ve>();
-            foreach (DataRow row in DAL_Ve.Instance.GetListVeBySuatChieu(MaSuatChieu).Rows)
+            List<DTO_GheNgoi> list = new List<DTO_GheNgoi>();
+            foreach (DataRow row in DAL_Ve.Instance.GetListGheBySuatChieu(MaSuatChieu).Rows)
             {
-                list.Add(new DTO_Ve
+                list.Add(new DTO_GheNgoi
                 {
-                    ChoNgoi = row["MaGhe"].ToString(),
-                    Status = (bool)row["TinhTrang"]
+                    MaSuatChieu = row["MaSuatChieu"].ToString(),
+                    MaGhe = row["MaGhe"].ToString(),
+                    TinhTrang = (bool)row["TinhTrang"],
+                    MaPhongChieu = row["MaPhongChieu"].ToString()
                 });
             }
             return list;

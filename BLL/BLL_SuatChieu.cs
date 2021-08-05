@@ -32,8 +32,12 @@ namespace DoAn_ver5.BLL
                 MaSuatChieu = row["MaSuatChieu"].ToString(),
                 PhongChieu = row["TenPhongChieu"].ToString(),
                 NgayGio = (DateTime)row["NgayGio"],
-                GiaVe = float.Parse(row["GiaVe"].ToString())
+                GiaVe = int.Parse(row["GiaVe"].ToString())
             };
+        }
+        public DataTable GetSuatChieusByTenPhimAndDate(string tenPhim, DateTime Ngay)
+        {
+            return DAL_SuatChieu.Instance.GetSuatChieusByTenPhimAndDate(tenPhim, Ngay);
         }
         public DataTable GetSuatChieusByTenPhim(string tenPhim)
         {
