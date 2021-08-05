@@ -99,7 +99,7 @@ namespace DoAn_ver5.DAL
             }
         }
 
-        public bool InsertSuatPhim(string MaSP, string MaPhim, string DinhDang, string HinhThuc, string NgonNgu)
+        public bool InsertSuatPhim(string MaSP, string DinhDang, string HinhThuc, string NgonNgu)
         {
             try
             {

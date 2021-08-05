@@ -44,8 +44,7 @@ namespace DoAn_ver5.GUI
 
             DAL_Phim.Instance.InsertSuatPhim
                 (
-                    "SP",
-                    txtMaPhim.Text.Trim(),
+                    "SP",                  
                     txtDinhdang.Text.Trim(),
                     cbbHinhthuc.SelectedItem.ToString(),
                     txtNgonngu.Text.Trim()
