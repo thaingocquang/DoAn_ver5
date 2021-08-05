@@ -58,7 +58,7 @@ namespace DoAn_ver5.GUI
             DataTable PhongChieu = DAL_PhongChieu.Instance.GetPhongChieuByTenPhongChieu(TenPhongChieu);
             int SoHang = int.Parse(PhongChieu.Rows[0]["SoHangGhe"].ToString());
             int SoGhe1Hang = int.Parse(PhongChieu.Rows[0]["SoGhe1Hang"].ToString());
-                int x = 0;
+            int x = 0;
             for(int i=0; i<SoHang*SoGhe1Hang; i++)
             {
                 DAL_SuatChieu.Instance.InsertGheNgoi

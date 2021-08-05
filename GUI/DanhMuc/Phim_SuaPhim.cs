@@ -24,6 +24,7 @@ namespace DoAn_ver5.GUI.DanhMuc
         }    
         public void GUI(string MaPhim)
         {
+            
             if (BLL_Phim.Instance.GetPhimByMaPhim(MaPhim) != null)
             {
                 DataTable dt = BLL_Phim.Instance.GetPhimByMaPhim(MaPhim);
@@ -33,12 +34,10 @@ namespace DoAn_ver5.GUI.DanhMuc
                     txtTenPhim.Text = i["TenPhim"].ToString();
                     numericUpDown2.Value = Convert.ToInt32(i["ThoiLuong"].ToString());
                     numericUpDown3.Value = Convert.ToInt32(i["NamSanXuat"].ToString());
-                    cbbDoTuoi.SelectedItem = Convert.ToInt32(i["GioiHanTuoi"].ToString());
+                    cbbDoTuoi.SelectedItem = i["GioiHanTuoi"].ToString();
                     dtpNgayChieu.Value = Convert.ToDateTime(i["NgayRaMat"].ToString());
-                    cbbTrangThai.SelectedItem = i["TrangThai"].ToString();
                     txtDienVien.Text = i["DienVien"].ToString();
                     cbbNuocsx.SelectedItem = i["NuocSanXuat"].ToString();
-                    cbbNN.SelectedItem = i["NgonNgu"].ToString();
                     cbbNhasx.SelectedItem = i["NhaSanXuat"].ToString();
                     txtDoanhThu.Text = i["DoanhThu"].ToString();
                     txtTomTat.Text = i["TomTat"].ToString();
@@ -60,10 +59,8 @@ namespace DoAn_ver5.GUI.DanhMuc
                     int.Parse(numericUpDown3.Value.ToString()),
                     int.Parse(cbbDoTuoi.SelectedItem.ToString()),
                     dtpNgayChieu.Value.ToString("yyyy/MM/dd"),
-                    cbbTrangThai.SelectedItem.ToString(),
                     txtDienVien.Text.Trim(),
                     cbbNuocsx.SelectedItem.ToString(),
-                    cbbNN.SelectedItem.ToString(),
                     cbbNhasx.SelectedItem.ToString(),
                     int.Parse(txtDoanhThu.Text.Trim()),
                     txtTomTat.Text.Trim()
@@ -78,10 +75,16 @@ namespace DoAn_ver5.GUI.DanhMuc
             cbbHinhthuc.SelectedItem = null;
         }
 
+        
         private void btnThem_Click(object sender, EventArgs e)
         {
             int count = 1;
-
+            ListViewItem ls = new ListViewItem(count.ToString());
+            ls.SubItems.Add(txtDinhdang.Text.Trim());
+            ls.SubItems.Add(cbbHinhthuc.SelectedItem.ToString().Trim());
+            ls.SubItems.Add(txtNgonngu.Text.Trim());
+            lstSuatphim.Items.Add(ls);
         }
+        
     }
 }

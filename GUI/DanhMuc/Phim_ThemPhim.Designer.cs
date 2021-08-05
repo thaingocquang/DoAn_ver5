@@ -62,24 +62,23 @@ namespace DoAn_ver5.GUI
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnHuy = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.lstSuatphim = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtDinhdang = new System.Windows.Forms.TextBox();
-            this.txtNgonngu = new System.Windows.Forms.TextBox();
-            this.cbbHinhthuc = new System.Windows.Forms.ComboBox();
-            this.btnThem = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnXoa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.cbbHinhthuc = new System.Windows.Forms.ComboBox();
+            this.txtNgonngu = new System.Windows.Forms.TextBox();
+            this.txtDinhdang = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -87,8 +86,8 @@ namespace DoAn_ver5.GUI
             ((System.ComponentModel.ISupportInitialize)(this.ThoiLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NamSX)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -408,55 +407,6 @@ namespace DoAn_ver5.GUI
             this.tabPage2.Text = "Suất phim";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Controls.Add(this.btnHuy);
-            this.panel2.Controls.Add(this.btnLuu);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 566);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(623, 54);
-            this.panel2.TabIndex = 3;
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(487, 12);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(85, 30);
-            this.btnHuy.TabIndex = 0;
-            this.btnHuy.Text = "Hủy bỏ";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(389, 12);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(75, 30);
-            this.btnLuu.TabIndex = 0;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnXoa);
-            this.groupBox1.Controls.Add(this.btnThem);
-            this.groupBox1.Controls.Add(this.cbbHinhthuc);
-            this.groupBox1.Controls.Add(this.txtNgonngu);
-            this.groupBox1.Controls.Add(this.txtDinhdang);
-            this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Location = new System.Drawing.Point(18, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(549, 132);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            // 
             // lstSuatphim
             // 
             this.lstSuatphim.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -494,56 +444,31 @@ namespace DoAn_ver5.GUI
             this.columnHeader4.Text = "Ngôn Ngữ";
             this.columnHeader4.Width = 140;
             // 
-            // label16
+            // groupBox1
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(49, 26);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(84, 20);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Định dạng";
+            this.groupBox1.Controls.Add(this.btnXoa);
+            this.groupBox1.Controls.Add(this.btnThem);
+            this.groupBox1.Controls.Add(this.cbbHinhthuc);
+            this.groupBox1.Controls.Add(this.txtNgonngu);
+            this.groupBox1.Controls.Add(this.txtDinhdang);
+            this.groupBox1.Controls.Add(this.label18);
+            this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Location = new System.Drawing.Point(18, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(549, 132);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
             // 
-            // label17
+            // btnXoa
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(49, 76);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(80, 20);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Ngôn ngữ";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(297, 26);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(81, 20);
-            this.label18.TabIndex = 2;
-            this.label18.Text = "Hình thức";
-            // 
-            // txtDinhdang
-            // 
-            this.txtDinhdang.Location = new System.Drawing.Point(140, 26);
-            this.txtDinhdang.Name = "txtDinhdang";
-            this.txtDinhdang.Size = new System.Drawing.Size(119, 26);
-            this.txtDinhdang.TabIndex = 3;
-            // 
-            // txtNgonngu
-            // 
-            this.txtNgonngu.Location = new System.Drawing.Point(140, 76);
-            this.txtNgonngu.Name = "txtNgonngu";
-            this.txtNgonngu.Size = new System.Drawing.Size(119, 26);
-            this.txtNgonngu.TabIndex = 4;
-            // 
-            // cbbHinhthuc
-            // 
-            this.cbbHinhthuc.FormattingEnabled = true;
-            this.cbbHinhthuc.Items.AddRange(new object[] {
-            "Phụ đề"});
-            this.cbbHinhthuc.Location = new System.Drawing.Point(385, 26);
-            this.cbbHinhthuc.Name = "cbbHinhthuc";
-            this.cbbHinhthuc.Size = new System.Drawing.Size(125, 28);
-            this.cbbHinhthuc.TabIndex = 5;
+            this.btnXoa.Location = new System.Drawing.Point(449, 72);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 30);
+            this.btnXoa.TabIndex = 7;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -555,15 +480,89 @@ namespace DoAn_ver5.GUI
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // btnXoa
+            // cbbHinhthuc
             // 
-            this.btnXoa.Location = new System.Drawing.Point(449, 72);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 30);
-            this.btnXoa.TabIndex = 7;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.cbbHinhthuc.FormattingEnabled = true;
+            this.cbbHinhthuc.Items.AddRange(new object[] {
+            "Phụ đề"});
+            this.cbbHinhthuc.Location = new System.Drawing.Point(385, 26);
+            this.cbbHinhthuc.Name = "cbbHinhthuc";
+            this.cbbHinhthuc.Size = new System.Drawing.Size(125, 28);
+            this.cbbHinhthuc.TabIndex = 5;
+            // 
+            // txtNgonngu
+            // 
+            this.txtNgonngu.Location = new System.Drawing.Point(140, 76);
+            this.txtNgonngu.Name = "txtNgonngu";
+            this.txtNgonngu.Size = new System.Drawing.Size(119, 26);
+            this.txtNgonngu.TabIndex = 4;
+            // 
+            // txtDinhdang
+            // 
+            this.txtDinhdang.Location = new System.Drawing.Point(140, 26);
+            this.txtDinhdang.Name = "txtDinhdang";
+            this.txtDinhdang.Size = new System.Drawing.Size(119, 26);
+            this.txtDinhdang.TabIndex = 3;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(297, 26);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(81, 20);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "Hình thức";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(49, 76);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(80, 20);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Ngôn ngữ";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(49, 26);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(84, 20);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Định dạng";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.btnHuy);
+            this.panel2.Controls.Add(this.btnLuu);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 566);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(623, 54);
+            this.panel2.TabIndex = 3;
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Location = new System.Drawing.Point(487, 12);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(85, 30);
+            this.btnHuy.TabIndex = 0;
+            this.btnHuy.Text = "Hủy bỏ";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Location = new System.Drawing.Point(389, 12);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 30);
+            this.btnLuu.TabIndex = 0;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // Phim_ThemPhim
             // 
@@ -588,9 +587,9 @@ namespace DoAn_ver5.GUI
             ((System.ComponentModel.ISupportInitialize)(this.ThoiLuong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NamSX)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -636,7 +635,6 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.DateTimePicker dtpNgayChieu;
         private System.Windows.Forms.ListView lstSuatphim;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;

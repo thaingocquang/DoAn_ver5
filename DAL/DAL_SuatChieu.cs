@@ -56,7 +56,7 @@ namespace DoAn_ver5.DAL
         public DataTable GetAllSuatChieu()
         {
             DataTable dt = new DataTable();
-            string query = "select * from SuatChieu sc  join Phim  p on sc.MaPhim = p.MaPhim join SuatPhim sp on sc.MaPhim = sp.MaPhim";
+            string query = "select * from SuatChieu sc join Phim  p on sc.MaPhim = p.MaPhim join SuatPhim sp on sc.MaSuatChieu = sp.MaSuatChieu";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
@@ -73,8 +73,8 @@ namespace DoAn_ver5.DAL
         {
             try
             {
-                string query = "insert into SuatChieu values ('" + MaPhim+"','"+ MaSC +"', '" + ThoiGian + "', N'" +TrangThai +"', N'"+Phong+"',"+GiaVe+")";
-                string s = "insert into SuatPhim values ('"+MaSP+"', '"+MaPhim+"', '"+DinhDang+"', N'"+HinhThuc+"', N'"+NgonNgu+"')";         
+                string query = "insert into SuatChieu values ('" + MaPhim+"','"+ MaSC +"', '" + ThoiGian + "', N'" +TrangThai +"', N'"+Phong+"',"+GiaVe+", '"+MaSP+"')";
+                string s = "insert into SuatPhim values ('"+MaSP+"', '"+DinhDang+"', N'"+HinhThuc+"', N'"+NgonNgu+"')";         
                 DataProvider.Instance.ExcuteDB(query);
                 DataProvider.Instance.ExcuteDB(s);                
                 return true;
