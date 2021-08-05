@@ -29,9 +29,9 @@ namespace DoAn_ver5.DAL
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
-        public void SetTrangThaiVe(string maVe)
+        public void SetTrangThaiVe(string maGhe)
         {
-            string query = "update dbo.GheNgoi set TinhTrang = 'true' where MaGhe = '" + maVe + "'";
+            string query = "update dbo.GheNgoi set TinhTrang = 'true' where MaGhe = '" + maGhe + "'";
             DataProvider.Instance.ExcuteDB(query);
         }
         public DataTable GetVe()

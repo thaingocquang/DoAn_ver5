@@ -29,10 +29,13 @@ namespace DoAn_ver5.BLL
             DataRow row = DAL_SuatChieu.Instance.GetSuatChieuByMaSuatChieu(MaSuatChieu).Rows[0];
             return new DTO_SuatChieu
             {
+                MaPhim = row["MaPhim"].ToString(),
                 MaSuatChieu = row["MaSuatChieu"].ToString(),
-                PhongChieu = row["TenPhongChieu"].ToString(),
+                PhongChieu = row["MaPhongChieu"].ToString(),
                 NgayGio = (DateTime)row["NgayGio"],
-                GiaVe = int.Parse(row["GiaVe"].ToString())
+                GiaVe = int.Parse(row["GiaVe"].ToString()),
+                TrangThai = row["TrangThai"].ToString(),
+                MaSuatPhim = row["MaSuatPhim"].ToString()
             };
         }
         public DataTable GetSuatChieusByTenPhimAndDate(string tenPhim, DateTime Ngay)

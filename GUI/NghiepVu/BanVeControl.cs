@@ -80,10 +80,5 @@ namespace DoAn_ver5.GUI.NghiepVu
             }
 
         }
-
-        private void lstListPhim_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

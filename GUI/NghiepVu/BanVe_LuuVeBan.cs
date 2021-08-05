@@ -17,12 +17,14 @@ namespace DoAn_ver5.GUI.NghiepVu
     {
         DTO_Phim Phim;
         DTO_SuatChieu SuatChieu;
+        DTO_PhongChieu PhongChieu;
         List<Button> listGheDaChon;
-        public BanVe_LuuVeBan(DTO_Phim phim, DTO_SuatChieu suatChieu, List<Button> list)
+        public BanVe_LuuVeBan(DTO_Phim phim, DTO_SuatChieu suatChieu, DTO_PhongChieu phongChieu, List<Button> list)
         {
             InitializeComponent();
             Phim = phim;
             SuatChieu = suatChieu;
+            PhongChieu = phongChieu;
             listGheDaChon = list;
         }
 
@@ -35,7 +37,7 @@ namespace DoAn_ver5.GUI.NghiepVu
         {
             txtMaSuatChieu.Text = SuatChieu.MaSuatChieu;
             txtTenPhim.Text = Phim.TenPhim;
-            txtPhongChieu.Text = SuatChieu.PhongChieu;
+            txtPhongChieu.Text = PhongChieu.TenPhongChieu;
             txtGioChieu.Text = SuatChieu.NgayGio.ToString();
             
             foreach(Button btn in listGheDaChon)
@@ -87,7 +89,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             foreach (Button btn in listGheDaChon)
             {
                 DAL_HoaDonVe.Instance.InsertHoaDonVe(txtMaSuatChieu.Text, btn.Text, dateTimePicker1.Value.Date.ToString(), "TNQ", float.Parse(txtTongTien.Text)/listGheDaChon.Count, txtMaKH.Text);
-                DAL_Ve.Instance.SetTrangThaiVe(btn.Text);
+                DAL_Ve.Instance.SetTrangThaiVe(btn.Tag.ToString());
             }
             this.Close();
         }

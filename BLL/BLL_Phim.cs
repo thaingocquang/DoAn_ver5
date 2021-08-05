@@ -57,7 +57,7 @@ namespace DoAn_ver5.BLL
                 NhaSanXuat = row["NhaSanXuat"].ToString(),
                 NgayRaMat = (DateTime)row["NgayRaMat"],
                 NuocSanXuat = row["NuocSanXuat"].ToString(),
-                CacDienVien = row["CacDienVien"].ToString(),
+                CacDienVien = row["DienVien"].ToString(),
                 TomTat = row["TomTat"].ToString()
             };
         }

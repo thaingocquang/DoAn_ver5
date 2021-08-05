@@ -41,7 +41,7 @@ namespace DoAn_ver5.GUI
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            DAL_SuatChieu.Instance.InsertSuatChieu
+            if(DAL_SuatChieu.Instance.InsertSuatChieu
                 (
                     ((CbbItem)cbbTenPhim.SelectedItem).ID.Trim(),
                     txtMaSC.Text.Trim(),
@@ -53,22 +53,28 @@ namespace DoAn_ver5.GUI
                     listView1.SelectedItems[0].SubItems[2].Text.Trim(),
                     listView1.SelectedItems[0].SubItems[3].Text.Trim(),
                     int.Parse(txtGiaVe.Text.Trim())
-                );       
+                ) == true)
+            {
+                MessageBox.Show("Insert SuatChieu thanh cong");
+            }
+            else
+            {
+                MessageBox.Show("Insert SuatChieu that bai");
+            }
             string TenPhongChieu = ((CbbItem)(cbbPhong.SelectedItem)).Name;
             DataTable PhongChieu = DAL_PhongChieu.Instance.GetPhongChieuByTenPhongChieu(TenPhongChieu);
             int SoHang = int.Parse(PhongChieu.Rows[0]["SoHangGhe"].ToString());
             int SoGhe1Hang = int.Parse(PhongChieu.Rows[0]["SoGhe1Hang"].ToString());
-            int x = 0;
+            //int x = 0;
             for(int i=0; i<SoHang*SoGhe1Hang; i++)
             {
                 DAL_SuatChieu.Instance.InsertGheNgoi
                     (
                         txtMaSC.Text.Trim(),
-                        x.ToString(),
                         "false",
                         ((CbbItem)cbbPhong.SelectedItem).ID.Trim()
                     );
-                x++;
+                //x++;
             }
             this.Close();
         }
@@ -96,6 +102,11 @@ namespace DoAn_ver5.GUI
             {
                 txtMaSP.Text = listView1.SelectedItems[0].SubItems[0].Text.Trim();
             }
+        }
+
+        private void SuatChieu_ThemSuatChieu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

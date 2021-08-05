@@ -181,7 +181,6 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.lstListPhim.TabIndex = 3;
             this.lstListPhim.UseCompatibleStateImageBehavior = false;
             this.lstListPhim.View = System.Windows.Forms.View.Details;
-            this.lstListPhim.SelectedIndexChanged += new System.EventHandler(this.lstListPhim_SelectedIndexChanged);
             this.lstListPhim.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lstListPhim_MouseClick);
             // 
             // columnHeader8

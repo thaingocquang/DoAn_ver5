@@ -67,7 +67,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(721, 23);
+            this.label2.Location = new System.Drawing.Point(816, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 17);
             this.label2.TabIndex = 4;
@@ -76,7 +76,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(542, 22);
+            this.label1.Location = new System.Drawing.Point(686, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 17);
             this.label1.TabIndex = 3;
@@ -85,34 +85,38 @@ namespace DoAn_ver5.GUI.NghiepVu
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Red;
-            this.panel5.Location = new System.Drawing.Point(639, 15);
+            this.panel5.Location = new System.Drawing.Point(769, 14);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(67, 24);
+            this.panel5.Size = new System.Drawing.Size(41, 24);
             this.panel5.TabIndex = 2;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Yellow;
-            this.panel4.Location = new System.Drawing.Point(469, 15);
+            this.panel4.Location = new System.Drawing.Point(640, 14);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(67, 24);
+            this.panel4.Size = new System.Drawing.Size(40, 24);
             this.panel4.TabIndex = 2;
             // 
             // lblThoiGian
             // 
             this.lblThoiGian.AutoSize = true;
+            this.lblThoiGian.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThoiGian.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lblThoiGian.Location = new System.Drawing.Point(28, 44);
             this.lblThoiGian.Name = "lblThoiGian";
-            this.lblThoiGian.Size = new System.Drawing.Size(46, 17);
+            this.lblThoiGian.Size = new System.Drawing.Size(64, 25);
             this.lblThoiGian.TabIndex = 1;
             this.lblThoiGian.Text = "label2";
             // 
             // lblThongTin
             // 
             this.lblThongTin.AutoSize = true;
+            this.lblThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThongTin.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lblThongTin.Location = new System.Drawing.Point(28, 13);
             this.lblThongTin.Name = "lblThongTin";
-            this.lblThongTin.Size = new System.Drawing.Size(46, 17);
+            this.lblThongTin.Size = new System.Drawing.Size(64, 25);
             this.lblThongTin.TabIndex = 0;
             this.lblThongTin.Text = "label1";
             // 

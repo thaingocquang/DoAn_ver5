@@ -16,24 +16,27 @@ namespace DoAn_ver5.GUI.NghiepVu
     {
         DTO_SuatChieu SuatChieu;
         DTO_Phim Phim;
+        DTO_PhongChieu PhongChieu;
 
         int SizeGhe = 30;
         int KhoangCachGhe = 7;
 
         List<DTO_GheNgoi> listGhe = new List<DTO_GheNgoi>();
         List<Button> listGheDaChon = new List<Button>();
+        List<string> listMaGheDaChon = new List<string>();
 
         public BanVe_ChonGhe(string MaSuatChieu)
         {
             InitializeComponent();
             SuatChieu = BLL_SuatChieu.Instance.GetSuatChieuByMaSuatChieu(MaSuatChieu);
             Phim = BLL_Phim.Instance.GetDTOPhimByMaPhim(SuatChieu.MaPhim);
+            PhongChieu = BLL_PhongChieu.Instance.GetPhongChieuByName(SuatChieu.PhongChieu);
         }
 
         private void BanVe_ChonGhe_Load(object sender, EventArgs e)
         {
             lblThongTin.Text = "PBL3 Movie Theater Project | "
-                + SuatChieu.PhongChieu + " | " + Phim.TenPhim;
+                + PhongChieu.TenPhongChieu + " | " + Phim.TenPhim;
             lblThoiGian.Text = SuatChieu.NgayGio.Date.ToString();
             LoadPhongChieu(SuatChieu.PhongChieu);
             listGhe = BLL_Ve.Instance.GetListGheBySuatChieu(SuatChieu.MaSuatChieu);
@@ -42,19 +45,26 @@ namespace DoAn_ver5.GUI.NghiepVu
 
         private void LoadGhe(List<DTO_GheNgoi> listGhe)
         {
+            int a = 0;
+            int count = 0;
+            char[] Alpha = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'L', 'M', 'N', 'O' };
             panelChonGhe.Controls.Clear();
-            for (int i = 0; i < listGhe.Count; i++)
+            for(int i=0; i<PhongChieu.SoHangGhe; i++)
             {
-                Button btnSeat = new Button() { Width = SizeGhe + 20, Height = SizeGhe };
-                btnSeat.Text = listGhe[i].MaGhe;
-                if (listGhe[i].TinhTrang == true)
-                    btnSeat.BackColor = Color.Red;
-                else
-                    btnSeat.BackColor = Color.White;
-                btnSeat.Click += BtnSeat_Click;
-                panelChonGhe.Controls.Add(btnSeat);
+                for(int j=0; j<PhongChieu.SoGheTren1Hang; j++)
+                {
+                    Button btnSeat = new Button() { Width = SizeGhe + 20, Height = SizeGhe };
+                    btnSeat.Text = Alpha[a] + j.ToString();
+                    if (listGhe[count++].TinhTrang == true)
+                        btnSeat.BackColor = Color.Red;
+                    else
+                        btnSeat.BackColor = Color.White;
+                    btnSeat.Click += BtnSeat_Click;
+                    panelChonGhe.Controls.Add(btnSeat);
 
-                btnSeat.Tag = listGhe[i];
+                    btnSeat.Tag = listGhe[i].MaGhe;
+                }
+                a++;
             }
         }
 
@@ -79,7 +89,7 @@ namespace DoAn_ver5.GUI.NghiepVu
 
         private void LoadPhongChieu(string phongChieu)
         {
-            DTO_PhongChieu PhongChieu = BLL_PhongChieu.Instance.GetPhongChieuByName(phongChieu);
+            DTO_PhongChieu PhongChieu = BLL_PhongChieu.Instance.GetPhongChieuByName(SuatChieu.PhongChieu);
             int row = PhongChieu.SoHangGhe;
             int col = PhongChieu.SoGheTren1Hang;
             panelChonGhe.Size = new Size((SizeGhe + 20 + KhoangCachGhe) * col, (SizeGhe + KhoangCachGhe) * row);
@@ -92,10 +102,8 @@ namespace DoAn_ver5.GUI.NghiepVu
                 MessageBox.Show("Vui lòng chọn ghế trước khi thanh toán!");
                 return;
             }
-            BanVe_LuuVeBan frm = new BanVe_LuuVeBan(Phim, SuatChieu, listGheDaChon);
-            //frm.Show();
+            BanVe_LuuVeBan frm = new BanVe_LuuVeBan(Phim, SuatChieu, PhongChieu,listGheDaChon);
             frm.ShowDialog();
-            //LoadGhe(listGhe);
             ReLoad();
         }
 
