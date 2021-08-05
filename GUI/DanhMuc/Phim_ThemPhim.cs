@@ -23,6 +23,7 @@ namespace DoAn_ver5.GUI
             this.Close();
         }
 
+        
         private void btnLuu_Click(object sender, EventArgs e)
         {
             DAL_Phim.Instance.InsertPhim
@@ -33,14 +34,22 @@ namespace DoAn_ver5.GUI
                 int.Parse(NamSX.Value.ToString()),
                 int.Parse(cbbDoTuoi.SelectedItem.ToString()),
                 dtpNgayChieu.Value.Date.ToString("yyyy/MM/dd"),
-                cbbTrangThai.SelectedItem.ToString(),
                 txtDienVien.Text.Trim(),
                 cbbNuocSX.SelectedItem.ToString(),
-                cbbNN.SelectedItem.ToString(),
                 cbbNhaSX.SelectedItem.ToString(),
                 int.Parse(txtDoanhThu.Text.Trim()),
                 txtTomTat.Text.Trim()
             );
+
+
+            /*DAL_Phim.Instance.InsertSuatPhim
+                (
+                    s +
+                    txtMaPhim.Text.Trim(),
+                    txtDinhdang.Text.Trim(),
+                    cbbHinhthuc.SelectedItem.ToString(),
+                    txtNgonngu.Text.Trim()
+                );*/
             this.Close();
         }
 
@@ -53,7 +62,12 @@ namespace DoAn_ver5.GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-
+            int count = 1;
+            ListViewItem ls = new ListViewItem(count.ToString());
+            ls.SubItems.Add(txtDinhdang.Text.Trim());
+            ls.SubItems.Add(cbbHinhthuc.SelectedItem.ToString().Trim());
+            ls.SubItems.Add(txtNgonngu.Text.Trim());
+            lstSuatphim.Items.Add(ls);
         }
     }
 }

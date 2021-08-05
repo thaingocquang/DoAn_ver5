@@ -41,7 +41,7 @@ namespace DoAn_ver5.GUI
             if (lstPhim.SelectedItems.Count > 0)
             {
                 ListViewItem ls = lstPhim.SelectedItems[0];
-                string MaPhim = ls.SubItems[0].Text.Trim();
+                string MaPhim = ls.SubItems[1].Text.Trim();
                 Phim_SuaPhim f = new Phim_SuaPhim(MaPhim);
                 f.ShowDialog();
             }
@@ -59,7 +59,6 @@ namespace DoAn_ver5.GUI
                 ls.SubItems.Add(i["ThoiLuong"].ToString());
                 ls.SubItems.Add(i["NhaSanXuat"].ToString());
                 ls.SubItems.Add(i["NamSanXuat"].ToString());
-                ls.SubItems.Add(i["NgonNgu"].ToString());
                 ls.SubItems.Add(i["NgayRaMat"].ToString());
                 ls.SubItems.Add(i["NuocSanXuat"].ToString());
                 ls.SubItems.Add(i["DoanhThu"].ToString());
@@ -86,7 +85,6 @@ namespace DoAn_ver5.GUI
                     ls.SubItems.Add(i["ThoiLuong"].ToString());
                     ls.SubItems.Add(i["NhaSanXuat"].ToString());
                     ls.SubItems.Add(i["NamSanXuat"].ToString());
-                    ls.SubItems.Add(i["NgonNgu"].ToString());
                     ls.SubItems.Add(i["NgayRaMat"].ToString());
                     ls.SubItems.Add(i["NuocSanXuat"].ToString());
                     ls.SubItems.Add(i["DoanhThu"].ToString());
@@ -106,7 +104,6 @@ namespace DoAn_ver5.GUI
                     ls.SubItems.Add(i["ThoiLuong"].ToString());
                     ls.SubItems.Add(i["NhaSanXuat"].ToString());
                     ls.SubItems.Add(i["NamSanXuat"].ToString());
-                    ls.SubItems.Add(i["NgonNgu"].ToString());
                     ls.SubItems.Add(i["NgayRaMat"].ToString());
                     ls.SubItems.Add(i["NuocSanXuat"].ToString());
                     ls.SubItems.Add(i["DoanhThu"].ToString());
