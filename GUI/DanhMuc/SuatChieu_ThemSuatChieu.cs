@@ -41,26 +41,15 @@ namespace DoAn_ver5.GUI
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if(DAL_SuatChieu.Instance.InsertSuatChieu
+            DAL_SuatChieu.Instance.InsertSuatChieu
                 (
-                    ((CbbItem)cbbTenPhim.SelectedItem).ID.Trim(),
+                     txtMaSP.Text.Trim(),                   
                     txtMaSC.Text.Trim(),
-                    txtMaSP.Text.Trim(),
                     ((CbbItem)cbbPhong.SelectedItem).ToString().Trim(),
                     dtpThoigian.Value.ToString(),
                     cbbTrangThai.SelectedItem.ToString().Trim(),
-                    listView1.SelectedItems[0].SubItems[1].Text.Trim(),
-                    listView1.SelectedItems[0].SubItems[2].Text.Trim(),
-                    listView1.SelectedItems[0].SubItems[3].Text.Trim(),
                     int.Parse(txtGiaVe.Text.Trim())
-                ) == true)
-            {
-                MessageBox.Show("Insert SuatChieu thanh cong");
-            }
-            else
-            {
-                MessageBox.Show("Insert SuatChieu that bai");
-            }
+                );
             string TenPhongChieu = ((CbbItem)(cbbPhong.SelectedItem)).Name;
             DataTable PhongChieu = DAL_PhongChieu.Instance.GetPhongChieuByTenPhongChieu(TenPhongChieu);
             int SoHang = int.Parse(PhongChieu.Rows[0]["SoHangGhe"].ToString());

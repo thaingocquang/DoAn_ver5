@@ -41,20 +41,29 @@ namespace DoAn_ver5.GUI
                 txtTomTat.Text.Trim()
             );
 
-            
-            DAL_Phim.Instance.InsertSuatPhim
+            for(int i=0; i<lstSuatphim.Items.Count; i++)
+            {
+                DAL_SuatChieu.Instance.InsertSuatPhimByMaPhim
                 (
-                    "SP" + (DataProvider.Instance.GetRowCount(BLL_SuatChieu.Instance.GetAllSuatPhim())+1),                  
-                    txtDinhdang.Text.Trim(),
-                    cbbHinhthuc.SelectedItem.ToString(),
-                    txtNgonngu.Text.Trim()
+                    "SP" + (DataProvider.Instance.GetRowCount(BLL_SuatChieu.Instance.GetAllSuatPhim()) + 1),
+                    lstSuatphim.Items[i].SubItems[1].Text.Trim(),
+                    lstSuatphim.Items[i].SubItems[2].Text.Trim(),
+                    lstSuatphim.Items[i].SubItems[3].Text.Trim(),
+                    txtMaPhim.Text.Trim()
                 );
+
+            }
+
+            /*for (int i = 0;)
+            {
+
+            }
             DAL_SuatChieu.Instance.InsertSuatChieuByMaSP
                 (
                     txtMaPhim.Text.Trim(),
                     "SC" +(DataProvider.Instance.GetRowCount(BLL_SuatChieu.Instance.GetAllSuatChieu())+ 1),
                     "SP" + DataProvider.Instance.GetRowCount(BLL_SuatChieu.Instance.GetAllSuatPhim())
-                );
+                );*/
             this.Close();
         }
 

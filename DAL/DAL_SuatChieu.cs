@@ -73,20 +73,23 @@ namespace DoAn_ver5.DAL
         public DataTable GetAllSuatChieu()
         {
             DataTable dt = new DataTable();
-            string query = "select sc.MaSuatChieu, sc.MaPhim, p.TenPhim, sc.NgayGio, sp.DinhDang, sp.HinhThuc, sp.NgonNgu, pc.TenPhongChieu," +
-                " sc.TrangThai, sp.MaSuatPhim from SuatChieu sc join Phim  p on sc.MaPhim = p.MaPhim join SuatPhim sp on sc.MaSuatPhim = sp.MaSuatPhim " +
-                "join PhongChieu pc on pc.MaPhongChieu = sc.MaPhongChieu";
+            string query = "select* from SuatChieu sc join SuatPhim sp on sc.MaSuatPhim = sp.MaSuatPhim join Phim p on p.MaPhim = sp.MaPhim join PhongChieu pc on pc.MaPhongChieu = sc.MaPhongChieu";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
         public DataTable GetSuatPhimByMaPhim(string MaPhim)
         {
+            //DataTable dt = new DataTable();
+            ////string query = "select MaSuatPhim, DinhDang, HinhThuc, NgonNgu from Phim p join SuatPhim sp on p.MaPhim = sp.MaPhim where p.MaPhim = '"+ MaPhim +"'";
+            //string query = @"select sp.MaSuatPhim, sp.DinhDang, sp.HinhThuc, sp.NgonNgu from Phim p join SuatChieu sc
+            //                on p.MaPhim = sc.MaPhim
+            //                join SuatPhim sp on sc.MaSuatPhim = sp.MaSuatPhim
+            //                where p.MaPhim = '"+ MaPhim +"'";
+            //dt = DataProvider.Instance.GetRecords(query);
+            //return dt;
             DataTable dt = new DataTable();
             //string query = "select MaSuatPhim, DinhDang, HinhThuc, NgonNgu from Phim p join SuatPhim sp on p.MaPhim = sp.MaPhim where p.MaPhim = '"+ MaPhim +"'";
-            string query = @"select sp.MaSuatPhim, sp.DinhDang, sp.HinhThuc, sp.NgonNgu from Phim p join SuatChieu sc
-                            on p.MaPhim = sc.MaPhim
-                            join SuatPhim sp on sc.MaSuatPhim = sp.MaSuatPhim
-                            where p.MaPhim = '"+ MaPhim +"'";
+            string query = @"select sp.MaSuatPhim, sp.DinhDang, sp.HinhThuc, sp.NgonNgu from Phim p join SuatPhim sp on p.MaPhim = sp.MaPhim where p.MaPhim = '"+MaPhim+"'";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
@@ -98,15 +101,12 @@ namespace DoAn_ver5.DAL
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
-        public bool InsertSuatChieu(string MaPhim, string MaSC, string MaSP, string Phong, string ThoiGian, string TrangThai,
-            string DinhDang, string HinhThuc, string NgonNgu,int GiaVe)
+        public bool InsertSuatChieu(string MaSuatPhim,  string MaSC, string Phong, string ThoiGian, string TrangThai, int GiaVe)
         {
             try
             {
-                string query = "insert into SuatChieu values ('" + MaPhim+"','"+ MaSC +"', '" + ThoiGian + "', N'" +TrangThai +"', N'"+Phong+"',"+GiaVe+", '"+MaSP+"')";
-                string s = "insert into SuatPhim values ('"+MaSP+"', '"+DinhDang+"', N'"+HinhThuc+"', N'"+NgonNgu+"')";         
+                string query = "insert into SuatChieu values ('"+MaSuatPhim+"','"+MaSC+"','"+ThoiGian+"', N'"+TrangThai+"','"+Phong+"',"+GiaVe+")";
                 DataProvider.Instance.ExcuteDB(query);
-                DataProvider.Instance.ExcuteDB(s);                
                 return true;
             }
             catch (Exception e)
@@ -115,11 +115,11 @@ namespace DoAn_ver5.DAL
                 return false;
             }
         }
-        public bool InsertSuatChieuByMaSP(string MaPhim, string MaSC, string MaSP)
+        public bool InsertSuatPhimByMaPhim(string MaSP, string DinhDang, string HinhThuc, string NgonNgu, string MaPhim)
         {
             try
             {
-                string query = "insert into SuatChieu (MaPhim, MaSuatChieu, MaSuatPhim) values ('" + MaPhim + "','" + MaSC + "','" + MaSP + "')";
+                string query = "insert into SuatPhim values ('" + MaSP + "','" + DinhDang + "',N'" + HinhThuc + "', N'"+NgonNgu+"', '"+MaPhim+"')";
                 DataProvider.Instance.ExcuteDB(query);
                 return true;
             }

@@ -427,7 +427,7 @@ namespace DoAn_ver5.GUI
             this.lstSuatphim.FullRowSelect = true;
             this.lstSuatphim.GridLines = true;
             this.lstSuatphim.HideSelection = false;
-            this.lstSuatphim.Location = new System.Drawing.Point(18, 144);
+            this.lstSuatphim.Location = new System.Drawing.Point(18, 153);
             this.lstSuatphim.Name = "lstSuatphim";
             this.lstSuatphim.Size = new System.Drawing.Size(549, 237);
             this.lstSuatphim.TabIndex = 1;
