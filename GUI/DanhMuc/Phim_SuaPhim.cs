@@ -76,7 +76,7 @@ namespace DoAn_ver5.GUI.DanhMuc
         
         private void btnThem_Click(object sender, EventArgs e)
         {
-            int count = 1;
+            int count = lstSuatphim.Items.Count + 1;
             ListViewItem ls = new ListViewItem(count.ToString());
             ls.SubItems.Add(txtDinhdang.Text.Trim());
             ls.SubItems.Add(cbbHinhthuc.SelectedItem.ToString().Trim());

@@ -115,7 +115,20 @@ namespace DoAn_ver5.DAL
                 return false;
             }
         }
-
+        public bool InsertSuatChieuByMaSP(string MaPhim, string MaSC, string MaSP)
+        {
+            try
+            {
+                string query = "insert into SuatChieu (MaPhim, MaSuatChieu, MaSuatPhim) values ('" + MaPhim + "','" + MaSC + "','" + MaSP + "')";
+                DataProvider.Instance.ExcuteDB(query);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
         public bool UpdateSuatChieu(string MaPhim, string MaSC, string MaSP, string Phong, string ThoiGian, string TrangThai,
             string DinhDang, string HinhThuc, string NgonNgu, int GiaVe)
         {

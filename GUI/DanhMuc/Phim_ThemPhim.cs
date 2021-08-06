@@ -48,7 +48,13 @@ namespace DoAn_ver5.GUI
                     txtDinhdang.Text.Trim(),
                     cbbHinhthuc.SelectedItem.ToString(),
                     txtNgonngu.Text.Trim()
-                );             
+                );
+            DAL_SuatChieu.Instance.InsertSuatChieuByMaSP
+                (
+                    txtMaPhim.Text.Trim(),
+                    "SC" +(DataProvider.Instance.GetRowCount(BLL_SuatChieu.Instance.GetAllSuatChieu())+ 1),
+                    "SP" + DataProvider.Instance.GetRowCount(BLL_SuatChieu.Instance.GetAllSuatPhim())
+                );
             this.Close();
         }
 
