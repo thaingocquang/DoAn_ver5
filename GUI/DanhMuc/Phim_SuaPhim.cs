@@ -39,7 +39,6 @@ namespace DoAn_ver5.GUI.DanhMuc
                     txtDienVien.Text = i["DienVien"].ToString();
                     cbbNuocsx.SelectedItem = i["NuocSanXuat"].ToString();
                     cbbNhasx.SelectedItem = i["NhaSanXuat"].ToString();
-                    txtDoanhThu.Text = i["DoanhThu"].ToString();
                     txtTomTat.Text = i["TomTat"].ToString();
                 }
             }
@@ -62,7 +61,6 @@ namespace DoAn_ver5.GUI.DanhMuc
                     txtDienVien.Text.Trim(),
                     cbbNuocsx.SelectedItem.ToString(),
                     cbbNhasx.SelectedItem.ToString(),
-                    int.Parse(txtDoanhThu.Text.Trim()),
                     txtTomTat.Text.Trim()
                 );
             this.Close();

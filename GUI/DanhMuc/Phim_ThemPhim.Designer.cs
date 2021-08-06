@@ -45,10 +45,8 @@ namespace DoAn_ver5.GUI
             this.NamSX = new System.Windows.Forms.NumericUpDown();
             this.cbbTrangThai = new System.Windows.Forms.ComboBox();
             this.txtDienVien = new System.Windows.Forms.TextBox();
-            this.txtDoanhThu = new System.Windows.Forms.TextBox();
             this.txtTenPhim = new System.Windows.Forms.TextBox();
             this.txtMaPhim = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -155,10 +153,8 @@ namespace DoAn_ver5.GUI
             this.tabPage1.Controls.Add(this.NamSX);
             this.tabPage1.Controls.Add(this.cbbTrangThai);
             this.tabPage1.Controls.Add(this.txtDienVien);
-            this.tabPage1.Controls.Add(this.txtDoanhThu);
             this.tabPage1.Controls.Add(this.txtTenPhim);
             this.tabPage1.Controls.Add(this.txtMaPhim);
-            this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label7);
@@ -249,9 +245,24 @@ namespace DoAn_ver5.GUI
             // NamSX
             // 
             this.NamSX.Location = new System.Drawing.Point(107, 201);
+            this.NamSX.Maximum = new decimal(new int[] {
+            3000,
+            0,
+            0,
+            0});
+            this.NamSX.Minimum = new decimal(new int[] {
+            1900,
+            0,
+            0,
+            0});
             this.NamSX.Name = "NamSX";
             this.NamSX.Size = new System.Drawing.Size(120, 26);
             this.NamSX.TabIndex = 4;
+            this.NamSX.Value = new decimal(new int[] {
+            1900,
+            0,
+            0,
+            0});
             // 
             // cbbTrangThai
             // 
@@ -271,13 +282,6 @@ namespace DoAn_ver5.GUI
             this.txtDienVien.Size = new System.Drawing.Size(173, 79);
             this.txtDienVien.TabIndex = 2;
             // 
-            // txtDoanhThu
-            // 
-            this.txtDoanhThu.Location = new System.Drawing.Point(399, 275);
-            this.txtDoanhThu.Name = "txtDoanhThu";
-            this.txtDoanhThu.Size = new System.Drawing.Size(100, 26);
-            this.txtDoanhThu.TabIndex = 2;
-            // 
             // txtTenPhim
             // 
             this.txtTenPhim.Location = new System.Drawing.Point(107, 64);
@@ -292,15 +296,6 @@ namespace DoAn_ver5.GUI
             this.txtMaPhim.Name = "txtMaPhim";
             this.txtMaPhim.Size = new System.Drawing.Size(100, 26);
             this.txtMaPhim.TabIndex = 1;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(295, 277);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(86, 20);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Doanh thu";
             // 
             // label9
             // 
@@ -499,7 +494,8 @@ namespace DoAn_ver5.GUI
             // 
             this.cbbHinhthuc.FormattingEnabled = true;
             this.cbbHinhthuc.Items.AddRange(new object[] {
-            "Phụ đề"});
+            "Phụ đề",
+            "Lồng tiếng"});
             this.cbbHinhthuc.Location = new System.Drawing.Point(385, 26);
             this.cbbHinhthuc.Name = "cbbHinhthuc";
             this.cbbHinhthuc.Size = new System.Drawing.Size(125, 28);
@@ -627,10 +623,8 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.NumericUpDown NamSX;
         private System.Windows.Forms.ComboBox cbbTrangThai;
         private System.Windows.Forms.TextBox txtDienVien;
-        private System.Windows.Forms.TextBox txtDoanhThu;
         private System.Windows.Forms.TextBox txtTenPhim;
         private System.Windows.Forms.TextBox txtMaPhim;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;

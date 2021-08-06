@@ -50,7 +50,6 @@ namespace DoAn_ver5.GUI
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
@@ -174,7 +173,6 @@ namespace DoAn_ver5.GUI
             this.columnHeader5,
             this.columnHeader7,
             this.columnHeader8,
-            this.columnHeader9,
             this.columnHeader10,
             this.columnHeader12});
             this.lstPhim.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -227,11 +225,6 @@ namespace DoAn_ver5.GUI
             // 
             this.columnHeader8.Text = "Nước sản xuất";
             this.columnHeader8.Width = 150;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Doanh thu";
-            this.columnHeader9.Width = 150;
             // 
             // columnHeader10
             // 
@@ -354,7 +347,6 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ColumnHeader columnHeader13;

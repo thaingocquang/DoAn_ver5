@@ -64,12 +64,13 @@ namespace DoAn_ver5.DAL
 
         public bool InsertPhim(string MaPhim, string TenPhim, int ThoiLuong, int Namsx,
         int DoTuoi, string NgayRaMat,  string DienVien, string Nuocsx,
-        string Nhasx, int DoanhThu, string TomTat)
+        string Nhasx, string TomTat)
         {
             try
             {
                 string query = "insert into Phim values " +
-                    "('" + MaPhim + "', N'" + TenPhim + "', " + ThoiLuong + ", " + Namsx + ", " + DoTuoi + ", '" + NgayRaMat + "', N'" + DienVien + "',N'" + Nuocsx + "',N'" + Nhasx + "'," + DoanhThu + ", N'" + TomTat + "')";
+                    "('" + MaPhim + "', N'" + TenPhim + "', " + ThoiLuong + ", " + Namsx + ", " + DoTuoi + ", '" + NgayRaMat + "', N'" + DienVien
+                    + "',N'" + Nuocsx + "',N'" + Nhasx + "', N'" + TomTat + "')";
                 DataProvider.Instance.ExcuteDB(query);
                 return true;
             }
@@ -82,13 +83,13 @@ namespace DoAn_ver5.DAL
 
         public bool UpdatePhim(string MaPhim, string TenPhim, int ThoiLuong, int Namsx,
         int DoTuoi, string NgayRaMat, string DienVien, string Nuocsx,
-        string Nhasx, int DoanhThu, string TomTat)
+        string Nhasx, string TomTat)
         {
             try
             {
                 string query = "update Phim set TenPhim = N'" + TenPhim + "', ThoiLuong = " + ThoiLuong + ", NamSanXuat = " + Namsx 
                     + ",GioiHanTuoi = " + DoTuoi + ", NgayRaMat = '" + NgayRaMat + "', DienVien = N'" + DienVien 
-                    + "', NuocSanXuat = N'" + Nuocsx + "', NhaSanXuat = N'" + Nhasx + "', DoanhThu = " + DoanhThu + ",TomTat = N'" + TomTat + "' where MaPhim = '"+ MaPhim + "'";                
+                    + "', NuocSanXuat = N'" + Nuocsx + "', NhaSanXuat = N'" + Nhasx + "',TomTat = N'" + TomTat + "' where MaPhim = '"+ MaPhim + "'";                
                 DataProvider.Instance.ExcuteDB(query);
                 return true;
             }
@@ -113,5 +114,7 @@ namespace DoAn_ver5.DAL
                 return false;
             }
         }
+
+        
     }
 }

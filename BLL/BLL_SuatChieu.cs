@@ -64,5 +64,9 @@ namespace DoAn_ver5.BLL
         {
             return DAL_SuatChieu.Instance.GetSuatPhimByMaPhim(s);
         }
+        public DataTable GetAllSuatPhim()
+        {
+            return DAL_SuatChieu.Instance.GetALlSuatPhim();
+        }
     }
 }

@@ -90,6 +90,14 @@ namespace DoAn_ver5.DAL
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
+
+        public DataTable GetALlSuatPhim()
+        {
+            DataTable dt = new DataTable();
+            string query = "select * from SuatPhim";
+            dt = DataProvider.Instance.GetRecords(query);
+            return dt;
+        }
         public bool InsertSuatChieu(string MaPhim, string MaSC, string MaSP, string Phong, string ThoiGian, string TrangThai,
             string DinhDang, string HinhThuc, string NgonNgu,int GiaVe)
         {

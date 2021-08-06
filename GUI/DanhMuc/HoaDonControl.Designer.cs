@@ -35,7 +35,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.chkThoiGian = new System.Windows.Forms.CheckBox();
             this.chkMa = new System.Windows.Forms.CheckBox();
             this.btnHienTatCa = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.listView2 = new System.Windows.Forms.ListView();
@@ -123,15 +122,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.btnHienTatCa.Text = "Hiện tất cả";
             this.btnHienTatCa.UseVisualStyleBackColor = true;
             this.btnHienTatCa.Click += new System.EventHandler(this.btnHienTatCa_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(0, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(114, 26);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "In hóa đơn";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -258,7 +248,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.btnHienTatCa);
-            this.panel2.Controls.Add(this.button5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(269, 0);
             this.panel2.Name = "panel2";
@@ -358,7 +347,6 @@ namespace DoAn_ver5.GUI.DanhMuc
         private System.Windows.Forms.CheckBox chkThoiGian;
         private System.Windows.Forms.CheckBox chkMa;
         private System.Windows.Forms.Button btnHienTatCa;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;

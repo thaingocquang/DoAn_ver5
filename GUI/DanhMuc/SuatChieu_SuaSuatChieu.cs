@@ -83,5 +83,10 @@ namespace DoAn_ver5.GUI.DanhMuc
         {
 
         }
+
+        private void cbbTenPhim_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

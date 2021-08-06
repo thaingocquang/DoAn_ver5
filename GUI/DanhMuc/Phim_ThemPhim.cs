@@ -1,4 +1,5 @@
-﻿using DoAn_ver5.DAL;
+﻿using DoAn_ver5.BLL;
+using DoAn_ver5.DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,9 +16,9 @@ namespace DoAn_ver5.GUI
     {
         public Phim_ThemPhim()
         {
-            InitializeComponent();
+            InitializeComponent();          
         }
-
+        
         private void btnHuy_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -37,18 +38,17 @@ namespace DoAn_ver5.GUI
                 txtDienVien.Text.Trim(),
                 cbbNuocSX.SelectedItem.ToString(),
                 cbbNhaSX.SelectedItem.ToString(),
-                int.Parse(txtDoanhThu.Text.Trim()),
                 txtTomTat.Text.Trim()
             );
 
-
+            
             DAL_Phim.Instance.InsertSuatPhim
                 (
-                    "SP",                  
+                    "SP" + (DataProvider.Instance.GetRowCount(BLL_SuatChieu.Instance.GetAllSuatPhim())+1),                  
                     txtDinhdang.Text.Trim(),
                     cbbHinhthuc.SelectedItem.ToString(),
                     txtNgonngu.Text.Trim()
-                ); 
+                );             
             this.Close();
         }
 
@@ -58,10 +58,11 @@ namespace DoAn_ver5.GUI
             txtNgonngu.Text = "";
             cbbHinhthuc.SelectedItem = null;
         }
-
+        
         private void btnThem_Click(object sender, EventArgs e)
         {
-            int count = 1;
+
+            int count = lstSuatphim.Items.Count + 1;
             ListViewItem ls = new ListViewItem(count.ToString());
             ls.SubItems.Add(txtDinhdang.Text.Trim());
             ls.SubItems.Add(cbbHinhthuc.SelectedItem.ToString().Trim());

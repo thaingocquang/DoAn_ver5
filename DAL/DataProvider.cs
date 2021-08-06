@@ -138,6 +138,9 @@ namespace DoAn_ver5.DAL
                 return false;
             }
         }
-
+        public int GetRowCount(DataTable dt)
+        {
+            return dt.Rows.Count;
+        }
     }
 }

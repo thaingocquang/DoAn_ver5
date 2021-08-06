@@ -61,7 +61,6 @@ namespace DoAn_ver5.GUI
                 ls.SubItems.Add(i["NamSanXuat"].ToString());
                 ls.SubItems.Add(i["NgayRaMat"].ToString());
                 ls.SubItems.Add(i["NuocSanXuat"].ToString());
-                ls.SubItems.Add(i["DoanhThu"].ToString());
                 ls.SubItems.Add(i["DienVien"].ToString());
                 ls.SubItems.Add(i["TomTat"].ToString());
                 lstPhim.Items.Add(ls);
@@ -82,16 +81,16 @@ namespace DoAn_ver5.GUI
                 {
                     ListViewItem ls = new ListViewItem(count.ToString());
                     ls.SubItems.Add(i["MaPhim"].ToString());
+                    ls.SubItems.Add(i["TenPhim"].ToString());
                     ls.SubItems.Add(i["ThoiLuong"].ToString());
                     ls.SubItems.Add(i["NhaSanXuat"].ToString());
                     ls.SubItems.Add(i["NamSanXuat"].ToString());
                     ls.SubItems.Add(i["NgayRaMat"].ToString());
                     ls.SubItems.Add(i["NuocSanXuat"].ToString());
-                    ls.SubItems.Add(i["DoanhThu"].ToString());
                     ls.SubItems.Add(i["DienVien"].ToString());
                     ls.SubItems.Add(i["TomTat"].ToString());
                     lstPhim.Items.Add(ls);
-                    count++; ;
+                    count++;
                 }
             }
             if (chkTheoKhoangTime.Checked == true)
@@ -101,12 +100,12 @@ namespace DoAn_ver5.GUI
                 {
                     ListViewItem ls = new ListViewItem(count.ToString());
                     ls.SubItems.Add(i["MaPhim"].ToString());
+                    ls.SubItems.Add(i["TenPhim"].ToString());
                     ls.SubItems.Add(i["ThoiLuong"].ToString());
                     ls.SubItems.Add(i["NhaSanXuat"].ToString());
                     ls.SubItems.Add(i["NamSanXuat"].ToString());
                     ls.SubItems.Add(i["NgayRaMat"].ToString());
                     ls.SubItems.Add(i["NuocSanXuat"].ToString());
-                    ls.SubItems.Add(i["DoanhThu"].ToString());
                     ls.SubItems.Add(i["DienVien"].ToString());
                     ls.SubItems.Add(i["TomTat"].ToString());
                     lstPhim.Items.Add(ls);

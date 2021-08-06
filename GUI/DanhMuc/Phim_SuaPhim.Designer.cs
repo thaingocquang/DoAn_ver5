@@ -34,7 +34,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.dtpNgayChieu = new System.Windows.Forms.DateTimePicker();
             this.txtTomTat = new System.Windows.Forms.TextBox();
             this.txtDienVien = new System.Windows.Forms.TextBox();
-            this.txtDoanhThu = new System.Windows.Forms.TextBox();
             this.txtTenPhim = new System.Windows.Forms.TextBox();
             this.txtMaPhim = new System.Windows.Forms.TextBox();
             this.cbbNhasx = new System.Windows.Forms.ComboBox();
@@ -44,7 +43,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.cbbTrangThai = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -103,7 +101,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.tabPage1.Controls.Add(this.dtpNgayChieu);
             this.tabPage1.Controls.Add(this.txtTomTat);
             this.tabPage1.Controls.Add(this.txtDienVien);
-            this.tabPage1.Controls.Add(this.txtDoanhThu);
             this.tabPage1.Controls.Add(this.txtTenPhim);
             this.tabPage1.Controls.Add(this.txtMaPhim);
             this.tabPage1.Controls.Add(this.cbbNhasx);
@@ -113,7 +110,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.tabPage1.Controls.Add(this.numericUpDown2);
             this.tabPage1.Controls.Add(this.numericUpDown3);
             this.tabPage1.Controls.Add(this.cbbTrangThai);
-            this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label7);
@@ -157,13 +153,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.txtDienVien.Name = "txtDienVien";
             this.txtDienVien.Size = new System.Drawing.Size(173, 79);
             this.txtDienVien.TabIndex = 23;
-            // 
-            // txtDoanhThu
-            // 
-            this.txtDoanhThu.Location = new System.Drawing.Point(400, 270);
-            this.txtDoanhThu.Name = "txtDoanhThu";
-            this.txtDoanhThu.Size = new System.Drawing.Size(100, 22);
-            this.txtDoanhThu.TabIndex = 22;
             // 
             // txtTenPhim
             // 
@@ -279,15 +268,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.cbbTrangThai.Name = "cbbTrangThai";
             this.cbbTrangThai.Size = new System.Drawing.Size(121, 24);
             this.cbbTrangThai.TabIndex = 24;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(296, 272);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 17);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Doanh thu";
             // 
             // label9
             // 
@@ -632,7 +612,6 @@ namespace DoAn_ver5.GUI.DanhMuc
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TextBox txtTomTat;
         private System.Windows.Forms.TextBox txtDienVien;
-        private System.Windows.Forms.TextBox txtDoanhThu;
         private System.Windows.Forms.TextBox txtTenPhim;
         private System.Windows.Forms.TextBox txtMaPhim;
         private System.Windows.Forms.ComboBox cbbNhasx;
@@ -642,7 +621,6 @@ namespace DoAn_ver5.GUI.DanhMuc
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.ComboBox cbbTrangThai;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;

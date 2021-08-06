@@ -139,6 +139,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.cbbTenPhim.Name = "cbbTenPhim";
             this.cbbTenPhim.Size = new System.Drawing.Size(181, 28);
             this.cbbTenPhim.TabIndex = 27;
+            this.cbbTenPhim.SelectedIndexChanged += new System.EventHandler(this.cbbTenPhim_SelectedIndexChanged);
             this.cbbTenPhim.TextChanged += new System.EventHandler(this.cbbTenPhim_TextChanged);
             // 
             // cbbPhong
