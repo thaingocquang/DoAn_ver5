@@ -101,7 +101,7 @@ namespace DoAn_ver5.DAL
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
-        public bool InsertSuatChieu(string MaSuatPhim,  string MaSC, string Phong, string ThoiGian, string TrangThai, int GiaVe)
+        public bool InsertSuatChieu(string MaSuatPhim,  string MaSC, string ThoiGian, string TrangThai, string Phong, int GiaVe)
         {
             try
             {

@@ -43,11 +43,11 @@ namespace DoAn_ver5.GUI
         {
             DAL_SuatChieu.Instance.InsertSuatChieu
                 (
-                     txtMaSP.Text.Trim(),                   
+                    txtMaSP.Text.Trim(),                   
                     txtMaSC.Text.Trim(),
-                    ((CbbItem)cbbPhong.SelectedItem).ToString().Trim(),
                     dtpThoigian.Value.ToString(),
                     cbbTrangThai.SelectedItem.ToString().Trim(),
+                    ((CbbItem)cbbPhong.SelectedItem).ToString().Trim(),
                     int.Parse(txtGiaVe.Text.Trim())
                 );
             string TenPhongChieu = ((CbbItem)(cbbPhong.SelectedItem)).Name;
