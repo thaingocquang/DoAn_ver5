@@ -50,5 +50,13 @@ namespace DoAn_ver5.BLL
             }
             return TongTien;
         }       
+        public bool InsertMaHoaDon(string MaHD, string NgayTao, string MaNV)
+        {
+            return DAL_HoaDonThucAn.Instance.InsertMaHoaDon(MaHD, NgayTao, MaNV);
+        }
+        public bool InSertChiTietHD(string MaHD, string MaSP, int SoLuong)
+        {
+            return DAL_HoaDonThucAn.Instance.InsertMaHoaDon(MaHD, MaSP, SoLuong);
+        }
     }
 }

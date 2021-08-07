@@ -22,12 +22,12 @@ namespace DoAn_ver5.DAL
             }
             private set => _Instance = value;
         }
-        public bool InsertHoaDonVe(string maSuatChieu, string maGhe, string ngayBanVe, string tenNV, float giaVe, string tenKH)
+        public bool InsertHoaDonVe(string maSuatChieu, int maGhe, string ngayBanVe, string tenNV, float giaVe, string tenKH)
         {
             try
             {
                 string query = "insert into dbo.HoaDonVe values " +
-                    "('"+ maSuatChieu +"', '"+ maGhe +"', '"+ngayBanVe.ToString()+"', '"+ tenNV +"', '" + giaVe + "', '"+tenKH+"')";
+                    "('"+ maSuatChieu +"', "+ maGhe +", '"+ngayBanVe.ToString()+"', '"+ tenNV +"', " + giaVe + ", '"+tenKH+"')";
                 DataProvider.Instance.ExcuteDB(query);
                 return true;
             }

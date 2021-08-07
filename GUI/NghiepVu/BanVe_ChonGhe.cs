@@ -45,13 +45,12 @@ namespace DoAn_ver5.GUI.NghiepVu
 
         private void LoadGhe(List<DTO_GheNgoi> listGhe)
         {
-            int a = 0;
-            int count = 0;
+            int a = 0, count = 0, k = 0;
             char[] Alpha = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'L', 'M', 'N', 'O' };
             panelChonGhe.Controls.Clear();
-            for(int i=0; i<PhongChieu.SoHangGhe; i++)
+            for (int i = 0; i < PhongChieu.SoHangGhe; i++)
             {
-                for(int j=0; j<PhongChieu.SoGheTren1Hang; j++)
+                for (int j = 0; j < PhongChieu.SoGheTren1Hang; j++)
                 {
                     Button btnSeat = new Button() { Width = SizeGhe + 20, Height = SizeGhe };
                     btnSeat.Text = Alpha[a] + j.ToString();
@@ -62,7 +61,7 @@ namespace DoAn_ver5.GUI.NghiepVu
                     btnSeat.Click += BtnSeat_Click;
                     panelChonGhe.Controls.Add(btnSeat);
 
-                    btnSeat.Tag = listGhe[i].MaGhe;
+                    btnSeat.Tag = listGhe[k++].MaGhe;
                 }
                 a++;
             }

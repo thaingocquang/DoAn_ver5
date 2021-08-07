@@ -25,7 +25,9 @@ namespace DoAn_ver5.DAL
         public DataTable GetListGheBySuatChieu(string MaSuatChieu)
         {
             DataTable dt = new DataTable();
-            string query = "select * from dbo.GheNgoi join dbo.SuatChieu on GheNgoi.MaSuatChieu = SuatChieu.MaSuatChieu";
+            string query = @"select * from dbo.GheNgoi gn join dbo.SuatChieu sc
+                            on gn.MaSuatChieu = sc.MaSuatChieu
+                            where sc.MaSuatChieu = '"+ MaSuatChieu +"'";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }

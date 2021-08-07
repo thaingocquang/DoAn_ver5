@@ -28,7 +28,8 @@ namespace DoAn_ver5.BLL
         public List<DTO_GheNgoi> GetListGheBySuatChieu(string MaSuatChieu)
         {
             List<DTO_GheNgoi> list = new List<DTO_GheNgoi>();
-            foreach (DataRow row in DAL_Ve.Instance.GetListGheBySuatChieu(MaSuatChieu).Rows)
+            DataTable dt = DAL_Ve.Instance.GetListGheBySuatChieu(MaSuatChieu);
+            foreach (DataRow row in dt.Rows)
             {
                 list.Add(new DTO_GheNgoi
                 {

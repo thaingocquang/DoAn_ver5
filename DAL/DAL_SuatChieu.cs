@@ -63,13 +63,26 @@ namespace DoAn_ver5.DAL
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
-        public DataTable GetDoanhThuByTimePeriod(string TenPhim, string TuNgay, string DenNgay)
+        public DataTable GetDoanhThuByTimePeriod(string TuNgay, string DenNgay)
         {
             DataTable dt = new DataTable();
-            string query = @"select p.MaPhim, p.TenPhim, hdv.MaGhe, hdv.MaKhachHang, hdv.NgayBanVe, hdv.GiaVe from dbo.Phim p join dbo.SuatChieu sc
-                            on p.MaPhim = sc.MaPhim join dbo.HoaDonVe hdv
-                            on sc.MaSuatChieu = hdv.MaSuatChieu
-                            where p.TenPhim = N'" + TenPhim + "' and hdv.NgayBanVe >= '" + TuNgay + "' and hdv.NgayBanVe <= '" + DenNgay + "'";
+            string query = @"select p.MaPhim, p.TenPhim, sum(sc.GiaVe) as DoanhThu from HoaDonVe hdv join SuatChieu sc
+                            on hdv.MaSuatChieu = sc.MaSuatChieu join SuatPhim sp
+                            on sc.MaSuatPhim = sp.MaSuatPhim join Phim p
+                            on sp.MaPhim = p.MaPhim
+                            where hdv.NgayBanVe >= '" + TuNgay + "' and hdv.NgayBanVe <= '" + DenNgay + "' "+
+                            "group by p.MaPhim, p.TenPhim";
+            dt = DataProvider.Instance.GetRecords(query);
+            return dt;
+        }
+        public DataTable GetTongDoanhThuByMaPhim(string MaPhim)
+        {
+            DataTable dt = new DataTable();
+            string query = @"select sum(sc.GiaVe) as TongDoanhThu from HoaDonVe hdv join SuatChieu sc
+                            on hdv.MaSuatChieu = sc.MaSuatChieu join SuatPhim sp
+                            on sc.MaSuatPhim = sp.MaSuatPhim join Phim p
+                            on sp.MaPhim = p.MaPhim
+                            where p.MaPhim = '"+MaPhim+"'";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
@@ -91,16 +104,7 @@ namespace DoAn_ver5.DAL
         }
         public DataTable GetSuatPhimByMaPhim(string MaPhim)
         {
-            //DataTable dt = new DataTable();
-            ////string query = "select MaSuatPhim, DinhDang, HinhThuc, NgonNgu from Phim p join SuatPhim sp on p.MaPhim = sp.MaPhim where p.MaPhim = '"+ MaPhim +"'";
-            //string query = @"select sp.MaSuatPhim, sp.DinhDang, sp.HinhThuc, sp.NgonNgu from Phim p join SuatChieu sc
-            //                on p.MaPhim = sc.MaPhim
-            //                join SuatPhim sp on sc.MaSuatPhim = sp.MaSuatPhim
-            //                where p.MaPhim = '"+ MaPhim +"'";
-            //dt = DataProvider.Instance.GetRecords(query);
-            //return dt;
             DataTable dt = new DataTable();
-            //string query = "select MaSuatPhim, DinhDang, HinhThuc, NgonNgu from Phim p join SuatPhim sp on p.MaPhim = sp.MaPhim where p.MaPhim = '"+ MaPhim +"'";
             string query = @"select sp.MaSuatPhim, sp.DinhDang, sp.HinhThuc, sp.NgonNgu from Phim p join SuatPhim sp on p.MaPhim = sp.MaPhim where p.MaPhim = '"+MaPhim+"'";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
@@ -113,7 +117,7 @@ namespace DoAn_ver5.DAL
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
-        public bool InsertSuatChieu(string MaSuatPhim,  string MaSC, string ThoiGian, string TrangThai, string Phong, int GiaVe)
+        public bool InsertSuatChieu(string MaSuatPhim,  string MaSC, string ThoiGian, string TrangThai, string Phong, float GiaVe)
         {
             try
             {
@@ -142,7 +146,7 @@ namespace DoAn_ver5.DAL
             }
         }
         public bool UpdateSuatChieu(string MaPhim, string MaSC, string MaSP, string Phong, string ThoiGian, string TrangThai,
-            string DinhDang, string HinhThuc, string NgonNgu, int GiaVe)
+            string DinhDang, string HinhThuc, string NgonNgu, float GiaVe)
         {
             try
             {

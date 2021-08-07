@@ -34,7 +34,7 @@ namespace DoAn_ver5.DAL
                             from dbo.Phim p join dbo.SuatPhim sp
                             on p.MaPhim = sp.MaPhim join dbo.SuatChieu sc
                             on sc.MaSuatPhim = sp.MaSuatPhim
-                            where convert(date, sc.NgayGio) = '" + date.Date.ToString() +"'";
+                            where convert(date, sc.NgayGio) = '" + date.Date.ToString() +"' group by p.TenPhim";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }

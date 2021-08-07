@@ -88,7 +88,7 @@ namespace DoAn_ver5.GUI.NghiepVu
         {
             foreach (Button btn in listGheDaChon)
             {
-                DAL_HoaDonVe.Instance.InsertHoaDonVe(txtMaSuatChieu.Text, btn.Text, dateTimePicker1.Value.Date.ToString(), "TNQ", float.Parse(txtTongTien.Text)/listGheDaChon.Count, txtMaKH.Text);
+                DAL_HoaDonVe.Instance.InsertHoaDonVe(txtMaSuatChieu.Text, int.Parse(btn.Tag.ToString()), dateTimePicker1.Value.Date.ToString(), "TNQ", float.Parse(txtTongTien.Text)/listGheDaChon.Count, (txtMaKH.Text==""?"KHDB": txtMaKH.Text));
                 DAL_Ve.Instance.SetTrangThaiVe(btn.Tag.ToString());
             }
             this.Close();

@@ -29,7 +29,7 @@ namespace DoAn_ver5.BLL
             List<DTO_ThucAn> list = new List<DTO_ThucAn>();            
             foreach(DataRow row in DAL_ThucAn.Instance.GetAllThucAn().Rows)
             {
-                list.Add(new DTO_ThucAn(row["LoaiThucAn"].ToString(), row["TenThucAn"].ToString(), row["KichCo"].ToString(), (int)row["GiaBan"]));
+                list.Add(new DTO_ThucAn(row["MaSP"].ToString(), row["LoaiThucAn"].ToString(), row["TenThucAn"].ToString(), row["KichCo"].ToString(), (int)row["GiaBan"]));
             }
             return list;
 
