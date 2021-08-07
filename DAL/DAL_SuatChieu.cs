@@ -41,13 +41,22 @@ namespace DoAn_ver5.DAL
         public DataTable GetSuatChieusByTenPhimAndDate(string tenPhim, DateTime Ngay)
         {
             DataTable dt = new DataTable();
-            string query = @"select sc.MaSuatChieu, sc.NgayGio, sp.DinhDang, sp.HinhThuc, sp.NgonNgu, pc.TenPhongChieu, sc.TrangThai from dbo.SuatChieu sc join dbo.Phim p
-                            on sc.MaPhim = p.MaPhim
-                            join dbo.SuatPhim sp
-                            on sp.MaSuatChieu = sc.MaSuatChieu
+            //string query = @"select sc.MaSuatChieu, sc.NgayGio, sp.DinhDang, sp.HinhThuc, sp.NgonNgu, pc.TenPhongChieu, sc.TrangThai 
+            //                from dbo.SuatChieu sc join dbo.Phim p
+            //                on sc.MaPhim = p.MaPhim
+            //                join dbo.SuatPhim sp
+            //                on sp.MaSuatChieu = sc.MaSuatChieu
+            //                join dbo.PhongChieu pc
+            //                on pc.MaPhongChieu = sc.MaPhongChieu
+            //                where p.TenPhim = N'"+ tenPhim +"' and sc.NgayGio = '"+ Ngay.Date.ToString() +"'";
+            string query = @"select sc.MaSuatChieu, sc.NgayGio, sp.DinhDang, sp.HinhThuc, sp.NgonNgu, pc.TenPhongChieu, sc.TrangThai 
+                            from dbo.SuatChieu sc join dbo.SuatPhim sp
+                            on sc.MaSuatPhim = sp.MaSuatPhim
+                            join dbo.Phim p
+                            on sp.MaPhim = p.MaPhim
                             join dbo.PhongChieu pc
                             on pc.MaPhongChieu = sc.MaPhongChieu
-                            where p.TenPhim = N'"+ tenPhim +"' and sc.NgayGio = '"+ Ngay.Date.ToString() +"'";
+                            where p.TenPhim = N'" + tenPhim + "' and convert(date, sc.NgayGio) = '" + Ngay.Date.ToString() +"'";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }

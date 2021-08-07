@@ -45,7 +45,7 @@ namespace DoAn_ver5.GUI
                 (
                      txtMaSP.Text.Trim(),                   
                     txtMaSC.Text.Trim(),
-                    ((CbbItem)cbbPhong.SelectedItem).ToString().Trim(),
+                    ((CbbItem)cbbPhong.SelectedItem).ID.Trim(),
                     dtpThoigian.Value.ToString(),
                     cbbTrangThai.SelectedItem.ToString().Trim(),
                     int.Parse(txtGiaVe.Text.Trim())

@@ -25,7 +25,7 @@ namespace DoAn_ver5.DAL
         public DataTable GetPhongChieuByTenPhongChieu(string TenPhongChieu)
         {
             DataTable dt = new DataTable();
-            string query = "select * from dbo.PhongChieu where TenPhongChieu = '"+ TenPhongChieu +"'";
+            string query = "select * from dbo.PhongChieu where TenPhongChieu = N'"+ TenPhongChieu +"'";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
