@@ -22,10 +22,10 @@ namespace DoAn_ver5.DAL
             }
             private set => _Instance = value;
         }
-        public DataTable GetPhongChieuByTenPhongChieu(string TenPhongChieu)
+        public DataTable GetPhongChieuByMaPhongChieu(string MaPhongChieu)
         {
             DataTable dt = new DataTable();
-            string query = "select * from dbo.PhongChieu where TenPhongChieu = N'"+ TenPhongChieu +"'";
+            string query = "select * from dbo.PhongChieu where MaPhongChieu = N'"+ MaPhongChieu + "'";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
@@ -36,6 +36,13 @@ namespace DoAn_ver5.DAL
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
-       
+        public DataTable GetPhongChieuByTenPhongChieu(string TenPhongChieu)
+        {
+            DataTable dt = new DataTable();
+            string query = "select * from dbo.PhongChieu where TenPhongChieu = N'" + TenPhongChieu + "'";
+            dt = DataProvider.Instance.GetRecords(query);
+            return dt;
+        }
+
     }
 }

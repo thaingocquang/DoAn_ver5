@@ -25,7 +25,10 @@ namespace DoAn_ver5.DAL
         public DataTable GetSuatChieuByMaSuatChieu(string MaSuatChieu)
         {
             DataTable dt = new DataTable();
-            string query = "select * from dbo.SuatChieu where MaSuatChieu = '" + MaSuatChieu + "'";
+            //string query = "select * from dbo.SuatChieu where MaSuatChieu = '" + MaSuatChieu + "'";
+            string query = @"select sp.MaPhim, sc.MaSuatChieu, sc.MaPhongChieu, sc.NgayGio, sc.GiaVe, sc.TrangThai, sc.MaSuatPhim from dbo.SuatChieu sc join dbo.SuatPhim sp
+                            on sc.MaSuatPhim = sp.MaSuatPhim
+                            where MaSuatChieu = '" + MaSuatChieu + "'";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }

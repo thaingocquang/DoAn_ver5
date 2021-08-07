@@ -30,7 +30,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             InitializeComponent();
             SuatChieu = BLL_SuatChieu.Instance.GetSuatChieuByMaSuatChieu(MaSuatChieu);
             Phim = BLL_Phim.Instance.GetDTOPhimByMaPhim(SuatChieu.MaPhim);
-            PhongChieu = BLL_PhongChieu.Instance.GetPhongChieuByName(SuatChieu.PhongChieu);
+            PhongChieu = BLL_PhongChieu.Instance.GetPhongChieuByMaPhongChieu(SuatChieu.PhongChieu);
         }
 
         private void BanVe_ChonGhe_Load(object sender, EventArgs e)
@@ -89,7 +89,7 @@ namespace DoAn_ver5.GUI.NghiepVu
 
         private void LoadPhongChieu(string phongChieu)
         {
-            DTO_PhongChieu PhongChieu = BLL_PhongChieu.Instance.GetPhongChieuByName(SuatChieu.PhongChieu);
+            DTO_PhongChieu PhongChieu = BLL_PhongChieu.Instance.GetPhongChieuByMaPhongChieu(SuatChieu.PhongChieu);
             int row = PhongChieu.SoHangGhe;
             int col = PhongChieu.SoGheTren1Hang;
             panelChonGhe.Size = new Size((SizeGhe + 20 + KhoangCachGhe) * col, (SizeGhe + KhoangCachGhe) * row);

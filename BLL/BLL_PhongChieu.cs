@@ -24,9 +24,9 @@ namespace DoAn_ver5.BLL
             }
             private set => _Instance = value;
         }
-        public DTO_PhongChieu GetPhongChieuByName(string name)
+        public DTO_PhongChieu GetPhongChieuByMaPhongChieu(string name)
         {
-            DataRow row = DAL_PhongChieu.Instance.GetPhongChieuByTenPhongChieu(name).Rows[0];
+            DataRow row = DAL_PhongChieu.Instance.GetPhongChieuByMaPhongChieu(name).Rows[0];
             return new DTO_PhongChieu()
             {
                 MaPhongChieu = row["MaPhongChieu"].ToString(),
