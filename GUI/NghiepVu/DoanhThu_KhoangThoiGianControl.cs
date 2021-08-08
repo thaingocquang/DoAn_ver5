@@ -33,35 +33,29 @@ namespace DoAn_ver5.GUI.NghiepVu
 
         private void btnXemBaoCao_Click(object sender, EventArgs e)
         {
-            if (cbbTenPhim.SelectedItem == null) return;
-            string TenPhim = cbbTenPhim.SelectedItem.ToString();
+            lstDoangThuKhoangTime.Items.Clear();
             DateTime Tu_Ngay = dtpTuNgay.Value;
             string TuNgay = Tu_Ngay.Date.ToString("yyyy/MM/dd");
             DateTime Den_Ngay = dtpTuNgay.Value;
             string DenNgay = Den_Ngay.Date.ToString("yyyy/MM/dd");
             int count = 1;
-            int TongDoanhThu = 0;
-            foreach (DataRow row in BLL_SuatChieu.Instance.GetDoanhThuByTimePeriod(TenPhim, TuNgay, DenNgay).Rows)
+            foreach (DataRow row in BLL_SuatChieu.Instance.GetDoanhThuByTimePeriod(TuNgay, DenNgay).Rows)
             {
                 ListViewItem lvi = new ListViewItem(count.ToString());
                 lvi.SubItems.Add(row["MaPhim"].ToString());
                 lvi.SubItems.Add(row["TenPhim"].ToString());
-                lvi.SubItems.Add(row["MaGhe"].ToString());
-                lvi.SubItems.Add(row["MaKhachHang"].ToString());
-                lvi.SubItems.Add(row["NgayBanVe"].ToString());
-                lvi.SubItems.Add(row["GiaVe"].ToString());
+                lvi.SubItems.Add(row["DoanhThu"].ToString());
                 lstDoangThuKhoangTime.Items.Add(lvi);
                 count++;
-                TongDoanhThu += int.Parse(row["GiaVe"].ToString());
             }
-            txtTongDoanhThu.Text = TongDoanhThu+"";
         }
 
-        private void DoanhThu_KhoangThoiGianControl_Load(object sender, EventArgs e)
+        private void lstDoangThuKhoangTime_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach(DataRow row in BLL_Phim.Instance.GetAllPhim().Rows)
+            if (lstDoangThuKhoangTime.SelectedItems.Count > 0)
             {
-                cbbTenPhim.Items.Add(row["TenPhim"].ToString());
+                string MaPhim = lstDoangThuKhoangTime.SelectedItems[0].SubItems[1].Text;
+                txtTongDoanhThu.Text = BLL_SuatChieu.Instance.GetTongDoanhThuByMaPhim(MaPhim).Rows[0]["TongDoanhThu"].ToString();
             }
         }
     }

@@ -27,9 +27,14 @@ namespace DoAn_ver5.DAL
         public DataTable GetPhimHaveSuatPhimByDate(DateTime date)
         {
             DataTable dt = new DataTable();
-            string query = @"select p.TenPhim from dbo.Phim p join dbo.SuatChieu sc
-                            on p.MaPhim = sc.MaPhim
-                            where sc.NgayGio = '" + date.Date.ToString() +"'";
+            //string query = @"select p.TenPhim from dbo.Phim p join dbo.SuatChieu sc
+            //                on p.MaPhim = sc.MaPhim
+            //                where sc.NgayGio = '" + date.Date.ToString() +"'";
+            string query = @"select p.TenPhim 
+                            from dbo.Phim p join dbo.SuatPhim sp
+                            on p.MaPhim = sp.MaPhim join dbo.SuatChieu sc
+                            on sc.MaSuatPhim = sp.MaSuatPhim
+                            where convert(date, sc.NgayGio) = '" + date.Date.ToString() +"' group by p.TenPhim";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }

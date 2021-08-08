@@ -40,35 +40,22 @@ namespace DoAn_ver5.GUI.NghiepVu
 
         private void btnXemBaoCao_Click(object sender, EventArgs e)
         {
-            if (chkVIP.Checked == true)
+            lstDoanhThuKH.Items.Clear();
+            DateTime tu_ngay = dtpTuNgay.Value;
+            string tungay = tu_ngay.Date.ToString("yyyy/MM/dd");
+            DateTime den_ngay = dtpDenNgay.Value;
+            string denngay = den_ngay.Date.ToString("yyyy/MM/dd");
+            int count = 1;
+            foreach (DataRow row in BLL_KhachHang.Instance.GetlistDoanhThuKH(tungay, denngay).Rows)
             {
-                int count = 1;
-                foreach(DataRow row in BLL.BLL_KhachHang.Instance.GetlistDoanhThuKH().Rows)
-                {
-                    if (row["LoaiKhachHang"].ToString() == "VIP")
-                    {
-                        ListViewItem lvi = new ListViewItem(count + "");
-                        lvi.SubItems.Add(row["MaKhachHang"].ToString());
-                        lvi.SubItems.Add(row["TenKhachHang"].ToString());
-                        lvi.SubItems.Add(row["NgayDangKy"].ToString());
-                        lvi.SubItems.Add(row["LoaiKhachHang"].ToString());
-                        lvi.SubItems.Add(row["DoanhThu"].ToString());
-                        lstDoanhThuKH.Items.Add(lvi);
-                        lvi.Tag = row["LoaiKhachHang"].ToString();
-                        count++;
-                    }
-                }
-            }
-            if (chkVIP.Checked == false)
-            {
-                foreach (ListViewItem lvi in lstDoanhThuKH.Items)
-                {
-                    if ((string)lvi.Tag == "VIP")
-                    {
-                        lstDoanhThuKH.Items.Remove(lvi);
-                    }
-
-                }
+                ListViewItem lvi = new ListViewItem(count.ToString());
+                lvi.SubItems.Add(row["MaKhachHang"].ToString());
+                lvi.SubItems.Add(row["TenKhachHang"].ToString());
+                lvi.SubItems.Add(row["NgayDangKy"].ToString());
+                lvi.SubItems.Add(row["LoaiKhachHang"].ToString());
+                lvi.SubItems.Add(row["DoanhThuKH"].ToString());
+                lstDoanhThuKH.Items.Add(lvi);
+                count++;
             }
         }
     }

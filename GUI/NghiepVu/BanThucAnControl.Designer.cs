@@ -47,9 +47,9 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.lblTongTien = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayBan = new System.Windows.Forms.DateTimePicker();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnBan = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lstBanDoAn = new System.Windows.Forms.ListView();
@@ -59,6 +59,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -93,6 +94,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             // lstDoAn
             // 
             this.lstDoAn.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader7,
             this.columnHeader8,
             this.columnHeader9,
             this.columnHeader10});
@@ -109,16 +111,19 @@ namespace DoAn_ver5.GUI.NghiepVu
             // 
             // columnHeader8
             // 
+            this.columnHeader8.DisplayIndex = 1;
             this.columnHeader8.Text = "Tên thức ăn";
             this.columnHeader8.Width = 100;
             // 
             // columnHeader9
             // 
+            this.columnHeader9.DisplayIndex = 2;
             this.columnHeader9.Text = "Kích cỡ";
             this.columnHeader9.Width = 100;
             // 
             // columnHeader10
             // 
+            this.columnHeader10.DisplayIndex = 3;
             this.columnHeader10.Text = "Đơn giá";
             this.columnHeader10.Width = 100;
             // 
@@ -137,7 +142,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             // 
             this.numericUpDownSoLuong.Location = new System.Drawing.Point(89, 10);
             this.numericUpDownSoLuong.Name = "numericUpDownSoLuong";
-            this.numericUpDownSoLuong.Size = new System.Drawing.Size(70, 26);
+            this.numericUpDownSoLuong.Size = new System.Drawing.Size(70, 23);
             this.numericUpDownSoLuong.TabIndex = 2;
             // 
             // btnChon
@@ -155,7 +160,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(19, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 20);
+            this.label2.Size = new System.Drawing.Size(64, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Số lượng";
             // 
@@ -175,7 +180,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.chkNuocUong.AutoSize = true;
             this.chkNuocUong.Location = new System.Drawing.Point(86, 54);
             this.chkNuocUong.Name = "chkNuocUong";
-            this.chkNuocUong.Size = new System.Drawing.Size(111, 24);
+            this.chkNuocUong.Size = new System.Drawing.Size(96, 21);
             this.chkNuocUong.TabIndex = 2;
             this.chkNuocUong.Text = "Nước uống";
             this.chkNuocUong.UseVisualStyleBackColor = true;
@@ -186,7 +191,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.chkDoAn.AutoSize = true;
             this.chkDoAn.Location = new System.Drawing.Point(15, 54);
             this.chkDoAn.Name = "chkDoAn";
-            this.chkDoAn.Size = new System.Drawing.Size(75, 24);
+            this.chkDoAn.Size = new System.Drawing.Size(65, 21);
             this.chkDoAn.TabIndex = 1;
             this.chkDoAn.Text = "Đồ ăn";
             this.chkDoAn.UseVisualStyleBackColor = true;
@@ -199,7 +204,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(10, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 33);
+            this.label1.Size = new System.Drawing.Size(141, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Loại thức ăn";
             // 
@@ -209,9 +214,9 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.panel2.Controls.Add(this.lblTongTien);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.dtpNgayBan);
             this.panel2.Controls.Add(this.btnXoa);
-            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.btnBan);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(269, 0);
             this.panel2.Name = "panel2";
@@ -231,7 +236,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(353, 17);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 20);
+            this.label4.Size = new System.Drawing.Size(72, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Tổng tiền:";
             // 
@@ -240,17 +245,17 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(126, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 20);
+            this.label3.Size = new System.Drawing.Size(69, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Ngày bán";
             // 
-            // dateTimePicker1
+            // dtpNgayBan
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(201, 15);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(98, 26);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dtpNgayBan.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayBan.Location = new System.Drawing.Point(201, 15);
+            this.dtpNgayBan.Name = "dtpNgayBan";
+            this.dtpNgayBan.Size = new System.Drawing.Size(98, 23);
+            this.dtpNgayBan.TabIndex = 5;
             // 
             // btnXoa
             // 
@@ -260,15 +265,17 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.btnXoa.TabIndex = 4;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // button5
+            // btnBan
             // 
-            this.button5.Location = new System.Drawing.Point(6, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(78, 26);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Bán";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnBan.Location = new System.Drawing.Point(6, 12);
+            this.btnBan.Name = "btnBan";
+            this.btnBan.Size = new System.Drawing.Size(78, 26);
+            this.btnBan.TabIndex = 4;
+            this.btnBan.Text = "Bán";
+            this.btnBan.UseVisualStyleBackColor = true;
+            this.btnBan.Click += new System.EventHandler(this.btnBan_Click);
             // 
             // panel3
             // 
@@ -311,7 +318,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Mã thức ăn";
+            this.columnHeader1.Text = "Mã sp";
             this.columnHeader1.Width = 150;
             // 
             // columnHeader2
@@ -339,9 +346,14 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.columnHeader6.Text = "Thành tiền";
             this.columnHeader6.Width = 150;
             // 
+            // columnHeader7
+            // 
+            this.columnHeader7.DisplayIndex = 0;
+            this.columnHeader7.Text = "Mã sp";
+            // 
             // BanThucAnControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -374,7 +386,7 @@ namespace DoAn_ver5.GUI.NghiepVu
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ListView lstBanDoAn;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnBan;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
@@ -396,7 +408,8 @@ namespace DoAn_ver5.GUI.NghiepVu
         private System.Windows.Forms.Label lblTongTien;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpNgayBan;
         private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
     }
 }

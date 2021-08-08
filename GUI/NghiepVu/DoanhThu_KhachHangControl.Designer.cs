@@ -38,12 +38,9 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.chkThuong = new System.Windows.Forms.CheckBox();
-            this.chkVIP = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.btnXemBaoCao = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDenNgay = new System.Windows.Forms.DateTimePicker();
+            this.dtpTuNgay = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -112,12 +109,9 @@ namespace DoAn_ver5.GUI.NghiepVu
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.chkThuong);
-            this.panel1.Controls.Add(this.chkVIP);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btnXemBaoCao);
-            this.panel1.Controls.Add(this.dateTimePicker2);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.dtpDenNgay);
+            this.panel1.Controls.Add(this.dtpTuNgay);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -126,36 +120,6 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1320, 44);
             this.panel1.TabIndex = 2;
-            // 
-            // chkThuong
-            // 
-            this.chkThuong.AutoSize = true;
-            this.chkThuong.Location = new System.Drawing.Point(969, 16);
-            this.chkThuong.Name = "chkThuong";
-            this.chkThuong.Size = new System.Drawing.Size(76, 21);
-            this.chkThuong.TabIndex = 6;
-            this.chkThuong.Text = "Thường";
-            this.chkThuong.UseVisualStyleBackColor = true;
-            // 
-            // chkVIP
-            // 
-            this.chkVIP.AutoSize = true;
-            this.chkVIP.Location = new System.Drawing.Point(915, 15);
-            this.chkVIP.Name = "chkVIP";
-            this.chkVIP.Size = new System.Drawing.Size(48, 21);
-            this.chkVIP.TabIndex = 5;
-            this.chkVIP.Text = "VIP";
-            this.chkVIP.UseVisualStyleBackColor = true;
-            this.chkVIP.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(796, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 17);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Loại khách hàng";
             // 
             // btnXemBaoCao
             // 
@@ -167,21 +131,21 @@ namespace DoAn_ver5.GUI.NghiepVu
             this.btnXemBaoCao.UseVisualStyleBackColor = true;
             this.btnXemBaoCao.Click += new System.EventHandler(this.btnXemBaoCao_Click);
             // 
-            // dateTimePicker2
+            // dtpDenNgay
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(663, 11);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(127, 23);
-            this.dateTimePicker2.TabIndex = 2;
+            this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDenNgay.Location = new System.Drawing.Point(663, 11);
+            this.dtpDenNgay.Name = "dtpDenNgay";
+            this.dtpDenNgay.Size = new System.Drawing.Size(127, 23);
+            this.dtpDenNgay.TabIndex = 2;
             // 
-            // dateTimePicker1
+            // dtpTuNgay
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(455, 11);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(127, 23);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTuNgay.Location = new System.Drawing.Point(455, 11);
+            this.dtpTuNgay.Name = "dtpTuNgay";
+            this.dtpTuNgay.Size = new System.Drawing.Size(127, 23);
+            this.dtpTuNgay.TabIndex = 2;
             // 
             // label3
             // 
@@ -238,12 +202,9 @@ namespace DoAn_ver5.GUI.NghiepVu
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.CheckBox chkThuong;
-        private System.Windows.Forms.CheckBox chkVIP;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnXemBaoCao;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDenNgay;
+        private System.Windows.Forms.DateTimePicker dtpTuNgay;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

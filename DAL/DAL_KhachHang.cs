@@ -37,16 +37,14 @@ namespace DoAn_ver5.DAL
             data = DataProvider.Instance.GetRecords(query);
             return data;
         }
-        public DataTable GetDoanhThuKH()
+        public DataTable GetlistDoanhThuKH(string tuNgay, string denNgay)
         {
             DataTable data = new DataTable();
-            string query = @"select kh.MaKhachHang, kh.TenKhachHang, kh.NgayDangKy, kh.LoaiKhachHang, sum(hdv.GiaVe) as [DoanhThu] from dbo.SuatChieu sc join dbo.HoaDonVe hdv
-                            on sc.MaSuatChieu = hdv.MaSuatChieu join dbo.KhachHang kh
-                            on hdv.MaKhachHang = kh.MaKhachHang
-                            group by kh.MaKhachHang, kh.TenKhachHang, kh.NgayDangKy, kh.LoaiKhachHang, hdv.GiaVe";
+            string query = @"select kh.MaKhachHang, kh.TenKhachHang, kh.NgayDangKy, kh.LoaiKhachHang, sum(hdv.GiaVe) as DoanhThuKH from HoaDonVe hdv join KhachHang kh on hdv.MaKhachHang = kh.MaKhachHang where hdv.NgayBanVe >= '" +tuNgay+ "' and hdv.NgayBanVe <= '" +denNgay+ "' group by kh.MaKhachHang, kh.TenKhachHang, kh.NgayDangKy, kh.LoaiKhachHang";
             data = DataProvider.Instance.GetRecords(query);
             return data;
         }
+        
         public DataTable GetKhachHangByTenKH(string Ten)
         {
             DataTable data = new DataTable();

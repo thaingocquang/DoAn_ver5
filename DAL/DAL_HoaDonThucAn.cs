@@ -26,7 +26,7 @@ namespace DoAn_ver5.DAL
         public DataTable GetHoaDon()
         {
             DataTable dt = new DataTable();
-            string query = "select MaHoaDon, NgayTao, MaNhanVien from HoaDonThucAn";
+            string query = "select * from HoaDonThucAn";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
@@ -63,6 +63,34 @@ namespace DoAn_ver5.DAL
                 "on SP.MaThucAn = TA.MaThucAn";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
+        }
+        public bool InsertMaHoaDon(string MaHD, string NgayTao, string MaNV)
+        {
+            try
+            {
+                string query = "insert into HoaDonThucAn values ('" + MaHD + "', '" + NgayTao + "', '" + MaNV + "')";
+                DataProvider.Instance.ExcuteDB(query);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
+        public bool InsertMaHoaDon(string MaHD, string MaSP, int SL)
+        {
+            try
+            {
+                string query = "insert into ChiTietHDTA values ('" + MaHD + "', '" + MaSP + "', " + SL + ")";
+                DataProvider.Instance.ExcuteDB(query);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
         }
     }
 }

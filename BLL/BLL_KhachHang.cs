@@ -41,9 +41,9 @@ namespace DoAn_ver5.BLL
             }
             return null;
         }
-        public DataTable GetlistDoanhThuKH()
+        public DataTable GetlistDoanhThuKH(string tuNgay, string denNgay)
         {
-            return DAL_KhachHang.Instance.GetDoanhThuKH();
+            return DAL_KhachHang.Instance.GetlistDoanhThuKH(tuNgay, denNgay);
         }
         
         public DataTable GetAllKH()
