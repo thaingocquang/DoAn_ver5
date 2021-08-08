@@ -51,7 +51,6 @@ namespace DoAn_ver5.GUI
                     lstSuatphim.Items[i].SubItems[3].Text.Trim(),
                     txtMaPhim.Text.Trim()
                 );
-
             }
             this.Close();
         }
