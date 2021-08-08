@@ -76,18 +76,24 @@ namespace DoAn_ver5.GUI.DanhMuc
                     cbbNhasx.SelectedItem.ToString(),
                     txtTomTat.Text.Trim()
                 );
-            /*for(int i = 0; i < lstSuatphim.Items.Count; i++)
+            for (int i = 0; i < lstSuatphim.Items.Count; i++)
             {
+                string DinhDang = lstSuatphim.Items[i].SubItems[1].Text.Trim();
+                string HinhThuc = lstSuatphim.Items[i].SubItems[2].Text.Trim();
+                string NgonNgu = lstSuatphim.Items[i].SubItems[3].Text.Trim();
+                string MaPhim = txtMaPhim.Text.Trim();
+                DataTable dt = DAL_SuatChieu.Instance.GetMaSuatPhiminMaPhim(DinhDang, HinhThuc, NgonNgu, MaPhim);
+                string s = dt.Rows[0]["MaSuatPhim"].ToString();
                 DAL_SuatChieu.Instance.UpdateSuatPhim
                 (
-
+                    s,
                     lstSuatphim.Items[i].SubItems[1].Text.Trim(),
                     lstSuatphim.Items[i].SubItems[2].Text.Trim(),
                     lstSuatphim.Items[i].SubItems[3].Text.Trim(),
                     txtMaPhim.Text.Trim()
                 );
-            }*/
-            
+            }
+
             this.Close();
         }
 
@@ -95,6 +101,20 @@ namespace DoAn_ver5.GUI.DanhMuc
         {
             if (lstSuatphim.SelectedItems.Count > 0)
             {
+                string DinhDang = lstSuatphim.SelectedItems[0].SubItems[1].Text.Trim();
+                string HinhThuc = lstSuatphim.SelectedItems[0].SubItems[2].Text.Trim();
+                string NgonNgu = lstSuatphim.SelectedItems[0].SubItems[3].Text.Trim();
+                string MaPhim = txtMaPhim.Text.Trim();
+                DataTable dt = DAL_SuatChieu.Instance.GetMaSuatPhiminMaPhim(DinhDang,HinhThuc,NgonNgu,MaPhim);
+                string s = dt.Rows[0]["MaSuatPhim"].ToString();
+                DAL_SuatChieu.Instance.DeleteSuatPhim
+                    (
+                        s,
+                        lstSuatphim.SelectedItems[0].SubItems[1].Text.Trim(),
+                        lstSuatphim.SelectedItems[0].SubItems[2].Text.Trim(),
+                        lstSuatphim.SelectedItems[0].SubItems[3].Text.Trim(),
+                        txtMaPhim.Text.Trim()
+                    );
                 lstSuatphim.Items.RemoveAt(lstSuatphim.SelectedItems[0].Index);
             }
         }
@@ -102,12 +122,22 @@ namespace DoAn_ver5.GUI.DanhMuc
         
         private void btnThem_Click(object sender, EventArgs e)
         {
-            int count = lstSuatphim.Items.Count + 1;
-            ListViewItem ls = new ListViewItem(count.ToString());
-            ls.SubItems.Add(txtDinhdang.Text.Trim());
-            ls.SubItems.Add(cbbHinhthuc.SelectedItem.ToString().Trim());
-            ls.SubItems.Add(txtNgonngu.Text.Trim());
-            lstSuatphim.Items.Add(ls);
+            if(lstSuatphim.SelectedItems.Count == 0)
+            {
+                int count = lstSuatphim.Items.Count + 1;
+                ListViewItem ls = new ListViewItem(count.ToString());
+                ls.SubItems.Add(txtDinhdang.Text.Trim());
+                ls.SubItems.Add(cbbHinhthuc.SelectedItem.ToString().Trim());
+                ls.SubItems.Add(txtNgonngu.Text.Trim());
+                lstSuatphim.Items.Add(ls);
+            }
+            if(lstSuatphim.SelectedItems.Count > 0)
+            {
+                ListViewItem sl = lstSuatphim.SelectedItems[0];
+                sl.SubItems[1].Text = txtDinhdang.Text.Trim();
+                sl.SubItems[2].Text = cbbHinhthuc.SelectedItem.ToString();
+                sl.SubItems[3].Text = txtNgonngu.Text.Trim();
+            }
         }
 
         private void lstSuatphim_SelectedIndexChanged(object sender, EventArgs e)
@@ -120,8 +150,7 @@ namespace DoAn_ver5.GUI.DanhMuc
                 txtDinhdang.Text = lstSuatphim.SelectedItems[0].SubItems[1].Text.Trim();
                 txtNgonngu.Text = lstSuatphim.SelectedItems[0].SubItems[3].Text.Trim();
                 cbbHinhthuc.SelectedItem = lstSuatphim.SelectedItems[0].SubItems[2].Text.Trim();
-            }    
-            
+            }     
         }
     }
 }

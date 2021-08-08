@@ -109,7 +109,14 @@ namespace DoAn_ver5.DAL
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
-
+        
+        public DataTable GetMaSuatPhiminMaPhim(string DinhDang, string HinhThuc, string NgonNgu, string MaPhim)
+        {
+            DataTable dt = new DataTable();
+            string query = "select MaSuatPhim from SuatPhim  where DinhDang = '"+DinhDang+"'and HinhThuc = N'"+HinhThuc+"'and NgonNgu = N'"+NgonNgu+"'and MaPhim = '"+MaPhim+"'";
+            dt = DataProvider.Instance.GetRecords(query);
+            return dt;
+        }
         public DataTable GetALlSuatPhim()
         {
             DataTable dt = new DataTable();
@@ -177,6 +184,22 @@ namespace DoAn_ver5.DAL
                 return false;
             }
         }
+        public bool DeleteSuatPhim(string MaSP, string DinhDang, string HinhThuc, string NgonNgu, string MaPhim)
+        {
+            try
+            {
+                string query = "delete from SuatChieu  where MaSuatPhim = '" + MaSP + "'";
+                string s = "delete from SuatPhim  where MaPhim = '" + MaPhim + "' and DinhDang = '" + DinhDang + "' and HinhThuc = N'" + HinhThuc + "' and NgonNgu = N'" + NgonNgu + "'";
+                DataProvider.Instance.ExcuteDB(query);
+                DataProvider.Instance.ExcuteDB(s);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
         public bool InsertGheNgoi(string MaSuatChieu, string TinhTrang, string MaPhongChieu )
         {
             try
@@ -191,6 +214,6 @@ namespace DoAn_ver5.DAL
                 Console.WriteLine(e.Message);
                 return false;
             }
-        }
+        } 
     }
 }

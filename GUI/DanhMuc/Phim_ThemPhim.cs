@@ -53,17 +53,6 @@ namespace DoAn_ver5.GUI
                 );
 
             }
-
-            /*for (int i = 0;)
-            {
-
-            }
-            DAL_SuatChieu.Instance.InsertSuatChieuByMaSP
-                (
-                    txtMaPhim.Text.Trim(),
-                    "SC" +(DataProvider.Instance.GetRowCount(BLL_SuatChieu.Instance.GetAllSuatChieu())+ 1),
-                    "SP" + DataProvider.Instance.GetRowCount(BLL_SuatChieu.Instance.GetAllSuatPhim())
-                );*/
             this.Close();
         }
 
