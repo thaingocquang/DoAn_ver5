@@ -24,7 +24,7 @@ namespace DoAn_ver5.GUI.DanhMuc
         }    
         public void GUI(string MaPhim)
         {
-            
+            int count = 1;
             if (BLL_Phim.Instance.GetPhimByMaPhim(MaPhim) != null)
             {
                 DataTable dt = BLL_Phim.Instance.GetPhimByMaPhim(MaPhim);
@@ -40,6 +40,19 @@ namespace DoAn_ver5.GUI.DanhMuc
                     cbbNuocsx.SelectedItem = i["NuocSanXuat"].ToString();
                     cbbNhasx.SelectedItem = i["NhaSanXuat"].ToString();
                     txtTomTat.Text = i["TomTat"].ToString();
+                }
+            }
+            if (BLL_SuatChieu.Instance.GetSuatPhimByMaPhim(MaPhim) != null)
+            {
+                DataTable dt = BLL_SuatChieu.Instance.GetSuatPhimByMaPhim(MaPhim);
+                foreach (DataRow i in dt.Rows)
+                {
+                    ListViewItem ls = new ListViewItem(count.ToString());
+                    ls.SubItems.Add(i["DinhDang"].ToString());
+                    ls.SubItems.Add(i["HinhThuc"].ToString());
+                    ls.SubItems.Add(i["NgonNgu"].ToString());
+                    lstSuatphim.Items.Add(ls);
+                    count++;
                 }
             }
         }
@@ -63,14 +76,27 @@ namespace DoAn_ver5.GUI.DanhMuc
                     cbbNhasx.SelectedItem.ToString(),
                     txtTomTat.Text.Trim()
                 );
+            /*for(int i = 0; i < lstSuatphim.Items.Count; i++)
+            {
+                DAL_SuatChieu.Instance.UpdateSuatPhim
+                (
+
+                    lstSuatphim.Items[i].SubItems[1].Text.Trim(),
+                    lstSuatphim.Items[i].SubItems[2].Text.Trim(),
+                    lstSuatphim.Items[i].SubItems[3].Text.Trim(),
+                    txtMaPhim.Text.Trim()
+                );
+            }*/
+            
             this.Close();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            txtDinhdang.Text = "";
-            txtNgonngu.Text = "";
-            cbbHinhthuc.SelectedItem = null;
+            if (lstSuatphim.SelectedItems.Count > 0)
+            {
+                lstSuatphim.Items.RemoveAt(lstSuatphim.SelectedItems[0].Index);
+            }
         }
 
         
@@ -83,6 +109,19 @@ namespace DoAn_ver5.GUI.DanhMuc
             ls.SubItems.Add(txtNgonngu.Text.Trim());
             lstSuatphim.Items.Add(ls);
         }
-        
+
+        private void lstSuatphim_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtDinhdang.Text = "";
+            txtNgonngu.Text = "";
+            cbbHinhthuc.SelectedItem = null;
+            if(lstSuatphim.SelectedItems.Count > 0)
+            {
+                txtDinhdang.Text = lstSuatphim.SelectedItems[0].SubItems[1].Text.Trim();
+                txtNgonngu.Text = lstSuatphim.SelectedItems[0].SubItems[3].Text.Trim();
+                cbbHinhthuc.SelectedItem = lstSuatphim.SelectedItems[0].SubItems[2].Text.Trim();
+            }    
+            
+        }
     }
 }

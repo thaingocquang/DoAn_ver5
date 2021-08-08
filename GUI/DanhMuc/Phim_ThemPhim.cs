@@ -69,9 +69,10 @@ namespace DoAn_ver5.GUI
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            txtDinhdang.Text = "";
-            txtNgonngu.Text = "";
-            cbbHinhthuc.SelectedItem = null;
+            if(lstSuatphim.SelectedItems.Count > 0)
+            {
+                lstSuatphim.Items.RemoveAt(lstSuatphim.SelectedItems[0].Index);
+            }
         }
         
         private void btnThem_Click(object sender, EventArgs e)

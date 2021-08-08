@@ -42,7 +42,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.cbbDoTuoi = new System.Windows.Forms.ComboBox();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.cbbTrangThai = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -52,7 +51,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -109,7 +107,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.tabPage1.Controls.Add(this.cbbDoTuoi);
             this.tabPage1.Controls.Add(this.numericUpDown2);
             this.tabPage1.Controls.Add(this.numericUpDown3);
-            this.tabPage1.Controls.Add(this.cbbTrangThai);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label7);
@@ -119,7 +116,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.label12);
-            this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
@@ -133,7 +129,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // dtpNgayChieu
             // 
             this.dtpNgayChieu.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayChieu.Location = new System.Drawing.Point(108, 270);
+            this.dtpNgayChieu.Location = new System.Drawing.Point(400, 14);
             this.dtpNgayChieu.Name = "dtpNgayChieu";
             this.dtpNgayChieu.Size = new System.Drawing.Size(166, 22);
             this.dtpNgayChieu.TabIndex = 33;
@@ -259,16 +255,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             0,
             0});
             // 
-            // cbbTrangThai
-            // 
-            this.cbbTrangThai.FormattingEnabled = true;
-            this.cbbTrangThai.Items.AddRange(new object[] {
-            "Công chiếu"});
-            this.cbbTrangThai.Location = new System.Drawing.Point(400, 11);
-            this.cbbTrangThai.Name = "cbbTrangThai";
-            this.cbbTrangThai.Size = new System.Drawing.Size(121, 24);
-            this.cbbTrangThai.TabIndex = 24;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -281,7 +267,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(14, 272);
+            this.label8.Location = new System.Drawing.Point(306, 16);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 17);
             this.label8.TabIndex = 14;
@@ -350,15 +336,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label12.TabIndex = 16;
             this.label12.Text = "Diễn viên";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(296, 14);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 17);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Trạng thái";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -405,6 +382,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.lstSuatphim.TabIndex = 3;
             this.lstSuatphim.UseCompatibleStateImageBehavior = false;
             this.lstSuatphim.View = System.Windows.Forms.View.Details;
+            this.lstSuatphim.SelectedIndexChanged += new System.EventHandler(this.lstSuatphim_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -466,7 +444,8 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             this.cbbHinhthuc.FormattingEnabled = true;
             this.cbbHinhthuc.Items.AddRange(new object[] {
-            "Phụ đề"});
+            "Phụ đề",
+            "Lồng tiếng"});
             this.cbbHinhthuc.Location = new System.Drawing.Point(385, 26);
             this.cbbHinhthuc.Name = "cbbHinhthuc";
             this.cbbHinhthuc.Size = new System.Drawing.Size(125, 24);
@@ -620,7 +599,6 @@ namespace DoAn_ver5.GUI.DanhMuc
         private System.Windows.Forms.ComboBox cbbDoTuoi;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.ComboBox cbbTrangThai;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -630,7 +608,6 @@ namespace DoAn_ver5.GUI.DanhMuc
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabPage tabPage2;

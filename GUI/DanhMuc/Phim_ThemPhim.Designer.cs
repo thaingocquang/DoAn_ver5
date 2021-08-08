@@ -43,7 +43,6 @@ namespace DoAn_ver5.GUI
             this.cbbDoTuoi = new System.Windows.Forms.ComboBox();
             this.ThoiLuong = new System.Windows.Forms.NumericUpDown();
             this.NamSX = new System.Windows.Forms.NumericUpDown();
-            this.cbbTrangThai = new System.Windows.Forms.ComboBox();
             this.txtDienVien = new System.Windows.Forms.TextBox();
             this.txtTenPhim = new System.Windows.Forms.TextBox();
             this.txtMaPhim = new System.Windows.Forms.TextBox();
@@ -56,7 +55,6 @@ namespace DoAn_ver5.GUI
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -151,7 +149,6 @@ namespace DoAn_ver5.GUI
             this.tabPage1.Controls.Add(this.cbbDoTuoi);
             this.tabPage1.Controls.Add(this.ThoiLuong);
             this.tabPage1.Controls.Add(this.NamSX);
-            this.tabPage1.Controls.Add(this.cbbTrangThai);
             this.tabPage1.Controls.Add(this.txtDienVien);
             this.tabPage1.Controls.Add(this.txtTenPhim);
             this.tabPage1.Controls.Add(this.txtMaPhim);
@@ -164,7 +161,6 @@ namespace DoAn_ver5.GUI
             this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.label12);
-            this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
@@ -177,7 +173,7 @@ namespace DoAn_ver5.GUI
             // 
             // dtpNgayChieu
             // 
-            this.dtpNgayChieu.Location = new System.Drawing.Point(107, 272);
+            this.dtpNgayChieu.Location = new System.Drawing.Point(399, 234);
             this.dtpNgayChieu.Name = "dtpNgayChieu";
             this.dtpNgayChieu.Size = new System.Drawing.Size(173, 26);
             this.dtpNgayChieu.TabIndex = 7;
@@ -196,7 +192,7 @@ namespace DoAn_ver5.GUI
             this.cbbNhaSX.Items.AddRange(new object[] {
             "Mavel",
             "Truyền hình Việt Nam"});
-            this.cbbNhaSX.Location = new System.Drawing.Point(399, 237);
+            this.cbbNhaSX.Location = new System.Drawing.Point(399, 201);
             this.cbbNhaSX.Name = "cbbNhaSX";
             this.cbbNhaSX.Size = new System.Drawing.Size(121, 28);
             this.cbbNhaSX.TabIndex = 5;
@@ -207,7 +203,7 @@ namespace DoAn_ver5.GUI
             this.cbbNN.Items.AddRange(new object[] {
             "Tiếng Anh",
             "Tiếng Việt"});
-            this.cbbNN.Location = new System.Drawing.Point(399, 200);
+            this.cbbNN.Location = new System.Drawing.Point(399, 162);
             this.cbbNN.Name = "cbbNN";
             this.cbbNN.Size = new System.Drawing.Size(121, 28);
             this.cbbNN.TabIndex = 5;
@@ -218,7 +214,7 @@ namespace DoAn_ver5.GUI
             this.cbbNuocSX.Items.AddRange(new object[] {
             "Mỹ ",
             "Việt Nam"});
-            this.cbbNuocSX.Location = new System.Drawing.Point(399, 154);
+            this.cbbNuocSX.Location = new System.Drawing.Point(399, 11);
             this.cbbNuocSX.Name = "cbbNuocSX";
             this.cbbNuocSX.Size = new System.Drawing.Size(121, 28);
             this.cbbNuocSX.TabIndex = 5;
@@ -238,6 +234,11 @@ namespace DoAn_ver5.GUI
             // ThoiLuong
             // 
             this.ThoiLuong.Location = new System.Drawing.Point(107, 162);
+            this.ThoiLuong.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.ThoiLuong.Name = "ThoiLuong";
             this.ThoiLuong.Size = new System.Drawing.Size(120, 26);
             this.ThoiLuong.TabIndex = 4;
@@ -263,16 +264,6 @@ namespace DoAn_ver5.GUI
             0,
             0,
             0});
-            // 
-            // cbbTrangThai
-            // 
-            this.cbbTrangThai.FormattingEnabled = true;
-            this.cbbTrangThai.Items.AddRange(new object[] {
-            "Công chiếu"});
-            this.cbbTrangThai.Location = new System.Drawing.Point(399, 16);
-            this.cbbTrangThai.Name = "cbbTrangThai";
-            this.cbbTrangThai.Size = new System.Drawing.Size(121, 28);
-            this.cbbTrangThai.TabIndex = 3;
             // 
             // txtDienVien
             // 
@@ -309,7 +300,7 @@ namespace DoAn_ver5.GUI
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(13, 278);
+            this.label8.Location = new System.Drawing.Point(305, 240);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(92, 20);
             this.label8.TabIndex = 0;
@@ -345,7 +336,7 @@ namespace DoAn_ver5.GUI
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(295, 240);
+            this.label15.Location = new System.Drawing.Point(295, 204);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(107, 20);
             this.label15.TabIndex = 0;
@@ -354,7 +345,7 @@ namespace DoAn_ver5.GUI
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(295, 203);
+            this.label14.Location = new System.Drawing.Point(295, 165);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(80, 20);
             this.label14.TabIndex = 0;
@@ -363,7 +354,7 @@ namespace DoAn_ver5.GUI
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(295, 162);
+            this.label13.Location = new System.Drawing.Point(295, 19);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(116, 20);
             this.label13.TabIndex = 0;
@@ -377,15 +368,6 @@ namespace DoAn_ver5.GUI
             this.label12.Size = new System.Drawing.Size(79, 20);
             this.label12.TabIndex = 0;
             this.label12.Text = "Diễn viên";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(295, 19);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 20);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Trạng thái";
             // 
             // label4
             // 
@@ -621,7 +603,6 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.ComboBox cbbDoTuoi;
         private System.Windows.Forms.NumericUpDown ThoiLuong;
         private System.Windows.Forms.NumericUpDown NamSX;
-        private System.Windows.Forms.ComboBox cbbTrangThai;
         private System.Windows.Forms.TextBox txtDienVien;
         private System.Windows.Forms.TextBox txtTenPhim;
         private System.Windows.Forms.TextBox txtMaPhim;
@@ -634,7 +615,6 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabPage tabPage2;

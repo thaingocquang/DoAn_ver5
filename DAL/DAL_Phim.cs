@@ -99,22 +99,5 @@ namespace DoAn_ver5.DAL
                 return false;
             }
         }
-
-        public bool InsertSuatPhim(string MaSP, string DinhDang, string HinhThuc, string NgonNgu)
-        {
-            try
-            {
-                string query = "insert into SuatPhim values ('"+MaSP+"','"+DinhDang+"',N'"+ HinhThuc+"', N'"+NgonNgu+"')";
-                DataProvider.Instance.ExcuteDB(query);
-                return true;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return false;
-            }
-        }
-
-        
     }
 }

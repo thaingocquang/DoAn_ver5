@@ -73,7 +73,7 @@ namespace DoAn_ver5.DAL
         public DataTable GetAllSuatChieu()
         {
             DataTable dt = new DataTable();
-            string query = "select* from SuatChieu sc join SuatPhim sp on sc.MaSuatPhim = sp.MaSuatPhim join Phim p on p.MaPhim = sp.MaPhim join PhongChieu pc on pc.MaPhongChieu = sc.MaPhongChieu";
+            string query = "select * from SuatChieu sc join SuatPhim sp on sc.MaSuatPhim = sp.MaSuatPhim join Phim p on p.MaPhim = sp.MaPhim join PhongChieu pc on pc.MaPhongChieu = sc.MaPhongChieu";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
@@ -138,6 +138,21 @@ namespace DoAn_ver5.DAL
                 string s = "update SuatPhim set DinhDang = '"+DinhDang+"', HinhThuc = N'"+HinhThuc+"', NgonNgu = N'"+NgonNgu+"' where MaSuatPhim = '"+MaSP+"'";
                 DataProvider.Instance.ExcuteDB(query);
                 DataProvider.Instance.ExcuteDB(s);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
+
+        public bool UpdateSuatPhim(string MaSP, string DinhDang, string HinhThuc, string NgonNgu, string MaPhim)
+        {
+            try
+            {
+                string query = "update SuatPhim set DinhDang = '"+DinhDang+"', HinhThuc = N'"+HinhThuc+"', NgonNgu = N'"+NgonNgu+"' where MaPhim = '" +MaPhim+ "' and MaSuatPhim = '" + MaSP + "'";
+                DataProvider.Instance.ExcuteDB(query);
                 return true;
             }
             catch (Exception e)

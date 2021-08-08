@@ -143,9 +143,7 @@ namespace DoAn_ver5.GUI
         private void btnXoaco_Click(object sender, EventArgs e)
         {
             if(listView2.SelectedItems.Count > 0)
-            {
-               
-               string s = listView2.SelectedItems[0].SubItems[0].Text.Trim();
+            {         
                 DAL_ThucAn.Instance.DeleteCoThucAn
                      (                    
                          listView2.SelectedItems[0].SubItems[0].Text.Trim(),
