@@ -10,6 +10,7 @@ namespace DoAn_ver5.BLL
 {
     class BLL_TaiKhoan
     {
+        public string MaNhanVien { get; set; }
         private static BLL_TaiKhoan _Instance;
         public static BLL_TaiKhoan Instance
         {
@@ -38,6 +39,26 @@ namespace DoAn_ver5.BLL
                 }
             }
             return "";
+        }
+        public DataTable GetNhanVienByUserAndPassword(string user, string pass)
+        {
+            return DAL_TaiKhoan.Instance.GetNhanVienByUserAndPassword(user, pass);
+        }
+        public bool UpdateThongTin(string ThuocTinh, string Text, string MaNhanVien)
+        {
+            return DAL_TaiKhoan.Instance.UpdateThongTin(ThuocTinh, Text, MaNhanVien);
+        }
+        public DataTable GetTaiKhoanByMaNhanVien(string MaNV)
+        {
+            return DAL_TaiKhoan.Instance.GetTaiKhoanByMaNhanVien(MaNV);
+        }
+        public bool UpdateMatKhau(string MatKhau, string MaNhanVien)
+        {
+            return DAL_TaiKhoan.Instance.UpdateMatKhau(MatKhau, MaNhanVien);
+        }
+        public bool UpdateTrangThai(string trangThai, string MaNhanVien)
+        {
+            return DAL_TaiKhoan.Instance.UpdateTrangThai(trangThai, MaNhanVien);
         }
     }
 }

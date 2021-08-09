@@ -92,5 +92,16 @@ namespace DoAn_ver5.DAL
                 return false;
             }
         }
+        public DataTable GetDoanhThuThucAn(int thang)
+        {
+            DataTable dt = new DataTable();
+            string query = @"select count(HDTA.MaHoaDon) as SoLuongHD, sum(CTHD.SoLuong) as SoLuongSP, sum(SP.GiaBan) as DoanhThu from HoaDonThucAn HDTA join ChiTietHDTA CTHD
+                            on HDTA.MaHoaDon = CTHD.MaHoaDon join Size_Price SP
+                            on CTHD.MaSP = sp.MaSP join ThucAn TA
+                            on SP.MaThucAn = TA.MaThucAn
+                            where month(HDTA.NgayTao) = " + thang;
+            dt = DataProvider.Instance.GetRecords(query);
+            return dt;
+        }
     }
 }

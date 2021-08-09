@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoAn_ver5.BLL;
 
 namespace DoAn_ver5.GUI
 {
@@ -49,7 +50,7 @@ namespace DoAn_ver5.GUI
 
         private void MainWorkSpace_Load(object sender, EventArgs e)
         {
-            lblThongTinNhanVien.Text = "Xin chào, " + DangNhap.MaNhanVien;
+            lblThongTinNhanVien.Text = "Xin chào, " + BLL_NhanVien.Instance.GetNhanVienByMaNhanVien(BLL_TaiKhoan.Instance.MaNhanVien).Rows[0]["HoVaTen"].ToString();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -186,7 +187,7 @@ namespace DoAn_ver5.GUI
 
         private void label21_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello");
+            this.Close();
         }
 
         private void lblSaoLuuPhucHoi_Click(object sender, EventArgs e)
@@ -197,8 +198,20 @@ namespace DoAn_ver5.GUI
 
         private void lblThongTinNhanVien_Click(object sender, EventArgs e)
         {
-            ThongTinNhanVien frm = new ThongTinNhanVien();
+            ThongTinNhanVien frm = new ThongTinNhanVien(BLL_TaiKhoan.Instance.MaNhanVien);
             frm.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (!panel6.Controls.Contains(DoanhThu_HangThangControl.Instance))
+            {
+                panel6.Controls.Add(DoanhThu_HangThangControl.Instance);
+                DoanhThu_HangThangControl.Instance.Dock = DockStyle.Fill;
+                DoanhThu_HangThangControl.Instance.BringToFront();
+            }
+            else
+                DoanhThu_HangThangControl.Instance.BringToFront();
         }
     }
 }

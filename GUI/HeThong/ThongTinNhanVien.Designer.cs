@@ -408,6 +408,7 @@ namespace DoAn_ver5.GUI.HeThong
             this.btnHuyBo.TabIndex = 0;
             this.btnHuyBo.Text = "Hủy bỏ";
             this.btnHuyBo.UseVisualStyleBackColor = true;
+            this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
             // 
             // btnLuu
             // 
@@ -417,6 +418,7 @@ namespace DoAn_ver5.GUI.HeThong
             this.btnLuu.TabIndex = 0;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // ThongTinNhanVien
             // 

@@ -35,7 +35,6 @@ namespace DoAn_ver5
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -104,7 +103,6 @@ namespace DoAn_ver5
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.checkBox1);
             this.panel2.Controls.Add(this.txtMatKhau);
             this.panel2.Controls.Add(this.txtTenDangNhap);
             this.panel2.Controls.Add(this.label5);
@@ -114,27 +112,16 @@ namespace DoAn_ver5
             this.panel2.Size = new System.Drawing.Size(469, 112);
             this.panel2.TabIndex = 1;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(145, 77);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(153, 21);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Lưu tên đăng nhập.";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(145, 45);
+            this.txtMatKhau.Location = new System.Drawing.Point(145, 58);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(262, 26);
             this.txtMatKhau.TabIndex = 1;
             // 
             // txtTenDangNhap
             // 
-            this.txtTenDangNhap.Location = new System.Drawing.Point(145, 13);
+            this.txtTenDangNhap.Location = new System.Drawing.Point(145, 26);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
             this.txtTenDangNhap.Size = new System.Drawing.Size(262, 26);
             this.txtTenDangNhap.TabIndex = 0;
@@ -142,7 +129,7 @@ namespace DoAn_ver5
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 48);
+            this.label5.Location = new System.Drawing.Point(21, 61);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 18);
             this.label5.TabIndex = 0;
@@ -151,7 +138,7 @@ namespace DoAn_ver5
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 16);
+            this.label4.Location = new System.Drawing.Point(21, 29);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(115, 18);
             this.label4.TabIndex = 0;
@@ -177,6 +164,7 @@ namespace DoAn_ver5
             this.btnThoat.Text = "Thoát";
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnDangNhap
             // 
@@ -222,7 +210,6 @@ namespace DoAn_ver5
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.TextBox txtTenDangNhap;
         private System.Windows.Forms.Label label5;

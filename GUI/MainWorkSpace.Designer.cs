@@ -32,8 +32,6 @@ namespace DoAn_ver5.GUI
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lblSaoLuuPhucHoi = new System.Windows.Forms.Label();
@@ -99,8 +97,6 @@ namespace DoAn_ver5.GUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.AliceBlue;
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.lblSaoLuuPhucHoi);
@@ -109,28 +105,6 @@ namespace DoAn_ver5.GUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1320, 77);
             this.panel1.TabIndex = 0;
-            // 
-            // label14
-            // 
-            this.label14.Image = global::DoAn_ver5.Properties.Resources.thongtin;
-            this.label14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label14.Location = new System.Drawing.Point(753, 17);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(195, 49);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Thông tin rạp phim";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label13
-            // 
-            this.label13.Image = global::DoAn_ver5.Properties.Resources.setting;
-            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label13.Location = new System.Drawing.Point(600, 17);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(123, 49);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "Quy định";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label12
             // 
@@ -273,6 +247,7 @@ namespace DoAn_ver5.GUI
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -337,6 +312,7 @@ namespace DoAn_ver5.GUI
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel4.Location = new System.Drawing.Point(3, 80);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1320, 572);
@@ -458,7 +434,8 @@ namespace DoAn_ver5.GUI
             // lblDangXuat
             // 
             this.lblDangXuat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDangXuat.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblDangXuat.BackColor = System.Drawing.Color.AliceBlue;
+            this.lblDangXuat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDangXuat.Image = global::DoAn_ver5.Properties.Resources.logout;
             this.lblDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -472,15 +449,15 @@ namespace DoAn_ver5.GUI
             // 
             // lblThongTinNhanVien
             // 
-            this.lblThongTinNhanVien.AutoSize = true;
-            this.lblThongTinNhanVien.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblThongTinNhanVien.BackColor = System.Drawing.SystemColors.Control;
             this.lblThongTinNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThongTinNhanVien.Location = new System.Drawing.Point(1156, 5);
+            this.lblThongTinNhanVien.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblThongTinNhanVien.Location = new System.Drawing.Point(945, 4);
             this.lblThongTinNhanVien.Name = "lblThongTinNhanVien";
-            this.lblThongTinNhanVien.Size = new System.Drawing.Size(60, 20);
+            this.lblThongTinNhanVien.Size = new System.Drawing.Size(271, 20);
             this.lblThongTinNhanVien.TabIndex = 2;
             this.lblThongTinNhanVien.Text = "label10";
-            this.lblThongTinNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblThongTinNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblThongTinNhanVien.Click += new System.EventHandler(this.lblThongTinNhanVien_Click);
             // 
             // MainWorkSpace
@@ -509,7 +486,6 @@ namespace DoAn_ver5.GUI
             this.panel3.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -518,8 +494,6 @@ namespace DoAn_ver5.GUI
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblSaoLuuPhucHoi;

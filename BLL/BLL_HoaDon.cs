@@ -58,5 +58,9 @@ namespace DoAn_ver5.BLL
         {
             return DAL_HoaDonThucAn.Instance.InsertMaHoaDon(MaHD, MaSP, SoLuong);
         }
+        public DataTable GetDoanhThuThucAn(int thang)
+        {
+            return DAL_HoaDonThucAn.Instance.GetDoanhThuThucAn(thang);
+        }
     }
 }

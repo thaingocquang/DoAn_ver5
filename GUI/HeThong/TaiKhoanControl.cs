@@ -13,6 +13,8 @@ namespace DoAn_ver5.GUI.HeThong
 {
     public partial class TaiKhoanControl : UserControl
     {
+        string cbbQuyenHanText;
+        bool KichHoatTK;
         private static TaiKhoanControl _instance;
         public static TaiKhoanControl Instance
         {
@@ -30,6 +32,8 @@ namespace DoAn_ver5.GUI.HeThong
 
         private void TaiKhoanControl_Load(object sender, EventArgs e)
         {
+            cbbQuyenHan.Items.Add("Bán vé");
+            cbbQuyenHan.Items.Add("Bán thức ăn");
             HienTatCaTaiKhoan();
         }
 
@@ -65,6 +69,44 @@ namespace DoAn_ver5.GUI.HeThong
             {
                 rdbTamNgung.Checked = true;
             }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            ThongTinNhanVien form = new ThongTinNhanVien(lstTaiKhoan.SelectedItems[0].SubItems[2].Text);
+            form.Show();
+        }
+
+        private void btnDatMKMacDinh_Click(object sender, EventArgs e)
+        {
+            if(BLL_TaiKhoan.Instance.UpdateMatKhau("12345", lstTaiKhoan.SelectedItems[0].SubItems[2].Text))
+            {
+                MessageBox.Show("Đặt lại mật khẩu mặc định thành công.");
+            }
+
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            if(BLL_TaiKhoan.Instance.UpdateTrangThai(KichHoatTK.ToString(), lstTaiKhoan.SelectedItems[0].SubItems[2].Text) && BLL_TaiKhoan.Instance.UpdateThongTin("ChucVu", cbbQuyenHanText, lstTaiKhoan.SelectedItems[0].SubItems[2].Text))
+            {
+                MessageBox.Show("Lưu thành công.");
+            }
+        }
+
+        private void cbbQuyenHan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbbQuyenHanText = cbbQuyenHan.SelectedItem.ToString();
+        }
+
+        private void rdbKichHoat_CheckedChanged(object sender, EventArgs e)
+        {
+            KichHoatTK = true;
+        }
+
+        private void rdbTamNgung_CheckedChanged(object sender, EventArgs e)
+        {
+            KichHoatTK = false;
         }
     }
 }

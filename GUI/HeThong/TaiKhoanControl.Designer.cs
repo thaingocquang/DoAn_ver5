@@ -38,12 +38,13 @@ namespace DoAn_ver5.GUI.HeThong
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblTenDangNhap = new System.Windows.Forms.Label();
+            this.lblTenNhanVien = new System.Windows.Forms.Label();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnDatMKMacDinh = new System.Windows.Forms.Button();
             this.rdbTamNgung = new System.Windows.Forms.RadioButton();
             this.rdbKichHoat = new System.Windows.Forms.RadioButton();
             this.cbbQuyenHan = new System.Windows.Forms.ComboBox();
@@ -51,8 +52,6 @@ namespace DoAn_ver5.GUI.HeThong
             this.label3 = new System.Windows.Forms.Label();
             this.sdasd = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblTenNhanVien = new System.Windows.Forms.Label();
-            this.lblTenDangNhap = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -127,19 +126,20 @@ namespace DoAn_ver5.GUI.HeThong
             this.panel3.Size = new System.Drawing.Size(1051, 531);
             this.panel3.TabIndex = 5;
             // 
-            // button5
+            // btnSua
             // 
-            this.button5.Location = new System.Drawing.Point(6, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(78, 26);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Sửa";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnSua.Location = new System.Drawing.Point(6, 12);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(78, 26);
+            this.btnSua.TabIndex = 4;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.btnSua);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(269, 0);
             this.panel2.Name = "panel2";
@@ -151,9 +151,8 @@ namespace DoAn_ver5.GUI.HeThong
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.lblTenDangNhap);
             this.panel1.Controls.Add(this.lblTenNhanVien);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnLuu);
+            this.panel1.Controls.Add(this.btnDatMKMacDinh);
             this.panel1.Controls.Add(this.rdbTamNgung);
             this.panel1.Controls.Add(this.rdbKichHoat);
             this.panel1.Controls.Add(this.cbbQuyenHan);
@@ -167,32 +166,43 @@ namespace DoAn_ver5.GUI.HeThong
             this.panel1.Size = new System.Drawing.Size(269, 575);
             this.panel1.TabIndex = 3;
             // 
-            // button3
+            // lblTenDangNhap
             // 
-            this.button3.Location = new System.Drawing.Point(123, 255);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(97, 27);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Hủy bỏ";
-            this.button3.UseVisualStyleBackColor = true;
+            this.lblTenDangNhap.AutoSize = true;
+            this.lblTenDangNhap.Location = new System.Drawing.Point(127, 89);
+            this.lblTenDangNhap.Name = "lblTenDangNhap";
+            this.lblTenDangNhap.Size = new System.Drawing.Size(0, 17);
+            this.lblTenDangNhap.TabIndex = 5;
             // 
-            // button2
+            // lblTenNhanVien
             // 
-            this.button2.Location = new System.Drawing.Point(22, 255);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 27);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Lưu";
-            this.button2.UseVisualStyleBackColor = true;
+            this.lblTenNhanVien.AutoSize = true;
+            this.lblTenNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenNhanVien.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblTenNhanVien.Location = new System.Drawing.Point(26, 44);
+            this.lblTenNhanVien.Name = "lblTenNhanVien";
+            this.lblTenNhanVien.Size = new System.Drawing.Size(0, 25);
+            this.lblTenNhanVien.TabIndex = 4;
             // 
-            // button1
+            // btnLuu
             // 
-            this.button1.Location = new System.Drawing.Point(22, 220);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(198, 29);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Đặt lại mật khẩu mặt định";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnLuu.Location = new System.Drawing.Point(22, 255);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(198, 27);
+            this.btnLuu.TabIndex = 3;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnDatMKMacDinh
+            // 
+            this.btnDatMKMacDinh.Location = new System.Drawing.Point(22, 220);
+            this.btnDatMKMacDinh.Name = "btnDatMKMacDinh";
+            this.btnDatMKMacDinh.Size = new System.Drawing.Size(198, 29);
+            this.btnDatMKMacDinh.TabIndex = 3;
+            this.btnDatMKMacDinh.Text = "Đặt lại mật khẩu mặt định";
+            this.btnDatMKMacDinh.UseVisualStyleBackColor = true;
+            this.btnDatMKMacDinh.Click += new System.EventHandler(this.btnDatMKMacDinh_Click);
             // 
             // rdbTamNgung
             // 
@@ -204,6 +214,7 @@ namespace DoAn_ver5.GUI.HeThong
             this.rdbTamNgung.TabStop = true;
             this.rdbTamNgung.Text = "Tạm ngưng";
             this.rdbTamNgung.UseVisualStyleBackColor = true;
+            this.rdbTamNgung.CheckedChanged += new System.EventHandler(this.rdbTamNgung_CheckedChanged);
             // 
             // rdbKichHoat
             // 
@@ -215,6 +226,7 @@ namespace DoAn_ver5.GUI.HeThong
             this.rdbKichHoat.TabStop = true;
             this.rdbKichHoat.Text = "Kích hoạt";
             this.rdbKichHoat.UseVisualStyleBackColor = true;
+            this.rdbKichHoat.CheckedChanged += new System.EventHandler(this.rdbKichHoat_CheckedChanged);
             // 
             // cbbQuyenHan
             // 
@@ -223,6 +235,7 @@ namespace DoAn_ver5.GUI.HeThong
             this.cbbQuyenHan.Name = "cbbQuyenHan";
             this.cbbQuyenHan.Size = new System.Drawing.Size(121, 24);
             this.cbbQuyenHan.TabIndex = 1;
+            this.cbbQuyenHan.SelectedIndexChanged += new System.EventHandler(this.cbbQuyenHan_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -262,24 +275,6 @@ namespace DoAn_ver5.GUI.HeThong
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhân viên";
             // 
-            // lblTenNhanVien
-            // 
-            this.lblTenNhanVien.AutoSize = true;
-            this.lblTenNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenNhanVien.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblTenNhanVien.Location = new System.Drawing.Point(26, 44);
-            this.lblTenNhanVien.Name = "lblTenNhanVien";
-            this.lblTenNhanVien.Size = new System.Drawing.Size(0, 25);
-            this.lblTenNhanVien.TabIndex = 4;
-            // 
-            // lblTenDangNhap
-            // 
-            this.lblTenDangNhap.AutoSize = true;
-            this.lblTenDangNhap.Location = new System.Drawing.Point(127, 89);
-            this.lblTenDangNhap.Name = "lblTenDangNhap";
-            this.lblTenDangNhap.Size = new System.Drawing.Size(0, 17);
-            this.lblTenDangNhap.TabIndex = 5;
-            // 
             // TaiKhoanControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -309,12 +304,11 @@ namespace DoAn_ver5.GUI.HeThong
         private System.Windows.Forms.ListView lstTaiKhoan;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnDatMKMacDinh;
         private System.Windows.Forms.RadioButton rdbTamNgung;
         private System.Windows.Forms.RadioButton rdbKichHoat;
         private System.Windows.Forms.ComboBox cbbQuyenHan;
