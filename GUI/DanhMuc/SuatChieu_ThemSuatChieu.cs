@@ -36,7 +36,7 @@ namespace DoAn_ver5.GUI
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close();          
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace DoAn_ver5.GUI
                     int.Parse(txtGiaVe.Text.Trim())
                 );
             string TenPhongChieu = ((CbbItem)(cbbPhong.SelectedItem)).Name;
-            DataTable PhongChieu = DAL_PhongChieu.Instance.GetPhongChieuByTenPhongChieu(TenPhongChieu);
+            DataTable PhongChieu = DAL_PhongChieu.Instance.GetPhongChieuByTenPhongChieu(TenPhongChieu);            
             int SoHang = int.Parse(PhongChieu.Rows[0]["SoHangGhe"].ToString());
             int SoGhe1Hang = int.Parse(PhongChieu.Rows[0]["SoGhe1Hang"].ToString());
             //int x = 0;
