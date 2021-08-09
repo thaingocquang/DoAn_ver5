@@ -118,7 +118,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             // txtGiaVe
             // 
-            this.txtGiaVe.Location = new System.Drawing.Point(130, 198);
+            this.txtGiaVe.Location = new System.Drawing.Point(131, 191);
             this.txtGiaVe.Name = "txtGiaVe";
             this.txtGiaVe.Size = new System.Drawing.Size(181, 27);
             this.txtGiaVe.TabIndex = 29;

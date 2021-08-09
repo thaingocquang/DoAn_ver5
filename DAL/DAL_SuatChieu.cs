@@ -152,12 +152,12 @@ namespace DoAn_ver5.DAL
                 return false;
             }
         }
-        public bool UpdateSuatChieu(string MaPhim, string MaSC, string MaSP, string Phong, string ThoiGian, string TrangThai,
+        public bool UpdateSuatChieu( string MaSC, string MaSP, string Phong, string ThoiGian, string TrangThai,
             string DinhDang, string HinhThuc, string NgonNgu, float GiaVe)
         {
             try
             {
-                string query = "update SuatChieu set MaPhim = '"+MaPhim+"', NgayGio = '"+ThoiGian+"', TrangThai = N'"+TrangThai+"', TenPhongChieu = N'"+Phong+"', GiaVe = "+GiaVe+", MaSuatPhim = '"+MaSP+"' where MaSuatChieu = '" + MaSC + "'";
+                string query = "update SuatChieu set  NgayGio = '"+ThoiGian+"', TrangThai = N'"+TrangThai+"', MaPhongChieu = '"+Phong+"', GiaVe = "+GiaVe+", MaSuatPhim = '"+MaSP+"' where MaSuatChieu = '"+MaSC+"'";
                 string s = "update SuatPhim set DinhDang = '"+DinhDang+"', HinhThuc = N'"+HinhThuc+"', NgonNgu = N'"+NgonNgu+"' where MaSuatPhim = '"+MaSP+"'";
                 DataProvider.Instance.ExcuteDB(query);
                 DataProvider.Instance.ExcuteDB(s);

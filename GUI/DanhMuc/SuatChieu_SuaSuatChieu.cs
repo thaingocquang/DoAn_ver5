@@ -42,18 +42,18 @@ namespace DoAn_ver5.GUI.DanhMuc
         private void btnLuu_Click(object sender, EventArgs e)
         {
             DAL_SuatChieu.Instance.UpdateSuatChieu
-                (
-                    ((CbbItem)cbbTenPhim.SelectedItem).ID.Trim(),
-                    txtMaSC.Text.Trim(),
-                    txtMaSP.Text.Trim(),
-                    ((CbbItem)cbbPhong.SelectedItem).ToString().Trim(),
-                    dtpThoigian.Value.ToString(),
-                    cbbTrangThai.SelectedItem.ToString().Trim(),
-                    listView1.SelectedItems[0].SubItems[1].Text.Trim(),
-                    listView1.SelectedItems[0].SubItems[2].Text.Trim(),
-                    listView1.SelectedItems[0].SubItems[3].Text.Trim(),
-                    int.Parse(txtGiaVe.Text.Trim())
+                (                    
+                    txtMaSC.Text.Trim(), // MaSuatChieu
+                    txtMaSP.Text.Trim(), // MaSuatPhim
+                    ((CbbItem)cbbPhong.SelectedItem).ID.Trim(), // Phong
+                    dtpThoigian.Value.ToString(), // ThoiGian
+                    cbbTrangThai.SelectedItem.ToString().Trim(), //TrangThai
+                    listView1.SelectedItems[0].SubItems[1].Text.Trim(), // DinhDang
+                    listView1.SelectedItems[0].SubItems[2].Text.Trim(), // HinhThuc
+                    listView1.SelectedItems[0].SubItems[3].Text.Trim(), // NgonNgu
+                    float.Parse(txtGiaVe.Text.Trim()) // GiaVe
                 );
+            
             this.Close();
         }
 
