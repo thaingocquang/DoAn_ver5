@@ -171,13 +171,23 @@ namespace DoAn_ver5.GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            if (BLL_NhanVien.Instance.IsQuyenQuanTri() == false)
+            {
+                MessageBox.Show("Bạn không có quyền sử dụng chức năng này.");
+                return;
+            }
             NhanVien_ThemNhanVien nv = new NhanVien_ThemNhanVien();
             nv.ShowDialog();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if(lstNhanVien.SelectedItems.Count > 0)
+            if (BLL_NhanVien.Instance.IsQuyenQuanTri() == false)
+            {
+                MessageBox.Show("Bạn không có quyền sử dụng chức năng này.");
+                return;
+            }
+            if (lstNhanVien.SelectedItems.Count > 0)
             {
                 ListViewItem ls = lstNhanVien.SelectedItems[0];
                 string s = ls.SubItems[2].Text.Trim();

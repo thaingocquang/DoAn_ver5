@@ -100,6 +100,7 @@ namespace DoAn_ver5.GUI.NghiepVu
 
         private void btnChon_Click(object sender, EventArgs e)
         {
+            if (lstDoAn.SelectedItems.Count <= 0) return;
             int soLuong = (int)numericUpDownSoLuong.Value;
             int thanhTien = soLuong * int.Parse(lstDoAn.SelectedItems[0].SubItems[3].Text);
 
@@ -129,6 +130,11 @@ namespace DoAn_ver5.GUI.NghiepVu
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            if (BLL_NhanVien.Instance.IsQuyenBanThucAn() == false)
+            {
+                MessageBox.Show("Bạn không có quyền sử dụng chức năng này.");
+                return;
+            }
             if (lstBanDoAn.SelectedItems.Count <= 0) return;
             foreach (ListViewItem item in lstBanDoAn.Items)
                 if (item.Selected)
@@ -137,6 +143,11 @@ namespace DoAn_ver5.GUI.NghiepVu
 
         private void btnBan_Click(object sender, EventArgs e)
         {
+            if (BLL_NhanVien.Instance.IsQuyenBanThucAn() == false)
+            {
+                MessageBox.Show("Bạn không có quyền sử dụng chức năng này.");
+                return;
+            }
             if (lstBanDoAn.Items.Count <= 0) return;
             string MaHD = "HD" + (DataProvider.Instance.GetRowCount(BLL_HoaDon.Instance.GetHoaDon()) + 1);
             BLL_HoaDon.Instance.InsertMaHoaDon(MaHD, dtpNgayBan.Value.ToString(), "NV001");

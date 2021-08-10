@@ -169,6 +169,11 @@ namespace DoAn_ver5.GUI
 
         private void label11_Click(object sender, EventArgs e)
         {
+            if (BLL_NhanVien.Instance.IsQuyenQuanTri() == false)
+            {
+                MessageBox.Show("Bạn không có quyền sử dụng chức năng này.");
+                return;
+            }
             KetNoiCSDL frm = new KetNoiCSDL();
             frm.Show();
         }
@@ -187,11 +192,16 @@ namespace DoAn_ver5.GUI
 
         private void label21_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void lblSaoLuuPhucHoi_Click(object sender, EventArgs e)
         {
+            if (BLL_NhanVien.Instance.IsQuyenQuanTri() == false)
+            {
+                MessageBox.Show("Bạn không có quyền sử dụng chức năng này.");
+                return;
+            }
             SaoLuuPhucHoi slph = new SaoLuuPhucHoi();
             slph.Show();
         }

@@ -10,6 +10,7 @@ namespace DoAn_ver5.DAL
 {
     public class DataProvider
     {
+        public string NameDatabase = "DOAN_TEST";
         private string cnnStr = @"Data Source=.\SQLEXPRESS;Initial Catalog=DOAN_TEST;Integrated Security=True";
         
         private static DataProvider _Instance;
@@ -27,7 +28,7 @@ namespace DoAn_ver5.DAL
         }
         private DataProvider()
         {
-            cnnStr = @"Data Source=.\SQLEXPRESS;Initial Catalog=DOAN_TEST;Integrated Security=True";
+            cnnStr = @"Data Source=.\SQLEXPRESS;Initial Catalog=" + NameDatabase + ";Integrated Security=True";
         }
         public bool ExcuteDB(string query)
         {
@@ -141,6 +142,33 @@ namespace DoAn_ver5.DAL
         public int GetRowCount(DataTable dt)
         {
             return dt.Rows.Count;
+        }
+
+        public List<string> GetDatabaseList()
+        {
+            List<string> list = new List<string>();
+
+            // Open connection to the database
+
+            using (SqlConnection con = new SqlConnection(cnnStr))
+            {
+                con.Open();
+
+                // Set up a command with the given query and associate
+                // this with the current connection.
+                using (SqlCommand cmd = new SqlCommand("SELECT name from sys.databases", con))
+                {
+                    using (IDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            list.Add(dr[0].ToString());
+                        }
+                    }
+                }
+            }
+            return list;
+
         }
     }
 }

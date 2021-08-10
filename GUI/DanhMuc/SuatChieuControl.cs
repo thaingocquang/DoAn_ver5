@@ -132,15 +132,24 @@ namespace DoAn_ver5.GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            
-                SuatChieu_ThemSuatChieu sc = new SuatChieu_ThemSuatChieu();
+            if (BLL_NhanVien.Instance.IsQuyenQuanTri() == false)
+            {
+                MessageBox.Show("Bạn không có quyền sử dụng chức năng này.");
+                return;
+            }
+            SuatChieu_ThemSuatChieu sc = new SuatChieu_ThemSuatChieu();
                 sc.ShowDialog();
                     
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if(lstSuatChieu.SelectedItems.Count > 0)
+            if (BLL_NhanVien.Instance.IsQuyenQuanTri() == false)
+            {
+                MessageBox.Show("Bạn không có quyền sử dụng chức năng này.");
+                return;
+            }
+            if (lstSuatChieu.SelectedItems.Count > 0)
             {
                 ListViewItem ls = lstSuatChieu.SelectedItems[0];
                 string s = ls.SubItems[1].Text.Trim();

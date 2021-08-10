@@ -32,12 +32,22 @@ namespace DoAn_ver5.GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            if(BLL_NhanVien.Instance.IsQuyenQuanTri() == false)
+            {
+                MessageBox.Show("Bạn không có quyền sử dụng chức năng này.");
+                return;
+            }
             Phim_ThemPhim frm = new Phim_ThemPhim();
             frm.Show();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            if (BLL_NhanVien.Instance.IsQuyenQuanTri() == false)
+            {
+                MessageBox.Show("Bạn không có quyền sử dụng chức năng này.");
+                return;
+            }
             if (lstPhim.SelectedItems.Count > 0)
             {
                 ListViewItem ls = lstPhim.SelectedItems[0];

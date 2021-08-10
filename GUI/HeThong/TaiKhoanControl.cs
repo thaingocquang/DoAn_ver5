@@ -73,13 +73,23 @@ namespace DoAn_ver5.GUI.HeThong
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            if (BLL_NhanVien.Instance.IsQuyenQuanTri() == false)
+            {
+                MessageBox.Show("Bạn không có quyền sử dụng chức năng này.");
+                return;
+            }
             ThongTinNhanVien form = new ThongTinNhanVien(lstTaiKhoan.SelectedItems[0].SubItems[2].Text);
             form.Show();
         }
 
         private void btnDatMKMacDinh_Click(object sender, EventArgs e)
         {
-            if(BLL_TaiKhoan.Instance.UpdateMatKhau("12345", lstTaiKhoan.SelectedItems[0].SubItems[2].Text))
+            if (BLL_NhanVien.Instance.IsQuyenQuanTri() == false)
+            {
+                MessageBox.Show("Bạn không có quyền sử dụng chức năng này.");
+                return;
+            }
+            if (BLL_TaiKhoan.Instance.UpdateMatKhau("12345", lstTaiKhoan.SelectedItems[0].SubItems[2].Text))
             {
                 MessageBox.Show("Đặt lại mật khẩu mặc định thành công.");
             }
@@ -88,7 +98,12 @@ namespace DoAn_ver5.GUI.HeThong
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if(BLL_TaiKhoan.Instance.UpdateTrangThai(KichHoatTK.ToString(), lstTaiKhoan.SelectedItems[0].SubItems[2].Text) && BLL_TaiKhoan.Instance.UpdateThongTin("ChucVu", cbbQuyenHanText, lstTaiKhoan.SelectedItems[0].SubItems[2].Text))
+            if (BLL_NhanVien.Instance.IsQuyenQuanTri() == false)
+            {
+                MessageBox.Show("Bạn không có quyền sử dụng chức năng này.");
+                return;
+            }
+            if (BLL_TaiKhoan.Instance.UpdateTrangThai(KichHoatTK.ToString(), lstTaiKhoan.SelectedItems[0].SubItems[2].Text) && BLL_TaiKhoan.Instance.UpdateThongTin("ChucVu", cbbQuyenHanText, lstTaiKhoan.SelectedItems[0].SubItems[2].Text))
             {
                 MessageBox.Show("Lưu thành công.");
             }

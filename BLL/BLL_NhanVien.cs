@@ -50,5 +50,32 @@ namespace DoAn_ver5.BLL
         {
             return DAL_NhanVien.Instance.GetNhanVienByMaNhanVien(MaNV);
         }
+        public bool IsQuyenQuanTri()
+        {
+            DataTable dt = DAL_NhanVien.Instance.GetNhanVienByMaNhanVien(BLL_TaiKhoan.Instance.MaNhanVien);
+            if (dt.Rows[0]["ChucVu"].ToString() == "Quản trị viên")
+
+                return true;
+            else
+                return false;
+        }
+        public bool IsQuyenBanVe()
+        {
+            if (IsQuyenQuanTri() == true) return true;
+            DataTable dt = DAL_NhanVien.Instance.GetNhanVienByMaNhanVien(BLL_TaiKhoan.Instance.MaNhanVien);
+            if (dt.Rows[0]["ChucVu"].ToString() == "Bán vé")
+                return true;
+            else
+                return false;
+        }
+        public bool IsQuyenBanThucAn()
+        {
+            if (IsQuyenQuanTri() == true) return true;
+            DataTable dt = DAL_NhanVien.Instance.GetNhanVienByMaNhanVien(BLL_TaiKhoan.Instance.MaNhanVien);
+            if (dt.Rows[0]["ChucVu"].ToString() == "Bán thức ăn")
+                return true;
+            else
+                return false;
+        }
     }
 }

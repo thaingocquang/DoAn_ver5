@@ -46,12 +46,22 @@ namespace DoAn_ver5.GUI.NghiepVu
 
         private void btnChon_Click(object sender, EventArgs e)
         {
+            if (BLL_NhanVien.Instance.IsQuyenBanVe() == false)
+            {
+                MessageBox.Show("Bạn không có quyền sử dụng chức năng này.");
+                return;
+            }
             lstListPhim.Items.Clear();
             HienThiPhimLenListView(dtpChonNgay.Value);
         }
 
         private void btnChonGhe_Click(object sender, EventArgs e)
         {
+            if (BLL_NhanVien.Instance.IsQuyenBanVe() == false)
+            {
+                MessageBox.Show("Bạn không có quyền sử dụng chức năng này.");
+                return;
+            }
             if (lstListSuatChieu.SelectedItems.Count > 0)
             {
                 BanVe_ChonGhe frm = new BanVe_ChonGhe(lstListSuatChieu.SelectedItems[0].SubItems[1].Text);
