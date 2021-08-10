@@ -60,11 +60,11 @@ namespace DoAn_ver5.DAL
             data = DataProvider.Instance.GetRecords(query);
             return data;
         }
-        public bool InsertKhachHang(string MaKhachHang, string TenKhachHang, string GioiTinh, int CMND, string NgaySinh, string Email, string SDT, string NgayDangKi)
+        public bool InsertKhachHang(string MaKhachHang, string TenKhachHang, string GioiTinh, string CMND, string NgaySinh, string Email, string SDT, string NgayDangKi)
         {
             try
             {
-                string query = "insert into KhachHang (MaKhachHang, TenKhachHang, GioiTinh, CMND, NgaySinh, Email, SDT, NgayDangKi) values ( N'" + MaKhachHang + "',N'" + TenKhachHang + "',N'" + GioiTinh + "'," + CMND + ",'" + NgaySinh +
+                string query = "insert into KhachHang (MaKhachHang, TenKhachHang, GioiTinh, CMND, NgaySinh, Email, SDT, NgayDangKy) values ( N'" + MaKhachHang + "',N'" + TenKhachHang + "',N'" + GioiTinh + "','" + CMND + "','" + NgaySinh +
                     "','" + Email + "',N'" + SDT + "','" + NgayDangKi + "')";
                 DataProvider.Instance.ExcuteDB(query);
                 return true;
@@ -82,7 +82,7 @@ namespace DoAn_ver5.DAL
             {
                 string query = "update KhachHang set TenKhachHang = N'" + TenKhachHang + "', GioiTinh = N'" + GioiTinh +"' , NgaySinh = '" + NgaySinh 
                     +"', Email = '" + Email + "', SDT = N'" + SDT + "', NgayDangKy = '" + NgayDangKi + "', CMND = " + CMND + " where MaKhachHang = N'" + MaKhachHang +"'" ;
-                MessageBox.Show(query);
+                
                 DataProvider.Instance.ExcuteDB(query);
                 return true;
             }

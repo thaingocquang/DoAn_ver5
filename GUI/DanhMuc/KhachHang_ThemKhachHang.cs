@@ -30,7 +30,7 @@ namespace DoAn_ver5.GUI.DanhMuc
                 txtMaKhachHang.Text.Trim(),
                 txtHovaTen.Text.Trim(),
                 rbNam.Checked == true ? rbNam.Text : rbNu.Text,
-                int.Parse(txtCMND.Text.Trim()),
+                txtCMND.Text.Trim(),
                 dtpNgaySinh.Value.Date.ToString("yyyy/MM/dd"),
                 txtEmail.Text.Trim(),
                 txtSDT.Text.Trim(),

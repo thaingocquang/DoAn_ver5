@@ -275,9 +275,9 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(99, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 29);
+            this.label1.Size = new System.Drawing.Size(200, 29);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Thêm Khách hàng";
+            this.label1.Text = "Sửa Khách hàng";
             // 
             // pictureBox1
             // 
