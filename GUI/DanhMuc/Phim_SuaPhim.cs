@@ -34,11 +34,11 @@ namespace DoAn_ver5.GUI.DanhMuc
                     txtTenPhim.Text = i["TenPhim"].ToString();
                     numericUpDown2.Value = Convert.ToInt32(i["ThoiLuong"].ToString());
                     numericUpDown3.Value = Convert.ToInt32(i["NamSanXuat"].ToString());
-                    cbbDoTuoi.SelectedItem = i["GioiHanTuoi"].ToString();
+                    nmGioiHanTuoi.Value = int.Parse(i["GioiHanTuoi"].ToString());
                     dtpNgayChieu.Value = Convert.ToDateTime(i["NgayRaMat"].ToString());
                     txtDienVien.Text = i["DienVien"].ToString();
-                    cbbNuocsx.SelectedItem = i["NuocSanXuat"].ToString();
-                    cbbNhasx.SelectedItem = i["NhaSanXuat"].ToString();
+                    txtNuocSX.Text = i["NuocSanXuat"].ToString();
+                    txtNhaSX.Text = i["NhaSanXuat"].ToString();
                     txtTomTat.Text = i["TomTat"].ToString();
                 }
             }
@@ -69,11 +69,11 @@ namespace DoAn_ver5.GUI.DanhMuc
                     txtTenPhim.Text.Trim(),
                     int.Parse(numericUpDown2.Value.ToString()),
                     int.Parse(numericUpDown3.Value.ToString()),
-                    int.Parse(cbbDoTuoi.SelectedItem.ToString()),
+                    int.Parse(nmGioiHanTuoi.Value.ToString()),
                     dtpNgayChieu.Value.ToString("yyyy/MM/dd"),
                     txtDienVien.Text.Trim(),
-                    cbbNuocsx.SelectedItem.ToString(),
-                    cbbNhasx.SelectedItem.ToString(),
+                    txtNuocSX.Text.ToString(),
+                    txtNhaSX.Text.ToString(),
                     txtTomTat.Text.Trim()
                 );            
 

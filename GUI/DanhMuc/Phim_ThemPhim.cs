@@ -33,11 +33,11 @@ namespace DoAn_ver5.GUI
                 txtTenPhim.Text.Trim(),
                 int.Parse(ThoiLuong.Value.ToString()),
                 int.Parse(NamSX.Value.ToString()),
-                int.Parse(cbbDoTuoi.SelectedItem.ToString()),
+                int.Parse(nmDoTuoi.Value.ToString()),
                 dtpNgayChieu.Value.Date.ToString("yyyy/MM/dd"),
                 txtDienVien.Text.Trim(),
-                cbbNuocSX.SelectedItem.ToString(),
-                cbbNhaSX.SelectedItem.ToString(),
+                txtNuocSX.Text.Trim(),
+                txtNhaSX.Text.Trim(),
                 txtTomTat.Text.Trim()
             );
 
@@ -68,10 +68,20 @@ namespace DoAn_ver5.GUI
 
             int count = lstSuatphim.Items.Count + 1;
             ListViewItem ls = new ListViewItem(count.ToString());
-            ls.SubItems.Add(txtDinhdang.Text.Trim());
+            ls.SubItems.Add(cbbDinhDang.SelectedItem.ToString());
             ls.SubItems.Add(cbbHinhthuc.SelectedItem.ToString().Trim());
             ls.SubItems.Add(txtNgonngu.Text.Trim());
             lstSuatphim.Items.Add(ls);
+        }
+
+        private void Phim_ThemPhim_Load(object sender, EventArgs e)
+        {
+            txtMaPhim.Text = "P" + ((BLL_General.Instance.GetRowCount(BLL_Phim.Instance.GetAllPhim())) + 1);
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -66,6 +66,7 @@
     <Compile Include="BLL\BLL_TaiKhoan.cs" />
     <Compile Include="BLL\BLL_ThucAn.cs" />
     <Compile Include="BLL\BLL_Ve.cs" />
+    <Compile Include="BLL\BLL_General.cs" />
     <Compile Include="DAL\DAL_HoaDonThucAn.cs" />
     <Compile Include="DAL\DAL_HoaDonVe.cs" />
     <Compile Include="DAL\DAL_KhachHang.cs" />

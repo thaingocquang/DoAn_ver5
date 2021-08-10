@@ -118,6 +118,7 @@ namespace DoAn_ver5
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(262, 26);
             this.txtMatKhau.TabIndex = 1;
+            this.txtMatKhau.UseSystemPasswordChar = true;
             // 
             // txtTenDangNhap
             // 

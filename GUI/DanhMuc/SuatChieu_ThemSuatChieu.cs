@@ -95,7 +95,7 @@ namespace DoAn_ver5.GUI
 
         private void SuatChieu_ThemSuatChieu_Load(object sender, EventArgs e)
         {
-
+            txtMaSC.Text = "SC" + (BLL_General.Instance.GetRowCount(BLL_SuatChieu.Instance.GetAllSuatChieu())+1);
         }
     }
 }

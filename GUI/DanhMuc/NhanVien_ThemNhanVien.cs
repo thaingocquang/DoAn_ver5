@@ -40,5 +40,10 @@ namespace DoAn_ver5.GUI
                 );
             this.Close();
         }
+
+        private void NhanVien_ThemNhanVien_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

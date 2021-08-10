@@ -15,10 +15,12 @@ namespace DoAn_ver5.GUI.DanhMuc
 {
     public partial class SuatChieu_SuaSuatChieu : Form
     {
+        string MaSuatChieu;
        
         public SuatChieu_SuaSuatChieu(string Ma)
         {
             InitializeComponent();
+            MaSuatChieu = Ma;
             GUI(Ma);
         }
 
@@ -60,8 +62,8 @@ namespace DoAn_ver5.GUI.DanhMuc
         private void cbbTenPhim_TextChanged(object sender, EventArgs e)
         {
             listView1.Items.Clear();
-            string MaPhim = ((CbbItem)cbbTenPhim.SelectedItem).ID.Trim();
-            foreach (DataRow i in BLL_SuatChieu.Instance.GetSuatPhimByMaPhim(MaPhim).Rows)
+            string maphim = ((CbbItem)cbbTenPhim.SelectedItem).ID.Trim();
+            foreach (DataRow i in BLL_SuatChieu.Instance.GetSuatPhimByMaPhim(maphim).Rows)
             {
                 ListViewItem ls = new ListViewItem(i["MaSuatPhim"].ToString());
                 ls.SubItems.Add(i["DinhDang"].ToString());
@@ -81,7 +83,12 @@ namespace DoAn_ver5.GUI.DanhMuc
 
         private void SuatChieu_SuaSuatChieu_Load(object sender, EventArgs e)
         {
+            DTO_SuatChieu dt = BLL_SuatChieu.Instance.GetSuatChieuByMaSuatChieu(MaSuatChieu);
+            cbbPhong.Text = BLL_PhongChieu.Instance.GetPhongChieuByMaPhongChieu(dt.PhongChieu).TenPhongChieu;
+            dtpThoigian.Value = dt.NgayGio;
 
+
+            
         }
 
         private void cbbTenPhim_SelectedIndexChanged(object sender, EventArgs e)

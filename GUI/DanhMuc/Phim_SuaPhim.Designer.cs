@@ -36,10 +36,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.txtDienVien = new System.Windows.Forms.TextBox();
             this.txtTenPhim = new System.Windows.Forms.TextBox();
             this.txtMaPhim = new System.Windows.Forms.TextBox();
-            this.cbbNhasx = new System.Windows.Forms.ComboBox();
-            this.cbbNN = new System.Windows.Forms.ComboBox();
-            this.cbbNuocsx = new System.Windows.Forms.ComboBox();
-            this.cbbDoTuoi = new System.Windows.Forms.ComboBox();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
@@ -48,7 +44,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -74,6 +69,9 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtNuocSX = new System.Windows.Forms.TextBox();
+            this.txtNhaSX = new System.Windows.Forms.TextBox();
+            this.nmGioiHanTuoi = new System.Windows.Forms.NumericUpDown();
             this.Phim.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -82,6 +80,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmGioiHanTuoi)).BeginInit();
             this.SuspendLayout();
             // 
             // Phim
@@ -89,22 +88,22 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.Phim.Controls.Add(this.tabPage1);
             this.Phim.Controls.Add(this.tabPage2);
             this.Phim.Location = new System.Drawing.Point(16, 108);
+            this.Phim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Phim.Name = "Phim";
             this.Phim.SelectedIndex = 0;
-            this.Phim.Size = new System.Drawing.Size(595, 429);
+            this.Phim.Size = new System.Drawing.Size(595, 430);
             this.Phim.TabIndex = 12;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.nmGioiHanTuoi);
+            this.tabPage1.Controls.Add(this.txtNhaSX);
+            this.tabPage1.Controls.Add(this.txtNuocSX);
             this.tabPage1.Controls.Add(this.dtpNgayChieu);
             this.tabPage1.Controls.Add(this.txtTomTat);
             this.tabPage1.Controls.Add(this.txtDienVien);
             this.tabPage1.Controls.Add(this.txtTenPhim);
             this.tabPage1.Controls.Add(this.txtMaPhim);
-            this.tabPage1.Controls.Add(this.cbbNhasx);
-            this.tabPage1.Controls.Add(this.cbbNN);
-            this.tabPage1.Controls.Add(this.cbbNuocsx);
-            this.tabPage1.Controls.Add(this.cbbDoTuoi);
             this.tabPage1.Controls.Add(this.numericUpDown2);
             this.tabPage1.Controls.Add(this.numericUpDown3);
             this.tabPage1.Controls.Add(this.label9);
@@ -113,15 +112,15 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label15);
-            this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(587, 400);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Size = new System.Drawing.Size(587, 401);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Phim";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -130,13 +129,15 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             this.dtpNgayChieu.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayChieu.Location = new System.Drawing.Point(400, 14);
+            this.dtpNgayChieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpNgayChieu.Name = "dtpNgayChieu";
-            this.dtpNgayChieu.Size = new System.Drawing.Size(166, 22);
+            this.dtpNgayChieu.Size = new System.Drawing.Size(167, 23);
             this.dtpNgayChieu.TabIndex = 33;
             // 
             // txtTomTat
             // 
             this.txtTomTat.Location = new System.Drawing.Point(108, 319);
+            this.txtTomTat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTomTat.Multiline = true;
             this.txtTomTat.Name = "txtTomTat";
             this.txtTomTat.Size = new System.Drawing.Size(465, 70);
@@ -145,14 +146,16 @@ namespace DoAn_ver5.GUI.DanhMuc
             // txtDienVien
             // 
             this.txtDienVien.Location = new System.Drawing.Point(400, 59);
+            this.txtDienVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDienVien.Multiline = true;
             this.txtDienVien.Name = "txtDienVien";
-            this.txtDienVien.Size = new System.Drawing.Size(173, 79);
+            this.txtDienVien.Size = new System.Drawing.Size(167, 79);
             this.txtDienVien.TabIndex = 23;
             // 
             // txtTenPhim
             // 
             this.txtTenPhim.Location = new System.Drawing.Point(108, 59);
+            this.txtTenPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenPhim.Multiline = true;
             this.txtTenPhim.Name = "txtTenPhim";
             this.txtTenPhim.Size = new System.Drawing.Size(173, 79);
@@ -162,70 +165,22 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             this.txtMaPhim.Enabled = false;
             this.txtMaPhim.Location = new System.Drawing.Point(108, 11);
+            this.txtMaPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaPhim.Name = "txtMaPhim";
-            this.txtMaPhim.Size = new System.Drawing.Size(100, 22);
+            this.txtMaPhim.Size = new System.Drawing.Size(173, 23);
             this.txtMaPhim.TabIndex = 20;
-            // 
-            // cbbNhasx
-            // 
-            this.cbbNhasx.FormattingEnabled = true;
-            this.cbbNhasx.Items.AddRange(new object[] {
-            "Mavel",
-            "Truyền hình Việt Nam"});
-            this.cbbNhasx.Location = new System.Drawing.Point(400, 232);
-            this.cbbNhasx.Name = "cbbNhasx";
-            this.cbbNhasx.Size = new System.Drawing.Size(121, 24);
-            this.cbbNhasx.TabIndex = 31;
-            // 
-            // cbbNN
-            // 
-            this.cbbNN.FormattingEnabled = true;
-            this.cbbNN.Items.AddRange(new object[] {
-            "Tiếng Anh",
-            "Tiếng Việt"});
-            this.cbbNN.Location = new System.Drawing.Point(400, 195);
-            this.cbbNN.Name = "cbbNN";
-            this.cbbNN.Size = new System.Drawing.Size(121, 24);
-            this.cbbNN.TabIndex = 30;
-            // 
-            // cbbNuocsx
-            // 
-            this.cbbNuocsx.FormattingEnabled = true;
-            this.cbbNuocsx.Items.AddRange(new object[] {
-            "Mỹ ",
-            "Việt Nam"});
-            this.cbbNuocsx.Location = new System.Drawing.Point(400, 154);
-            this.cbbNuocsx.Name = "cbbNuocsx";
-            this.cbbNuocsx.Size = new System.Drawing.Size(121, 24);
-            this.cbbNuocsx.TabIndex = 29;
-            // 
-            // cbbDoTuoi
-            // 
-            this.cbbDoTuoi.FormattingEnabled = true;
-            this.cbbDoTuoi.Items.AddRange(new object[] {
-            "16",
-            "18",
-            "20"});
-            this.cbbDoTuoi.Location = new System.Drawing.Point(108, 232);
-            this.cbbDoTuoi.Name = "cbbDoTuoi";
-            this.cbbDoTuoi.Size = new System.Drawing.Size(121, 24);
-            this.cbbDoTuoi.TabIndex = 28;
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(108, 157);
+            this.numericUpDown2.Location = new System.Drawing.Point(108, 158);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
-            60,
-            0,
-            0,
-            0});
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 22);
+            this.numericUpDown2.Size = new System.Drawing.Size(173, 23);
             this.numericUpDown2.TabIndex = 26;
             this.numericUpDown2.Value = new decimal(new int[] {
             60,
@@ -236,6 +191,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // numericUpDown3
             // 
             this.numericUpDown3.Location = new System.Drawing.Point(108, 196);
+            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown3.Maximum = new decimal(new int[] {
             3000,
             0,
@@ -247,7 +203,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             0,
             0});
             this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 22);
+            this.numericUpDown3.Size = new System.Drawing.Size(173, 23);
             this.numericUpDown3.TabIndex = 25;
             this.numericUpDown3.Value = new decimal(new int[] {
             1900,
@@ -267,7 +223,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(306, 16);
+            this.label8.Location = new System.Drawing.Point(307, 16);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 17);
             this.label8.TabIndex = 14;
@@ -276,7 +232,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(14, 235);
+            this.label7.Location = new System.Drawing.Point(13, 235);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 17);
             this.label7.TabIndex = 19;
@@ -285,7 +241,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 198);
+            this.label6.Location = new System.Drawing.Point(13, 198);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(95, 17);
             this.label6.TabIndex = 11;
@@ -294,7 +250,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 157);
+            this.label5.Location = new System.Drawing.Point(13, 158);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 17);
             this.label5.TabIndex = 12;
@@ -303,25 +259,16 @@ namespace DoAn_ver5.GUI.DanhMuc
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(296, 235);
+            this.label15.Location = new System.Drawing.Point(307, 235);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(91, 17);
             this.label15.TabIndex = 13;
             this.label15.Text = "Nhà sản xuất";
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(296, 198);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(70, 17);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "Ngôn ngữ";
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(296, 157);
+            this.label13.Location = new System.Drawing.Point(307, 184);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(98, 17);
             this.label13.TabIndex = 18;
@@ -330,7 +277,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(296, 62);
+            this.label12.Location = new System.Drawing.Point(307, 62);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(67, 17);
             this.label12.TabIndex = 16;
@@ -339,7 +286,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 62);
+            this.label4.Location = new System.Drawing.Point(13, 62);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 17);
             this.label4.TabIndex = 10;
@@ -348,7 +295,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 14);
+            this.label3.Location = new System.Drawing.Point(13, 14);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 17);
             this.label3.TabIndex = 7;
@@ -359,9 +306,10 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.tabPage2.Controls.Add(this.lstSuatphim);
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(587, 400);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Size = new System.Drawing.Size(587, 401);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Suất Phim";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -377,6 +325,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.lstSuatphim.GridLines = true;
             this.lstSuatphim.HideSelection = false;
             this.lstSuatphim.Location = new System.Drawing.Point(19, 151);
+            this.lstSuatphim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lstSuatphim.Name = "lstSuatphim";
             this.lstSuatphim.Size = new System.Drawing.Size(549, 237);
             this.lstSuatphim.TabIndex = 3;
@@ -414,15 +363,18 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Location = new System.Drawing.Point(19, 13);
+            this.groupBox1.Location = new System.Drawing.Point(19, 14);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Size = new System.Drawing.Size(549, 132);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(449, 72);
+            this.btnXoa.Location = new System.Drawing.Point(449, 71);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 30);
             this.btnXoa.TabIndex = 7;
@@ -432,7 +384,8 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(351, 72);
+            this.btnThem.Location = new System.Drawing.Point(351, 71);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 30);
             this.btnThem.TabIndex = 6;
@@ -447,6 +400,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             "Phụ đề",
             "Lồng tiếng"});
             this.cbbHinhthuc.Location = new System.Drawing.Point(385, 26);
+            this.cbbHinhthuc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbHinhthuc.Name = "cbbHinhthuc";
             this.cbbHinhthuc.Size = new System.Drawing.Size(125, 24);
             this.cbbHinhthuc.TabIndex = 5;
@@ -454,15 +408,17 @@ namespace DoAn_ver5.GUI.DanhMuc
             // txtNgonngu
             // 
             this.txtNgonngu.Location = new System.Drawing.Point(140, 76);
+            this.txtNgonngu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNgonngu.Name = "txtNgonngu";
-            this.txtNgonngu.Size = new System.Drawing.Size(119, 22);
+            this.txtNgonngu.Size = new System.Drawing.Size(119, 23);
             this.txtNgonngu.TabIndex = 4;
             // 
             // txtDinhdang
             // 
             this.txtDinhdang.Location = new System.Drawing.Point(140, 26);
+            this.txtDinhdang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDinhdang.Name = "txtDinhdang";
-            this.txtDinhdang.Size = new System.Drawing.Size(119, 22);
+            this.txtDinhdang.Size = new System.Drawing.Size(119, 23);
             this.txtDinhdang.TabIndex = 3;
             // 
             // label18
@@ -499,14 +455,16 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.panel2.Controls.Add(this.btnLuu);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 566);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(623, 54);
+            this.panel2.Size = new System.Drawing.Size(633, 54);
             this.panel2.TabIndex = 11;
             // 
             // btnHuy
             // 
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.Location = new System.Drawing.Point(487, 12);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(85, 30);
             this.btnHuy.TabIndex = 0;
@@ -518,6 +476,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Location = new System.Drawing.Point(389, 12);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 30);
             this.btnLuu.TabIndex = 0;
@@ -543,31 +502,56 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label1.Location = new System.Drawing.Point(117, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 23);
+            this.label1.Size = new System.Drawing.Size(77, 18);
             this.label1.TabIndex = 9;
             this.label1.Text = "Sửa phim";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DoAn_ver5.Properties.Resources.themPhimIcon1;
-            this.pictureBox1.Location = new System.Drawing.Point(18, 8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(19, 7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(91, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // txtNuocSX
+            // 
+            this.txtNuocSX.Location = new System.Drawing.Point(411, 181);
+            this.txtNuocSX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNuocSX.Name = "txtNuocSX";
+            this.txtNuocSX.Size = new System.Drawing.Size(156, 23);
+            this.txtNuocSX.TabIndex = 34;
+            // 
+            // txtNhaSX
+            // 
+            this.txtNhaSX.Location = new System.Drawing.Point(411, 232);
+            this.txtNhaSX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNhaSX.Name = "txtNhaSX";
+            this.txtNhaSX.Size = new System.Drawing.Size(156, 23);
+            this.txtNhaSX.TabIndex = 35;
+            // 
+            // nmGioiHanTuoi
+            // 
+            this.nmGioiHanTuoi.Location = new System.Drawing.Point(108, 233);
+            this.nmGioiHanTuoi.Name = "nmGioiHanTuoi";
+            this.nmGioiHanTuoi.Size = new System.Drawing.Size(173, 23);
+            this.nmGioiHanTuoi.TabIndex = 36;
+            // 
             // Phim_SuaPhim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 620);
+            this.ClientSize = new System.Drawing.Size(633, 620);
             this.Controls.Add(this.Phim);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Phim_SuaPhim";
             this.Text = "Phim_SuaPhim";
             this.Phim.ResumeLayout(false);
@@ -580,6 +564,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmGioiHanTuoi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -593,10 +578,6 @@ namespace DoAn_ver5.GUI.DanhMuc
         private System.Windows.Forms.TextBox txtDienVien;
         private System.Windows.Forms.TextBox txtTenPhim;
         private System.Windows.Forms.TextBox txtMaPhim;
-        private System.Windows.Forms.ComboBox cbbNhasx;
-        private System.Windows.Forms.ComboBox cbbNN;
-        private System.Windows.Forms.ComboBox cbbNuocsx;
-        private System.Windows.Forms.ComboBox cbbDoTuoi;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.Label label9;
@@ -605,7 +586,6 @@ namespace DoAn_ver5.GUI.DanhMuc
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label4;
@@ -632,5 +612,8 @@ namespace DoAn_ver5.GUI.DanhMuc
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtNhaSX;
+        private System.Windows.Forms.TextBox txtNuocSX;
+        private System.Windows.Forms.NumericUpDown nmGioiHanTuoi;
     }
 }

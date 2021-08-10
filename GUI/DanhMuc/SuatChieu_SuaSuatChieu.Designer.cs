@@ -66,15 +66,17 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.panel2.Controls.Add(this.btnHuy);
             this.panel2.Controls.Add(this.btnLuu);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 566);
+            this.panel2.Location = new System.Drawing.Point(0, 532);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(623, 54);
+            this.panel2.Size = new System.Drawing.Size(621, 54);
             this.panel2.TabIndex = 16;
             // 
             // btnHuy
             // 
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.Location = new System.Drawing.Point(487, 12);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(85, 30);
             this.btnHuy.TabIndex = 0;
@@ -86,6 +88,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Location = new System.Drawing.Point(389, 12);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 30);
             this.btnLuu.TabIndex = 0;
@@ -111,16 +114,18 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(12, 99);
+            this.panel1.Location = new System.Drawing.Point(12, 98);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(595, 429);
+            this.panel1.Size = new System.Drawing.Size(595, 430);
             this.panel1.TabIndex = 15;
             // 
             // txtGiaVe
             // 
             this.txtGiaVe.Location = new System.Drawing.Point(131, 191);
+            this.txtGiaVe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtGiaVe.Name = "txtGiaVe";
-            this.txtGiaVe.Size = new System.Drawing.Size(181, 27);
+            this.txtGiaVe.Size = new System.Drawing.Size(181, 23);
             this.txtGiaVe.TabIndex = 29;
             // 
             // label5
@@ -128,16 +133,17 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(61, 198);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 20);
+            this.label5.Size = new System.Drawing.Size(49, 17);
             this.label5.TabIndex = 28;
             this.label5.Text = "Giá vé";
             // 
             // cbbTenPhim
             // 
             this.cbbTenPhim.FormattingEnabled = true;
-            this.cbbTenPhim.Location = new System.Drawing.Point(130, 96);
+            this.cbbTenPhim.Location = new System.Drawing.Point(131, 96);
+            this.cbbTenPhim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbTenPhim.Name = "cbbTenPhim";
-            this.cbbTenPhim.Size = new System.Drawing.Size(181, 28);
+            this.cbbTenPhim.Size = new System.Drawing.Size(181, 25);
             this.cbbTenPhim.TabIndex = 27;
             this.cbbTenPhim.SelectedIndexChanged += new System.EventHandler(this.cbbTenPhim_SelectedIndexChanged);
             this.cbbTenPhim.TextChanged += new System.EventHandler(this.cbbTenPhim_TextChanged);
@@ -146,16 +152,18 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             this.cbbPhong.FormattingEnabled = true;
             this.cbbPhong.Location = new System.Drawing.Point(409, 41);
+            this.cbbPhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbPhong.Name = "cbbPhong";
-            this.cbbPhong.Size = new System.Drawing.Size(171, 28);
+            this.cbbPhong.Size = new System.Drawing.Size(171, 25);
             this.cbbPhong.TabIndex = 26;
             // 
             // txtMaSP
             // 
             this.txtMaSP.Enabled = false;
             this.txtMaSP.Location = new System.Drawing.Point(131, 146);
+            this.txtMaSP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaSP.Name = "txtMaSP";
-            this.txtMaSP.Size = new System.Drawing.Size(181, 27);
+            this.txtMaSP.Size = new System.Drawing.Size(181, 23);
             this.txtMaSP.TabIndex = 25;
             // 
             // label6
@@ -164,24 +172,26 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(15, 149);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 20);
+            this.label6.Size = new System.Drawing.Size(95, 17);
             this.label6.TabIndex = 24;
             this.label6.Text = "Mã Suất Phim";
             // 
             // txtMaSC
             // 
             this.txtMaSC.Enabled = false;
-            this.txtMaSC.Location = new System.Drawing.Point(130, 43);
+            this.txtMaSC.Location = new System.Drawing.Point(131, 43);
+            this.txtMaSC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaSC.Name = "txtMaSC";
-            this.txtMaSC.Size = new System.Drawing.Size(181, 27);
+            this.txtMaSC.Size = new System.Drawing.Size(181, 23);
             this.txtMaSC.TabIndex = 23;
             // 
             // dtpThoigian
             // 
             this.dtpThoigian.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpThoigian.Location = new System.Drawing.Point(408, 96);
+            this.dtpThoigian.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpThoigian.Name = "dtpThoigian";
-            this.dtpThoigian.Size = new System.Drawing.Size(171, 27);
+            this.dtpThoigian.Size = new System.Drawing.Size(171, 23);
             this.dtpThoigian.TabIndex = 22;
             // 
             // cbbTrangThai
@@ -192,8 +202,9 @@ namespace DoAn_ver5.GUI.DanhMuc
             "Sắp Chiếu",
             "Đã Chiếu"});
             this.cbbTrangThai.Location = new System.Drawing.Point(408, 143);
+            this.cbbTrangThai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbTrangThai.Name = "cbbTrangThai";
-            this.cbbTrangThai.Size = new System.Drawing.Size(171, 28);
+            this.cbbTrangThai.Size = new System.Drawing.Size(171, 25);
             this.cbbTrangThai.TabIndex = 20;
             // 
             // listView1
@@ -206,9 +217,10 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(14, 245);
+            this.listView1.Location = new System.Drawing.Point(13, 245);
+            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(566, 166);
+            this.listView1.Size = new System.Drawing.Size(567, 166);
             this.listView1.TabIndex = 19;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -240,7 +252,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(329, 46);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 20);
+            this.label9.Size = new System.Drawing.Size(49, 17);
             this.label9.TabIndex = 13;
             this.label9.Text = "Phòng";
             // 
@@ -250,7 +262,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(329, 96);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 20);
+            this.label8.Size = new System.Drawing.Size(67, 17);
             this.label8.TabIndex = 14;
             this.label8.Text = "Thời gian";
             // 
@@ -258,9 +270,9 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(318, 146);
+            this.label7.Location = new System.Drawing.Point(317, 146);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 20);
+            this.label7.Size = new System.Drawing.Size(73, 17);
             this.label7.TabIndex = 15;
             this.label7.Text = "Trạng thái";
             // 
@@ -270,7 +282,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(28, 96);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 20);
+            this.label4.Size = new System.Drawing.Size(67, 17);
             this.label4.TabIndex = 17;
             this.label4.Text = "Tên phim";
             // 
@@ -278,16 +290,16 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(10, 46);
+            this.label3.Location = new System.Drawing.Point(11, 46);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 20);
+            this.label3.Size = new System.Drawing.Size(96, 17);
             this.label3.TabIndex = 18;
             this.label3.Text = "Mã suất chiếu";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(115, 45);
+            this.label2.Location = new System.Drawing.Point(115, 46);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(201, 17);
@@ -302,7 +314,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label1.Location = new System.Drawing.Point(115, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 23);
+            this.label1.Size = new System.Drawing.Size(113, 18);
             this.label1.TabIndex = 14;
             this.label1.Text = "Sửa suất chiếu";
             // 
@@ -310,7 +322,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             this.pictureBox1.Image = global::DoAn_ver5.Properties.Resources.themPhimIcon1;
             this.pictureBox1.Location = new System.Drawing.Point(16, 7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(91, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -321,12 +333,14 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 620);
+            this.ClientSize = new System.Drawing.Size(621, 586);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SuatChieu_SuaSuatChieu";
             this.Text = "SuatChieu";
             this.Load += new System.EventHandler(this.SuatChieu_SuaSuatChieu_Load);
