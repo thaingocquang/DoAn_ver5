@@ -1,4 +1,5 @@
-﻿using DoAn_ver5.DAL;
+﻿using DoAn_ver5.BLL;
+using DoAn_ver5.DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,14 +37,20 @@ namespace DoAn_ver5.GUI
                     txtEmail.Text.Trim(),
                     txtSDT.Text.Trim(),
                     cbbChucVu.SelectedItem.ToString(),
-                    dtpNgayLam.Value.Date.ToString("yyyy/MM/dd")
+                    dtpNgayLam.Value.Date.ToString("yyyy/MM/dd"),
+                    txtTenDangNhap.Text.Trim(),
+                    "123456",
+                    "true"
                 );
             this.Close();
         }
 
         private void NhanVien_ThemNhanVien_Load(object sender, EventArgs e)
         {
-
+            if(cbTaiKhoan.Checked == true)
+            {
+                txtTenDangNhap.Text = "NV" + (DataProvider.Instance.GetRowCount(BLL_NhanVien.Instance.GetAllNhanVien()) + 1);
+            }
         }
     }
 }

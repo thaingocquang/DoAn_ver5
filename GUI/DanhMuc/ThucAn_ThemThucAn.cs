@@ -1,4 +1,5 @@
-﻿using DoAn_ver5.DAL;
+﻿using DoAn_ver5.BLL;
+using DoAn_ver5.DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,6 +33,11 @@ namespace DoAn_ver5.GUI
         private void btnHuy_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ThucAn_ThemThucAn_Load(object sender, EventArgs e)
+        {
+            txtMa.Text = "TA" + (DataProvider.Instance.GetRowCount(BLL_ThucAn.Instance.GetThucAn())+1);
         }
     }
 }

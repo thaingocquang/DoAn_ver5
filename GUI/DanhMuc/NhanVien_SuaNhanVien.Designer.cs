@@ -39,7 +39,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.dtpNgayLam = new System.Windows.Forms.DateTimePicker();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.cbbChucVu = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtCMND = new System.Windows.Forms.TextBox();
@@ -48,7 +47,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.txtMaNV = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -110,7 +108,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.panel2.Controls.Add(this.dtpNgayLam);
             this.panel2.Controls.Add(this.dtpNgaySinh);
             this.panel2.Controls.Add(this.cbbChucVu);
-            this.panel2.Controls.Add(this.comboBox2);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.txtSDT);
             this.panel2.Controls.Add(this.txtCMND);
@@ -119,7 +116,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.panel2.Controls.Add(this.textBox3);
             this.panel2.Controls.Add(this.txtTen);
             this.panel2.Controls.Add(this.txtMaNV);
-            this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label13);
@@ -197,14 +193,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.cbbChucVu.Size = new System.Drawing.Size(203, 24);
             this.cbbChucVu.TabIndex = 2;
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(463, 264);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(203, 24);
-            this.comboBox2.TabIndex = 2;
-            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -257,19 +245,11 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             // txtMaNV
             // 
+            this.txtMaNV.Enabled = false;
             this.txtMaNV.Location = new System.Drawing.Point(134, 18);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(185, 22);
             this.txtMaNV.TabIndex = 1;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(361, 267);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(50, 17);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Quyền";
             // 
             // label15
             // 
@@ -451,7 +431,6 @@ namespace DoAn_ver5.GUI.DanhMuc
         private System.Windows.Forms.DateTimePicker dtpNgayLam;
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.ComboBox cbbChucVu;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.TextBox txtCMND;
@@ -460,7 +439,6 @@ namespace DoAn_ver5.GUI.DanhMuc
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.TextBox txtMaNV;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label13;

@@ -180,6 +180,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.Controls.Add(this.label1);
             this.Name = "ThucAn_CoThucAn";
             this.Text = "ThucAn_CoThucAn";
+            this.Load += new System.EventHandler(this.ThucAn_CoThucAn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

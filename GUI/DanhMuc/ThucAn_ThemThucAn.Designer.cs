@@ -87,6 +87,7 @@ namespace DoAn_ver5.GUI
             // 
             // txtMa
             // 
+            this.txtMa.Enabled = false;
             this.txtMa.Location = new System.Drawing.Point(106, 66);
             this.txtMa.Name = "txtMa";
             this.txtMa.Size = new System.Drawing.Size(234, 26);
@@ -208,6 +209,7 @@ namespace DoAn_ver5.GUI
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ThucAn_ThemThucAn";
             this.Text = "ThucAn_ThemThucAn";
+            this.Load += new System.EventHandler(this.ThucAn_ThemThucAn_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

@@ -1,4 +1,5 @@
-﻿using DoAn_ver5.DAL;
+﻿using DoAn_ver5.BLL;
+using DoAn_ver5.DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,6 +38,11 @@ namespace DoAn_ver5.GUI.DanhMuc
                 dtpNgayDK.Value.Date.ToString("yyyy/MM/dd")
             );
             this.Close();
+        }
+
+        private void KhachHang_ThemKhachHang_Load(object sender, EventArgs e)
+        {
+            txtMaKhachHang.Text = "KH" + (DataProvider.Instance.GetRowCount(BLL_KhachHang.Instance.GetAllKH())+1);
         }
     }
 }

@@ -131,6 +131,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             // txtMa
             // 
+            this.txtMa.Enabled = false;
             this.txtMa.Location = new System.Drawing.Point(106, 70);
             this.txtMa.Name = "txtMa";
             this.txtMa.Size = new System.Drawing.Size(234, 22);

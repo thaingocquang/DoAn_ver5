@@ -60,12 +60,13 @@ namespace DoAn_ver5.DAL
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
-        public bool InsertNhanVien(string MaNhanVien, string HovaTen, string NgaySinh, string GioiTinh, string DiaChi, int CMND, string Email, string SDT, string ChucVu, string NgayVaoLam)
+        public bool InsertNhanVien(string MaNhanVien, string HovaTen, string NgaySinh, string GioiTinh, string DiaChi, int CMND, string Email, string SDT, string ChucVu, string NgayVaoLam, string TenDangNhap, string MatKhau, string TrangThai)
         {
             try
             {
                 string query = "insert into NhanVien values  ('" + MaNhanVien + "', N'"+ HovaTen +"', '"+ NgaySinh + "', N'" + GioiTinh + "'," +
                     "N'" + DiaChi + "', " + CMND + ", N'" + Email + "', '" + SDT + "', N'" + ChucVu + "','"+ NgayVaoLam +"')";
+                string s = "insert into TaiKhoan values ('"+MaNhanVien+"','"+TenDangNhap+"','"+MatKhau+"','"+TrangThai+"')";
                 DataProvider.Instance.ExcuteDB(query);
                 return true;
             }

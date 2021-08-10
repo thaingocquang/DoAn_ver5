@@ -48,5 +48,10 @@ namespace DoAn_ver5.GUI.DanhMuc
                 );
                 this.Close();
         }
+
+        private void ThucAn_CoThucAn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

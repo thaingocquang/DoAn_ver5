@@ -190,6 +190,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             // txtMaKhachHang
             // 
+            this.txtMaKhachHang.Enabled = false;
             this.txtMaKhachHang.Location = new System.Drawing.Point(134, 18);
             this.txtMaKhachHang.Name = "txtMaKhachHang";
             this.txtMaKhachHang.Size = new System.Drawing.Size(199, 22);
@@ -300,6 +301,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.Controls.Add(this.pictureBox1);
             this.Name = "KhachHang_ThemKhachHang";
             this.Text = "KhachHang_ThemKhachHang";
+            this.Load += new System.EventHandler(this.KhachHang_ThemKhachHang_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
