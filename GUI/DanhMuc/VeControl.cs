@@ -101,7 +101,60 @@ namespace DoAn_ver5.GUI.DanhMuc
 
         private void btnTim_Click(object sender, EventArgs e)
         {
-
+            int count = 1;
+            listView1.Items.Clear();
+            string Ma = txtMa.Text;
+            string Ten = txtTen.Text;
+            string DenNgay = dtpDenNgay.Value.ToString("yyyy/MM/dd");
+            string TuNgay = dtpTuNgay.Value.ToString("yyyy/MM/dd");
+            if (chkMa.Checked == true)
+            {
+                foreach(DataRow i in BLL_Ve.Instance.GetVeByMaVe(Ma).Rows)
+                {
+                    ListViewItem ls = new ListViewItem(count.ToString());
+                    ls.SubItems.Add(i["MaHoaDonVe"].ToString());
+                    ls.SubItems.Add(i["MaSuatChieu"].ToString());
+                    ls.SubItems.Add(i["MaGhe"].ToString());
+                    ls.SubItems.Add(i["NgayBanVe"].ToString());
+                    ls.SubItems.Add(i["HovaTen"].ToString());
+                    ls.SubItems.Add(i["GiaVe"].ToString());
+                    ls.SubItems.Add(i["TenKhachHang"].ToString());
+                    listView1.Items.Add(ls);
+                    count++;
+                }
+            }
+            if(chkTen.Checked == true)
+            {
+                foreach(DataRow i in BLL_Ve.Instance.GetVeByTenKH(Ten).Rows)
+                {
+                    ListViewItem ls = new ListViewItem(count.ToString());
+                    ls.SubItems.Add(i["MaHoaDonVe"].ToString());
+                    ls.SubItems.Add(i["MaSuatChieu"].ToString());
+                    ls.SubItems.Add(i["MaGhe"].ToString());
+                    ls.SubItems.Add(i["NgayBanVe"].ToString());
+                    ls.SubItems.Add(i["HovaTen"].ToString());
+                    ls.SubItems.Add(i["GiaVe"].ToString());
+                    ls.SubItems.Add(i["TenKhachHang"].ToString());
+                    listView1.Items.Add(ls);
+                    count++;
+                }
+            }
+            if(chkThoiGian.Checked == true)
+            {
+                foreach(DataRow i in BLL_Ve.Instance.GetVeByDate(TuNgay, DenNgay).Rows)
+                {
+                    ListViewItem ls = new ListViewItem(count.ToString());
+                    ls.SubItems.Add(i["MaHoaDonVe"].ToString());
+                    ls.SubItems.Add(i["MaSuatChieu"].ToString());
+                    ls.SubItems.Add(i["MaGhe"].ToString());
+                    ls.SubItems.Add(i["NgayBanVe"].ToString());
+                    ls.SubItems.Add(i["HovaTen"].ToString());
+                    ls.SubItems.Add(i["GiaVe"].ToString());
+                    ls.SubItems.Add(i["TenKhachHang"].ToString());
+                    listView1.Items.Add(ls);
+                    count++;
+                }
+            }
         }
     }
 }

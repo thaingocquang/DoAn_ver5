@@ -67,8 +67,6 @@ namespace DoAn_ver5.GUI.DanhMuc
 
             foreach (DataRow i in BLL_HoaDon.Instance.GetHoaDon().Rows)
             {
-
-
                 ListViewItem ls = new ListViewItem(count.ToString());
                 ls.SubItems.Add(i["MaHoaDon"].ToString());
                 ls.SubItems.Add(i["NgayTao"].ToString());
@@ -94,6 +92,41 @@ namespace DoAn_ver5.GUI.DanhMuc
                 sl.SubItems.Add(i["SoLuong"].ToString());
                 listView2.Items.Add(sl);
                 count++;
+            }
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            int count = 1;
+            string Ma = txtMa.Text;
+            string TuNgay = dtpTuNgay.Value.ToString("yyyy/MM/dd");
+            string DenNgay = dtpDenNgay.Value.ToString("yyyy/MM/dd");
+            if(chkMa.Checked == true)
+            {
+                foreach(DataRow i in BLL_HoaDon.Instance.GetHoaDonByMaHD(Ma).Rows)
+                {
+                    ListViewItem ls = new ListViewItem(count.ToString());
+                    ls.SubItems.Add(i["MaHoaDon"].ToString());
+                    ls.SubItems.Add(i["NgayTao"].ToString());
+                    ls.SubItems.Add(BLL_HoaDon.Instance.GetTongTienByMHD(i["MaHoaDon"].ToString()) + "");
+                    ls.SubItems.Add(i["MaNhanVien"].ToString());
+                    listView1.Items.Add(ls);
+                    count++;
+                }
+            }
+            if(chkThoiGian.Checked == true)
+            {
+                foreach(DataRow i in BLL_HoaDon.Instance.GetHoaDonByDate(TuNgay,DenNgay).Rows)
+                {
+                    ListViewItem ls = new ListViewItem(count.ToString());
+                    ls.SubItems.Add(i["MaHoaDon"].ToString());
+                    ls.SubItems.Add(i["NgayTao"].ToString());
+                    ls.SubItems.Add(BLL_HoaDon.Instance.GetTongTienByMHD(i["MaHoaDon"].ToString()) + "");
+                    ls.SubItems.Add(i["MaNhanVien"].ToString());
+                    listView1.Items.Add(ls);
+                    count++;
+                }
             }
         }
     }
