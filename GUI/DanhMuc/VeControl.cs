@@ -98,5 +98,10 @@ namespace DoAn_ver5.GUI.DanhMuc
                 count++;
             }
         }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

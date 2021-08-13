@@ -35,6 +35,7 @@ namespace DoAn_ver5.GUI.NghiepVu
 
         private void btnXemBaoCao_Click(object sender, EventArgs e)
         {
+            lstDoanhThuThang.Items.Clear();
             int TongDoanhThu = 0;
             for (int i = 1; i <= 12; i++)
             {

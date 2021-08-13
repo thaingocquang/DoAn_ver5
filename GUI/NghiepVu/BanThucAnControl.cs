@@ -150,11 +150,12 @@ namespace DoAn_ver5.GUI.NghiepVu
             }
             if (lstBanDoAn.Items.Count <= 0) return;
             string MaHD = "HD" + (DataProvider.Instance.GetRowCount(BLL_HoaDon.Instance.GetHoaDon()) + 1);
-            BLL_HoaDon.Instance.InsertMaHoaDon(MaHD, dtpNgayBan.Value.ToString(), "NV001");
+            BLL_HoaDon.Instance.InsertMaHoaDon(MaHD, dtpNgayBan.Value.ToString(), BLL_TaiKhoan.Instance.MaNhanVien);
             foreach (ListViewItem lvi in lstBanDoAn.Items) 
             {
                 BLL_HoaDon.Instance.InSertChiTietHD(MaHD, lvi.SubItems[0].Text, int.Parse(lvi.SubItems[4].Text)); 
             }
+            lstBanDoAn.Items.Clear();
         }
 
 

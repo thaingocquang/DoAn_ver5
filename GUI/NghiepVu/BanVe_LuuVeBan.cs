@@ -35,6 +35,7 @@ namespace DoAn_ver5.GUI.NghiepVu
 
         private void BanVe_LuuVeBan_Load(object sender, EventArgs e)
         {
+            txtMaNV.Text = BLL_TaiKhoan.Instance.MaNhanVien;
             txtMaSuatChieu.Text = SuatChieu.MaSuatChieu;
             txtTenPhim.Text = Phim.TenPhim;
             txtPhongChieu.Text = PhongChieu.TenPhongChieu;
@@ -88,7 +89,7 @@ namespace DoAn_ver5.GUI.NghiepVu
         {
             foreach (Button btn in listGheDaChon)
             {
-                DAL_HoaDonVe.Instance.InsertHoaDonVe(txtMaSuatChieu.Text, int.Parse(btn.Tag.ToString()), dateTimePicker1.Value.Date.ToString(), "TNQ", float.Parse(txtTongTien.Text)/listGheDaChon.Count, (txtMaKH.Text==""?"KHDB": txtMaKH.Text));
+                DAL_HoaDonVe.Instance.InsertHoaDonVe( txtMaSuatChieu.Text, int.Parse(btn.Tag.ToString()), dateTimePicker1.Value.Date.ToString(), BLL_TaiKhoan.Instance.MaNhanVien, float.Parse(txtTongTien.Text)/listGheDaChon.Count, (txtMaKH.Text==""?"KHDB": txtMaKH.Text));
                 DAL_Ve.Instance.SetTrangThaiVe(btn.Tag.ToString());
             }
             this.Close();

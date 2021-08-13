@@ -68,7 +68,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDenNgay.Location = new System.Drawing.Point(89, 297);
             this.dtpDenNgay.Name = "dtpDenNgay";
-            this.dtpDenNgay.Size = new System.Drawing.Size(166, 26);
+            this.dtpDenNgay.Size = new System.Drawing.Size(166, 23);
             this.dtpDenNgay.TabIndex = 8;
             // 
             // dtpTuNgay
@@ -76,7 +76,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpTuNgay.Location = new System.Drawing.Point(89, 259);
             this.dtpTuNgay.Name = "dtpTuNgay";
-            this.dtpTuNgay.Size = new System.Drawing.Size(166, 26);
+            this.dtpTuNgay.Size = new System.Drawing.Size(166, 23);
             this.dtpTuNgay.TabIndex = 7;
             // 
             // label2
@@ -84,7 +84,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(14, 264);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 20);
+            this.label2.Size = new System.Drawing.Size(60, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Từ ngày";
             // 
@@ -133,7 +133,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(14, 302);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 20);
+            this.label3.Size = new System.Drawing.Size(69, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Đến ngày";
             // 
@@ -155,19 +155,20 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.btnTim.TabIndex = 4;
             this.btnTim.Text = "Tìm kiếm";
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // txtTen
             // 
             this.txtTen.Location = new System.Drawing.Point(17, 166);
             this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(238, 26);
+            this.txtTen.Size = new System.Drawing.Size(238, 23);
             this.txtTen.TabIndex = 2;
             // 
             // txtMa
             // 
             this.txtMa.Location = new System.Drawing.Point(17, 96);
             this.txtMa.Name = "txtMa";
-            this.txtMa.Size = new System.Drawing.Size(238, 26);
+            this.txtMa.Size = new System.Drawing.Size(238, 23);
             this.txtMa.TabIndex = 2;
             // 
             // chkThoiGian
@@ -175,7 +176,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.chkThoiGian.AutoSize = true;
             this.chkThoiGian.Location = new System.Drawing.Point(17, 222);
             this.chkThoiGian.Name = "chkThoiGian";
-            this.chkThoiGian.Size = new System.Drawing.Size(248, 24);
+            this.chkThoiGian.Size = new System.Drawing.Size(216, 21);
             this.chkThoiGian.TabIndex = 1;
             this.chkThoiGian.Text = "Theo khoảng thời gian bán vé";
             this.chkThoiGian.UseVisualStyleBackColor = true;
@@ -186,7 +187,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.chkTen.AutoSize = true;
             this.chkTen.Location = new System.Drawing.Point(17, 139);
             this.chkTen.Name = "chkTen";
-            this.chkTen.Size = new System.Drawing.Size(186, 24);
+            this.chkTen.Size = new System.Drawing.Size(162, 21);
             this.chkTen.TabIndex = 1;
             this.chkTen.Text = "Theo tên khách hàng";
             this.chkTen.UseVisualStyleBackColor = true;
@@ -197,7 +198,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.chkMa.AutoSize = true;
             this.chkMa.Location = new System.Drawing.Point(17, 69);
             this.chkMa.Name = "chkMa";
-            this.chkMa.Size = new System.Drawing.Size(118, 24);
+            this.chkMa.Size = new System.Drawing.Size(102, 21);
             this.chkMa.TabIndex = 1;
             this.chkMa.Text = "Theo mã vé";
             this.chkMa.UseVisualStyleBackColor = true;
@@ -210,7 +211,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(25, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 36);
+            this.label1.Size = new System.Drawing.Size(125, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tra cứu vé";
             // 
@@ -245,13 +246,12 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.columnHeader8,
             this.columnHeader9,
             this.columnHeader10});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Location = new System.Drawing.Point(269, 57);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1320, 575);
+            this.listView1.Size = new System.Drawing.Size(1051, 518);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -307,7 +307,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             // VeControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

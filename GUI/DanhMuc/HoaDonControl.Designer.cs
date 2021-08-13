@@ -83,12 +83,13 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.btnTim.TabIndex = 4;
             this.btnTim.Text = "Tìm kiếm";
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // txtMa
             // 
             this.txtMa.Location = new System.Drawing.Point(17, 96);
             this.txtMa.Name = "txtMa";
-            this.txtMa.Size = new System.Drawing.Size(238, 26);
+            this.txtMa.Size = new System.Drawing.Size(238, 23);
             this.txtMa.TabIndex = 2;
             // 
             // chkThoiGian
@@ -96,7 +97,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.chkThoiGian.AutoSize = true;
             this.chkThoiGian.Location = new System.Drawing.Point(17, 153);
             this.chkThoiGian.Name = "chkThoiGian";
-            this.chkThoiGian.Size = new System.Drawing.Size(194, 24);
+            this.chkThoiGian.Size = new System.Drawing.Size(169, 21);
             this.chkThoiGian.TabIndex = 1;
             this.chkThoiGian.Text = "Theo khoảng thời gian";
             this.chkThoiGian.UseVisualStyleBackColor = true;
@@ -107,7 +108,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.chkMa.AutoSize = true;
             this.chkMa.Location = new System.Drawing.Point(17, 69);
             this.chkMa.Name = "chkMa";
-            this.chkMa.Size = new System.Drawing.Size(160, 24);
+            this.chkMa.Size = new System.Drawing.Size(139, 21);
             this.chkMa.TabIndex = 1;
             this.chkMa.Text = "Theo mã hóa đơn";
             this.chkMa.UseVisualStyleBackColor = true;
@@ -261,7 +262,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(25, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 36);
+            this.label1.Size = new System.Drawing.Size(187, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tra cứu hóa đơn";
             // 
@@ -289,7 +290,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDenNgay.Location = new System.Drawing.Point(89, 228);
             this.dtpDenNgay.Name = "dtpDenNgay";
-            this.dtpDenNgay.Size = new System.Drawing.Size(166, 26);
+            this.dtpDenNgay.Size = new System.Drawing.Size(166, 23);
             this.dtpDenNgay.TabIndex = 12;
             // 
             // dtpTuNgay
@@ -297,7 +298,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpTuNgay.Location = new System.Drawing.Point(89, 190);
             this.dtpTuNgay.Name = "dtpTuNgay";
-            this.dtpTuNgay.Size = new System.Drawing.Size(166, 26);
+            this.dtpTuNgay.Size = new System.Drawing.Size(166, 23);
             this.dtpTuNgay.TabIndex = 11;
             // 
             // label3
@@ -305,7 +306,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(14, 233);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 20);
+            this.label3.Size = new System.Drawing.Size(69, 17);
             this.label3.TabIndex = 10;
             this.label3.Text = "Đến ngày";
             // 
@@ -314,13 +315,13 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(14, 195);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 20);
+            this.label2.Size = new System.Drawing.Size(60, 17);
             this.label2.TabIndex = 9;
             this.label2.Text = "Từ ngày";
             // 
             // HoaDonControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
