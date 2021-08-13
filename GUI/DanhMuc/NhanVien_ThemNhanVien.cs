@@ -47,10 +47,7 @@ namespace DoAn_ver5.GUI
 
         private void NhanVien_ThemNhanVien_Load(object sender, EventArgs e)
         {
-            if(cbTaiKhoan.Checked == true)
-            {
-                txtTenDangNhap.Text = "NV" + (DataProvider.Instance.GetRowCount(BLL_NhanVien.Instance.GetAllNhanVien()) + 1);
-            }
+            txtMaNV.Text = "NV" + (DataProvider.Instance.GetRowCount(BLL_NhanVien.Instance.GetAllNhanVien()) + 1);            
         }
     }
 }

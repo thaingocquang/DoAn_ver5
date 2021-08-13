@@ -33,14 +33,14 @@ namespace DoAn_ver5.DAL
         public DataTable GetHoaDonByMaHD(string Ma)
         {
             DataTable dt = new DataTable();
-            string query = "select MaHoaDon, NgayTao, MaNhanVien from HoaDonThucAn where MaHoaDon = '" + Ma + "'";
+            string query = "select * from HoaDonThucAn where MaHoaDon = '" + Ma + "'";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }
         public DataTable GetHoaDonByDate(string dt1, string dt2)
         {
             DataTable dt = new DataTable();
-            string query = "select MaHoaDon, NgayTao, MaNhanVien from HoaDonThucAn where NgayTao between '" + dt1 + "' and '" + dt2 + "'";
+            string query = "select * from HoaDonThucAn where NgayTao between '" + dt1 + "' and '" + dt2 + "'";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }

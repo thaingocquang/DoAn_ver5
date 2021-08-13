@@ -92,7 +92,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.btnHienTatCa);
-            this.panel2.Location = new System.Drawing.Point(269, 0);
+            this.panel2.Location = new System.Drawing.Point(271, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1051, 51);
             this.panel2.TabIndex = 7;
@@ -155,6 +155,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.btnTim.TabIndex = 4;
             this.btnTim.Text = "Tìm kiếm";
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // txtTen
             // 
@@ -225,6 +226,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.panel2);
             this.panel4.Controls.Add(this.listView1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
@@ -245,13 +247,12 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.columnHeader8,
             this.columnHeader9,
             this.columnHeader10});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Location = new System.Drawing.Point(271, 44);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1320, 575);
+            this.listView1.Size = new System.Drawing.Size(1049, 531);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -309,7 +310,6 @@ namespace DoAn_ver5.GUI.DanhMuc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

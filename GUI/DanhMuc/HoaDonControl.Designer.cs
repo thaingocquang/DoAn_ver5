@@ -83,6 +83,7 @@ namespace DoAn_ver5.GUI.DanhMuc
             this.btnTim.TabIndex = 4;
             this.btnTim.Text = "Tìm kiếm";
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // txtMa
             // 
