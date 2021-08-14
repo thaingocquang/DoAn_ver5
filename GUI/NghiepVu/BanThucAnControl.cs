@@ -155,6 +155,8 @@ namespace DoAn_ver5.GUI.NghiepVu
             {
                 BLL_HoaDon.Instance.InSertChiTietHD(MaHD, lvi.SubItems[0].Text, int.Parse(lvi.SubItems[4].Text)); 
             }
+            MessageBox.Show("Thêm hóa đơn thành công.");
+            lblTongTien.Text = "";
             lstBanDoAn.Items.Clear();
         }
 

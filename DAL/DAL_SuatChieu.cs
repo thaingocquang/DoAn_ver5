@@ -66,12 +66,7 @@ namespace DoAn_ver5.DAL
         public DataTable GetDoanhThuByTimePeriod(string TuNgay, string DenNgay)
         {
             DataTable dt = new DataTable();
-            string query = @"select p.MaPhim, p.TenPhim, sum(sc.GiaVe) as DoanhThu from HoaDonVe hdv join SuatChieu sc
-                            on hdv.MaSuatChieu = sc.MaSuatChieu join SuatPhim sp
-                            on sc.MaSuatPhim = sp.MaSuatPhim join Phim p
-                            on sp.MaPhim = p.MaPhim
-                            where hdv.NgayBanVe >= '" + TuNgay + "' and hdv.NgayBanVe <= '" + DenNgay + "' "+
-                            "group by p.MaPhim, p.TenPhim";
+            string query = @"select p.MaPhim, p.TenPhim, sum(sc.GiaVe) as DoanhThu from HoaDonVe hdv join SuatChieu sc on hdv.MaSuatChieu = sc.MaSuatChieu join SuatPhim sp on sc.MaSuatPhim = sp.MaSuatPhim join Phim p on sp.MaPhim = p.MaPhim where hdv.NgayBanVe >= '" + TuNgay + "' and hdv.NgayBanVe <= '" + DenNgay + "' "+ "group by p.MaPhim, p.TenPhim";
             dt = DataProvider.Instance.GetRecords(query);
             return dt;
         }

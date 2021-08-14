@@ -36,7 +36,7 @@ namespace DoAn_ver5.GUI.NghiepVu
             lstDoangThuKhoangTime.Items.Clear();
             DateTime Tu_Ngay = dtpTuNgay.Value;
             string TuNgay = Tu_Ngay.Date.ToString("yyyy/MM/dd");
-            DateTime Den_Ngay = dtpTuNgay.Value;
+            DateTime Den_Ngay = dtpDenNgay.Value;
             string DenNgay = Den_Ngay.Date.ToString("yyyy/MM/dd");
             int count = 1;
             foreach (DataRow row in BLL_SuatChieu.Instance.GetDoanhThuByTimePeriod(TuNgay, DenNgay).Rows)
